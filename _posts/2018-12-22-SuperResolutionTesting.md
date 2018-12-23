@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Testing Texture \"Super Resolution\" Techniques"
-date:   2018-12-23 13:28:13 +1100
+date:   2018-12-23 13:29:13 +1100
 categories: rainbowsix gamedev superresolution rendering
 ---
 
