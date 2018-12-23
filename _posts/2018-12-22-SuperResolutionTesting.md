@@ -7,7 +7,7 @@ categories: rainbowsix gamedev superresolution rendering
 
 After seeing [Doom Neural Upscale 2X by hidfan](https://www.doomworld.com/forum/topic/99021-v-0-95-doom-neural-upscale-2x/), I became interested in testing out "super resolution" techniques on the images found in Rainbow Six and Rogue Spear.
 
-[Super Resolution](https://en.wikipedia.org/wiki/Super-resolution_imaging) is the process of taking a smaller image and generating extra detail to output a larger resolution image without just blurring the smaller image. Although there are many varied techniques to achieve the results, in this article I will be using an open source trained network, [ESRGAN (Enhanced SRGAN)](https://github.com/xinntao/ESRGAN), and an image upscaling service called [LetsEnhance.io](letsenhance.io).
+[Super Resolution](https://en.wikipedia.org/wiki/Super-resolution_imaging) is the process of taking a smaller image and generating extra detail to output a larger resolution image without just blurring the smaller image. Although there are many varied techniques to achieve the results, in this article I will be using an open source trained network, [ESRGAN (Enhanced SRGAN)](https://github.com/xinntao/ESRGAN), and an image upscaling service called [LetsEnhance.io](https://letsenhance.io).
 
 <!--more-->
 
@@ -66,9 +66,9 @@ In these comparisons look at the buildings in the background, the hedges, flower
 
 ## Hybrid approach
 
-Taking a page out of hidfans' book, I tried averaging results from a few sources. Since I don't have API access to letsenhance.io I chose an image that would demonstrate a variety of scenarios and see how it performed. I used M13_Loading.png which is a 640x480 in-game screenshot which displayed when loading the mission (who would have guessed?). I ran this through:
+Taking a page out of hidfans' book, I tried averaging results from a few sources. Since I don't have API access to [letsenhance.io](https://letsenhance.io) I chose an image that would demonstrate a variety of scenarios and see how it performed. I used M13_Loading.png which is a 640x480 in-game screenshot which displayed when loading the mission (who would have guessed?). I ran this through:
 
-- [letsenhance.io](letsenhance.io)
+- [letsenhance.io](https://letsenhance.io)
 - ESRGAN with pre-trained model: RRDB_ESRGAN_x4
 - ESRGAN with pre-trained model: RRDB_PSNR_x4
 
