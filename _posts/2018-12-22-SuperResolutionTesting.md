@@ -72,7 +72,7 @@ Taking a page out of hidfans' book, I tried averaging results from a few sources
 - ESRGAN with pre-trained model: RRDB_ESRGAN_x4
 - ESRGAN with pre-trained model: RRDB_PSNR_x4
 
-Once I had all three results, I opened these in photoshop and stacked them to get the mean color. This did help to smooth out some of artifacts, though it was far from perfect. I tried downsampling the images which did help with noise. Unfortunately there was still a lot of artifacting including halos, strange lines and striations.
+Once I had all three results, I opened these in photoshop and stacked them to get the mean color. This did help to smooth out some of artifacts, though it was far from perfect. I tried downsampling the images which did help with noise. Unfortunately there was still a lot of artifacting including halos, strange lines and striations. In particular look at the noise introduced in the sky and clouds.
 
 Original Image (Click to enlarge)
 ![Original Textures](/assets/posts/2018-12-22-SuperResolutionTesting.md/M13_loading-original.PNG){:class="img-zoom"}
