@@ -12,6 +12,9 @@
     padding-bottom: 2%;
 }
 
-.img-zoom:active {
+.img-zoomable {
+}
+
+.img-zoomed {
     transform: scale(2);
 }
