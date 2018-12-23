@@ -1,23 +1,23 @@
 ---
 layout: post
 title:  "Testing Texture \"Super Resolution\" Techniques"
-date:   2018-12-22 17:28:13 +1100
+date:   2018-12-23 13:28:13 +1100
 categories: rainbowsix gamedev superresolution rendering
 ---
 
 After seeing [Doom Neural Upscale 2X by hidfan](https://www.doomworld.com/forum/topic/99021-v-0-95-doom-neural-upscale-2x/), I became interested in testing out "super resolution" techniques on the images found in Rainbow Six and Rogue Spear.
 
-[Super Resolution](https://en.wikipedia.org/wiki/Super-resolution_imaging) is the process of taking a smaller image and generating extra detail to output a larger resolution image without just blurring the smaller image. Although there are many varied techniques, I will be focussing on [neural network](https://en.wikipedia.org/wiki/Artificial_neural_network) based techniques in this article. The Neural networks have been trained on a large dataset of small images that are then compared against larger version, and the difference is then used to train the model. The result is a network that can restore missing detail in an image and the results can appear to be magic.
+[Super Resolution](https://en.wikipedia.org/wiki/Super-resolution_imaging) is the process of taking a smaller image and generating extra detail to output a larger resolution image without just blurring the smaller image. Although there are many varied techniques to achieve the results, in this article I will be using an open source trained network, [ESRGAN (Enhanced SRGAN)](https://github.com/xinntao/ESRGAN), and an image upscaling service called [LetsEnhance.io](letsenhance.io).
 
 <!--more-->
 
 ## Goals / Requirements
 
-To properly evaluate I needed some criteria that results could be compared against. Primarily these are that the results look good, and I don't want to manually tweak thousands of images. My ideal list is:
+My goal is to upscale textures from a 20 year old game, therefore the process needs to work on extremely small textures and produce visually appealing results. There are a lot of textures to process so I'd like to avoid any hand tweaking. My goals boil down to this list:
 
 1. High resolution textures from existing data
 2. Low noise, low artifact results
-3. The process can be fully automated with no human intervention on a per image basis.
+3. A fully automated with no human intervention on a per image basis.
 4. Pre-processing and post-processing of images is ok, as long as the process can be automated and applied to all images.
 5. Services with no possibility of API access are a no-go.
 
@@ -33,49 +33,55 @@ More details on the differences between the 2 trained models are available in th
 
 These screenshots are taken with Blender loading one set of textures at a time. Click to see the full image, zoom for more detail.
 
-Original Textures
-[![Original Textures]({{ site.url }}/assets/posts/2018-12-22-SuperResolutionTesting.md/int1_Original.jpg)]({{ site.url }}/assets/posts/2018-12-22-SuperResolutionTesting.md/int1_Original.jpg)
+Original Textures (Click to enlarge)
+[![Original Textures](/assets/posts/2018-12-22-SuperResolutionTesting.md/int1_Original.jpg)](/assets/posts/2018-12-22-SuperResolutionTesting.md/int1_Original.jpg)
 
-RRDB_ESRGAN_x4 Textures
-[![Original Textures]({{ site.url }}/assets/posts/2018-12-22-SuperResolutionTesting.md/int1_RRDB_ESRGAN_x4.jpg)]({{ site.url }}/assets/posts/2018-12-22-SuperResolutionTesting.md/int1_RRDB_ESRGAN_x4.jpg)
+RRDB_ESRGAN_x4 Textures (Click to enlarge)
+[![RRDB_ESRGAN_x4 Textures](/assets/posts/2018-12-22-SuperResolutionTesting.md/int1_RRDB_ESRGAN_x4.jpg)](/assets/posts/2018-12-22-SuperResolutionTesting.md/int1_RRDB_ESRGAN_x4.jpg)
 
-RRDB_PSNR_x4 Textures
-[![Original Textures]({{ site.url }}/assets/posts/2018-12-22-SuperResolutionTesting.md/int1_RRDB_PSNR_x4.jpg)]({{ site.url }}/assets/posts/2018-12-22-SuperResolutionTesting.md/int1_RRDB_PSNR_x4.jpg)
+RRDB_PSNR_x4 Textures (Click to enlarge)
+[![RRDB_PSNR_x4 Textures](/assets/posts/2018-12-22-SuperResolutionTesting.md/int1_RRDB_PSNR_x4.jpg)](/assets/posts/2018-12-22-SuperResolutionTesting.md/int1_RRDB_PSNR_x4.jpg)
 
 
 As you can see in these screenshots using RRDB_ESRGAN_x4 the wall textures appear quite harsh, however the books have come up about as well as could be expected using RRDB_ESRGAN_x4. The improvements seen with RRDB_PSNR_x4 are better but not earth-shattering.
 
-Original Textures
-[![Original Textures]({{ site.url }}/assets/posts/2018-12-22-SuperResolutionTesting.md/ext1_Original.jpg)]({{ site.url }}/assets/posts/2018-12-22-SuperResolutionTesting.md/ext1_Original.jpg)
+Original Textures (Click to enlarge)
+[![Original Textures](/assets/posts/2018-12-22-SuperResolutionTesting.md/ext1_Original.jpg)](/assets/posts/2018-12-22-SuperResolutionTesting.md/ext1_Original.jpg)
 
-RRDB_ESRGAN_x4 Textures
-[![Original Textures]({{ site.url }}/assets/posts/2018-12-22-SuperResolutionTesting.md/ext1_RRDB_ESRGAN_x4.jpg)]({{ site.url }}/assets/posts/2018-12-22-SuperResolutionTesting.md/ext1_RRDB_ESRGAN_x4.jpg)
+RRDB_ESRGAN_x4 Textures (Click to enlarge)
+[![RRDB_ESRGAN_x4 Textures](/assets/posts/2018-12-22-SuperResolutionTesting.md/ext1_RRDB_ESRGAN_x4.jpg)](/assets/posts/2018-12-22-SuperResolutionTesting.md/ext1_RRDB_ESRGAN_x4.jpg)
 
-RRDB_PSNR_x4 Textures
-[![Original Textures]({{ site.url }}/assets/posts/2018-12-22-SuperResolutionTesting.md/ext1_RRDB_PSNR_x4.jpg)]({{ site.url }}/assets/posts/2018-12-22-SuperResolutionTesting.md/ext1_RRDB_PSNR_x4.jpg)
+RRDB_PSNR_x4 Textures (Click to enlarge)
+[![RRDB_PSNR_x4 Textures](/assets/posts/2018-12-22-SuperResolutionTesting.md/ext1_RRDB_PSNR_x4.jpg)](/assets/posts/2018-12-22-SuperResolutionTesting.md/ext1_RRDB_PSNR_x4.jpg)
 
 From these shots, take note of the bricks on the fence, the bricks on the embassy, and the tiles on the driveway. Certainly a these bricks have come up extremely well, however the tiles have an over-exaggerated streak-like pattern. With the PSNR model the streaking remains, and the textures gain a little sharpness, but not enough to justify the artifacts. The textures that were generated by the RRDB_ESRGAN_x4 model also appear quite a bit brighter.
 
-Original Textures
-[![Original Textures]({{ site.url }}/assets/posts/2018-12-22-SuperResolutionTesting.md/ext2_Original.jpg)]({{ site.url }}/assets/posts/2018-12-22-SuperResolutionTesting.md/ext2_Original.jpg)
+Original Textures (Click to enlarge)
+[![Original Textures](/assets/posts/2018-12-22-SuperResolutionTesting.md/ext2_Original.jpg)](/assets/posts/2018-12-22-SuperResolutionTesting.md/ext2_Original.jpg)
 
-RRDB_ESRGAN_x4 Textures
-[![Original Textures]({{ site.url }}/assets/posts/2018-12-22-SuperResolutionTesting.md/ext2_RRDB_ESRGAN_x4.jpg)]({{ site.url }}/assets/posts/2018-12-22-SuperResolutionTesting.md/ext2_RRDB_ESRGAN_x4.jpg)
+RRDB_ESRGAN_x4 Textures (Click to enlarge)
+[![RRDB_ESRGAN_x4 Textures](/assets/posts/2018-12-22-SuperResolutionTesting.md/ext2_RRDB_ESRGAN_x4.jpg)](/assets/posts/2018-12-22-SuperResolutionTesting.md/ext2_RRDB_ESRGAN_x4.jpg)
 
-RRDB_PSNR_x4 Textures
-[![Original Textures]({{ site.url }}/assets/posts/2018-12-22-SuperResolutionTesting.md/ext2_RRDB_PSNR_x4.jpg)]({{ site.url }}/assets/posts/2018-12-22-SuperResolutionTesting.md/ext2_RRDB_PSNR_x4.jpg)
+RRDB_PSNR_x4 Textures (Click to enlarge)
+[![RRDB_PSNR_x4 Textures](/assets/posts/2018-12-22-SuperResolutionTesting.md/ext2_RRDB_PSNR_x4.jpg)](/assets/posts/2018-12-22-SuperResolutionTesting.md/ext2_RRDB_PSNR_x4.jpg)
 
 In these comparisons look at the buildings in the background, the hedges, flowerbed, and the concrete and grass around the pond. The buildings are affected by significant artifacting. The concrete and grass around the pond gains minor sharpness improvement, but it is noticeable and acceptable in both models. The hedgerow sees another decent boost in sharpness. The flowerbed once again exhibits an over-sharpened appearance with both models.
 
 ## Hybrid approach
 
-Taking a page out of hidfans' book, I tried averaging results from a few sources. I used M13_Loading.png which is a 640x480 image displayed when loading the mission (who would have guessed?). I ran this through:
+Taking a page out of hidfans' book, I tried averaging results from a few sources. Since I don't have API access to letsenhance.io I chose an image that would demonstrate a variety of scenarios and see how it performed. I used M13_Loading.png which is a 640x480 in-game screenshot which displayed when loading the mission (who would have guessed?). I ran this through:
 
 - [letsenhance.io](letsenhance.io)
-- ESRGAN with pretrained model: RRDB_ESRGAN_x4
-- ESRGAN with pretrained model: RRDB_PSNR_x4
+- ESRGAN with pre-trained model: RRDB_ESRGAN_x4
+- ESRGAN with pre-trained model: RRDB_PSNR_x4
 
-Once I had all three results, I opened these in photoshop and stacked them to get the mean color. This did help to smooth out some of artifacts, but it was far from perfect. I tried downsampling the images, which did help with noise, but there was still a lot of artifacting. Strange lines and striations, halos, etc.
+Once I had all three results, I opened these in photoshop and stacked them to get the mean color. This did help to smooth out some of artifacts, but it was far from perfect. I tried downsampling the images, which did help with noise, but there was still a lot of artifacting including halos, strange lines and striations.
+
+Original Image (Click to enlarge)
+[![Original Textures](/assets/posts/2018-12-22-SuperResolutionTesting.md/M13_loading-original.PNG)](/assets/posts/2018-12-22-SuperResolutionTesting.md/M13_loading-original.PNG)
+
+Merged and Downsampled Result (Click to enlarge)
+[![RRDB_ESRGAN_x4 Textures](/assets/posts/2018-12-22-SuperResolutionTesting.md/M13_loading-original-merged-downsampled.jpg)](/assets/posts/2018-12-22-SuperResolutionTesting.md/M13_loading-original-merged-downsampled.jpg)
 
 ## Color Dithering issues
 
@@ -91,13 +97,19 @@ I then followed the same process.
 
 The results were improved, especially around areas with a lot of dithering, however there were a large number of artifacts remaining. A slightly stronger de-noise filter would smooth out the remainder of the issues around dithering. It's probable other artifacts will be lessened with more pre-processing.
 
+Denoised Image (Click to enlarge)
+[![Original Textures](/assets/posts/2018-12-22-SuperResolutionTesting.md/M13_loading-original-denoised.PNG)](/assets/posts/2018-12-22-SuperResolutionTesting.md/M13_loading-original-denoised.PNG)
+
+Merged and Downsampled Result (Click to enlarge)
+[![RRDB_ESRGAN_x4 Textures](/assets/posts/2018-12-22-SuperResolutionTesting.md/M13_loading-denoised-merged-downsampled.jpg)](/assets/posts/2018-12-22-SuperResolutionTesting.md/M13_loading-denoised-merged-downsampled.jpg)
+
 ## Conclusion
 
-The results achieved by hidfan on [Doom Neural Upscale 2X](https://www.doomworld.com/forum/topic/99021-v-0-95-doom-neural-upscale-2x/) are amazing. I'd really like to achieve a similar level of success in upscaling textures for Rainbow Six and Rogue Spear however the current approaches I've tried are extremely promising but they aren't quite meeting my needs. In comparison to the [Morrowind Enhanced Textures mod](https://www.nexusmods.com/morrowind/mods/46221?tab=files), these source textures are extremely low resolution and cover large portions of the screen. This means small imperfections are significantly more noticeable, which I suspect it is the reason I'm not getting results that are as acceptable.
+The results achieved by hidfan on [Doom Neural Upscale 2X](https://www.doomworld.com/forum/topic/99021-v-0-95-doom-neural-upscale-2x/) are amazing. I'd really like to achieve a similar level of success in upscaling textures for Rainbow Six and Rogue Spear however the current approaches I've tried are extremely promising but they aren't quite meeting my needs. In comparison to the [Morrowind Enhanced Textures mod](https://www.nexusmods.com/morrowind/mods/46221?tab=files), these source textures are extremely low resolution and cover large portions of the screen. This means small imperfections are significantly more noticeable, which I suspect is the reason I'm not getting results that are as acceptable.
 
-Only being able to achieve a 4x upscale didn't allow much wiggle room to hide artifacts with downsampling and averaging. Ideally finding an approach that allows an 8x upscale would benefit a lot. However the larger you upscale, the more data has to be inferred, which leads to more chance for artifacts. I'm confident that using different neural networks that perhaps have been trained on larger data sets will yield better results.
+Only being able to achieve a 4x upscale didn't allow much wiggle room to hide artifacts with downsampling and averaging. Ideally finding an approach that allows an 8x upscale would benefit a lot. However the larger you upscale, the more data has to be inferred. This leads to more chance for artifacts. I'm confident that using different techniques that perhaps have been trained on larger data sets will yield better results.
 
-Issues surrounding dithering induced noise caused significant amounts of artifacts which would require a lot of hand tweaking. A quick test with denoising provided very promising results. A more robust pre-processing stage will alleviate this problem and possibly others, but will require fine tweaking to ensure maximum detail is still preserved.
+Issues surrounding dithering induced noise caused significant amounts of artifacts which would require a lot of hand tweaking. A quick test with denoising provided very promising results. A more robust pre-processing stage will alleviate this problem and possibly other problems, but will require fine tuning to ensure maximum detail is still preserved.
 
 The upscaling processes themselves introduced significant artifacts, so a post-processing stage will definitely be needed. Using multiple services or networks and averaging the results definitely improved the results. I suspect averaging too many results will result in a blurry image and best results will probably be obtained by selecting the best 2-3 results. Halos and bright spots were common artifacts. I'd like to explore using the source image in a post-processing stage to remove hot pixels.
 
