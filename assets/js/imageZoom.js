@@ -1,8 +1,16 @@
-function unzoomAll() {
+function unzoomAllImages() {
     $('.img-zoomable').removeClass('img-zoomed');
 }
 
 $('.img-zoomable').click(function(e) {
-    unzoomAll();
-    $( this ).toggleClass('img-zoomed');
+    let bZoom = true;
+    if($( this ).hasClass('img-zoomed')) {
+        bZoom = false;
+    }
+
+    unzoomAllImages();
+
+    if (bZoom === true) {
+        $( this ).toggleClass('img-zoomed');
+    }
 });
