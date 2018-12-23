@@ -4,8 +4,9 @@ layout: default
 
 <div class="postheader">
 <h1>{{ page.title }}</h1>
+{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
 <div class="postdate">
-Published {{page.date}}
+Published {{page.date| date: date_format }}
 </div>
 </div>
 
