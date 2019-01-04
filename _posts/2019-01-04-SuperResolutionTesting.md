@@ -66,7 +66,7 @@ In these comparisons look at the buildings in the background, the hedges, flower
 
 ## Hybrid approach
 
-Taking a page out of hidfans' book, I tried averaging results from a few sources. Since I don't have API access to [letsenhance.io](https://letsenhance.io) I chose an image that would demonstrate a variety of scenarios and see how it performed. I used M13_Loading.png which is a 640x480 in-game screenshot which displayed when loading the mission (who would have guessed?). I ran this through:
+Taking a page out of hidfans' book, I tried averaging results from a few sources. Since I don't have API access to [letsenhance.io](https://letsenhance.io) I chose an image that would demonstrate a variety of scenarios and see how it performed. I used M13_Loading.png which is a 640x480 in-game screenshot which is displayed when loading the mission (who would have guessed?). I ran this through:
 
 - [letsenhance.io](https://letsenhance.io)
 - ESRGAN with pre-trained model: RRDB_ESRGAN_x4
