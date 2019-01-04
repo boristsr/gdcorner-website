@@ -110,10 +110,8 @@ Issues surrounding dithering induced noise caused significant amounts of artifac
 
 The upscaling processes themselves introduced significant artifacts so a post-processing stage will definitely be needed. Using multiple services or networks and averaging the results definitely improved the results. I suspect averaging too many results will result in a blurry image and best results will probably be obtained by selecting the best 2-3 results. Halos and bright spots were common artifacts. I'd like to explore using the source image in a post-processing stage to remove hot pixels.
 
-It's still early days in my project so I have plenty of time to let these things mature, and more importantly, experiment more!
-
-## Further work
-
 In the future I'd like to evaluate more software, other neural networks, and other techniques. Of most interest are services and software that can achieve higher than 4x upscaling, allowing more wiggle room to downsample and hide artifacts. I've applied for access to [NVIDIA Gameworks: Materials & Textures](https://developer.nvidia.com/gwmt), and when I get a chance I'll try out [Topaz AI Gigapixel](https://topazlabs.com/ai-gigapixel/). There are also numerous research papers available which have shared their trained model and code on github, and I will keep an eye out for promising ones.
 
 After reading through the early thread on Doom Neural Upscale it appears that translucency was a problem for these techniques. I'll need to pay special attention to these, or copy translucency and masking values from the source files and upscale the alpha channel or color masks the old fashioned way.
+
+It's still early days in my project so I have plenty of time to let these things mature, and more importantly, experiment more!
