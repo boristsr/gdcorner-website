@@ -5,9 +5,9 @@ date:   2019-01-13 20:17:13 +1100
 categories: rainbowsix gamedev superresolution rendering progress
 ---
 
-[Rainbow Six](https://en.wikipedia.org/wiki/Tom_Clancy%27s_Rainbow_Six_(video_game)) and it’s sequel called [Rogue Spear](https://en.wikipedia.org/wiki/Tom_Clancy%27s_Rainbow_Six:_Rogue_Spear) are widely regarded as early defining games in the tactical shooter genre and the legacy remains today in [Rainbow Six: Siege](https://en.wikipedia.org/wiki/Tom_Clancy%27s_Rainbow_Six_Siege).
+[Rainbow Six](https://en.wikipedia.org/wiki/Tom_Clancy%27s_Rainbow_Six_(video_game)) and it’s sequel called [Rogue Spear](https://en.wikipedia.org/wiki/Tom_Clancy%27s_Rainbow_Six:_Rogue_Spear) are early defining games in the tactical shooter genre and the legacy remains today in [Rainbow Six: Siege](https://en.wikipedia.org/wiki/Tom_Clancy%27s_Rainbow_Six_Siege).
 
-I've been working on extracting data out of Rainbow Six with the goal of bringing it into a new engine, and recreating the game.
+I've been working on extracting data out of Rainbow Six with the goal of bringing it into a new engine and recreating the game.
 
 Preview of the first mission in Unreal Engine 4
 ![First attempt in Unreal](/assets/posts/2019-01-13-RainbowSixRevivalProject.md/M01-R6-Unreal.jpg)
@@ -57,7 +57,7 @@ All scripts are currently being written in python 3.7 since it’s really quick 
 
 ### Blender 2.8
 
-I’ve chosen to rely heavily on Blender for this project since it has well tested 3D operations that i won’t need to rewrite, as well as excellent format support for converting to other engines. Since starting the project I have upgraded the scripts to the new beta Blender 2.8 since this isn’t a production project and the goal is future proofing
+I’ve chosen to rely heavily on Blender for this project since it has well tested 3D operations that I won’t need to rewrite, as well as excellent format support for converting to other engines. Since starting the project I have upgraded the scripts to the new beta Blender 2.8 since this isn’t a production project and the goal is future proofing
 
 ### 010 Editor - Hex Editor
 
@@ -82,6 +82,8 @@ Below are some examples of the strange placement of lights
 ![Example of lights clearly setup for Vertex Lighting](/assets/posts/2019-01-13-RainbowSixRevivalProject.md/M07-Outside.jpg)
 (Click to Enlarge)
 
+Here is a [let's play by sigonsteele that shows how it looks in the original game](https://youtu.be/FyoSz4xW_9k?list=PLAA66182E9682A667&t=364). Skip to 9:05.
+
 
 Many modern renderers are moving towards a model known as [Physically Based Rendering](https://en.wikipedia.org/wiki/Physically_based_rendering). This describes how lights behave and interact with the surfaces and materials in the scene. Rendering previously has relied on a much simpler model. The old model only defined an ambient, diffuse and specular property as [described here](https://www.cs.uic.edu/~jbell/CourseNotes/ComputerGraphics/LightingAndShading.html). The lights also shared these properties so lights could give a different specular highlight to the diffuse color the light was producing.
 
@@ -96,6 +98,7 @@ Office in Embassy
 
 ### Rainbow Six Mission 02 and it's re-release in Rogue Spear Urban Operations
 
+For reference, [here is a let's play by sigonsteele of the mission](https://www.youtube.com/watch?v=LqS8ZYwJGFY) in the original game.
 Basement
 
 Rainbow Six
