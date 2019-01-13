@@ -19,10 +19,11 @@ Preview of the first mission in Unreal Engine 4
 Early last year I wanted to play these games, unfortunately it turns out it’s quite hard to play these games on modern systems. Rainbow Six is available from [GOG](https://www.gog.com/game/tom_clancys_rainbow_six) although it has some rendering issues and I was unable to get the mission pack Eagle Watch working. I also had no luck getting Rogue Spear to work from my CDs.
 
 It’s a shame these 2 games are so inaccessible these days, and I wondered how hard it would be to extract the data and put them into a modern engine. So one of the projects I’ve been working on in my freetime is exactly that. Over time I’ll write about a few of the interesting challenges faced throughout the project such as:
-Issues arising from from vertex based lighting setups in a per pixel lighting renderer
-Differences with old rendering methods and modern physically-based rendering
-how to decode a file format and Interpreting data
-Useful tools for decoding files
+
+ - Issues arising from from vertex based lighting setups in a per pixel lighting renderer
+ - Differences with old rendering methods and modern physically-based rendering
+ - How to decode a file format and Interpreting data
+ - Useful tools for decoding files
 
 The ultimate goal is to rebuild the game code from scratch, but the first step is extract all the assets out of the files.
 
