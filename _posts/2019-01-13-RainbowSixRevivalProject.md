@@ -127,4 +127,4 @@ From outside the aircraft you can see the Business Class cabin, and others
 From Inside the Business class cabin you can see it's quite large and furnished
 ![RM05](/assets/posts/2019-01-13-RainbowSixRevivalProject.md/RM05-BusinessClass.jpg)
 
-That’s all for now. Stay tuned for more progress updates soon!
+Stay tuned for more progress updates soon!
