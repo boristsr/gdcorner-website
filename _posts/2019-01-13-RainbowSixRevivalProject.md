@@ -45,7 +45,7 @@ There are a few factors that I still need to weigh up which will help decide on 
 
 - Adding a method to load original assets at runtime will mean there is no pre-processing step for users, but assets will appear as-is with little opportunity to improve.
 - Converting the assets into a native format for a new engine will enable using engine features like baked lighting which require static objects. Recreating them from scratch on each install will prove challenging, as will loading original assets at runtime.
-- I’d like to support optionally loading higher detail textures, materials and models, while I don’t have the skills or time for the content side, hopefully some modders will find it fun. These newer assets will need to be in a native format.
+- I’d like to support optionally loading higher detail textures, materials and models, while I don’t have the skills or time for the content side, hopefully some modders will find it fun. These newer assets will need to be in a native format of the final engine.
 - These games are based on portals, which is how segments of the map are determined to be visible or not. This also leads to geometry that is not physically possible, like 2 rooms at least partially sharing the same space. This will prove challenging for networking and physics since most engines now assume a physically correct world.
 
 ## Tech
