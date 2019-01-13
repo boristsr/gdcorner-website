@@ -54,7 +54,7 @@ The goal is to make a completely automated process which can read the original a
 
 ### Python 3.7
 
-All scripts are currently being written in python 3.7 since it’s really quick to iterate with and there is a lot of software that is already easy to interact with. This means with minimal or no changes the same scripts can be used in Blender, and potentially the final engine.
+All scripts are currently being written in [python 3.7](https://www.python.org/) since it’s really quick to iterate with and there is a lot of software that is already easy to interact with. This means with minimal or no changes the same scripts can be used in Blender, and potentially the final engine.
 
 ### Blender 2.8
 
