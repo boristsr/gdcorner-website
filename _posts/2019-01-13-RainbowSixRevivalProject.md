@@ -58,15 +58,15 @@ All scripts are currently being written in python 3.7 since it’s really quick 
 
 ### Blender 2.8
 
-I’ve chosen to rely heavily on Blender for this project since it has well tested 3D operations that I won’t need to rewrite, as well as excellent format support for converting to other engines. Since starting the project I have upgraded the scripts to the new beta Blender 2.8 since this isn’t a production project and the goal is future proofing
+I’ve chosen to rely heavily on [Blender](https://www.blender.org/) for this project since it has well tested 3D operations that I won’t need to rewrite, as well as excellent format support for converting to other engines. Since starting the project I have upgraded the scripts to the new beta Blender 2.8 since this isn’t a production project and the goal is future proofing.
 
-### 010 Editor - Hex Editor
+### 010 Editor
 
-This is a piece of software I only became familiar with based off Alex's work. It is incredibly useful for exploring data formats. If you ever have a need to extract data from an unknown format, or recover a corrupted file, or a hex editor in general, definitely look into this software. It’s amazing.
+[010 Editor](https://www.sweetscape.com/010editor/) is a hex editor on steroids. This is a piece of software I only became familiar with based off Alex's work. It is incredibly useful for exploring data formats. If you ever have a need to extract data from an unknown format, or recover a corrupted file, or a hex editor in general, definitely look into this software. It’s amazing.
 
-## Progress so far
+## Current Progress
 
-So far I’m able to completely read all textures, static meshes and have mostly decoded/imported map files. I’m tracking [progress of file formats here](https://github.com/boristsr/RainbowSixFileConverters/blob/master/FileFormats.md) There is a lot to go still, but I believe the majority of the work was in the level format which is mostly decoded now. Some challenges remain ahead though.
+So far I’m able to completely read all textures, static meshes and have mostly decoded/imported map files. I’m tracking [progress of file formats here](https://github.com/boristsr/RainbowSixFileConverters/blob/master/FileFormats.md). I believe the majority of the work was in the level format which is mostly decoded now, but there is still a lot to go. Some challenges still remain ahead.
 
 ### Materials
 
