@@ -89,7 +89,7 @@ Many modern renderers are moving towards a model known as [Physically Based Rend
 
 Lights also had 3 attenuation properties [constant, linear and quadratic](https://developer.valvesoftware.com/wiki/Constant-Linear-Quadratic_Falloff). These could all be changed to achieve different effects, however they have mostly been replaced with newer attenuation methods. There will need to be some fine tuning to map the old values to newer lighting models.
 
-## Screenshots
+## Finally, some screenshots of the progress
 
 ### Rainbow Six Mission 01
 
