@@ -66,7 +66,7 @@ I’ve chosen to rely heavily on [Blender](https://www.blender.org/) for this pr
 
 ## Current Progress
 
-So far I’m able to completely read all textures, static meshes and have mostly decoded/imported map files. I’m tracking [progress of file formats here](https://github.com/boristsr/RainbowSixFileConverters/blob/master/FileFormats.md). I believe the majority of the work was in the level format which is mostly decoded now, but there is still a lot to go. Some challenges still remain ahead.
+So far I’m able to completely read all textures, static meshes and have mostly decoded/imported map files. I’m tracking [progress of file formats here](https://github.com/boristsr/RainbowSixFileConverters/blob/master/FileFormats.md). I believe the majority of the work was in the level format which is mostly decoded now, but there is still a lot to go with some remaining challenges.
 
 ### Materials
 
