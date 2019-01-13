@@ -35,11 +35,11 @@ I’m using blender for a lot of the 3D and export operations since it’s open 
 
 After some research I stumbled upon a github repo by [Alex Kimov](https://github.com/AlexKimov/RSE-file-formats), which already had a great deal of formats partially documented. The layout of most file formats is mostly documented, with the actual contents of the data structures still being incomplete. This has been a great starting point. Once I began writing python scripts to parse the files I was able to start discovering what many of the undocumented parts meant.
 
-This has been an interesting problem. I’ve never really had to work backwards so much on a file or system. It's an interesting perspective. Remembering how the fixed function rendering pipeline works has been a walk down memory lane, since that’s what I first learned with OpenGL, but I haven’t used it in a long time. It’s so easy just to think in terms of shaders these days you forget how much could be done in the fixed function pipeline. This whole process has been as much about research as it has been about analysing files. Looking up old modding SDKs for the games, the DirectX 8 SDK and tutorials for hints about data structures and rendering functionality. These resources are much harder to find these days because either the sites are gone, or they’ve been de-ranked by search engines due to age and popularity.
+This has been an interesting problem, I’ve never really had to work backwards in this way on a file or system. It's an interesting perspective. Remembering how the fixed function rendering pipeline works has been a walk down memory lane, since that’s what I first learned with OpenGL, but I haven’t used it in a long time. It’s so easy just to think in terms of shaders these days you forget how much could be done in the fixed function pipeline. This whole process has been as much about research as it has been about analysing files. Looking up old modding SDKs for the games, the DirectX 8 SDK and tutorials for hints about data structures and rendering functionality. These resources are much harder to find these days because either the sites are gone, or they’ve been de-ranked by search engines due to age and popularity.
 
 ## Rebuilding the game
 
-This hasn’t started yet. I’d like to remake both single player and multiplayer. To ease the amount of work required for that I’ll probably elect for a more complete engine like Unity or Unreal, rather than go down a similar path to OpenSAGE (https://github.com/OpenSAGE/OpenSAGE) which is trying to redevelop the engine and open the original binary files at runtime. The idea of a WebGL implementation does have some appeal though, since it's quite an old game which won't require much processing power.
+This stage hasn’t started yet. I’d like to remake both single player and multiplayer. To ease the amount of work required for that I’ll probably elect for a more complete engine like Unity or Unreal, rather than go down a similar path to [OpenSAGE](https://github.com/OpenSAGE/OpenSAGE) which is trying to redevelop the engine and open the original binary files at runtime. The idea of a WebGL implementation does have some appeal though, since it's quite an old game which won't require much processing power.
 
 There are a few factors that I still need to weigh up which will help decide on a final engine:
 
@@ -84,7 +84,6 @@ Below are some examples of the strange placement of lights
 (Click to Enlarge)
 
 Here is a [let's play by sigonsteele that shows how it looks in the original game](https://youtu.be/FyoSz4xW_9k?list=PLAA66182E9682A667&t=364). Skip to 9:05.
-
 
 Many modern renderers are moving towards a model known as [Physically Based Rendering](https://en.wikipedia.org/wiki/Physically_based_rendering). This describes how lights behave and interact with the surfaces and materials in the scene. Rendering previously has relied on a much simpler model. The old model only defined an ambient, diffuse and specular property as [described here](https://www.cs.uic.edu/~jbell/CourseNotes/ComputerGraphics/LightingAndShading.html). The lights also shared these properties so lights could give a different specular highlight to the diffuse color the light was producing.
 
