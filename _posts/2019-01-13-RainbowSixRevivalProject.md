@@ -99,6 +99,7 @@ Office in Embassy
 ### Rainbow Six Mission 02 and it's re-release in Rogue Spear Urban Operations
 
 For reference, [here is a let's play by sigonsteele of the mission](https://www.youtube.com/watch?v=LqS8ZYwJGFY) in the original game.
+
 Basement
 
 Rainbow Six
