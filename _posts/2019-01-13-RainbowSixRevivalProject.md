@@ -5,7 +5,7 @@ date:   2019-01-13 20:17:13 +1100
 categories: rainbowsix gamedev superresolution rendering progress
 ---
 
-[Rainbow Six](https://en.wikipedia.org/wiki/Tom_Clancy%27s_Rainbow_Six_(video_game)) and it’s sequel called [Rogue Spear](https://en.wikipedia.org/wiki/Tom_Clancy%27s_Rainbow_Six:_Rogue_Spear) are early defining games in the tactical shooter genre and the legacy remains today in [Rainbow Six: Siege](https://en.wikipedia.org/wiki/Tom_Clancy%27s_Rainbow_Six_Siege).
+[Rainbow Six](https://en.wikipedia.org/wiki/Tom_Clancy%27s_Rainbow_Six_(video_game)) and it’s sequel [Rogue Spear](https://en.wikipedia.org/wiki/Tom_Clancy%27s_Rainbow_Six:_Rogue_Spear) are early defining games in the tactical shooter genre and the legacy remains today in [Rainbow Six: Siege](https://en.wikipedia.org/wiki/Tom_Clancy%27s_Rainbow_Six_Siege).
 
 I've been working on extracting data out of Rainbow Six with the goal of bringing it into a new engine and recreating the game.
 
