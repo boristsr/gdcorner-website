@@ -267,7 +267,7 @@
 
     function setup_image_links() {
         $("img").each(function () {
-            if (!$(this).hasClass('no-lightbox')) {
+            if (!$(this).hasClass('no-lightbox') && $(this).hasClass('enable-lightbox')) {
                 let src = $(this).attr('src');
                 wrapText = "<a href=\"" + src + "\"></a>"; 
                 $(this).wrap(wrapText);

@@ -10,9 +10,8 @@ categories: rainbowsix gamedev superresolution rendering progress
 I've been working on extracting data out of Rainbow Six with the goal of bringing it into a new engine and recreating the game.
 
 Preview of the first mission in Unreal Engine 4
-![First attempt in Unreal](/assets/posts/2019-01-13-RainbowSixRevivalProject.md/M01-R6-Unreal.jpg)
+![First attempt in Unreal](/assets/posts/2019-01-13-RainbowSixRevivalProject.md/M01-R6-Unreal.jpg){: .enable-lightbox}
 <!--more-->
-(Click to Enlarge)
 
 ## Background
 
@@ -79,9 +78,8 @@ Lighting is still being worked on. Ambient lighting isn’t currently configured
 The original games use [Vertex Lighting](https://en.wikipedia.org/wiki/Gouraud_shading) while modern rendering is based on [Per-Pixel Lighting](https://en.wikipedia.org/wiki/Per-pixel_lighting). Vertex lighting can still be setup, though I’d prefer to move towards per pixel lighting since it will simplify material setup and allow easier progress towards a HD pack. The main visible issue is currently it’s obvious that lights are placed away from what a player expects would be a light source like a lamp or street light. This was done to drive the vertex lighting in a very controlled way, however it becomes quite apparent with per pixel lighting.
 
 Below are some examples of the strange placement of lights
-![Example of lights clearly setup for Vertex Lighting](/assets/posts/2019-01-13-RainbowSixRevivalProject.md/M07-Inside-VertexLighting.jpg)
-![Example of lights clearly setup for Vertex Lighting](/assets/posts/2019-01-13-RainbowSixRevivalProject.md/M07-Outside.jpg)
-(Click to Enlarge)
+![Example of lights clearly setup for Vertex Lighting](/assets/posts/2019-01-13-RainbowSixRevivalProject.md/M07-Inside-VertexLighting.jpg){: .enable-lightbox}
+![Example of lights clearly setup for Vertex Lighting](/assets/posts/2019-01-13-RainbowSixRevivalProject.md/M07-Outside.jpg){: .enable-lightbox}
 
 Here is a [let's play by sigonsteele that shows how it looks in the original game](https://youtu.be/FyoSz4xW_9k?list=PLAA66182E9682A667&t=364). Skip to 9:05.
 
@@ -94,7 +92,7 @@ Lights also had 3 attenuation properties [constant, linear and quadratic](https:
 ### Rainbow Six Mission 01
 
 Office in Embassy
-![M01](/assets/posts/2019-01-13-RainbowSixRevivalProject.md/M01-R6-OfficeBlender.jpg)
+![M01](/assets/posts/2019-01-13-RainbowSixRevivalProject.md/M01-R6-OfficeBlender.jpg){: .enable-lightbox}
 
 ### Rainbow Six Mission 02 and it's re-release in Rogue Spear Urban Operations
 
@@ -103,29 +101,29 @@ For reference, [here is a let's play by sigonsteele of the mission](https://www.
 Basement
 
 Rainbow Six
-![M02](/assets/posts/2019-01-13-RainbowSixRevivalProject.md/M02-R6-Basement.jpg)
+![M02](/assets/posts/2019-01-13-RainbowSixRevivalProject.md/M02-R6-Basement.jpg){: .enable-lightbox}
 Rogue Spear
-![M02](/assets/posts/2019-01-13-RainbowSixRevivalProject.md/M02-RS-Basement.jpg)
+![M02](/assets/posts/2019-01-13-RainbowSixRevivalProject.md/M02-RS-Basement.jpg){: .enable-lightbox}
 
 Outside
 
 Rainbow Six
-![M02](/assets/posts/2019-01-13-RainbowSixRevivalProject.md/M02-R6-Outside.jpg)
+![M02](/assets/posts/2019-01-13-RainbowSixRevivalProject.md/M02-R6-Outside.jpg){: .enable-lightbox}
 Rogue Spear
-![M02](/assets/posts/2019-01-13-RainbowSixRevivalProject.md/M02-RS-Outside.jpg)
+![M02](/assets/posts/2019-01-13-RainbowSixRevivalProject.md/M02-RS-Outside.jpg){: .enable-lightbox}
 
 Sitting Room
 
 Rainbow Six
-![M02](/assets/posts/2019-01-13-RainbowSixRevivalProject.md/M02-R6-SittingRoom.jpg)
+![M02](/assets/posts/2019-01-13-RainbowSixRevivalProject.md/M02-R6-SittingRoom.jpg){: .enable-lightbox}
 Rogue Spear
-![M02](/assets/posts/2019-01-13-RainbowSixRevivalProject.md/M02-RS-SittingRoom.jpg)
+![M02](/assets/posts/2019-01-13-RainbowSixRevivalProject.md/M02-RS-SittingRoom.jpg){: .enable-lightbox}
 
 ### Rogue Spear Mission 5 - Example of impossible geometry
 
 From outside the aircraft you can see the Business Class cabin, and others
-![RM05](/assets/posts/2019-01-13-RainbowSixRevivalProject.md/RM05-PlaneExterior.jpg)
+![RM05](/assets/posts/2019-01-13-RainbowSixRevivalProject.md/RM05-PlaneExterior.jpg){: .enable-lightbox}
 From Inside the Business class cabin you can see it's quite large and furnished
-![RM05](/assets/posts/2019-01-13-RainbowSixRevivalProject.md/RM05-BusinessClass.jpg)
+![RM05](/assets/posts/2019-01-13-RainbowSixRevivalProject.md/RM05-BusinessClass.jpg){: .enable-lightbox}
 
 Stay tuned for more progress updates soon!
