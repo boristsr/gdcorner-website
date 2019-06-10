@@ -6,7 +6,7 @@ tags: [dependencies python rainbowredux development]
 comments: true
 ---
 
-With dependency management tools like NPM, PIP and other similar tools it’s easy to just add another library dependency to a project without much thought. However, dependencies do add weight and cost to a project. They have varying levels of cost. The costs could be time, money, potential sources of bugs. The libraries also have different levels of support. So how do you weigh up using a new library or extending an existing library? When is it appropriate to roll your own?
+With dependency management tools like NPM, PIP and other similar tools it’s easy to just add another library dependency to a project without much thought. However, dependencies do add weight and cost to a project. They have varying levels of cost. The costs could be time, money,  and potential sources of bugs. The libraries also have different levels of support. So how do you weigh up using a new library or extending an existing library? When is it appropriate to roll your own?
 
 <!--more-->
 
