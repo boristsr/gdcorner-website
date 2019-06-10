@@ -4,6 +4,7 @@ title:  "Rainbow Six Revival Project"
 date:   2019-01-13 20:17:13 +1100
 categories: rainbowsix gamedev superresolution rendering progress
 comments: true
+permalink: /rainbowsix/gamedev/superresolution/rendering/progress/2019/01/13/RainbowSixRevivalProject.html
 ---
 
 [Rainbow Six](https://en.wikipedia.org/wiki/Tom_Clancy%27s_Rainbow_Six_(video_game)) and it’s sequel [Rogue Spear](https://en.wikipedia.org/wiki/Tom_Clancy%27s_Rainbow_Six:_Rogue_Spear) are early defining games in the tactical shooter genre and the legacy remains today in [Rainbow Six: Siege](https://en.wikipedia.org/wiki/Tom_Clancy%27s_Rainbow_Six_Siege).
