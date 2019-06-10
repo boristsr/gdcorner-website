@@ -10,15 +10,15 @@ With dependency management tools like NPM, PIP and other similar tools it’s ea
 
 <!--more-->
 
+I’ve decided to share a few things I consider when adding a library dependency to a project. I’ll mainly focus on the decisions behind using an open source library, as the considerations are a little different for a commercial/closed source library.
+
+I won’t be moaning about the [left-pad debacle of 2016](https://arstechnica.com/information-technology/2016/03/rage-quit-coder-unpublished-17-lines-of-javascript-and-broke-the-internet/), or [over use of trivial packages](https://medium.com/commitlog/the-internet-is-at-the-mercy-of-a-handful-of-people-73fac4bc5068), or reminding you to be [more specific](https://60devs.com/npm-install-specific-version.html) with your [dependency versions](https://pip.readthedocs.io/en/1.1/requirements.html#freezing-requirements). Instead I’ll focus on some of the questions or evaluation points I go through when deciding whether to include a new dependency.
+
 I’ll start with a recent example from a project I’m working on. RainbowRedux is requiring more and more linear math functions like matrix and vector operations. So far I’ve scraped through with a design that has allowed me to leverage the math libraries of the supported engines, and keeping the core library independent of this code.
 
 Increasingly I require some linear algebra functions in the core library. Standard responses online point people to just use NumPy. NumPy is a great library that provides a huge amount of functionality. It is extremely fast, well tested, well supported, and provides the exact functionality I require.
 
 Unfortunately NumPy is also nearly 50mb (as of 1.16.4 on windows). This increases the project size by about 50%. In modern computing terms that’s not huge, but it’s a bit extreme for the few vector and matrix operations that I require. I also don’t require the speed boost that having a compiled library provides. So I began looking into alternatives.
-
-I’ve decided to share a few things I consider when adding a library dependency to a project. I’ll mainly focus on the decisions behind using an open source library, as the considerations are a little different for a commercial/closed source library.
-
-I won’t be moaning about the [left-pad debacle of 2016](https://arstechnica.com/information-technology/2016/03/rage-quit-coder-unpublished-17-lines-of-javascript-and-broke-the-internet/), or [over use of trivial packages](https://medium.com/commitlog/the-internet-is-at-the-mercy-of-a-handful-of-people-73fac4bc5068), or reminding you to be [more specific](https://60devs.com/npm-install-specific-version.html) with your [dependency versions](https://pip.readthedocs.io/en/1.1/requirements.html#freezing-requirements). Instead I’ll focus on some of the questions or evaluation points I go through when deciding whether to include a new dependency.
 
 ## What functionality do I require?
 
