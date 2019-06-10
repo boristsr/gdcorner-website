@@ -56,9 +56,9 @@ Make sure to evaluate this over time too. An example of mine: a few years ago I 
 
 ## So, what did I choose?
 
-Despite all my warnings above, I did decide to roll my own vector and matrix library. The library totals around 100 lines. I’ve written basic vector and matrix classes several times before so I had a decent understanding of the work involved. After a while the time for evaluating libraries vs just making my own was not a good trade off, so I just wrote my own.
+Despite all my warnings above, I did decide to roll my own vector and matrix library. The library totals around 100 lines. I’ve written basic vector and matrix classes several times before so I had a decent understanding of the work involved. After a while it was going to take longer to find the perfectly library than just writing my own.
 
-When I went through the same process for an Image IO library I chose Pillow as it was a significantly smaller library, it fit my needs, it is well supported,  it’s license is permissive and I didn’t need to learn the compression schemes behind JPEG or PNG.
+When I went through the same process for an Image IO library I chose [Pillow](https://pillow.readthedocs.io/en/stable/) as it was a significantly smaller library, it fit my needs, it is well supported, it’s license is permissive and I definitely didn't want to be spending significant amounts of time deciphering the JPEG or PNG formats.
 
 ## How do you evaluate your libraries?
 
