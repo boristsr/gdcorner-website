@@ -14,7 +14,7 @@ I’ve decided to share a few things I consider when adding a library dependency
 
 I won’t be moaning about the [left-pad debacle of 2016](https://arstechnica.com/information-technology/2016/03/rage-quit-coder-unpublished-17-lines-of-javascript-and-broke-the-internet/), or [over use of trivial packages](https://medium.com/commitlog/the-internet-is-at-the-mercy-of-a-handful-of-people-73fac4bc5068), or reminding you to be [more specific](https://60devs.com/npm-install-specific-version.html) with your [dependency versions](https://pip.readthedocs.io/en/1.1/requirements.html#freezing-requirements). Instead I’ll focus on some of the questions or evaluation points I go through when deciding whether to include a new dependency.
 
-I’ll start with a recent example from a project I’m working on. [RainbowRedux](/rainbowsix/gamedev/superresolution/rendering/progress/2019/01/13/RainbowSixRevivalProject.html) is requiring more and more linear math functions like matrix and vector operations. So far I’ve scraped through with a design that has allowed me to leverage the math libraries of the supported engines, and keeping the core library independent of this code.
+I’ll start with a recent example from a project I’m working on. [RainbowRedux](/rainbowsix/gamedev/superresolution/rendering/progress/2019/01/13/RainbowSixRevivalProject.html) is requiring more and more linear algebra functions like matrix and vector operations. So far I’ve scraped through with a design that has allowed me to leverage the math libraries of the supported engines, and keeping the core library independent of this code.
 
 Increasingly I require some linear algebra functions in the core library. Standard responses online point people to just use NumPy. NumPy is a great library that provides a huge amount of functionality. It is extremely fast, well tested, well supported, and provides the exact functionality I require.
 
@@ -56,9 +56,9 @@ Make sure to evaluate this over time too. An example of mine: a few years ago I 
 
 ## So, what did I choose?
 
-Despite all my warnings above, I did decide to roll my own vector and matrix library. The library totals around 100 lines. I’ve written basic vector and matrix classes several times before so I had a decent understanding of the work involved. After a while it was going to take longer to find the perfectly library than just writing my own.
+Despite all my warnings above, I did decide to roll my own vector and matrix library. The library totals around 100 lines. I’ve written basic vector and matrix classes several times before so I had a decent understanding of the work involved. After a while it was going to take longer to find the perfect library than just writing my own.
 
-When I went through the same process for an Image IO library I chose [Pillow](https://pillow.readthedocs.io/en/stable/) as it was a significantly smaller library, it fit my needs, it is well supported, it’s license is permissive and I definitely didn't want to be spending significant amounts of time deciphering the JPEG or PNG formats.
+When I went through the same process for an Image IO library I chose [Pillow](https://pillow.readthedocs.io/en/stable/) as it was a significantly smaller library than NumPy (~4mb), it fit my needs, it is well supported, it’s license is permissive and I definitely didn't want to be spending significant amounts of time deciphering the JPEG or PNG formats.
 
 ## How do you evaluate your libraries?
 
