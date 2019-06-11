@@ -38,7 +38,7 @@ None of the answers to these questions are necessarily deal breakers because wit
 
 ## What is the license for this library?
 
-This is probably one of my biggest concerns with unchecked dependency usage. Evaluating how a dependency is licensed is critical. Some licenses have big ramifications on how your can distribute your product or code. Sometimes changing the design of the system and reducing coupling with a dependency which can help mitigate some of these restrictions. A good place for getting an understanding of common open source licenses is to read the summary and the text at [https://choosealicense.com/](https://choosealicense.com/), however always read the license directly embedded with the library.
+This is probably one of my biggest concerns with unchecked dependency usage. Evaluating how a dependency is licensed is critical. Some licenses have big ramifications on how your can distribute your product or code. A good place for getting an understanding of common open source licenses is to read the summary and the text at [https://choosealicense.com/](https://choosealicense.com/), however always read the license directly embedded with the library. Sometimes changing the design of the system and reducing coupling with a dependency can help mitigate some of these restrictions.
 
 In commercial settings your company possibly already has identified acceptable licenses, or has a process for evaluating a new license. When in doubt definitely speak to someone with a good grasp on software licensing or raise the issue with your lead or manager.
 
