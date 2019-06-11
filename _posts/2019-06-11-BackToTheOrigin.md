@@ -5,7 +5,7 @@ date:   2019-06-11 14:16:13 +1100
 tags: [math floatingpoint rainbowredux development gamedev]
 comments: true
 ---
-While working on RainbowRedux I’ve discovered the content is authored in some interesting ways. Today I’m going to talk about large distances, floating point numbers and the errors they can cause. I’ll also explain how I’m trying to prevent this with examples, and show a performance boost this provided.
+While working on [RainbowRedux](/rainbowsix/gamedev/superresolution/rendering/progress/2019/01/13/RainbowSixRevivalProject.html) I’ve discovered the content is authored in some interesting ways. Today I’m going to talk about large distances, floating point numbers and the errors they can cause. I’ll also explain how I’m trying to prevent this with examples, and show a performance boost this provided.
 
 ![Level is far away from the origin](/assets/posts/2019-06-11-BackToTheOrigin.md/TopDownProblem.png){: .enable-lightbox}
 
