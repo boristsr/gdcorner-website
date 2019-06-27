@@ -44,7 +44,7 @@ In commercial settings your company possibly already has identified acceptable l
 
 ## Before rolling your own...
 
-It can be tempting to fall into the trap of reinventing the wheel, but it’s rarely a good choice. Sometimes this is referred to as [“Not Invented Here Syndrome”](http://www.informit.com/articles/article.aspx?p=1905548). Before going down this path make sure you do the following:
+It can be tempting to fall into the trap of reinventing the wheel, but it’s rarely a good choice for anything that's not trivial. Sometimes this is referred to as [“Not Invented Here Syndrome”](http://www.informit.com/articles/article.aspx?p=1905548). Before going down this path make sure you do the following:
 
 - Have a good look around at the alternatives and have a good reason why they don’t fit.
 - Evaluate how much time it will REALLY take, don’t be optimistic with your estimate.
@@ -56,7 +56,7 @@ Make sure to evaluate this over time too. An example of mine: a few years ago I 
 
 ## So, what did I choose?
 
-Despite all my warnings above, I did decide to roll my own vector and matrix library. The library totals around 100 lines. I’ve written basic vector and matrix classes several times before so I had a decent understanding of the work involved. After a while it was going to take longer to find the perfect library than just writing my own.
+Despite all my warnings above, I did decide to roll my own vector and matrix library, as my requirements are fairly trivial. The library totals around 100 lines. I’ve written basic vector and matrix classes several times before so I had a decent understanding of the work involved. After a while it was going to take longer to find the perfect library than just writing my own. If I start requiring a faster solution or more advanced functionality I will re-evaluate.
 
 When I went through the same process for an Image IO library I chose [Pillow](https://pillow.readthedocs.io/en/stable/) as it was a significantly smaller library than NumPy (~4mb), it fit my needs, it is well supported, it’s license is permissive and I definitely didn't want to be spending significant amounts of time deciphering the JPEG or PNG formats.
 
