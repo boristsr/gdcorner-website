@@ -21,7 +21,7 @@ The program that I tested on read all images from a game that were in an old gam
 The existing function used a really rough hashing method for the inputs as it was merely a quick prototype I tried before moving on.
 
 Existing Function:
-```
+```python
 previousMasks = {}
 def calc_bitmasks_ARGB_color(bdR, bdG, bdB, bdA):
     """Calculates the appropriate bitmasks for a color stored in ARGB format."""
@@ -37,7 +37,7 @@ def calc_bitmasks_ARGB_color(bdR, bdG, bdB, bdA):
 ```
 
 Modification to use lru_cache:
-```
+```python
 import functools
 
 @functools.lru_cache(maxsize=8)
@@ -63,7 +63,7 @@ This function took 2 bytes as an argument and converted them into a shortint, it
 
 Before:
 
-```
+```python
 def read_bitmask_ARGB_color(byteStream, bdR, bdG, bdB, bdA):	
     """Reads an ARGB color with custom bit depths for each channel, returns in RGBA format"""
     colorVal = bytes_to_shortint(byteStream)[0]	
@@ -73,7 +73,7 @@ def read_bitmask_ARGB_color(byteStream, bdR, bdG, bdB, bdA):
 ```
 
 After:
-```
+```python
 @functools.lru_cache(maxsize=None)
 def read_bitmask_ARGB_color(colorVal, bdR, bdG, bdB, bdA):
     """Reads an ARGB color with custom bit depths for each channel, returns in RGBA format"""
