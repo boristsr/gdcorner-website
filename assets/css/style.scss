@@ -3,23 +3,9 @@
 
 @import "{{ site.theme }}";
 
-.postdate {
-    font-size: 8pt;
-    color: #8f8a7f9c;
-}
-
-.postheader {
-    padding-bottom: 2%;
-}
-
 .img-zoomable {
 }
 
 .img-zoomed {
     transform: scale(2);
-}
-
-.site-heading {
-    color: white;
-    text-decoration: none;
 }
