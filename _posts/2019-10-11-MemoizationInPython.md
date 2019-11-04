@@ -26,7 +26,7 @@ ncalls      tottime  percall  cumtime  percall filename:lineno(function)
 43022383   19.481    0.000   21.861    0.000 BinaryConversionUtilities.py:25(read_bytes)
 ```
 
-Profiling previously revealed there were 2 functions that were run for every pixel. They didn't take particularly long each iteration, but cumulatively they were where the majority of program run time was spent so any improvement would be beneficial. The first function used a really rough hashing method for the inputs as it was merely a quick prototype I tried before moving on.
+Profiling previously revealed there were 2 functions that were run for every pixel. The above profiling results were taken before any caching or memoization had taken place. They didn't take particularly long each iteration, but cumulatively they were where the majority of program run time was spent so any improvement would be beneficial. The first function used a really rough hashing method for the inputs as it was merely a quick prototype I tried before moving on.
 
 Existing Function:
 ```python
