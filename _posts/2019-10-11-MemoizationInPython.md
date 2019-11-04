@@ -18,7 +18,15 @@ comments: true
 
 The program that I tested on read all images from a game that were in an old game specific format and converted to full color PNG files. The complexity is that the colors are all packed into 16 bits so there is a lot of bit shifting, masking and so on that is required to convert back to full 32 bit color images.
 
-The existing function used a really rough hashing method for the inputs as it was merely a quick prototype I tried before moving on.
+```
+ncalls      tottime  percall  cumtime  percall filename:lineno(function)
+37876344    7.270    0.000   14.887    0.000 BinaryConversionUtilities.py:207(bytes_to_shortint)
+37876344   86.094    0.000   86.094    0.000 BinaryConversionUtilities.py:218(calc_bitmasks_ARGB_color)
+37876344  108.527    0.000  214.896    0.000 BinaryConversionUtilities.py:247(read_bitmask_ARGB_color)
+43022383   19.481    0.000   21.861    0.000 BinaryConversionUtilities.py:25(read_bytes)
+```
+
+Profiling previously revealed there were 2 functions that were run for every pixel. They didn't take particularly long each iteration, but cumulatively they were where the majority of program run time was spent so any improvement would be beneficial. The first function used a really rough hashing method for the inputs as it was merely a quick prototype I tried before moving on.
 
 Existing Function:
 ```python
@@ -57,7 +65,7 @@ Results:
 
 As you can see the benefit was noticable, and it simplified my code [which is always positive](https://blog.codinghorror.com/the-best-code-is-no-code-at-all/). I'm sure atleast part of the speedup came from a better hashing function which avoided converting all inputs into strings.
 
-The really impressive part though was how easy it was to implement. There was a neighboring function that I thought might benefit but didn't spend the time exploring before. This made it too easy to not test. However, some changes were required. This works best with primitive types ([technically it only requires all arguments to be hashable](https://docs.python.org/3/library/functools.html#functools.lru_cache)), so arguments that are objects or arrays make this ineffective.
+The really impressive part though was how easy it was to implement. This made it too easy to not test the second function. However, some changes were required. This works best with primitive types ([technically it only requires all arguments to be hashable](https://docs.python.org/3/library/functools.html#functools.lru_cache)), so arguments that are objects or arrays make this ineffective.
 
 This function took 2 bytes as an argument and converted them into a shortint, it was easy enough to make the changes so that the conversion was made before calling this function. In fact this change made for a better and more usable function anyway.
 
@@ -101,7 +109,7 @@ Results:
 
 ## When to use
 
-This is a an example of a [time-memory tradeoff](https://en.wikipedia.org/wiki/Space%E2%80%93time_tradeoff), less time is required at the expense of more memory being consumed. With that in mind this is most effective when the same set of inputs will be regularly used. Having an understanding of your data and program will help you get an idea of what functions will benefit, and how big the cache size should be.
+This is a an example of a [time-memory tradeoff](https://en.wikipedia.org/wiki/Space%E2%80%93time_tradeoff), less time is required at the expense of more memory being consumed. With that in mind this is most effective when the same set of inputs will be regularly used. Profiling as well as having an understanding of your data and program will help you get an idea of what functions will benefit, and how big the cache size should be.
 
 When choosing a cache size understanding the data will help but try a few values to see what works best. Too large your program may end up using too much memory. Too small and there won't be an effective speedup. In memory limited environments or on large datasets batching or grouping similar requests may help to avoid churning the cached results and reduce memory usage.
 
