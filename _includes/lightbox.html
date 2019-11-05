@@ -507,7 +507,9 @@
         n[e] = i
     }(window, document, "SwipeIt");
 
-    var mySwipeIt = new SwipeIt('body');
+    var mySwipeIt = new SwipeIt('body', {
+        mouseEvent: false
+    });
     mySwipeIt.on('swipeLeft', function (e) {
         //check if lightbox is present
         if ($('.lightbox').length > 0) {
