@@ -32,6 +32,10 @@
         .lightbox .img {
             max-width: 2000px;
         }
+
+        .lightbox-img {
+            max-width: 2000px;
+        }
     }
 
     @media screen and (min-height: 2000px) {
@@ -316,7 +320,7 @@
             $(
                 '<div class="lightbox"><a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="img" style="background: url(' +
                 $(this).attr('href') + ') center center / contain no-repeat;" title="' + $(this).attr(
-                    'title') + '" ><img src="' + $(this).attr('href') + '" alt="' + $(this).attr(
+                    'title') + '" ><img class="lightbox-img" src="' + $(this).attr('href') + '" alt="' + $(this).attr(
                     'title') + '" /></div><span>' + $(this).attr('title') + '</span></div>').appendTo(
                 'body');
         });
