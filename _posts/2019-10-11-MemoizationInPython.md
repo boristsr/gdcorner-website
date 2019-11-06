@@ -73,7 +73,10 @@ Before:
 
 ```python
 def read_bitmask_ARGB_color(byteStream, bdR, bdG, bdB, bdA):	
-    """Reads an ARGB color with custom bit depths for each channel, returns in RGBA format"""
+    """
+    Reads an ARGB color with custom bit depths for each channel,
+    returns in RGBA format
+    """
     colorVal = bytes_to_shortint(byteStream)[0]	
     masks = calc_bitmasks_ARGB_color(bdR, bdG, bdB, bdA)
     
@@ -84,7 +87,10 @@ After:
 ```python
 @functools.lru_cache(maxsize=None)
 def read_bitmask_ARGB_color(colorVal, bdR, bdG, bdB, bdA):
-    """Reads an ARGB color with custom bit depths for each channel, returns in RGBA format"""
+    """
+    Reads an ARGB color with custom bit depths for each channel,
+    returns in RGBA format
+    """
     masks = calc_bitmasks_ARGB_color(bdR, bdG, bdB, bdA)
 
     ...
