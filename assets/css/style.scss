@@ -3,18 +3,13 @@
 
 @import "{{ site.theme }}";
 
-.img-zoomable {
-}
-
-.img-zoomed {
-    transform: scale(2);
-}
-
+//Fix slate themes code boxes having an ugly white inset box which doesn't cover all code
 code {
     background-color: #00000000;
     font-size: 12px;
 }
 
+//Fix slate theme width to be a bit wider
 .inner {
     max-width: 740px;
 }
