@@ -87,7 +87,7 @@ Don’t isolate yourself and then deliver a document from on high. While the opi
 
 Grow it overtime. Rules should be added when problems are repeatedly observed that may be improved with a new guideline.
 
-### Handling multiple languages in style guides
+## Handling multiple languages in style guides
 
 It’s common to see a project that mixes at least 2 languages these days. There are a few ways to handle this. A good thought to keep in mind is the [advice in PEP8](https://www.python.org/dev/peps/pep-0008/#a-foolish-consistency-is-the-hobgoblin-of-little-minds):
 > A style guide is about consistency. Consistency with this style guide is important. Consistency within a project is more important. Consistency within one module or function is the most important.
