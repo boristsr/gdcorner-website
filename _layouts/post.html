@@ -18,6 +18,8 @@ Published {{page.date| date: date_format }}
     $(document).ready(function () {
         //Add anchors to all H2 elements
         anchors.add('h2');
+        //Add anchors to all H3 elements
+        anchors.add('h3');
         //Special case: remove it from site subtitle in header
         anchors.remove('#project_tagline');
     });
