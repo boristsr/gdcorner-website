@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Improving Coding Standards"
+title:  "Improving Coding Standards and Quality"
 date:   2019-11-18 11:17:13 +1100
 tags: [development standards testing staticanalysis linting team]
 comments: true
