@@ -109,7 +109,9 @@ John Carmack wrote of [his experience reviewing new analysis tools for his proje
 
 The PVS-Studio blog and John Carmack's article on his experience with static analysis are excellent with great insights. I highly recommend having a read through some of them.
 
-Ideally you have a process which performs both linting and analysis to report any potential errors that slip through to your main branches. While these tests should be automated for every check in, the team should also be able to run these tools on demand. Make sure your standard development environment includes a linter, an analysis tool and/or an auto-formatter. Don’t forget a tuned configuration to go with them!
+Ideally you have an automatic process which performs both linting and analysis to report any potential errors that slip through to your main branches at check-in or regular intervals. Whether you have this process automated yet or not, the team should also be able to run these tools on demand or locally so they can check their code as they desire, especially before submission or merging.
+
+Make sure your standard development environment includes a linter, an analysis tool and/or an auto-formatter. Don’t forget a tuned configuration to go with them!
 
 ## Enforcing the standards
 
