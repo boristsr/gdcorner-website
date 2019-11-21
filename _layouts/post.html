@@ -1,32 +1,10 @@
 ---
-layout: custom-default
+layout: page
 ---
 
-<div class="postheader">
-<h1>{{ page.title }}</h1>
 {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
 <div class="postdate">
 Published {{page.date| date: date_format }}
 </div>
-</div>
 
 {{ content }}
-
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="/assets/js/anchorjs-4.2.1/anchor.min.js" ></script>
-<script>
-    $(document).ready(function () {
-        //Add anchors to all H2 elements
-        anchors.add('h2');
-        //Add anchors to all H3 elements
-        anchors.add('h3');
-        //Special case: remove it from site subtitle in header
-        anchors.remove('#project_tagline');
-    });
-</script>
-
-{% include lightbox.html %}
-
-{% if site.disqus.shortname %}
-    {% include disquscomments.html %}
-{% endif %}
