@@ -8,3 +8,7 @@ Published {{page.date| date: date_format }}
 </div>
 
 {{ content }}
+
+{% if site.disqus.shortname %}
+    {% include disquscomments.html %}
+{% endif %}
