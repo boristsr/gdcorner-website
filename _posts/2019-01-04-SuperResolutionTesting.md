@@ -2,7 +2,7 @@
 layout: post
 title:  "Testing Texture \"Super Resolution\" Techniques"
 date:   2019-01-04 13:29:13 +1100
-tags: rainbowsix gamedev superresolution rendering
+tags: [rainbowsix, gamedev, superresolution, rendering, RainbowRedux]
 comments: true
 permalink: /rainbowsix/gamedev/superresolution/rendering/2019/01/04/SuperResolutionTesting.html
 ---

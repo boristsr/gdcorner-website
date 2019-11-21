@@ -2,7 +2,7 @@
 layout: post
 title:  "Cheap Optimization with Memoization in Python"
 date:   2019-10-11 11:17:13 +1100
-tags: [python development optimization]
+tags: [python, development, optimization]
 comments: true
 ---
 

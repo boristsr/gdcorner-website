@@ -2,7 +2,7 @@
 layout: post
 title:  "Rainbow Six Revival Project"
 date:   2019-01-13 20:17:13 +1100
-categories: rainbowsix gamedev superresolution rendering progress
+tags: [rainbowsix, gamedev, superresolution, rendering, progress, RainbowRedux]
 comments: true
 permalink: /rainbowsix/gamedev/superresolution/rendering/progress/2019/01/13/RainbowSixRevivalProject.html
 ---

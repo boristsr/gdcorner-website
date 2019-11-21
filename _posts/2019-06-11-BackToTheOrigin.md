@@ -2,7 +2,7 @@
 layout: post
 title:  "Back to the Origin - A look at object bounds and floating point precision"
 date:   2019-06-11 14:16:13 +1100
-tags: [math floatingpoint rainbowredux development gamedev]
+tags: [math, floatingpoint, RainbowRedux, development, gamedev]
 comments: true
 ---
 While working on [RainbowRedux](/rainbowsix/gamedev/superresolution/rendering/progress/2019/01/13/RainbowSixRevivalProject.html) I’ve discovered the content is authored in some interesting ways. Today I’m going to talk about large distances, floating point numbers and the errors they can cause. I'll show how I'm trying to reduce these distances and make the geometry more manageable.

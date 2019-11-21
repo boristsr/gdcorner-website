@@ -2,7 +2,7 @@
 layout: post
 title:  "Evaluating Project Dependencies"
 date:   2019-06-10 15:17:13 +1100
-tags: [dependencies python rainbowredux development]
+tags: [dependencies, python, RainbowRedux, development]
 comments: true
 ---
 
