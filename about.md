@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Hi, I'm Philip Edwards. I'm a software developer and software development manager. Previously I've worked in game development, system admin and web development roles. My interests are pretty wide including games, 3D rendering, VR, build systems (including CI/CD), networking, system admin & system automation.
+Hi, I'm Philip Edwards. I'm a software developer and software development manager. Previously I've worked in game development, system admin and web development roles. My interests are pretty wide including games, 3D rendering, AR, VR, build systems (including CI/CD), networking, system admin & system automation.
 
 I created this blog to spread ideas and share progress on some of my side projects, although improving my writing is proving to be a nice side effect.
 
