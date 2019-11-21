@@ -4,7 +4,9 @@ title: About
 permalink: /about/
 ---
 
-Hi, I'm Philip Edwards. I'm a software developer and software development manager. Previously I've worked in system admin, web development and game development roles. I created this blog to share some ideas and update progress on some of my side projects.
+Hi, I'm Philip Edwards. I'm a software developer and software development manager. Previously I've worked in game development, system admin and web development roles. My interests are pretty wide including games, 3D rendering, VR, build systems (including CI/CD), networking, system admin & system automation.
+
+I created this blog to spread ideas and share progress on some of my side projects, although improving my writing is proving to be a nice side effect.
 
 Contact: [philip@gdcorner.com](mailto:philip@gdcorner.com)
 
@@ -19,6 +21,9 @@ Github: [boristsr](https://github.com/boristsr/)
 I'm working on decoding the original Rainbow Six file formats to make the files usable in anything that can embed python. Currently working on Blender 2.8 and Unreal Engine 4 integration.
 
 [Rainbow Redux](/rainbowsix/gamedev/superresolution/rendering/progress/2019/01/13/RainbowSixRevivalProject.html)
+
+![M01](/assets/posts/2019-01-13-RainbowSixRevivalProject.md/M01-R6-OfficeBlender.jpg){: .enable-lightbox}
+![M01](/assets/posts/2019-06-11-BackToTheOrigin.md/Scene1.png){: .enable-lightbox}
 
 ## Past Projects
 
