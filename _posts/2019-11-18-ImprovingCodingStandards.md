@@ -38,7 +38,7 @@ The document should be clear to read as a whole yet quick to glance at and searc
 
 ### Tabs vs Spaces, Brace placement, etc
 
-Who cares? We aren’t living in the 80’s. Most IDEs automatically detect and match indenting, it’s not like you need to press space X times anymore. Tools can catch and fix mismatches. Flip a coin, pick one, configure your tools, and be consistent.
+Who cares? We aren’t living in the 80’s. Most IDEs automatically detect and match indenting, [it’s not like you need to press space X times anymore](https://www.youtube.com/watch?v=SsoOG6ZeyUI). Tools can catch and fix mismatches. Flip a coin, pick one, configure your tools, and be consistent.
 
 [As Bill Sourour says](https://www.freecodecamp.org/news/the-100-correct-coding-style-guide-5b594a1655f0/):
 >Over the past 20+ years, I’ve followed every imaginable trend. I’ve followed the different conventions of different languages. None of it has impacted my bug count or made my code any more efficient.
