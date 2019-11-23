@@ -4,9 +4,11 @@ title: About
 permalink: /about/
 ---
 
-Hi, I'm Philip Edwards. I'm a software developer and software development manager. Previously I've worked in game development, system admin and web development roles. My interests are pretty wide including games, 3D rendering, AR, VR, build systems (including CI/CD), networking, system admin & system automation.
+Hi, I'm Philip Edwards. I live in Sydney, Australia. I started programming when I was 12 when my brother introduced me to Visual Basic 6, although I soon learned the error of my ways. Joking, although there is a lot of hate for VB6 I learned a lot. A keen interest in game development soon lead me to begin learning C++ when I was around 14. Over the years I have always worked on side projects for fun or learning. I hope to share some of these projects on here.
 
-I created this blog to spread ideas and share progress on some of my side projects, although improving my writing is proving to be a nice side effect.
+In my professional life I'm a software developer and software development manager. Previously I've worked in game development, development for the marketing sector (AR, VR, interactive displays and websites), system administration and web development roles. My interests are pretty wide including games, 3D rendering, AR, VR, build systems (including CI/CD), system automation, networking and system admin.
+
+I created this blog to spread ideas and share progress on some of my side projects, although improving my writing is proving to be a nice side effect. Expect some discussion on improving development workflows, team dynamics, and fun stuff around game dev, and occasionally projects with a Raspberry Pi.
 
 Contact: [philip@gdcorner.com](mailto:philip@gdcorner.com)
 
