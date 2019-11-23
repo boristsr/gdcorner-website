@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Hi, I'm Philip Edwards. I live in Sydney, Australia. I started programming when I was 12 when my brother introduced me to Visual Basic 6, although I soon learned the error of my ways. Joking, although there is a lot of hate for VB6 I learned a lot. A keen interest in game development soon lead me to begin learning C++ when I was around 14. Over the years I have always worked on side projects for fun or learning. I hope to share some of these projects on here.
+Hi, I'm Philip Edwards. I live in Sydney, Australia. I started programming when I was 12 when my brother introduced me to Visual Basic 6, although I soon learned the error of my ways. Joking, although there is a lot of hate for VB6 I learned a lot. A keen interest in game development soon lead me to begin learning C++ when I was around 14. Over the years I have have always worked on side projects for fun or learning. I hope to share some of these projects on here.
 
 In my professional life I'm a software developer and software development manager. Previously I've worked in game development, development for the marketing sector (AR, VR, interactive displays and websites), system administration and web development roles. My interests are pretty wide including games, 3D rendering, AR, VR, build systems (including CI/CD), system automation, networking and system admin.
 
