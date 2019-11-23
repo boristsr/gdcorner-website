@@ -8,7 +8,7 @@ comments: true
 
 Coding Standards are often thought of as style guides, however coding standards should be more than merely a style guide. Beyond just style, I believe standards should encompass everything that is used to improve code quality and reliability. This includes how code is reviewed and what automated checks should be in place (before even discussing your testing strategy).
 
-What goes into building a more complete set of coding standards? How can teams build a useful style guide? How can a good guide be used to improve team dynamics, rather than a tool to drown code reviews? How can tools be used to automate style checks? How can tools be used for more than just finding stylistic infractions?
+What goes into building a more complete set of coding standards? How can teams build a useful style guide? How can a good guide be used to improve team dynamics, rather than a tool to drown code reviews? How can tools automatically analyse code to help find bugs rather than just checking style infractions?
 
 <!--more-->
 
