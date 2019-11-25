@@ -8,9 +8,9 @@ comments: true
 
 At the beginning of the year I wrote about my [initial experiments with image super resolution](/rainbowsix/gamedev/superresolution/rendering/2019/01/04/SuperResolutionTesting.html). This week I focused on some of the improvements I discussed and implemented a pipeline.
 
-![Denoised before ESRGAN and then downsampled](/assets/posts/2019-11-25-TextureUpscalingPipeline.md/Desk-Downsampled-Denoised.jpg){: .enable-lightbox}
-
 I’ve written an image processing framework which I'm [releasing](https://github.com/boristsr/TextureUpscalingPipeline) under the [MIT license](https://github.com/boristsr/TextureUpscalingPipeline/blob/master/LICENSE). The goal is to allow rapid iteration of image processing until good results are achieved in the majority of cases reducing or eliminating the need for any manual editing of images.
+
+![Denoised before ESRGAN and then downsampled](/assets/posts/2019-11-25-TextureUpscalingPipeline.md/Desk-Downsampled-Denoised.jpg){: .enable-lightbox}
 
 <!--more-->
 
