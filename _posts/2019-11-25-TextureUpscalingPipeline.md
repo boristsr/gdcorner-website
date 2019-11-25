@@ -33,7 +33,7 @@ The pipeline itself currently has the following features
 
 ## Future Work
 
-Now that this pipeline is in place I want to iterate much more quickly over this process. Some of the improvements I’m planning are:
+Now that this pipeline is in place I plan to iterate much more quickly over this process. Some of the improvements I’m planning are:
 
 * Additional super-resolution implementations
     * NVIDIA (If I can get access)
@@ -73,4 +73,5 @@ Denoised before ESRGAN and then downsampled
 ![Denoised before ESRGAN and then downsampled](/assets/posts/2019-11-25-TextureUpscalingPipeline.md/Tunnel-Downsampled-Denoised.jpg){: .enable-lightbox}
 
 ### Where to download
+
 This is all available on my github here: [Texture Upscaling Pipeline](https://github.com/boristsr/TextureUpscalingPipeline)
