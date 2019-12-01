@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: custom-default
 title:  Privacy Policy
 date:   2019-01-04 13:29:13 +1100
 permalink: /privacy/
