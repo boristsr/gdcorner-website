@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Install some prereqs
-sudo apt-get install -y zlib1g zlib1g-dev
+apt-get install -y zlib1g zlib1g-dev
 
 # Install ruby & bundler
-sudo apt-get install -y ruby ruby-dev
-sudo gem install bundler
+apt-get install -y ruby ruby-dev
+gem install bundler
 
 # Install modules for site
 bundle install
