@@ -5,6 +5,7 @@ date:   2019-12-16 13:29:13 +1100
 tags: [jenkins, ci, homelab, sysadmin, docker, raspberrypi, linux]
 comments: true
 ogimage: "/assets/posts/jenkins-home-lab/2019-12-17-JenkinsHomeLab-P1-MasterSetup/jenkins-p1-ogimage.png"
+description: "A guide for building a Jenkins home lab. In this first part you'll learn how to configure a Jenkins master server."
 ---
 
 Over the next week or so I’m going to output a series of tutorials aimed at setting up a comprehensive home lab environment for Jenkins. With this home lab you can turn any old or cheap computers into an environment to automate tasks for your side projects, sharpen your CI/CD skills, and prototype new project pipelines.
