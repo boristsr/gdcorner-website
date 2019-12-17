@@ -19,7 +19,7 @@ author: "Philip Edwards"
 description: >- # this means to ignore newlines until "baseurl:"
   A blog on various development topics
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.gdcorner.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.gdcorner.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: boristsr
 github_username:  boristsr
 
