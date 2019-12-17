@@ -14,7 +14,7 @@ Over the next week or so I’m going to output a series of tutorials aimed at se
 
 I embarked on creating my own home lab to automate tasks on a few side projects as well as a way of filling in some knowledge gaps of mine, specifically aiming to learn windows containers and docker on arm architecture, like raspberry pis. As a result this guide is going to cover many different options. I’ve aimed to keep it modular so you can pick how you want to run your master jenkins server, and choose any or all of the different agents for your environment.
 
-> Security Note: This guide is focused on a home lab environment so certain security principles will not be rigidly conformed to. I’ll make a note anytime a security assumption or choice is made that should be more carefully considered in a production environment.
+> <span class="badge badge-danger">Security Note</span> This guide is focused on a home lab environment so certain security principles will not be rigidly conformed to. I’ll make a note anytime a security assumption or choice is made that should be more carefully considered in a production environment.
 
 ## Why Jenkins?
 
@@ -150,7 +150,7 @@ At home I run a Synology DS918+, so being able to host the docker container on t
 
 Configuration is mostly straight forward with the exception of a small permission change required on the jenkins_home directory. Unfortunately the synology docker UI doesn’t support docker volumes, and instead uses bind-mounts. This is not ideal, as it usually has some complications around permissions as seen here, but it’s safe and workable.
 
-> Security Note: Ideally you’d create a jenkins user and group with matching UIDs for a more permanent solution. It’s clearer to manage than raw UIDs.
+> <span class="badge badge-danger">Security Note</span> Ideally you’d create a jenkins user and group with matching UIDs for a more permanent solution. It’s clearer to manage than raw UIDs.
 
 Create a directory somewhere on your NAS, for me it’s in a Shared Folder dedicated to Docker.
 
@@ -241,7 +241,7 @@ INSERTIMAGE
 
 INSERTIMAGE
 
-> Security note: In a home lab generally you’ll only configure 1 or 2 users, however you should always follow the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege), especially since jobs will likely have access to credentials for other systems and services, and an error in code could have unintended effects. Appropriately planning access will allow you to create users that can run jobs but not access or modify credentials and jobs. Plan your access appropriately. [Read the Jenkins handbook section on Securing Jenkins here](https://jenkins.io/doc/book/system-administration/security/).
+> <span class="badge badge-danger">Security Note</span> In a home lab generally you’ll only configure 1 or 2 users, however you should always follow the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege), especially since jobs will likely have access to credentials for other systems and services, and an error in code could have unintended effects. Appropriately planning access will allow you to create users that can run jobs but not access or modify credentials and jobs. Plan your access appropriately. [Read the Jenkins handbook section on Securing Jenkins here](https://jenkins.io/doc/book/system-administration/security/).
 
 ### Instance Configuration
 
