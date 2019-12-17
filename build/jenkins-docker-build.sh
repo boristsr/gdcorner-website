@@ -5,11 +5,13 @@ bundle install
 
 BUILD_ENVIRONMENT="${BUILD_ENVIRONMENT:-development}"
 
-if [[ -z "${OVERRIDE_URL}" ]]; then
-  sed -i _config.yml \
-        -e 's/url:.*/url: $OVERRIDE_URL/'
+if [[ -n "${OVERRIDE_URL}" ]]; then
+  echo "Ovverride url provided, modifying _config.yml"
+  sed -i \
+        -e 's!^url:.*!url: \"'"${OVERRIDE_URL}"'\"!' \
+        _config.yml
 
-  cat _config.yml
+  rm _config.yml-e
 fi
 
 echo Building in mode: $BUILD_ENVIRONMENT
