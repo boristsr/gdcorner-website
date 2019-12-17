@@ -49,21 +49,24 @@ sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sou
 ```
 
 Update the repository
+
 ```bash
 sudo apt update
 ```
 
 Install the default java runtime and jenkins
+
 ```bash
 sudo apt install default-jre jenkins -y
 ```
 
 Now we need to get the initial password for jenkins, save the output of this for later.
+
 ```bash
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 
-You can now logout from the terminal on the raspberry pi and we can proceed to configuring Jenkins.
+You can now logout from the terminal on the raspberry pi and move on to [configuring Jenkins](#configuring-the-jenkins-master).
 
 ## Installing with Docker
 
@@ -138,6 +141,8 @@ To start a docker container after the host has rebooted or after it’s stopped 
 ```bash
 docker container start jenkins-master
 ```
+
+Now we have a working container, [you can move onto initial configuration.](#configuring-the-jenkins-master)
 
 ### Running the Jenkins Docker image from a Synology NAS
 
@@ -217,9 +222,9 @@ Run the exit command to close this terminal
 exit
 ```
 
-You can now close the container window and proceed to configuring jenkins
+You can now close the container window and [proceed to configuring jenkins.](#configuring-the-jenkins-master)
 
-## Configuring Jenkins Master
+## Configuring the Jenkins Master
 
 You can now access jenkins at http://HOSTNAME-OR-IP:8080 in your browser.
 
@@ -257,6 +262,7 @@ In here change “# of executors” to 0 and click Save.
 Once this is applied the Build Executor Status box on the left will now be empty.
 
 ## What’s Next?
+
 Now we have a configured Jenkins Master node we are ready to add some agents to perform some actual work for us which I’ll cover tomorrow. In the meantime, you may want to consider setting up email notifications.
 
 Email notifications aren’t essential for a home lab, however I recommend spending some time setting them up as it’s nice to know when jobs fail. All the relevant settings settings are also under Manage Jenkins->Configure System. [Here are some instructions](https://www.360logica.com/blog/email-notification-in-jenkins/).
