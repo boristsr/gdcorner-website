@@ -4,6 +4,7 @@ title:  "Jenkins Home Lab: Part 1 - Master Setup"
 date:   2019-12-16 13:29:13 +1100
 tags: [jenkins, ci, homelab, sysadmin, docker, raspberrypi, linux]
 comments: true
+ogimage: "/assets/posts/jenkins-home-lab/2019-12-17-JenkinsHomeLab-P1-MasterSetup/jenkins-p1-ogimage.png"
 ---
 
 Over the next week or so I’m going to output a series of tutorials aimed at setting up a comprehensive home lab environment for Jenkins. With this home lab you can turn any old or cheap computers into an environment to automate tasks for your side projects, sharpen your CI/CD skills, and prototype new project pipelines.
@@ -30,15 +31,15 @@ We’ll be configuring the jenkins master purely as a tool for coordinating agen
 
 Click an option below to jump straight to the relevant instructions.
 
-- Raspberry Pi
-- Ubuntu
-- Docker
-- Synology NAS
+- [Raspberry Pi](#installing-jenkins-on-ubuntu--raspbian)
+- [Ubuntu](#installing-jenkins-on-ubuntu--raspbian)
+- [Docker](#installing-with-docker)
+- [Synology NAS](#running-the-jenkins-docker-image-from-a-synology-nas)
 
 ## Installing Jenkins on Ubuntu & Raspbian
 
-Installing Jenkins is the same process on Ubuntu and Raspbian, and likely all debian based distributions.
-https://raspberrytips.com/install-jenkins-raspberry-pi/
+Installing Jenkins is the same process on Ubuntu and [Raspbian](https://raspberrytips.com/install-jenkins-raspberry-pi/), and likely all debian based distributions.
+
 First we add the jenkins repository to apt, including the associated key.
 
 ```bash
@@ -69,14 +70,11 @@ Docker is probably the simplest and lightest way to host a jenkins master instan
 
 ### Installing Docker - Quickstart
 
-I won’t cover this extensively, but these are the commands you need to get started quickly. For further configuration information see here for install instructions and here for post-install configuration.
-https://docs.docker.com/install/
-https://docs.docker.com/install/linux/linux-postinstall/
+I won’t cover this extensively, but these are the commands you need to get started quickly. For further configuration information see [here for install instructions](https://docs.docker.com/install/) and [here for post-install configuration](https://docs.docker.com/install/linux/linux-postinstall/).
 
 #### Installing Docker on Ubuntu
 
-Running the below 3 commands will install docker and set it to automatically start on system boot. Further details on this are available here.
-https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04
+Running the below 3 commands will install docker and set it to automatically start on system boot. Further details on this are [available here](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04).
 
 ```bash
 sudo apt install docker.io
@@ -85,24 +83,21 @@ sudo systemctl enable docker
 ```
 
 ### Running Jenkins Docker Image from Command Line
-Running jenkins in docker is really simple and can be accomplished in 2 commands.
-https://batmat.net/2018/09/07/how-to-run-and-upgrade-jenkins-using-the-official-docker-image/
 
-The image we want to use is jenkins/jenkins:lts. Targetting the Long Term Support release means this release likely to be more stable, and be patched for a longer period.
-https://jenkins.io/download/lts/
-https://jenkins.io/blog/2018/12/10/the-official-Docker-image/
+Running jenkins in docker is [really simple and can be accomplished in 2 commands](https://batmat.net/2018/09/07/how-to-run-and-upgrade-jenkins-using-the-official-docker-image/).
 
-Next up, we can create a place to store persistent data. This makes backup and upgrades easier.  The persistent volume is all you need to backup, and upgrading is as simple as recreating the container with a newer image, pointing it to the same persistent volume for jenkins_home. For specific upgrade notes you can always check here.
-https://batmat.net/2018/09/07/how-to-run-and-upgrade-jenkins-using-the-official-docker-image/
-https://jenkins.io/doc/upgrade-guide/
+The image we want to use is [jenkins/jenkins:lts](https://jenkins.io/blog/2018/12/10/the-official-Docker-image/). Targetting the [Long Term Support release](https://jenkins.io/download/lts/) means this release likely to be more stable, and will be patched for a longer period.
 
+Next up, we can create a place to store persistent data. This makes backup and upgrades easier.  The persistent volume is all you need to backup, and [upgrading is as simple as recreating the container with a newer image, pointing it to the same persistent volume for jenkins_home](https://batmat.net/2018/09/07/how-to-run-and-upgrade-jenkins-using-the-official-docker-image/). For specific upgrade notes you can always [check the upgrade guide](https://jenkins.io/doc/upgrade-guide/).
 
 Command to Create volume
+
 ```bash
 docker volume create jenkins-master-home
 ```
 
 Argument to use volume
+
 ```bash
 -v jenkins-master-home:/var/jenkins_home
 ```
@@ -119,9 +114,9 @@ The full command lines are:
 docker volume create jenkins-master-home
 docker run --name jenkins-master \
            --detach \
+           -v jenkins-master-home:/var/jenkins_home \
            -p 8080:8080 \
            -p 50000:50000 \
-           -v jenkins-master-home:/var/jenkins_home \
            jenkins/jenkins:lts
 ```
 
@@ -145,8 +140,7 @@ docker container start jenkins-master
 
 ### Running the Jenkins Docker image from a Synology NAS
 
-https://www.synology.com/en-global/products/DS918+
-At home I run a Synology DS918+, so being able to host the docker container on this is really convenient. It’s always on, reliable, and already has backup tasks configured, so it’s a perfect place to host it.
+At home I run a [Synology DS918+](https://www.synology.com/en-global/products/DS918+), so being able to host the docker container on this is really convenient. It’s always on, reliable, and already has backup tasks configured, so it’s a perfect place to host it. You can also install Jenkins directly from the Synology Package Center, however running it in Docker will keep it self contained and give you more control over which version you install.
 
 Configuration is mostly straight forward with the exception of a small permission change required on the jenkins_home directory. Unfortunately the synology docker UI doesn’t support docker volumes, and instead uses bind-mounts. This is not ideal, as it usually has some complications around permissions as seen here, but it’s safe and workable.
 
