@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Jenkins Home Lab: Part 1 - Master Setup"
+title:  "Jenkins Home Lab: Part 1 - Setting up the Master"
 date:   2019-12-16 13:29:13 +1100
 tags: [jenkins, ci, homelab, sysadmin, docker, raspberrypi, linux]
 comments: true
