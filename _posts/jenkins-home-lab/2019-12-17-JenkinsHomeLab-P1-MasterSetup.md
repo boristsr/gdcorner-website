@@ -18,6 +18,15 @@ I embarked on creating my own home lab to automate tasks on a few side projects 
 
 > <span class="badge badge-danger">Security Note</span> This guide is focused on a home lab environment so certain security principles will not be rigidly conformed to. I’ll make a note anytime a security assumption or choice is made that should be more carefully considered in a production environment.
 
+## Articles in this guide
+
+- [Part 1 - Setting up the Master (this article)]()
+- Part 2 - Setting up Linux Agents on Ubuntu and Raspberry Pis
+- Part 3 - Setting up Windows Agents
+- Part 4 - Setting up Docker for on-demand linux agent creation
+- Part 5 - Setting up Docker for on-demand windows agent creation
+- Part 6 - Jenkins Pipeline, Jenkinsfiles & hints on designing jobs.
+
 ## Why Jenkins?
 
 There are plenty of CI/CD tools around. Some paid, some free, some cloud hosted, some self hosted. All of these tools have strengths and weaknesses, but in general you can accomplish the same tasks in all of them. I’ve chosen jenkins for this since it’s free, open source, and incredibly flexible.
@@ -27,6 +36,8 @@ Jenkins is written in Java and runs in many environments. It is focused on runni
 ## Jenkins Master requirements & setup options
 
 We’ll be configuring the jenkins master purely as a tool for coordinating agents, and disabling local execution of jobs. This means that we don’t need a particularly powerful machine to run this on, however this is where job artifacts (built projects) will be stored, so make sure you have enough storage for your intended projects.
+
+I won't be showing you how to install a JDK, maven and other java related build tools. You can add the build tools and prerequisites to fit your projects and needs later. Ideally once we've setup docker agents your projects will define all prerequisites and dependencies which will be built into the Docker images or installed during the build process.
 
 ## Where would you like to setup your Jenkins Master?
 

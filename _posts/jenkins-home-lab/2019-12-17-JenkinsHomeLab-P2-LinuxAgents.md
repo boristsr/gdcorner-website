@@ -12,6 +12,15 @@ Today we’ll look at setting up linux agents. These instructions apply to Ubunt
 
 <!--more-->
 
+## Articles in this guide
+
+- [Part 1 - Setting up the Master]()
+- [Part 2 - Setting up Linux Agents on Ubuntu and Raspberry Pis (this article)]()
+- Part 3 - Setting up Windows Agents
+- Part 4 - Setting up Docker for on-demand linux agent creation
+- Part 5 - Setting up Docker for on-demand windows agent creation
+- Part 6 - Jenkins Pipeline, Jenkinsfiles & hints on designing jobs.
+
 ## Generate an SSH key
 
 We’ll need an SSH key to authenticate the connection between the master and the agent. Generating an SSH key is quite simple. On a linux or mac command line enter this command
