@@ -76,6 +76,8 @@ $ sudo apt install default-jre -y
 
 ### Create a user called jenkins
 
+We need to create a user that the agent will run under. Enter the command below and follow the prompts.
+
 ```bash
 $ sudo adduser jenkins
 
