@@ -3,6 +3,7 @@ layout: post
 title:  "Improving Coding Standards and Quality"
 date:   2019-11-18 11:17:13 +1100
 tags: [Development, Standards, Testing, StaticAnalysis, linting, team]
+ogimage: "/assets/posts/2019-11-18-ImprovingCodingStandards.md/improvingcoding-ogimage.png"
 comments: true
 ---
 
