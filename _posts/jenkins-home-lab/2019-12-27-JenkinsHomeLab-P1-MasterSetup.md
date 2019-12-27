@@ -21,11 +21,11 @@ I embarked on creating my own home lab to automate tasks on a few side projects 
 ## Articles in this guide
 
 - [Part 1 - Setting up the Master (this article)]()
-- Part 2 - Setting up Linux Agents on Ubuntu and Raspberry Pis
-- Part 3 - Setting up Windows Agents
-- Part 4 - Setting up Docker for on-demand linux agent creation
-- Part 5 - Setting up Docker for on-demand windows agent creation
-- Part 6 - Jenkins Pipeline, Jenkinsfiles & hints on designing jobs.
+- Part 2 (Coming Soon) - Setting up Linux Agents on Ubuntu and Raspberry Pis
+- Part 3 (Coming Soon) - Setting up Windows Agents
+- Part 4 (Coming Soon) - Setting up Docker for on-demand linux agent creation
+- Part 5 (Coming Soon) - Setting up Docker for on-demand windows agent creation
+- Part 6 (Coming Soon) - Jenkins Pipeline, Jenkinsfiles & hints on designing jobs.
 
 ## Why Jenkins?
 
