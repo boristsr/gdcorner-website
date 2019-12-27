@@ -2,7 +2,7 @@
 layout: post
 title:  "Jenkins Home Lab: Part 1 - Setting up the Master"
 date:   2019-12-27 13:29:13 +1100
-tags: [jenkins, ci, homelab, sysadmin, docker, raspberrypi, linux]
+tags: [jenkins, ci, HomeLab, sysadmin, docker, RaspberryPi, linux]
 comments: true
 ogimage: "/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/jenkins-p1-ogimage.png"
 description: "A guide for building a Jenkins home lab. In this first part you'll learn how to configure a Jenkins master server."
@@ -14,7 +14,7 @@ Are you looking for a project this holidays? Did you get a Raspberry Pi for Chri
 
 ## Overview
 
-I embarked on creating my own home lab to automate tasks on a few side projects as well as a way of filling in some knowledge gaps of mine, specifically aiming to learn windows containers and docker on arm architecture, like raspberry pis. As a result this guide is going to cover many different options. I’ve aimed to keep it modular so you can pick how you want to run your master jenkins server, and choose any or all of the different agents for your environment.
+I embarked on creating my own home lab to automate tasks on a few side projects as well as a way of filling in some knowledge gaps of mine, specifically aiming to learn windows containers and [Docker](https://www.docker.com/) on ARM architectures, like a [Raspberry Pi](https://www.raspberrypi.org/). As a result this guide is going to cover many different options. I’ve aimed to keep it modular so you can pick how you want to run your master Jenkins server, and choose any or all of the different agents for your environment.
 
 > <span class="badge badge-danger">Security Note</span> This guide is focused on a home lab environment so certain security principles will not be rigidly conformed to. I’ll make a note anytime a security assumption or choice is made that should be more carefully considered in a production environment.
 
@@ -29,13 +29,13 @@ I embarked on creating my own home lab to automate tasks on a few side projects 
 
 ## Why Jenkins?
 
-There are plenty of CI/CD tools around. Some paid, some free, some cloud hosted, some self hosted. All of these tools have strengths and weaknesses, but in general you can accomplish the same tasks in all of them. I’ve chosen jenkins for this since it’s free, open source, and incredibly flexible.
+There are plenty of CI/CD tools around. Some paid, some free, some cloud hosted, some self hosted. All of these tools have strengths and weaknesses, but in general you can accomplish the same tasks in all of them. I’ve chosen Jenkins for this since it’s free, open source, and incredibly flexible.
 
 Jenkins is written in Java and runs in many environments. It is focused on running user defined tasks and pipelines. This means you can mix architectures and operating systems freely in this setup, all that matters is that your jobs are compatible with an environment available on an agent or slave that you’ve configured.
 
 ## Jenkins Master requirements & setup options
 
-We’ll be configuring the jenkins master purely as a tool for coordinating agents, and disabling local execution of jobs. This means that we don’t need a particularly powerful machine to run this on, however this is where job artifacts (built projects) will be stored, so make sure you have enough storage for your intended projects.
+We’ll be configuring the Jenkins master purely as a tool for coordinating agents, and disabling local execution of jobs. This means that we don’t need a particularly powerful machine to run this on, however this is where job artifacts (built projects) will be stored, so make sure you have enough storage for your intended projects.
 
 I won't be showing you how to install a JDK, maven and other java related build tools. You can add the build tools and prerequisites to fit your projects and needs later. Ideally once we've setup docker agents your projects will define all prerequisites and dependencies which will be built into the Docker images or installed during the build process.
 
@@ -52,7 +52,7 @@ Click an option below to jump straight to the relevant instructions.
 
 Installing Jenkins is the same process on Ubuntu and [Raspbian](https://raspberrytips.com/install-jenkins-raspberry-pi/), and likely all debian based distributions.
 
-First we add the jenkins repository to apt, including the associated key.
+First we add the Jenkins repository to apt, including the associated key.
 
 ```bash
 wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
@@ -65,23 +65,23 @@ Update the repository
 sudo apt update
 ```
 
-Install the default java runtime and jenkins
+Install the default java runtime and Jenkins
 
 ```bash
 sudo apt install default-jre jenkins -y
 ```
 
-Now we need to get the initial password for jenkins, save the output of this for later.
+Now we need to get the initial password for Jenkins, save the output of this for later.
 
 ```bash
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 
-You can now logout from the terminal on the raspberry pi and move on to [configuring Jenkins](#configuring-the-jenkins-master).
+You can now logout from the terminal on the Raspberry Pi and move on to [configuring Jenkins](#configuring-the-jenkins-master).
 
 ## Installing with Docker
 
-Docker is probably the simplest and lightest way to host a jenkins master instance as it’s quite literally 2 commands, and upgrading is as simple as recreating the container with a newer image while pointing to the same volume for the jenkins_home directory.
+Docker is probably the simplest and lightest way to host a Jenkins master instance as it’s quite literally 2 commands, and upgrading is as simple as recreating the container with a newer image while pointing to the same volume for the jenkins_home directory.
 
 ### Installing Docker - Quickstart
 
@@ -99,9 +99,9 @@ sudo systemctl enable docker
 
 ### Running Jenkins Docker Image from Command Line
 
-Running jenkins in docker is [really simple and can be accomplished in 2 commands](https://batmat.net/2018/09/07/how-to-run-and-upgrade-jenkins-using-the-official-docker-image/).
+Running Jenkins in docker is [really simple and can be accomplished in 2 commands](https://batmat.net/2018/09/07/how-to-run-and-upgrade-jenkins-using-the-official-docker-image/).
 
-The image we want to use is [jenkins/jenkins:lts](https://jenkins.io/blog/2018/12/10/the-official-Docker-image/). Targetting the [Long Term Support release](https://jenkins.io/download/lts/) means this release likely to be more stable, and will be patched for a longer period.
+The image we want to use is [jenkins/jenkins:lts](https://jenkins.io/blog/2018/12/10/the-official-Docker-image/). Targeting the [Long Term Support release](https://jenkins.io/download/lts/) means this release likely to be more stable, and will be patched for a longer period.
 
 Next up, we can create a place to store persistent data. This makes backup and upgrades easier.  The persistent volume is all you need to backup, and [upgrading is as simple as recreating the container with a newer image, pointing it to the same persistent volume for jenkins_home](https://batmat.net/2018/09/07/how-to-run-and-upgrade-jenkins-using-the-official-docker-image/). For specific upgrade notes you can always [check the upgrade guide](https://jenkins.io/doc/upgrade-guide/).
 
@@ -222,7 +222,7 @@ Run the command
 cat /var/jenkins_home/secrets/initialAdminPassword
 ```
 
-Copy the output of this command, as this is the initial password we will need when logging into jenkins.
+Copy the output of this command, as this is the initial password we will need when logging into Jenkins.
 
 Run the exit command to close this terminal
 
@@ -230,7 +230,7 @@ Run the exit command to close this terminal
 exit
 ```
 
-You can now close the container window and [proceed to configuring jenkins.](#configuring-the-jenkins-master)
+You can now close the container window and [proceed to configuring Jenkins.](#configuring-the-jenkins-master)
 
 ## Configuring the Jenkins Master
 
@@ -266,7 +266,7 @@ Unless you are planning on renaming the host, or adding a custom DNS entry for t
 
 ### Wizard Finished
 
-Congratulations, you now have a jenkins master installed. We still should perform a few configuration tasks on this since we have a larger setup planned. I like to keep the master node as clean as possible so i don’t like running jobs on this instance, so lets go ahead and disable those.
+Congratulations, you now have a Jenkins master installed. We still should perform a few configuration tasks on this since we have a larger setup planned. I like to keep the master node as clean as possible so i don’t like running jobs on this instance, so lets go ahead and disable those.
 
 ### Disable jobs on this node
 
@@ -297,4 +297,4 @@ Now we have a configured Jenkins Master node we are ready to add some agents to 
 
 Email notifications aren’t essential for a home lab, however I recommend spending some time setting them up as it’s nice to know when jobs fail. All the relevant settings settings are also under Manage Jenkins->Configure System. [Here are some instructions](https://www.360logica.com/blog/email-notification-in-jenkins/).
 
-Tomorrow I’ll cover configuring linux SSH agents. This will involve setting up an SSH key, installing java, and configuring Jenkins to remotely start the agent. This is a good method to use for VMs, raspberry pis and other bare metal linux systems. 
+Tomorrow I’ll cover configuring linux SSH agents. This will involve setting up an SSH key, installing java, and configuring Jenkins to remotely start the agent. This is a good method to use for VMs, a Raspberry Pi and other bare metal linux systems.
