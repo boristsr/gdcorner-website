@@ -6,6 +6,7 @@ tags: [jenkins, ci, homelab, sysadmin, windows]
 comments: true
 ogimage: "/assets/posts/jenkins-home-lab/2019-12-17-JenkinsHomeLab-P3-WindowsAgents/jenkins-p3-ogimage.png"
 description: "Configuring Windows agents for a Jenkins home lab."
+disabled: true
 ---
 
 Today, since we already have a working setup of Jenkins, lets expand it to include windows agents.
