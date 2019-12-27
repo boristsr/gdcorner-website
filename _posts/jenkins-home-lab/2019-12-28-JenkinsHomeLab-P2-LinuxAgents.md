@@ -1,12 +1,12 @@
 ---
 layout: post
 title:  "Jenkins Home Lab: Part 2 - Setting up Linux Agents (Ubuntu & Raspberry Pi systems)"
-date:   2019-12-16 13:29:13 +1100
+date:   2019-12-27 13:29:13 +1100
 tags: [jenkins, ci, homelab, sysadmin, ubuntu, raspbian, raspberrypi, linux]
 comments: true
-ogimage: "/assets/posts/jenkins-home-lab/2019-12-17-JenkinsHomeLab-P2-LinuxAgents/jenkins-p2-ogimage.png"
+ogimage: "/assets/posts/jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents/jenkins-p2-ogimage.png"
 description: "Configuring Ubuntu and Raspberry Pi agents for a Jenkins home lab."
-disabled: true
+disabled: false
 ---
 
 Today we’ll look at setting up linux agents. These instructions apply to Ubuntu and Raspberry Pi / Raspbian systems, but should work for any debian based system. With some very minor tweaks these instructions should work pretty similarly for most linux systems.
@@ -117,23 +117,23 @@ $ cat id_rsa.pub >> ~/.ssh/authorized_keys
 
 Click on Manage Jenkins
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-17-JenkinsHomeLab-P2-LinuxAgents/1.01-manage-jenkins.jpg){: .enable-lightbox}
+![jenkins](/assets/posts/jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents/1.01-manage-jenkins.jpg){: .enable-lightbox}
 
 Click on Manage Nodes
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-17-JenkinsHomeLab-P2-LinuxAgents/1.02-manage-nodes.jpg){: .enable-lightbox}
+![jenkins](/assets/posts/jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents/1.02-manage-nodes.jpg){: .enable-lightbox}
 
 Click New Node Node
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-17-JenkinsHomeLab-P2-LinuxAgents/1.03-new-node.jpg){: .enable-lightbox}
+![jenkins](/assets/posts/jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents/1.03-new-node.jpg){: .enable-lightbox}
 
 Enter a name, choose Permanent Agent and click OK
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-17-JenkinsHomeLab-P2-LinuxAgents/1.04-new-node-wiz.jpg){: .enable-lightbox}
+![jenkins](/assets/posts/jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents/1.04-new-node-wiz.jpg){: .enable-lightbox}
 
 Here we want to enter a few details
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-17-JenkinsHomeLab-P2-LinuxAgents/1.05-configured-node.jpg){: .enable-lightbox}
+![jenkins](/assets/posts/jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents/1.05-configured-node.jpg){: .enable-lightbox}
 
 - **Name**: Name of the node to be displayed in Jenkins
 - **\# of executors**: how many jobs should be able to concurrently run on this agent, generally set this to the number of cores available.
@@ -149,9 +149,9 @@ Here we want to enter a few details
 ### Adding the credentials
 
 To add the credentials click the Add button, and then click Jenkins.
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-17-JenkinsHomeLab-P2-LinuxAgents/2.01-add-credentials.jpg){: .enable-lightbox}
+![jenkins](/assets/posts/jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents/2.01-add-credentials.jpg){: .enable-lightbox}
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-17-JenkinsHomeLab-P2-LinuxAgents/2.02-credential-details.jpg){: .enable-lightbox}
+![jenkins](/assets/posts/jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents/2.02-credential-details.jpg){: .enable-lightbox}
 
 Here again a few things need to be configured:
 - **Domain**: choose the Global credentials domai
@@ -175,19 +175,19 @@ To ensure this is working we’ll create a job which will print some system info
 
 Go back to the home page of Jenkins and click New Item
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-17-JenkinsHomeLab-P2-LinuxAgents/3.01-new-item.jpg){: .enable-lightbox}
+![jenkins](/assets/posts/jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents/3.01-new-item.jpg){: .enable-lightbox}
 
 Enter a name for this job, Linux-Agent-Test and choose Freestyle Project
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-17-JenkinsHomeLab-P2-LinuxAgents/3.02-new-item-wiz.jpg){: .enable-lightbox}
+![jenkins](/assets/posts/jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents/3.02-new-item-wiz.jpg){: .enable-lightbox}
 
 In the job we’ll configure a restriction for where the job can run, tick “Restrict where this project can be run” and then enter the expression”linux”. This will find the label that was applied to the configured agent. When we add a windows agent tomorrow this build will already be restricted from running on it
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-17-JenkinsHomeLab-P2-LinuxAgents/3.03-job-details.jpg){: .enable-lightbox}
+![jenkins](/assets/posts/jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents/3.03-job-details.jpg){: .enable-lightbox}
 
 In the Build section, add a build step “Execute shell” and then enter the code below. This will print system information and all the environment variables.
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-17-JenkinsHomeLab-P2-LinuxAgents/3.04-shellscript.jpg){: .enable-lightbox}
+![jenkins](/assets/posts/jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents/3.04-shellscript.jpg){: .enable-lightbox}
 
 ```bash
 uname -a
@@ -196,15 +196,15 @@ printenv
 
 After clicking save, you will be returned to the main page for the project. Click “Build Now” and you will see a job run and appear in Build History. You may have to refresh the page.
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-17-JenkinsHomeLab-P2-LinuxAgents/3.05-build-now.jpg){: .enable-lightbox}
+![jenkins](/assets/posts/jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents/3.05-build-now.jpg){: .enable-lightbox}
 
 Once the job has turned blue, click the build number next to the circle which will take you to the build page.
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-17-JenkinsHomeLab-P2-LinuxAgents/3.06-build-history.jpg){: .enable-lightbox}
+![jenkins](/assets/posts/jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents/3.06-build-history.jpg){: .enable-lightbox}
 
 On the build page you can see some information about this build. Click Console Output to see what was printed by the shell commands.
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-17-JenkinsHomeLab-P2-LinuxAgents/3.07-console-output.jpg){: .enable-lightbox}
+![jenkins](/assets/posts/jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents/3.07-console-output.jpg){: .enable-lightbox}
 
 ## What’s next?
 
