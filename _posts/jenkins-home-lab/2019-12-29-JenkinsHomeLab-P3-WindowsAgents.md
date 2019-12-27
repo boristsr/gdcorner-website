@@ -15,12 +15,12 @@ Today, since we already have a working setup of Jenkins, lets expand it to inclu
 
 ## Articles in this guide
 
-- [Part 1 - Setting up the Master]()
-- [Part 2 - Setting up Linux Agents on Ubuntu and Raspberry Pis]()
-- [Part 3 - Setting up Windows Agents]()
-- Part 4 - Setting up Docker for on-demand linux agent creation
-- Part 5 - Setting up Docker for on-demand windows agent creation
-- Part 6 - Jenkins Pipeline, Jenkinsfiles & hints on designing jobs.
+- [Part 1 - Setting up the Master](/2019/12/27/JenkinsHomeLab-P1-MasterSetup.html)
+- [Part 2 - Setting up Linux Agents on Ubuntu and Raspberry Pis](/2019/12/27/JenkinsHomeLab-P2-LinuxAgents.html)
+- [Part 3 - Setting up Windows Agents (this article)](/2019/12/27/JenkinsHomeLab-P3-WindowsAgents.html)
+- Part 4 (Coming Soon) - Setting up Docker for on-demand linux agent creation
+- Part 5 (Coming Soon) - Setting up Docker for on-demand windows agent creation
+- Part 6 (Coming Soon) - Jenkins Pipeline, Jenkinsfiles & hints on designing jobs.
 
 ## Configuring Jenkins
 

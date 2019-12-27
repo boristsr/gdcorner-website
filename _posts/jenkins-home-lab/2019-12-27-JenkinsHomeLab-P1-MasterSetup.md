@@ -20,7 +20,7 @@ I embarked on creating my own home lab to automate tasks on a few side projects 
 
 ## Articles in this guide
 
-- [Part 1 - Setting up the Master (this article)]()
+- [Part 1 - Setting up the Master (this article)](/2019/12/27/JenkinsHomeLab-P1-MasterSetup.html)
 - Part 2 (Coming Soon) - Setting up Linux Agents on Ubuntu and Raspberry Pis
 - Part 3 (Coming Soon) - Setting up Windows Agents
 - Part 4 (Coming Soon) - Setting up Docker for on-demand linux agent creation
