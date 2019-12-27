@@ -113,13 +113,13 @@ If you use [chocolatey package manager](https://chocolatey.org/) you can run the
 choco install javaruntime
 ```
 
-> Licensing note: Oracle Java needs to be licensed for business use. Check your licensing is appropriate.
+> <span class="badge badge-warning">Licensing Note</span> Oracle Java needs to be licensed for business use. Check your licensing is appropriate.
 
 ### Setup Agent
 
 There are a few ways to setup this agent to run on startup. I'll show 2 methods. The first will work if you used the Docker method for creating the master server. If you installed the master using the ubuntu/RPi method then most likely you'll need to use the second method.
 
-> Security Note: Both of these methods will have the installed service run as the local SYSTEM user which grants it full administrative rights on the PC. In a production environment you will want to run the agent as a domain user. This can be configured through the normal Windows Service Management. Instructions can be found under the Configure Slave Service to Run as Domain User section of the documentation here: [https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+as+a+Windows+service](https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+as+a+Windows+service)
+> <span class="badge badge-danger">Security Note</span> Both of these methods will have the installed service run as the local SYSTEM user which grants it full administrative rights on the PC. In a production environment you will want to run the agent as a domain user. This can be configured through the normal Windows Service Management. Instructions can be found under the Configure Slave Service to Run as Domain User section of the documentation here: [https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+as+a+Windows+service](https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+as+a+Windows+service)
 
 Jump to the instructions for your method:
 
