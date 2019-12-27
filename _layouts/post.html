@@ -9,6 +9,10 @@ Published {{page.date| date: date_format }}
 
 {{ content }}
 
-{% if site.disqus.shortname %}
+{% if site.disqus.shortname and site.disqus.enabled %}
     {% include disquscomments.html %}
+{% endif %}
+
+{% if site.commento.enabled %}
+    {% include commentocomments.html %}
 {% endif %}
