@@ -101,7 +101,7 @@ sudo systemctl enable docker
 
 Running Jenkins in docker is [really simple and can be accomplished in 2 commands](https://batmat.net/2018/09/07/how-to-run-and-upgrade-jenkins-using-the-official-docker-image/).
 
-The image we want to use is [jenkins/jenkins:lts](https://jenkins.io/blog/2018/12/10/the-official-Docker-image/). Targeting the [Long Term Support release](https://jenkins.io/download/lts/) means this release likely to be more stable, and will be patched for a longer period.
+The image we want to use is [jenkins/jenkins:lts](https://jenkins.io/blog/2018/12/10/the-official-Docker-image/). Targeting the [Long Term Support release](https://jenkins.io/download/lts/) means this release is likely to be more stable, and will be patched for a longer period.
 
 Next up, we can create a place to store persistent data. This makes backup and upgrades easier.  The persistent volume is all you need to backup, and [upgrading is as simple as recreating the container with a newer image, pointing it to the same persistent volume for jenkins_home](https://batmat.net/2018/09/07/how-to-run-and-upgrade-jenkins-using-the-official-docker-image/). For specific upgrade notes you can always [check the upgrade guide](https://jenkins.io/doc/upgrade-guide/).
 
@@ -118,6 +118,8 @@ Argument to use volume
 ```
 
 Next, 2 ports need to be exposed to allow access to the webpage and communication with agents/slaves. This is accomplished with these arguments:
+
+> <span class="badge badge-danger">Security Note</span> This exposes these ports on the host system so other systems can connect to Jenkins. To be clear these are not being exposed to the internet and in general I'd avoid exposing these to the internet.
 
 ```bash
 -p 8080:8080 -p 50000:50000
@@ -238,7 +240,7 @@ You can now access jenkins at http://HOSTNAME-OR-IP:8080 in your browser.
 
 ### Initial Login
 
-Enter the password that we captured after installing jenkins.
+Enter the password that we captured from the file at /var/jenkins_home/secrets/initialAdminPassword after installing Jenkins.
 ![jenkins](/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/2.01-jenkins-initial-login.jpg){: .enable-lightbox}
 
 ### Plugins
@@ -270,7 +272,7 @@ Congratulations, you now have a Jenkins master installed. We still should perfor
 
 ### Disable jobs on this node
 
-It is [best practice to not build on the master node](https://wiki.jenkins.io/display/JENKINS/Jenkins+Best+Practices). This is more secure and reduces long term issues if any of your scripts or jobs install extra dependencies that may conflict. It's easier to wipe and recreate an agent than to fix or clean the master system.
+It is [best practice to not build on the master node](https://wiki.jenkins.io/display/JENKINS/Jenkins+Best+Practices). This is more secure and reduces long term issues including performance and conflicting dependencies. It's easier to wipe and recreate an agent than to fix or clean the master system.
 
 In the left hand menu on the side enter Manage Jenkins, and then enter Configure System. This page can be slow to load, be patient.
 
@@ -278,7 +280,7 @@ In the left hand menu on the side enter Manage Jenkins, and then enter Configure
 
 ![jenkins](/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/2.07-configure-system.jpg){: .enable-lightbox}
 
-In here change “# of executors” to 0 and click Save.
+In here change “# of executors” to 0 and click Save. This is the number of jobs that can be run concurrently on the master node, not the number of agents that will eventually connect.
 ![jenkins](/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/2.08-change-num-executors.jpg){: .enable-lightbox}
 
 Once this is applied the Build Executor Status box on the left will now be empty.
@@ -295,6 +297,6 @@ After:
 
 Now we have a configured Jenkins Master node we are ready to add some agents to perform some actual work for us which I’ll cover tomorrow. In the meantime, you may want to consider setting up email notifications.
 
-Email notifications aren’t essential for a home lab, however I recommend spending some time setting them up as it’s nice to know when jobs fail. All the relevant settings settings are also under Manage Jenkins->Configure System. [Here are some instructions](https://www.360logica.com/blog/email-notification-in-jenkins/).
+Email notifications aren’t essential for a home lab, however I recommend spending some time setting them up as it’s nice to know when jobs fail. All the relevant settings are also under Manage Jenkins->Configure System. [Here are some instructions](https://www.360logica.com/blog/email-notification-in-jenkins/).
 
 Tomorrow I’ll cover configuring linux SSH agents. This will involve setting up an SSH key, installing java, and configuring Jenkins to remotely start the agent. This is a good method to use for VMs, a Raspberry Pi and other bare metal linux systems.
