@@ -21,12 +21,11 @@ I embarked on creating my own home lab to automate tasks on a few side projects 
 ## Articles in this guide
 
 - [Part 1 - Setting up the Master (this article)](/2019/12/27/JenkinsHomeLab-P1-MasterSetup.html)
-- Part 2 (Coming Soon) - Setting up Linux Agents on Ubuntu and Raspberry Pis
+- [Part 2 - Setting up Linux Agents on Ubuntu and Raspberry Pis](/2019/12/27/JenkinsHomeLab-P2-LinuxAgents.html)
 - Part 3 (Coming Soon) - Setting up Windows Agents
 - Part 4 (Coming Soon) - Setting up Docker for on-demand linux agent creation
 - Part 5 (Coming Soon) - Setting up Docker for on-demand windows agent creation
 - Part 6 (Coming Soon) - Jenkins Pipeline, Jenkinsfiles & hints on designing jobs.
-
 ## Why Jenkins?
 
 There are plenty of CI/CD tools around. Some paid, some free, some cloud hosted, some self hosted. All of these tools have strengths and weaknesses, but in general you can accomplish the same tasks in all of them. I’ve chosen Jenkins for this since it’s free, open source, and incredibly flexible.
@@ -300,3 +299,5 @@ Now we have a configured Jenkins Master node we are ready to add some agents to 
 Email notifications aren’t essential for a home lab, however I recommend spending some time setting them up as it’s nice to know when jobs fail. All the relevant settings are also under Manage Jenkins->Configure System. [Here are some instructions](https://www.360logica.com/blog/email-notification-in-jenkins/).
 
 Tomorrow I’ll cover configuring linux SSH agents. This will involve setting up an SSH key, installing java, and configuring Jenkins to remotely start the agent. This is a good method to use for VMs, a Raspberry Pi and other bare metal linux systems.
+
+Continue on with [Part 2 - Setting up Linux Agents on Ubuntu and Raspberry Pis](/2019/12/27/JenkinsHomeLab-P2-LinuxAgents.html)
