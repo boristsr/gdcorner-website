@@ -63,7 +63,7 @@ This will generate 2 files, a public key called id_rsa.pub and a private key cal
 There are 3 steps to configuring the agent:
 
 1. [Install Java](#install-prerequisites)
-2. [Create a jenkins user](#create-a-user-called-jenkins)
+2. [Create a Jenkins user](#create-a-user-called-jenkins)
 3. [Adding the SSH key for the jenkins user](#add-ssh-public-key-to-authorized_hosts)
 
 ### Install Prerequisites
@@ -111,7 +111,7 @@ $ mkdir ~/.ssh
 $ cat id_rsa.pub >> ~/.ssh/authorized_keys
 ```
 
-> <span class="badge badge-danger">Security Note</span> The authorized_keys file should have 644 permissions and be owned by the user. More information is available on the Ubuntu OpenSSH keys page. https://help.ubuntu.com/community/SSH/OpenSSH/Keys
+> <span class="badge badge-danger">Security Note</span> The authorized_keys file should have 644 permissions and be owned by the user. More information is available on the [Ubuntu OpenSSH keys page](https://help.ubuntu.com/community/SSH/OpenSSH/Keys).
 
 ## Register agent in Jenkins
 
@@ -123,7 +123,7 @@ Click on Manage Nodes
 
 ![jenkins](/assets/posts/jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents/1.02-manage-nodes.jpg){: .enable-lightbox}
 
-Click New Node Node
+Click New Node
 
 ![jenkins](/assets/posts/jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents/1.03-new-node.jpg){: .enable-lightbox}
 
@@ -154,7 +154,7 @@ To add the credentials click the Add button, and then click Jenkins.
 ![jenkins](/assets/posts/jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents/2.02-credential-details.jpg){: .enable-lightbox}
 
 Here again a few things need to be configured:
-- **Domain**: choose the Global credentials domai
+- **Domain**: choose the Global credentials domain
 - **Kind**: SSH Username with private key
 - **Scope**: System
 - **ID**: jenkins-ssh-agent-user
@@ -181,11 +181,11 @@ Enter a name for this job, Linux-Agent-Test and choose Freestyle Project
 
 ![jenkins](/assets/posts/jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents/3.02-new-item-wiz.jpg){: .enable-lightbox}
 
-In the job we’ll configure a restriction for where the job can run, tick “Restrict where this project can be run” and then enter the expression”linux”. This will find the label that was applied to the configured agent. When we add a windows agent tomorrow this build will already be restricted from running on it
+In the job we’ll configure a restriction for where the job can run, tick "Restrict where this project can be run" and then enter the expression "linux". This will find the label that was applied to the configured agent. When we add a windows agent tomorrow this build will already be restricted from running on it
 
 ![jenkins](/assets/posts/jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents/3.03-job-details.jpg){: .enable-lightbox}
 
-In the Build section, add a build step “Execute shell” and then enter the code below. This will print system information and all the environment variables.
+In the Build section, add a build step "Execute shell" and then enter the code below. This will print system information and all the environment variables.
 
 ![jenkins](/assets/posts/jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents/3.04-shellscript.jpg){: .enable-lightbox}
 
@@ -194,7 +194,7 @@ uname -a
 printenv
 ```
 
-After clicking save, you will be returned to the main page for the project. Click “Build Now” and you will see a job run and appear in Build History. You may have to refresh the page.
+After clicking save, you will be returned to the main page for the project. Click "Build Now" and you will see a job run and appear in Build History. You may have to refresh the page.
 
 ![jenkins](/assets/posts/jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents/3.05-build-now.jpg){: .enable-lightbox}
 
@@ -208,4 +208,4 @@ On the build page you can see some information about this build. Click Console O
 
 ## What’s next?
 
-Congratulations, you now have a linux agent able to run any linux based jobs. Tomorrow we’ll look into configuring a windows agent.
+Congratulations, you now have a linux agent able to run any linux based jobs. Tomorrow we’ll look into configuring a Windows agent.
