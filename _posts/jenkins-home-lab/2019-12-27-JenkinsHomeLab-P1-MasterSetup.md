@@ -37,7 +37,7 @@ Jenkins is written in Java and runs in many environments. It is focused on runni
 
 We’ll be configuring the Jenkins master purely as a tool for coordinating agents, and disabling local execution of jobs. This means that we don’t need a particularly powerful machine to run this on, however this is where job artifacts (built projects) will be stored, so make sure you have enough storage for your intended projects.
 
-I won't be showing you how to install a JDK, maven and other java related build tools. You can add the build tools and prerequisites to fit your projects and needs later. Ideally once we've setup docker agents your projects will define all prerequisites and dependencies which will be built into the Docker images or installed during the build process.
+I won't be showing you how to install a JDK, maven and other java related build tools. You can add the build tools and prerequisites to fit your projects and needs later. Ideally once we've setup Docker agents your projects will define all prerequisites and dependencies which will be built into the Docker images or installed during the build process.
 
 ## Where would you like to setup your Jenkins Master?
 
@@ -89,7 +89,7 @@ I won’t cover this extensively, but these are the commands you need to get sta
 
 #### Installing Docker on Ubuntu
 
-Running the below 3 commands will install docker and set it to automatically start on system boot. Further details on this are [available here](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04).
+Running the below 3 commands will install Docker and set it to automatically start on system boot. Further details on this are [available here](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04).
 
 ```bash
 sudo apt install docker.io
@@ -99,7 +99,7 @@ sudo systemctl enable docker
 
 ### Running Jenkins Docker Image from Command Line
 
-Running Jenkins in docker is [really simple and can be accomplished in 2 commands](https://batmat.net/2018/09/07/how-to-run-and-upgrade-jenkins-using-the-official-docker-image/).
+Running Jenkins in Docker is [really simple and can be accomplished in 2 commands](https://batmat.net/2018/09/07/how-to-run-and-upgrade-jenkins-using-the-official-docker-image/).
 
 The image we want to use is [jenkins/jenkins:lts](https://jenkins.io/blog/2018/12/10/the-official-Docker-image/). Targeting the [Long Term Support release](https://jenkins.io/download/lts/) means this release is likely to be more stable, and will be patched for a longer period.
 
@@ -184,7 +184,7 @@ Exit the SSH session. We are now ready to setup the container on the Synology NA
 Search the registry for the jenkins/jenkins image
 ![jenkins](/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/1.01-synology-jenkins-image-repository.jpg){: .enable-lightbox}
 
-Download the jenkins image with tag LTS
+Download the Jenkins image with tag LTS
 ![jenkins](/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/1.02-synology-jenkins-image-tag.jpg){: .enable-lightbox}
 
 Create the container by double clicking the image
