@@ -17,7 +17,7 @@ Today we’ll look at setting up linux agents. These instructions apply to Ubunt
 
 - [Part 1 - Setting up the Master](/2019/12/27/JenkinsHomeLab-P1-MasterSetup.html)
 - [Part 2 - Setting up Linux Agents on Ubuntu and Raspberry Pis (this article)](/2019/12/27/JenkinsHomeLab-P2-LinuxAgents.html)
-- Part 3 (Coming Soon) - Setting up Windows Agents
+- [Part 3 - Setting up Windows Agents](/2019/12/30/JenkinsHomeLab-P3-WindowsAgents.html)
 - Part 4 (Coming Soon) - Setting up Docker for on-demand linux agent creation
 - Part 5 (Coming Soon) - Setting up Docker for on-demand windows agent creation
 - Part 6 (Coming Soon) - Jenkins Pipeline, Jenkinsfiles & hints on designing jobs.
@@ -209,3 +209,5 @@ On the build page you can see some information about this build. Click Console O
 ## What’s next?
 
 Congratulations, you now have a linux agent able to run any linux based jobs. Tomorrow we’ll look into configuring a Windows agent.
+
+Continue on with [Part 3 - Setting up Windows Agents](/2019/12/27/JenkinsHomeLab-P2-LinuxAgents.html)
