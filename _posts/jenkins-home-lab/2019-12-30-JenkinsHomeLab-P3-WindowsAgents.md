@@ -42,9 +42,9 @@ Scroll down to Agents and set the TCP port for inbound agents to 50000.
 
 ![jenkins](/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/1.03-tcp-port.jpg){: .enable-lightbox}
 
-### Install the powershell plugin
+### Install the Powershell plugin
 
-Powershell gives you significantly more flexibility in build steps. This plugin will add support for powershell commands as a build step.
+Powershell gives you significantly more flexibility in build steps. This plugin will add support for Powershell commands as a build step.
 
 Go to the home page and click on Manage Jenkins
 
@@ -86,7 +86,7 @@ After clicking on save you will be returned to a list of nodes. Click on the new
 
 ![jenkins](/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/3.05-agent-list.jpg){: .enable-lightbox}
 
-Depending on which master hosting method used you may be able to launch with Java webstart, but that won't allow you to install the service since it won't run with administrative priviledges. Instead we'll uset the second connection method. For now copy the following as we will use them a little later:
+Depending on which master hosting method used you may be able to launch with Java webstart, but that won't allow you to install the service since it won't run with administrative priviledges. Instead we'll use the second connection method. For now copy the following as we will use them a little later:
 
 ![jenkins](/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/3.06-agent-connection.jpg){: .enable-lightbox}
 
@@ -96,7 +96,7 @@ Now we can configure the windows system itself. We need to install some prerequi
 
 ### Install the .NET Framework
 
-In an administrative powershell run the command below to install the .NET Framework
+In an administrative Powershell run the command below to install the .NET Framework
 
 ```powershell
 Add-WindowsCapability -Online -Name NetFx3~~~~
@@ -104,7 +104,7 @@ Add-WindowsCapability -Online -Name NetFx3~~~~
 
 ### Install Java
 
-The agent needs a java JRE installed. You can download it from here:
+The agent needs a Java JRE installed. You can download it from here:
 [https://www.java.com/en/download/](https://www.java.com/en/download/)
 
 If you use [chocolatey package manager](https://chocolatey.org/) you can run the following command.
@@ -126,7 +126,7 @@ Jump to the instructions for your method:
 - [Docker Master Method](#docker-master-method)
 - [Ubuntu/Raspbian Method](#ubunturaspbian-master-method)
 
-#### Docker master method
+#### Docker hosted master method
 
 From the Windows agent system log in to Jenkins and go to the status page for the windows node that was created earlier.
 
@@ -146,7 +146,7 @@ net start jenkinsslave-c__jenkins
 
 This will start the agent and it will relaunch every reboot. You can skip ahead to [setting up a test job](#create-a-test-job-for-windows-agents).
 
-#### Ubuntu/Raspbian master method
+#### Ubuntu/Raspbian hosted master method
 
 I adapted this method from a [larger method on stackoverflow](https://stackoverflow.com/a/44753306). From the Windows agent system log in to Jenkins and go to the status page for the windows node that was created earlier.
 
