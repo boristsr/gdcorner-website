@@ -5,7 +5,7 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,maximum-scale=2">
-    <link rel=icon href="/favicon.png">
+    <link rel=icon href="{{ url }}/favicon.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     
@@ -21,13 +21,13 @@
     <div id="header_wrap" class="outer">
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/{{ site.github_username }}">GitHub Page</a>
-          <a id="about" href="/about">About</a>
+          <a id="about" href="{{ url }}/about">About</a>
           {% if site.github.is_project_page %}
             <a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>
           {% endif %}
 
-          <a href="/" class="site-heading">
-            <h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1>
+          <a href="{{ url }}/" class="site-heading">
+            <div id="site-name"><img id="header-site-logo" class="header-img" src="{{ url }}/assets/images/gdcorner-logo.png" /><img id="header-site-text" class="header-img" src="{{ url }}/assets/images/gdcorner-text.png" /></div>
           </a>
           <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
           {% if jekyll.environment != "production" %}
@@ -57,7 +57,7 @@
         <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
         {% endif %}
         <p class="copyright">Copyright © 2019 Philip Edwards</p>
-        <p><a href="/privacy">Privacy Policy</a></p>
+        <p><a href="{{ url }}/privacy">Privacy Policy</a></p>
         <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
