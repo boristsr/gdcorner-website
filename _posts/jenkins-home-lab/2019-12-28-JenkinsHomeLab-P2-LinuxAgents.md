@@ -20,7 +20,6 @@ Today we’ll look at setting up linux agents. These instructions apply to Ubunt
 - [Part 3 - Setting up Windows Agents](/2019/12/30/JenkinsHomeLab-P3-WindowsAgents.html)
 - Part 4 (Coming Soon) - Setting up Docker for on-demand linux agent creation
 - Part 5 (Coming Soon) - Setting up Docker for on-demand windows agent creation
-- Part 6 (Coming Soon) - Jenkins Pipeline, Jenkinsfiles & hints on designing jobs.
 
 ## Generate an SSH key
 

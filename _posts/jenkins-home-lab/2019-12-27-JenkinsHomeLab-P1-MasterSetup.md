@@ -25,7 +25,7 @@ I embarked on creating my own home lab to automate tasks on a few side projects 
 - [Part 3 - Setting up Windows Agents](/2019/12/30/JenkinsHomeLab-P3-WindowsAgents.html)
 - Part 4 (Coming Soon) - Setting up Docker for on-demand linux agent creation
 - Part 5 (Coming Soon) - Setting up Docker for on-demand windows agent creation
-- Part 6 (Coming Soon) - Jenkins Pipeline, Jenkinsfiles & hints on designing jobs.
+
 ## Why Jenkins?
 
 There are plenty of CI/CD tools around. Some paid, some free, some cloud hosted, some self hosted. All of these tools have strengths and weaknesses, but in general you can accomplish the same tasks in all of them. I’ve chosen Jenkins for this since it’s free, open source, and incredibly flexible.
