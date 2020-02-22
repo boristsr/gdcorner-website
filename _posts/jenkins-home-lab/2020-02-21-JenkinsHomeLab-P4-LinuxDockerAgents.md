@@ -161,9 +161,14 @@ tcp://DOCKERHOST:2375
 
 Now the docker host has been setup, click Docker Agent templates, and we’ll configure the docker image that was just created. Click Add Docker Template.
 
+![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/03-01-DockerAgentTemplates.jpg){: .enable-lightbox}
+
+![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/03-02-AddDockerTemplate.jpg){: .enable-lightbox}
+
 Things to configure here:
 
-- **Labels:** This is the same as normal agent templates, so add a label that will allow us to target builds against this template. In my case that’s “docker-jenkins-linux
+- **Labels:** This is the same as normal agent templates, so add a label that will allow us to target builds against this template. In my case that’s “docker-jenkins-linux"
+- **Enabled:** By default new images are disabled, so make sure to check this box.
 - **Name:** friendly name for your reference
 - **Docker Image:** a reference to the docker image. If using DockerHub then a short reference is enough, however you can use full URLs if hosting elsewhere like GitHub.
 - **Remote File System Root:** /home/jenkins - this is where jobs will store their data while performing the job
@@ -174,12 +179,21 @@ Things to configure here:
 - **Host Key Verification Strategy:** Non verifying Verification Strategy
 - **Pull Strategy:** Pull once and update latest will keep your image up to date, while not wasting bandwidth
 
+![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/03-03-TopLevelSettings.jpg){: .enable-lightbox}
+
+![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/03-04-SSHSettings.jpg){: .enable-lightbox}
+
 Now the top level options are set, expand the Container settings section under Docker Image.
+
+![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/03-05-ContainerSettings.jpg){: .enable-lightbox}
+
 Under Environment, you want to add a line like this:
 
 ```INI
 JENKINS_SLAVE_SSH_PUBKEY=ssh-rsa YOUR SSH PUBLIC KEY
 ```
+
+![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/03-06-PublicKey.jpg){: .enable-lightbox}
 
 This sets an environment variable that the script discussed above will insert into the authorized_hosts file by the setup-sshd script in the Docker image discussed earlier.
 
