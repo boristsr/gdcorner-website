@@ -23,7 +23,7 @@ I embarked on creating my own home lab to automate tasks on a few side projects 
 - [Part 1 - Setting up the Master (this article)](/2019/12/27/JenkinsHomeLab-P1-MasterSetup.html)
 - [Part 2 - Setting up Linux Agents on Ubuntu and Raspberry Pis](/2019/12/27/JenkinsHomeLab-P2-LinuxAgents.html)
 - [Part 3 - Setting up Windows Agents](/2019/12/30/JenkinsHomeLab-P3-WindowsAgents.html)
-- Part 4 (Coming Soon) - Setting up Docker for on-demand linux agent creation
+- [Part 4 - Setting up Docker for on-demand linux agent creation](/2020/02/20/JenkinsHomeLab-P4-LinuxDockerAgents.html)
 - Part 5 (Coming Soon) - Setting up Docker for on-demand windows agent creation
 
 ## Why Jenkins?
