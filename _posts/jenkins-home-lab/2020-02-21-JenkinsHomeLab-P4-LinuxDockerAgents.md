@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Jenkins Home Lab: Part 4 - Setting up Linux Agents with Docker"
+title:  "Jenkins Home Lab: Part 4 - On-Demand Linux Agents with Docker"
 date:   2020-02-21 13:29:13 +1100
 tags: [jenkins, ci, homelab, sysadmin, windows]
 comments: true
@@ -9,7 +9,7 @@ description: "Configuring Jenkins to use Docker for on-demand agents"
 disabled: false
 ---
 
-Today we will setup Linux on-demand agents through Docker. First step, let's install Docker.
+Today we will setup on-demand linux agents through Docker. First step, let's install Docker.
 
 <!--more-->
 
