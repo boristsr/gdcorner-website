@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Jenkins Home Lab: Part 4 - Setting up Linux Agents with Docker"
-date:   2020-02-20 13:29:13 +1100
+date:   2020-02-21 13:29:13 +1100
 tags: [jenkins, ci, homelab, sysadmin, windows]
 comments: true
 ogimage: "/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/jenkins-p4-ogimage.png"
