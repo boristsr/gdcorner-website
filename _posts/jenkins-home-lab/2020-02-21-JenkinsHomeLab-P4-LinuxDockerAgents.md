@@ -46,7 +46,7 @@ sudo usermod -aG docker YOURUSER
 
 ### Open HTTP API port
 
-The easiest way to do this is to create an override file for systemd to add a new parameter for the docker daemon. [More details on this are here](https://success.docker.com/article/how-do-i-enable-the-remote-api-for-dockerd) but the relevant details are below.
+The easiest way to do this is to create an override file for systemd to add a new parameter for the Docker daemon. [More details on this are here](https://success.docker.com/article/how-do-i-enable-the-remote-api-for-dockerd) but the relevant details are below.
 
 
 On the new system that is hosting Docker open a console and perform the following.
@@ -84,7 +84,7 @@ http://HOSTNAME:2375/version
 
 ## Fork & modify SSH Slave Docker image
 
-Now that we have a docker server configured, let's create a container image that can be used by Jenkins. Jenkins already has an example docker container which we’ll base our image off. I don’t use this one as it won’t work on Raspberry Pi docker services and I prefer an image based off Ubuntu for my other images.
+Now that we have a Docker server configured, let's create a container image that can be used by Jenkins. Jenkins already has an example docker container which we’ll base our image off. I don’t use this one as it won’t work on Raspberry Pi Docker services and I prefer an image based off Ubuntu for my other images.
 
 Jenkins will connect to this container via SSH, so it needs to inject an SSH key into the image. [The repository here contains an example of how to do this. This is what we'll fork.](https://github.com/jenkinsci/docker-ssh-slave)
 
@@ -92,9 +92,9 @@ The changes I made to this are minimal, and [can be seen in this commit](https:/
 
 I changed the base image to Ubuntu 18.04 for x86 images, and I included a step to install the default java runtime environment.
 
-The key part of the provided example from [jenkinsci](https://github.com/jenkinsci/) is the script [setup-sshd](https://github.com/jenkinsci/docker-ssh-slave/blob/master/setup-sshd) which takes an environment variable, JENKINS_SLAVE_SSH_PUBKEY, and inserts it into the authorized_keys file before starting the SSH daemon. This allows Jenkins to connect to this docker container via the specified SSH key.
+The key part of the provided example from [jenkinsci](https://github.com/jenkinsci/) is the script [setup-sshd](https://github.com/jenkinsci/docker-ssh-slave/blob/master/setup-sshd) which takes an environment variable, JENKINS_SLAVE_SSH_PUBKEY, and inserts it into the authorized_keys file before starting the SSH daemon. This allows Jenkins to connect to this Docker container via the specified SSH key.
 
-> <span class="badge badge-danger">Security Note</span> I haven’t been able to find a consistent source for up to date docker container images on Raspberry Pi. The [Hypriot](https://hub.docker.com/u/hypriot) ones seem to be quite popular though. These should be fine for a home lab, but I’d recommend sticking with x86 images in many circumstances as they are updated more frequently.
+> <span class="badge badge-danger">Security Note</span> I haven’t been able to find a consistent source for up to date Docker container images on Raspberry Pi. The [Hypriot](https://hub.docker.com/u/hypriot) ones seem to be quite popular though. These should be fine for a home lab, but I’d recommend sticking with x86 images in many circumstances as they are updated more frequently.
 
 ## Build & Push Image
 
@@ -135,7 +135,7 @@ Tick it, and click Install without Restart. On the next page press “Restart Je
 
 ![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/01-03-InstallingPlugins.jpg){: .enable-lightbox}
 
-Once it is installed we can configure it to point to the docker host.
+Once it is installed we can configure it to point to the Docker host.
 
 ### Setup A Docker Cloud
 
@@ -159,7 +159,7 @@ tcp://DOCKERHOST:2375
 
 ### Setup Docker Image
 
-Now the docker host has been setup, click Docker Agent templates, and we’ll configure the docker image that was just created. Click Add Docker Template.
+Now the Docker host has been setup, click Docker Agent templates, and we’ll configure the Docker image that was just created. Click Add Docker Template.
 
 ![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/03-01-DockerAgentTemplates.jpg){: .enable-lightbox}
 
@@ -170,7 +170,7 @@ Things to configure here:
 - **Labels:** This is the same as normal agent templates, so add a label that will allow us to target builds against this template. In my case that’s “docker-jenkins-linux"
 - **Enabled:** By default new images are disabled, so make sure to check this box.
 - **Name:** friendly name for your reference
-- **Docker Image:** a reference to the docker image. If using DockerHub then a short reference is enough, however you can use full URLs if hosting elsewhere like GitHub.
+- **Docker Image:** a reference to the Docker image. If using DockerHub then a short reference is enough, however you can use full URLs if hosting elsewhere like GitHub.
 - **Remote File System Root:** /home/jenkins - this is where jobs will store their data while performing the job
 - **Connect Method:** Connect with SSH
 > <span class="badge badge-warning">Note</span> If you don’t have a key set already generated, generate one and add it to jenkins as described in the [Linux Agent article here](/2019/12/27/JenkinsHomeLab-P2-LinuxAgents.html#generate-an-ssh-key). Make sure to copy the public key as we’ll use it shortly.
@@ -250,8 +250,8 @@ Click on the job name, and then click on a build under Build History to see info
 
 ## Next Steps
 
-Once you have a base docker image you are happy with, it should be fairly easy to create a new docker image that uses your base image and installs any dependencies required for specific projects.
+Once you have a base Docker image you are happy with, it should be fairly easy to create a new Docker image that uses your base image and installs any dependencies required for specific projects.
 
-In the next article in this series I’ll be discussing documenting setting up a Windows docker service, but this will be in a few weeks.
+In the next article in this series I’ll be discussing documenting setting up a Windows Docker service, but this will be in a few weeks.
 
 As an exercise in the meantime try creating a job that automatically builds and pushes your image to DockerHub.
