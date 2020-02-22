@@ -199,7 +199,7 @@ This sets an environment variable that the script discussed above will insert in
 
 > <span class="badge badge-warning">Note</span> If you are using the original jenkins image, you will need to set the JavaPath option under Connect Method->Advanced to point to the appropriate java path, as it’s not in the path for the jenkins user.
 
-That should be enough to set. You can tweak these as you see fit, and for future images.
+That should be enough to configure our first image. You can tweak these as you see fit for future images.
 
 ### Setup Test Job
 
