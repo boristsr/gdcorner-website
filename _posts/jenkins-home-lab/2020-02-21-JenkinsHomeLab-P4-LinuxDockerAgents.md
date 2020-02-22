@@ -82,7 +82,7 @@ http://HOSTNAME:2375/version
 
 > <span class="badge badge-danger">Security Note</span> In a production environment I’d recommend using TLS and adding additional security to secure your environment. In this case your port would also become 2376. [This is discussed in detail here.](https://docs.docker.com/engine/security/https/)
 
-## Fork & modify SSH Slave Docker image
+## Fork & Modify SSH Slave Docker image
 
 Now that we have a Docker server configured, let's create a container image that can be used by Jenkins. Jenkins already has an example docker container which we’ll base our image off. I don’t use this one as it won’t work on Raspberry Pi Docker services and I prefer an image based off Ubuntu for my other images.
 
