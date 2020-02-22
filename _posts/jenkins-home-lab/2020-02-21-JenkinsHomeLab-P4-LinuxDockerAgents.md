@@ -46,7 +46,10 @@ sudo usermod -aG docker YOURUSER
 
 ### Open HTTP API port
 
-The easiest way to do this is to create an override file for systemd to add a new parameter for the docker daemon. https://success.docker.com/article/how-do-i-enable-the-remote-api-for-dockerd
+The easiest way to do this is to create an override file for systemd to add a new parameter for the docker daemon. [More details on this are here](https://success.docker.com/article/how-do-i-enable-the-remote-api-for-dockerd) but the relevant details are below.
+
+
+On the new system that is hosting Docker open a console and perform the following.
 
 ```bash
 # Create the directory
@@ -77,7 +80,7 @@ You can verify this is working by navigating to the appropriate URL in your brow
 http://HOSTNAME:2375/version
 ```
 
-> <span class="badge badge-danger">Security Note</span> In a production environment I’d recommend using TLS and adding additional security to secure your environment. In this case your port would also become 2376. https://docs.docker.com/engine/security/https/
+> <span class="badge badge-danger">Security Note</span> In a production environment I’d recommend using TLS and adding additional security to secure your environment. In this case your port would also become 2376. [This is discussed in detail here.](https://docs.docker.com/engine/security/https/)
 
 ## Fork & modify SSH Slave Docker image
 
@@ -121,9 +124,16 @@ All that’s left now is to get Jenkins talking to this new Docker host, and set
 Navigate to Manage Jenkins -> Manage Plugins.
 
 Click on the Available tab and search for “Docker”
-There are numerous plugins that will show up, we want the one that has the description “This plugin integrates Jenkins with Docker” and is linked to https://plugins.jenkins.io/docker-plugin/
 
-Tick it, and click Install without Restart, on the next page press “Restart Jenkins when installation is complete and no jobs are running” to ensure that everything is ready to go.
+![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/01-01-SearchPlugins.jpg){: .enable-lightbox}
+
+There are numerous plugins that will show up, we want the one that has the description “This plugin integrates Jenkins with Docker” and is linked to [https://plugins.jenkins.io/docker-plugin/](https://plugins.jenkins.io/docker-plugin/)
+
+![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/01-02-CorrectDockerPlugin.jpg){: .enable-lightbox}
+
+Tick it, and click Install without Restart. On the next page press “Restart Jenkins when installation is complete and no jobs are running” to ensure that everything is ready to go.
+
+![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/01-03-InstallingPlugins.jpg){: .enable-lightbox}
 
 Once it is installed we can configure it to point to the docker host.
 
@@ -133,9 +143,13 @@ Navigate to Manage Jenkins -> Configure System.
 
 Scroll right to the bottom to find the new section Cloud.
 
-Click Add a new cloud, and select docker.
+Click Add a new cloud, and select Docker. Click Docker Cloud details to expand host information.
 
-Give it a name for your reference, and enter the following URI, changing your hostname
+![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/02-01-DockerCloudDetails.jpg){: .enable-lightbox}
+
+![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/02-02-DockerCloudDetailsFilled.jpg){: .enable-lightbox}
+
+Give it a name for your reference, and enter the following URI, changing your hostname.
 
 ```html
 tcp://DOCKERHOST:2375
@@ -148,12 +162,13 @@ tcp://DOCKERHOST:2375
 Now the docker host has been setup, click Docker Agent templates, and we’ll configure the docker image that was just created. Click Add Docker Template.
 
 Things to configure here:
+
 - **Labels:** This is the same as normal agent templates, so add a label that will allow us to target builds against this template. In my case that’s “docker-jenkins-linux
 - **Name:** friendly name for your reference
 - **Docker Image:** a reference to the docker image. If using DockerHub then a short reference is enough, however you can use full URLs if hosting elsewhere like GitHub.
 - **Remote File System Root:** /home/jenkins - this is where jobs will store their data while performing the job
 - **Connect Method:** Connect with SSH
-> <span class="badge badge-warning">Note</span> If you don’t have a key set already generated, generate one and add it to jenkins as described in the Linux Agent article here. Make sure to copy the public key as we’ll use it shortly. TODO
+> <span class="badge badge-warning">Note</span> If you don’t have a key set already generated, generate one and add it to jenkins as described in the [Linux Agent article here](/2019/12/27/JenkinsHomeLab-P2-LinuxAgents.html#generate-an-ssh-key). Make sure to copy the public key as we’ll use it shortly.
 - **SSH Key**: Use configured SSH Credentials
 - **SSH Credentials:** Choose the credentials that match the public key we’ll set soon
 - **Host Key Verification Strategy:** Non verifying Verification Strategy
@@ -166,7 +181,7 @@ Under Environment, you want to add a line like this:
 JENKINS_SLAVE_SSH_PUBKEY=ssh-rsa YOUR SSH PUBLIC KEY
 ```
 
-This sets an environment variable that the script discussed above will insert into the authorized_hosts file.
+This sets an environment variable that the script discussed above will insert into the authorized_hosts file by the setup-sshd script in the Docker image discussed earlier.
 
 > <span class="badge badge-warning">Note</span> If you are using the original jenkins image, you will need to set the JavaPath option under Connect Method->Advanced to point to the appropriate java path, as it’s not in the path for the jenkins user.
 
@@ -176,11 +191,19 @@ That should be enough to set. You can tweak these as you see fit, and for future
 
 Now we’ll set up a new job to test the new image. On the Jenkins main page click New Item.
 
+![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-01-NewItem.jpg){: .enable-lightbox}
+
 Enter a name for this job, and choose Freestyle project and click next.
+
+![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-02-FreestyleProjectName.jpg){: .enable-lightbox}
 
 Tick Restrict where this project can be run, and then enter the label that you configured for your Docker template.
 
+![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-03-RestrictJobs.jpg){: .enable-lightbox}
+
 Under Build, click Add build step and choose Execute Shell.
+
+![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-04-ExecuteShellStep.jpg){: .enable-lightbox}
 
 Enter the following code:
 
@@ -193,11 +216,23 @@ This will print out the authorized_keys and show that the public key we specifie
 
 Click Save.
 
+![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-05-AddedCodeSave.jpg){: .enable-lightbox}
+
 On the main page of Jenkins, click the Run Job icon next to our new job.
+
+![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-06-RunJob.jpg){: .enable-lightbox}
 
 If all goes well you’ll see the new agent start up. It may briefly show as offline as it initializes, and then it will complete the job rather quickly.
 
+![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-07-OfflineAgent.jpg){: .enable-lightbox}
+
+![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-08-ExecutingJob.jpg){: .enable-lightbox}
+
 Click on the job name, and then click on a build under Build History to see information about it. Clicking Console Output will show the information that we expected to print out.
+
+![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-10-JobNumber.jpg){: .enable-lightbox}
+
+![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-11-ConsoleOutput.jpg){: .enable-lightbox}
 
 ## Next Steps
 
