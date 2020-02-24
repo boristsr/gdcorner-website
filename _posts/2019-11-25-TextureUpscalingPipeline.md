@@ -6,11 +6,11 @@ tags: [Development, python, SuperResolution, ImageProcessing, RainbowRedux]
 comments: true
 ---
 
-At the beginning of the year I wrote about my [initial experiments with image super resolution](/rainbowsix/gamedev/superresolution/rendering/2019/01/04/SuperResolutionTesting.html). This week I focused on some of the improvements I discussed and implemented a pipeline.
+At the beginning of the year I wrote about my [initial experiments with image super resolution]({{ site.url }}{% post_url 2019-01-04-SuperResolutionTesting %}). This week I focused on some of the improvements I discussed and implemented a pipeline.
 
 I’ve written an image processing framework which I'm [releasing](https://github.com/boristsr/TextureUpscalingPipeline) under the [MIT license](https://github.com/boristsr/TextureUpscalingPipeline/blob/master/LICENSE). The goal is to allow rapid iteration of image processing until good results are achieved in the majority of cases reducing or eliminating the need for any manual editing of images.
 
-![Denoised before ESRGAN and then downsampled](/assets/posts/2019-11-25-TextureUpscalingPipeline.md/Desk-Downsampled-Denoised.jpg){: .enable-lightbox}
+![Denoised before ESRGAN and then downsampled]({{ site.url }}/assets/posts/2019-11-25-TextureUpscalingPipeline.md/Desk-Downsampled-Denoised.jpg){: .enable-lightbox}
 
 <!--more-->
 
@@ -46,31 +46,31 @@ Now that this pipeline is in place I plan to iterate much more quickly over this
 
 ## Results
 
-Here are some examples of the results from this pipeline. The passes are exagerated here to show off denoising. This pipeline allows these passes to be tweaked rapidly until a nice result is acheived in the majority of circumstances.
+Here are some examples of the results from this pipeline. The passes are exaggerated here to show off denoising. This pipeline allows these passes to be tweaked rapidly until a nice result is achieved in the majority of circumstances.
 
 ### Desk & Office
 
 This scene shows off a lot of detailed textures which demonstrate the results of the different passes.
 
 Original
-![Original](/assets/posts/2019-11-25-TextureUpscalingPipeline.md/Desk-Original.jpg){: .enable-lightbox}
+![Original]({{ site.url }}/assets/posts/2019-11-25-TextureUpscalingPipeline.md/Desk-Original.jpg){: .enable-lightbox}
 Unfiltered ESRGAN
-![Unfiltered ESRGAN](/assets/posts/2019-11-25-TextureUpscalingPipeline.md/Desk-UnfilteredESRGAN.jpg){: .enable-lightbox}
+![Unfiltered ESRGAN]({{ site.url }}/assets/posts/2019-11-25-TextureUpscalingPipeline.md/Desk-UnfilteredESRGAN.jpg){: .enable-lightbox}
 Denoised before ESRGAN
-![Denoised before ESRGAN](/assets/posts/2019-11-25-TextureUpscalingPipeline.md/Desk-Denoised.jpg){: .enable-lightbox}
+![Denoised before ESRGAN]({{ site.url }}/assets/posts/2019-11-25-TextureUpscalingPipeline.md/Desk-Denoised.jpg){: .enable-lightbox}
 ESRGAN Downsampled
-![ESRGAN Downsampled](/assets/posts/2019-11-25-TextureUpscalingPipeline.md/Desk-Downsampled.jpg){: .enable-lightbox}
+![ESRGAN Downsampled]({{ site.url }}/assets/posts/2019-11-25-TextureUpscalingPipeline.md/Desk-Downsampled.jpg){: .enable-lightbox}
 Denoised before ESRGAN and then downsampled
-![Denoised before ESRGAN and then downsampled](/assets/posts/2019-11-25-TextureUpscalingPipeline.md/Desk-Downsampled-Denoised.jpg){: .enable-lightbox}
+![Denoised before ESRGAN and then downsampled]({{ site.url }}/assets/posts/2019-11-25-TextureUpscalingPipeline.md/Desk-Downsampled-Denoised.jpg){: .enable-lightbox}
 
 ### Translucency
 
 [Rainbow Six](https://en.wikipedia.org/wiki/Tom_Clancy%27s_Rainbow_Six_(video_game)) doesn't have too many translucent textures, mainly masked alpha textures, but here is an example of some glass to see the alpha channel recovery. You can also see the metal beams which are a masked transparent material.
 
 Original
-![Original](/assets/posts/2019-11-25-TextureUpscalingPipeline.md/Tunnel-Original.jpg){: .enable-lightbox}
+![Original]({{ site.url }}/assets/posts/2019-11-25-TextureUpscalingPipeline.md/Tunnel-Original.jpg){: .enable-lightbox}
 Denoised before ESRGAN and then downsampled
-![Denoised before ESRGAN and then downsampled](/assets/posts/2019-11-25-TextureUpscalingPipeline.md/Tunnel-Downsampled-Denoised.jpg){: .enable-lightbox}
+![Denoised before ESRGAN and then downsampled]({{ site.url }}/assets/posts/2019-11-25-TextureUpscalingPipeline.md/Tunnel-Downsampled-Denoised.jpg){: .enable-lightbox}
 
 ### Where to download
 
