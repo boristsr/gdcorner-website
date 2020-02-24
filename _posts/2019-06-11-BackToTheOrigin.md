@@ -5,15 +5,15 @@ date:   2019-06-11 14:16:13 +1100
 tags: [math, floatingpoint, RainbowRedux, development, gamedev]
 comments: true
 ---
-While working on [RainbowRedux](/rainbowsix/gamedev/superresolution/rendering/progress/2019/01/13/RainbowSixRevivalProject.html) I’ve discovered the content is authored in some interesting ways. Today I’m going to talk about large distances, floating point numbers and the errors they can cause. I'll show how I'm trying to reduce these distances and make the geometry more manageable.
+While working on [RainbowRedux]({{ site.url }}{% post_url 2019-01-13-RainbowSixRevivalProject %}) I’ve discovered the content is authored in some interesting ways. Today I’m going to talk about large distances, floating point numbers and the errors they can cause. I'll show how I'm trying to reduce these distances and make the geometry more manageable.
 
-![Level is far away from the origin](/assets/posts/2019-06-11-BackToTheOrigin.md/TopDownProblem.png){: .enable-lightbox}
+![Level is far away from the origin]({{ site.url }}/assets/posts/2019-06-11-BackToTheOrigin.md/TopDownProblem.png){: .enable-lightbox}
 
 <!--more-->
 
 In this image you can see that the level geometry is stored in the top right, approximately  50,000 units away from the origin (roughly ([30 000],[30 000],[30 000])). In the bottom left you can see there is some geometry at the origin. This is all the dynamic objects like breakable glass, usable doors and so on. I haven't been able to find a reason for this. I suspect it's just how some of their authoring tools were configured.
 
-![Rotation problem](/assets/posts/2019-06-11-BackToTheOrigin.md/TopDownProblemRotation.gif){: .enable-lightbox}
+![Rotation problem]({{ site.url }}/assets/posts/2019-06-11-BackToTheOrigin.md/TopDownProblemRotation.gif){: .enable-lightbox}
 
 This is another top down view. Watch as I rotate a room. As it rotates you can see that the pivot point is the origin. Imagine the room is on a large invisible boom arm. All rooms and static objects are stored like this in the level.
 
@@ -50,13 +50,13 @@ For the purposes of this example, I’m just going to ignore the dynamic objects
 
 **Step 3.** Subtract the object offset from each vertex.
 
-![Vehicle At Origin](/assets/posts/2019-06-11-BackToTheOrigin.md/VehicleAtOrigin-small.gif){: .enable-lightbox}
+![Vehicle At Origin]({{ site.url }}/assets/posts/2019-06-11-BackToTheOrigin.md/VehicleAtOrigin-small.gif){: .enable-lightbox}
 
 This places the object so it’s centered at the origin. In the image above you can see the cardinal axis lines (red and green) that are shown at the origin in the UE4 editor, and you can see the vehicle rotating about it's own center.
 
 **Step 4.** Move the object by the object offset.
 
-![Fixed Vehicle In Place](/assets/posts/2019-06-11-BackToTheOrigin.md/FixedVehicleInPlace.gif){: .enable-lightbox}
+![Fixed Vehicle In Place]({{ site.url }}/assets/posts/2019-06-11-BackToTheOrigin.md/FixedVehicleInPlace.gif){: .enable-lightbox}
 
 This places the object back in its original position, however if we were to rotate the object it rotates in place rather than moving as if on a boom arm.
 
@@ -65,7 +65,7 @@ This makes it easy to identify the global offset of the level
 
 **Step 6.** Move each object back by the global offset
 
-![Level At Origin](/assets/posts/2019-06-11-BackToTheOrigin.md/LevelAtOrigin.png){: .enable-lightbox}
+![Level At Origin]({{ site.url }}/assets/posts/2019-06-11-BackToTheOrigin.md/LevelAtOrigin.png){: .enable-lightbox}
 
 This keeps the relative position of all the objects, but centers the level around the origin. In this picture you can see the level is intersected by the cardinal axis lines.
 
@@ -75,5 +75,5 @@ By shifting the origin of the level the potential for floating point imprecision
 
 Here are a few screeenshots from the project showing some progress.
 
-![Unreal Preview](/assets/posts/2019-06-11-BackToTheOrigin.md/Scene1.png){: .enable-lightbox}
-![Unreal Preview](/assets/posts/2019-06-11-BackToTheOrigin.md/Scene2.png){: .enable-lightbox}
+![Unreal Preview]({{ site.url }}/assets/posts/2019-06-11-BackToTheOrigin.md/Scene1.png){: .enable-lightbox}
+![Unreal Preview]({{ site.url }}/assets/posts/2019-06-11-BackToTheOrigin.md/Scene2.png){: .enable-lightbox}

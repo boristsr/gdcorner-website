@@ -63,7 +63,7 @@ Results:
 * Prototype caching: 3m48s
 * lru_cache: 3m22s
 
-As you can see the benefit was noticable, and it simplified my code [which is always positive](https://blog.codinghorror.com/the-best-code-is-no-code-at-all/). I'm sure atleast part of the speedup came from a better hashing function which avoided converting all inputs into strings.
+As you can see the benefit was noticeable, and it simplified my code [which is always positive](https://blog.codinghorror.com/the-best-code-is-no-code-at-all/). I'm sure at least part of the speedup came from a better hashing function which avoided converting all inputs into strings.
 
 The really impressive part though was how easy it was to implement. This made it too easy to not test the second function. However, some changes were required. This works best with primitive types ([technically it only requires all arguments to be hashable](https://docs.python.org/3/library/functools.html#functools.lru_cache)), so arguments that are objects or arrays make this ineffective.
 
