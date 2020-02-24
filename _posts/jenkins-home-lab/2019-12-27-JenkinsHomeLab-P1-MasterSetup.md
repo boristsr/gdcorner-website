@@ -181,23 +181,23 @@ sudo chown -R 1000:1000 /volume1/docker/JenkinsMaster/dataFolder/var/jenkins_hom
 Exit the SSH session. We are now ready to setup the container on the Synology NAS.
 
 Search the registry for the jenkins/jenkins image
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/1.01-synology-jenkins-image-repository.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/1.01-synology-jenkins-image-repository.jpg){: .enable-lightbox}
 
 Download the Jenkins image with tag LTS
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/1.02-synology-jenkins-image-tag.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/1.02-synology-jenkins-image-tag.jpg){: .enable-lightbox}
 
 Create the container by double clicking the image
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/1.03-synology-jenkins-create-container-from-image.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/1.03-synology-jenkins-create-container-from-image.jpg){: .enable-lightbox}
 
 Enter a name for the container and then enter Advanced Settings
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/1.04-synology-jenkins-create-container-basic.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/1.04-synology-jenkins-create-container-basic.jpg){: .enable-lightbox}
 
 Expose the ports
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/1.05-synology-jenkins-expose-ports.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/1.05-synology-jenkins-expose-ports.jpg){: .enable-lightbox}
 
 Map the jenkins_home folder by clicking Add Folder and selecting the folder you created previously.
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/1.06-synology-jenkins-map-home-add-folder.jpg){: .enable-lightbox}
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/1.07-synology-jenkins-map-home-folder-selection.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/1.06-synology-jenkins-map-home-add-folder.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/1.07-synology-jenkins-map-home-folder-selection.jpg){: .enable-lightbox}
 
 Enter the mount path as
 
@@ -206,16 +206,16 @@ Enter the mount path as
 ```
 
 Apply the advanced settings and continue with container creation
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/1.08-synology-jenkins-create-summary.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/1.08-synology-jenkins-create-summary.jpg){: .enable-lightbox}
 
 Press apply and the container will start up.
 
 To get the initial password we need to connect a second terminal to this instance and run a command. Click the new container and click details.
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/1.09-synology-jenkins-created.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/1.09-synology-jenkins-created.jpg){: .enable-lightbox}
 
 Once in the running container details, click Terminal, and then Create. Click on the newly created terminal, labelled bash.
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/1.10-synology-jenkins-terminal.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/1.10-synology-jenkins-terminal.jpg){: .enable-lightbox}
 
 Run the command
 
@@ -240,16 +240,16 @@ You can now access jenkins at http://HOSTNAME-OR-IP:8080 in your browser.
 ### Initial Login
 
 Enter the password that we captured from the file at /var/jenkins_home/secrets/initialAdminPassword after installing Jenkins.
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/2.01-jenkins-initial-login.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/2.01-jenkins-initial-login.jpg){: .enable-lightbox}
 
 ### Plugins
 
 I recommend just installing the recommended plugins first up. You can always add or remove plugins later.
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/2.02-plugin-options.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/2.02-plugin-options.jpg){: .enable-lightbox}
 
 This will take a while to download depending on your internet speed and system.
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/2.03-installing-plugins.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/2.03-installing-plugins.jpg){: .enable-lightbox}
 
 ### Create Admin User
 
@@ -257,13 +257,13 @@ This will take a while to download depending on your internet speed and system.
 
 Enter the details for your main admin user.
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/2.04-creating-first-admin-user.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/2.04-creating-first-admin-user.jpg){: .enable-lightbox}
 
 ### Instance Configuration
 
 Unless you are planning on renaming the host, or adding a custom DNS entry for this server then the default setting is probably ok.
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/2.05-instance-configuration.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/2.05-instance-configuration.jpg){: .enable-lightbox}
 
 ### Wizard Finished
 
@@ -275,22 +275,22 @@ It is [best practice to not build on the master node](https://wiki.jenkins.io/di
 
 In the left hand menu on the side enter Manage Jenkins, and then enter Configure System. This page can be slow to load, be patient.
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/2.06-manage-jenkins.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/2.06-manage-jenkins.jpg){: .enable-lightbox}
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/2.07-configure-system.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/2.07-configure-system.jpg){: .enable-lightbox}
 
 In here change “# of executors” to 0 and click Save. This is the number of jobs that can be run concurrently on the master node, not the number of agents that will eventually connect.
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/2.08-change-num-executors.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/2.08-change-num-executors.jpg){: .enable-lightbox}
 
 Once this is applied the Build Executor Status box on the left will now be empty.
 
 Before:
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/2.09-executors-before.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/2.09-executors-before.jpg){: .enable-lightbox}
 
 After:
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/2.10-executors-after.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/2.10-executors-after.jpg){: .enable-lightbox}
 
 ## What’s Next?
 

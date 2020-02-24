@@ -31,15 +31,15 @@ This is likely already done if you are running the Docker image for the master s
 
 Go to the home page and click on Manage Jenkins
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/1.01-manage-jenkins.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/1.01-manage-jenkins.jpg){: .enable-lightbox}
 
 Click on Configure Global Security
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/1.02-global-security.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/1.02-global-security.jpg){: .enable-lightbox}
 
 Scroll down to Agents and set the TCP port for inbound agents to 50000.
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/1.03-tcp-port.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/1.03-tcp-port.jpg){: .enable-lightbox}
 
 ### Install the Powershell plugin
 
@@ -47,29 +47,29 @@ Powershell gives you significantly more flexibility in build steps. This plugin 
 
 Go to the home page and click on Manage Jenkins
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/1.01-manage-jenkins.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/1.01-manage-jenkins.jpg){: .enable-lightbox}
 
 Click on Manage Plugins
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/2.02-manage-plugins.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/2.02-manage-plugins.jpg){: .enable-lightbox}
 
 Click on Available and search for "Powershell". Tick this plugin and click install without restart.
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/2.03-powershell-plugin.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/2.03-powershell-plugin.jpg){: .enable-lightbox}
 
 ### Create agent node
 
 Go to the home page and click on Manage Jenkins
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/1.01-manage-jenkins.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/1.01-manage-jenkins.jpg){: .enable-lightbox}
 
 Click on Manage nodes
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/3.02-manage-nodes.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/3.02-manage-nodes.jpg){: .enable-lightbox}
 
 Enter a name and choose Permanent Agent
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/3.03-create-agent.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/3.03-create-agent.jpg){: .enable-lightbox}
 
 Enter the following details:
 
@@ -79,15 +79,15 @@ Enter the following details:
 - **Remote root directory**: C:\jenkins
 - **Launch method**: Launch agent by connecting it to the master
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/3.04-agent-details.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/3.04-agent-details.jpg){: .enable-lightbox}
 
 After clicking on save you will be returned to a list of nodes. Click on the newly created node which will be offline.
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/3.05-agent-list.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/3.05-agent-list.jpg){: .enable-lightbox}
 
 Depending on which master hosting method used you may be able to launch with Java webstart, but that won't allow you to install the service since it won't run with administrative priviledges. Instead we'll use the second connection method. For now copy the following as we will use them a little later:
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/3.06-agent-connection.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/3.06-agent-connection.jpg){: .enable-lightbox}
 
 ## Configure Windows System
 
@@ -129,11 +129,11 @@ Jump to the instructions for your method:
 
 From the Windows agent system log in to Jenkins and go to the status page for the windows node that was created earlier.
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/4.01-agent-connection.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/4.01-agent-connection.jpg){: .enable-lightbox}
 
 Click the Launch agent from browser. This will start an agent with a GUI. Click File and then "Install as a Service". This will fail but will download the files we need.
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/4.02-install-as-service.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/4.02-install-as-service.jpg){: .enable-lightbox}
 
 Open an administrative shell and enter the following commands to install the service.
 
@@ -149,7 +149,7 @@ This will start the agent and it will relaunch every reboot. You can skip ahead 
 
 I adapted this method from a [larger method on stackoverflow](https://stackoverflow.com/a/44753306). From the Windows agent system log in to Jenkins and go to the status page for the windows node that was created earlier.
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/4.01-agent-connection.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/4.01-agent-connection.jpg){: .enable-lightbox}
 
 Create a folder, c:\jenkins
 
@@ -180,15 +180,15 @@ This will start the agent and it will relaunch every reboot.
 
 From the Jenkins homepage click "New Item".
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/5.01-new-item.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/5.01-new-item.jpg){: .enable-lightbox}
 
 Enter the name as Windows-Agent-Test, select Freestyle Project and click save.
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/5.02-job-name.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/5.02-job-name.jpg){: .enable-lightbox}
 
 In the details for this job enable "Restrict where to run this job" and type the label "windows". This will mean it will only run on the agent we just created.
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/5.03-restrict-job.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/5.03-restrict-job.jpg){: .enable-lightbox}
 
 We want to add 2 build steps. First add a Batch command and type the following command to print all environment variables.
 
@@ -202,17 +202,17 @@ Now add a Powershell build step and add the following command. This will print v
 Get-ComputerInfo
 ```
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/5.04-build-steps.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/5.04-build-steps.jpg){: .enable-lightbox}
 
 Click save and this will return you to the status page for the job. Click "Build Now" and wait a few seconds for the job to run.
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/5.05-job-status.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/5.05-job-status.jpg){: .enable-lightbox}
 
 Once you see the job has turned blue in the bottom left you can click #1 and then click "Console Output" to see what was printed out.
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/5.06-job-history.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/5.06-job-history.jpg){: .enable-lightbox}
 
-![jenkins](/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/5.07-console-output.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/5.07-console-output.jpg){: .enable-lightbox}
 
 ## What's next?
 

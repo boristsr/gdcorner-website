@@ -125,15 +125,15 @@ Navigate to Manage Jenkins -> Manage Plugins.
 
 Click on the Available tab and search for “Docker”
 
-![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/01-01-SearchPlugins.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/01-01-SearchPlugins.jpg){: .enable-lightbox}
 
 There are numerous plugins that will show up, we want the one that has the description “This plugin integrates Jenkins with Docker” and is linked to [https://plugins.jenkins.io/docker-plugin/](https://plugins.jenkins.io/docker-plugin/)
 
-![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/01-02-CorrectDockerPlugin.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/01-02-CorrectDockerPlugin.jpg){: .enable-lightbox}
 
 Tick it, and click Install without Restart. On the next page press “Restart Jenkins when installation is complete and no jobs are running” to ensure that everything is ready to go.
 
-![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/01-03-InstallingPlugins.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/01-03-InstallingPlugins.jpg){: .enable-lightbox}
 
 Once it is installed we can configure it to point to the Docker host.
 
@@ -145,9 +145,9 @@ Scroll right to the bottom to find the new section Cloud.
 
 Click Add a new cloud, and select Docker. Click Docker Cloud details to expand host information.
 
-![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/02-01-DockerCloudDetails.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/02-01-DockerCloudDetails.jpg){: .enable-lightbox}
 
-![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/02-02-DockerCloudDetailsFilled.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/02-02-DockerCloudDetailsFilled.jpg){: .enable-lightbox}
 
 Give it a name for your reference, and enter the following URI, changing your hostname.
 
@@ -161,9 +161,9 @@ tcp://DOCKERHOST:2375
 
 Now the Docker host has been setup, click Docker Agent templates, and we’ll configure the Docker image that was just created. Click Add Docker Template.
 
-![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/03-01-DockerAgentTemplates.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/03-01-DockerAgentTemplates.jpg){: .enable-lightbox}
 
-![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/03-02-AddDockerTemplate.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/03-02-AddDockerTemplate.jpg){: .enable-lightbox}
 
 Things to configure here:
 
@@ -179,13 +179,13 @@ Things to configure here:
 - **Host Key Verification Strategy:** Non verifying Verification Strategy
 - **Pull Strategy:** Pull once and update latest will keep your image up to date, while not wasting bandwidth
 
-![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/03-03-TopLevelSettings.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/03-03-TopLevelSettings.jpg){: .enable-lightbox}
 
-![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/03-04-SSHSettings.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/03-04-SSHSettings.jpg){: .enable-lightbox}
 
 Now the top level options are set, expand the Container settings section under Docker Image.
 
-![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/03-05-ContainerSettings.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/03-05-ContainerSettings.jpg){: .enable-lightbox}
 
 Under Environment, you want to add a line like this:
 
@@ -193,7 +193,7 @@ Under Environment, you want to add a line like this:
 JENKINS_SLAVE_SSH_PUBKEY=ssh-rsa YOUR SSH PUBLIC KEY
 ```
 
-![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/03-06-PublicKey.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/03-06-PublicKey.jpg){: .enable-lightbox}
 
 This sets an environment variable that the script discussed above will insert into the authorized_hosts file by the setup-sshd script in the Docker image discussed earlier.
 
@@ -205,19 +205,19 @@ That should be enough to configure our first image. You can tweak these as you s
 
 Now we’ll set up a new job to test the new image. On the Jenkins main page click New Item.
 
-![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-01-NewItem.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-01-NewItem.jpg){: .enable-lightbox}
 
 Enter a name for this job, and choose Freestyle project and click next.
 
-![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-02-FreestyleProjectName.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-02-FreestyleProjectName.jpg){: .enable-lightbox}
 
 Tick Restrict where this project can be run, and then enter the label that you configured for your Docker template.
 
-![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-03-RestrictJobs.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-03-RestrictJobs.jpg){: .enable-lightbox}
 
 Under Build, click Add build step and choose Execute Shell.
 
-![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-04-ExecuteShellStep.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-04-ExecuteShellStep.jpg){: .enable-lightbox}
 
 Enter the following code:
 
@@ -230,23 +230,23 @@ This will print out the authorized_keys and show that the public key we specifie
 
 Click Save.
 
-![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-05-AddedCodeSave.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-05-AddedCodeSave.jpg){: .enable-lightbox}
 
 On the main page of Jenkins, click the Run Job icon next to our new job.
 
-![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-06-RunJob.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-06-RunJob.jpg){: .enable-lightbox}
 
 If all goes well you’ll see the new agent start up. It may briefly show as offline as it initializes, and then it will complete the job rather quickly.
 
-![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-07-OfflineAgent.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-07-OfflineAgent.jpg){: .enable-lightbox}
 
-![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-08-ExecutingJob.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-08-ExecutingJob.jpg){: .enable-lightbox}
 
 Click on the job name, and then click on a build under Build History to see information about it. Clicking Console Output will show the information that we expected to print out.
 
-![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-10-JobNumber.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-10-JobNumber.jpg){: .enable-lightbox}
 
-![jenkins](/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-11-ConsoleOutput.jpg){: .enable-lightbox}
+![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/04-11-ConsoleOutput.jpg){: .enable-lightbox}
 
 ## Next Steps
 
