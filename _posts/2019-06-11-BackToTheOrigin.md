@@ -73,7 +73,7 @@ This keeps the relative position of all the objects, but centers the level aroun
 
 By shifting the origin of the level the potential for floating point imprecision is reduced. This also allows the geometry and objects to be manipulated at runtime more easily as they will exhibit more expected behaviour when being transformed.
 
-Here are a few screeenshots from the project showing some progress.
+Here are a few screenshots from the project showing some progress.
 
 ![Unreal Preview]({{ site.url }}/assets/posts/2019-06-11-BackToTheOrigin.md/Scene1.png){: .enable-lightbox}
 ![Unreal Preview]({{ site.url }}/assets/posts/2019-06-11-BackToTheOrigin.md/Scene2.png){: .enable-lightbox}
