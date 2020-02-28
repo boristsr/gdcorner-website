@@ -7,7 +7,7 @@ ogimage: "/assets/posts/2020-02-28-ProblemBehavioursInSoftwareTeams.md/4problems
 comments: true
 ---
 
-I’m going to outline 4 common behaviours I’ve noticed and experienced in my time in the game and software development industry. This is by no means an exhaustive list but they are problems I’ve seen crop up repeatedly which can have major effects on team performance and morale. I’ll talk about the issues that follow from these behaviours as well as how to prevent them.
+I’m going to outline 4 problem behaviours that I’ve noticed and experienced in my time in the game and software development industry.. This is by no means an exhaustive list but they are problems I’ve seen crop up repeatedly which can have major effects on team performance and morale. I’ll talk about the issues that follow from these behaviours as well as offer insights into how to prevent them.
 
 <!--more-->
 
@@ -41,7 +41,7 @@ Try these steps:
 
 4. Start looking to reduce scope for the deadline or move the deadline.
 
-Ofcourse, reducing scope or moving deadlines isn’t always easy or possible, but if the team is already doing overtime then assigning everything as high won’t help you deliver and will only reduce the effectiveness of the team.
+Reducing scope or moving deadlines isn’t always easy or possible, but if the team is already doing overtime then assigning everything as high won’t help you deliver and will only reduce the effectiveness of the team.
 
 If this is the result of conflict with the client then it’s for leadership and client facing roles to deal with. Create a buffer and reassess these issues and priorities internally. Continue working in a manner that helps deliver the best product efficiently. It’s better to do this than just shifting the heat to the rest of the team.
 
@@ -79,7 +79,7 @@ The best thing you can do is make it stupidly easy for people to report issues o
 
 Empower your developers to redirect these requests to official channels. Let them know you have their back and they won’t be in trouble for not immediately actioning these requests.
 
-The flipside here is that you don’t want to encourage a culture of brush-offs. I’m all for teams being responsive and helpful. It’s just that a balance is required.
+The flip side here is that you don’t want to encourage a culture of brush-offs. I’m all for teams being responsive and helpful. It’s just that a balance is required.
 
 ## Issue 3: Blaming Individuals
 
@@ -99,7 +99,7 @@ Blaming an individual will stop you identifying the root cause of an issue. The 
 
 The blame game only further increases stress and tensions in a team. When mistakes are blamed on individuals, and worse, publicly called out, this isn’t good for the engagement or mental wellbeing of your developers.
 
-And lastly, it ignores 2 fundamental truths of software development. 
+And lastly, it ignores 2 fundamental truths of software development.
 
 1. **Software development is a team effort**.
 
@@ -151,7 +151,7 @@ Many developers may instantly baulk at this conversation. In too many companies 
 
 This is somewhat related to other points, "everything is urgent" and blaming individuals. This is when someone starts blowing a bug or issue out of proportion, possibly naming and shaming people. Certainly they are trying to get their issue actioned as quickly as possible.
 
-I’ve seen producers and project managers single out developers in front of team meetings over trivial issues that are painted as major failings completely blocking progress. The team members see right through this. It doesn’t earn respect, or change the facts. It’s pure hyperbole.
+I’ve seen producers and project managers single out developers in front of team meetings over trivial issues that are painted as major failings completely blocking progress. The team members see right through this. It doesn’t earn respect, or change the facts. It’s pure exaggeration.
 
 This can also arise from a bug that's experienced during a demo. This is especially likely if the demo strays off topic away from the feature being demonstrated. It’s not uncommon for people unfamiliar with development to get hung up on otherwise small details which, in turn, lights a fire under the people running the session.
 
