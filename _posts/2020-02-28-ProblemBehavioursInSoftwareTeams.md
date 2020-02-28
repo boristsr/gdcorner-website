@@ -7,7 +7,7 @@ ogimage: "/assets/posts/2020-02-28-ProblemBehavioursInSoftwareTeams.md/4problems
 comments: true
 ---
 
-I’m going to outline 4 problem behaviours that I’ve noticed and experienced in my time in the game and software development industry.. This is by no means an exhaustive list but they are problems I’ve seen crop up repeatedly which can have major effects on team performance and morale. I’ll talk about the issues that follow from these behaviours as well as offer insights into how to prevent them.
+I’m going to outline 4 problem behaviours that I’ve noticed and experienced in my time in the game and software development industry. This is by no means an exhaustive list but they are problems I’ve seen crop up repeatedly which can have major effects on team performance and morale. I’ll talk about the issues that follow from these behaviours as well as offer insights into how to prevent them.
 
 <!--more-->
 
@@ -169,7 +169,7 @@ Blowing out the significance of trivial tweaks after major features being implem
 
 These sorts of responses encourage bypassing proper issue triaging and response. The person raising this is trying to elicit a response of this being urgent and above all else, outside of the normal stream of work. This feeds back into many of the same points in Everything Is Urgent, including difficulty tracking costs and issues.
 
-There are very few situations in development where raising issues like this is beneficial. If the product is still several months from release, nothing is this urgent. The exception being when a demo is being prepped, in which case some time should have been scheduled for ad-hoc polish work.
+There are very few situations in development where raising issues like this is beneficial. If the product is still several months from release, nothing is this urgent. The exception being when a demo is being prepared, in which case some time should have been scheduled for ad-hoc polish work.
 
 These sorts of reports, or exaggerated focus on issues will turn the team defensive with an "Us vs Them" attitude. They will start operating in a manner that reduces the chances of this happening. They may reduce communication, lower the amount of attention paid to the people raising these issues or stop doing any work above and beyond what is assigned so they have to deal with this less. None of these are desired outcomes.
 
