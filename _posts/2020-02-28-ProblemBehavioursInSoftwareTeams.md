@@ -131,7 +131,7 @@ The goals of any release or build process should include:
 * Reduce management overhead
 * Reduce manual work
 
-Where possible all steps in the process should be automated. Human mistakes can’t be made if a human isn’t involved. **Automate everything possible. **If you can’t automate steps, tasks or processes, look into why. Try and change the surrounding factors to allow automation. It’ll be cheaper, easier and preferable in the long run.
+Where possible all steps in the process should be automated. Human mistakes can’t be made if a human isn’t involved. **Automate everything possible.** If you can’t automate steps, tasks or processes, look into why. Try and change the surrounding factors to allow automation. It’ll be cheaper, easier and preferable in the long run.
 
 #### Too Much Access
 
