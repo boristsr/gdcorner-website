@@ -26,12 +26,15 @@ h3 a:hover {
 
 img.og-post-banner:hover {
     box-shadow: 0 0 25px 0 rgba(50, 50, 50, 0.4);
+    transition: all .15s ease-in-out;  
     cursor: pointer;  
 }
 
 img.og-post-banner {
     margin-top: 25px;
     border: 0px;
+    box-shadow: 0 0 0px 0 rgba(50, 50, 50, 0.4);
+    transition: all .15s ease-in-out;  
 }
 
 //Fix slate themes code boxes having an ugly white inset box which doesn't cover all code
