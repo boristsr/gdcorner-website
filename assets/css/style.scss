@@ -3,6 +3,37 @@
 
 @import "{{ site.theme }}";
 
+
+h3 {
+    margin-bottom: 0;
+}
+
+h3 a {
+    font-size: 28px;
+    color: #000;
+    color: rgba(0,0,0,0.9);
+    transition: all .15s ease-in-out;  
+    line-height: 1.2;
+}
+
+h3 a:hover {
+    text-decoration: none;
+}
+
+.post-list li {
+    padding-bottom: 10px;
+}
+
+img.og-post-banner:hover {
+    box-shadow: 0 0 25px 0 rgba(50, 50, 50, 0.4);
+    cursor: pointer;  
+}
+
+img.og-post-banner {
+    margin-top: 25px;
+    border: 0px;
+}
+
 //Fix slate themes code boxes having an ugly white inset box which doesn't cover all code
 code {
     background-color: #00000000;
