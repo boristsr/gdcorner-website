@@ -43,7 +43,7 @@ I’ve had a few people ask how to contribute, and I’ve been thinking how to o
 
 ### RainbowRedux GitHub Organisation
 
-Alex Kimov and I have recently agreed to start closer collaboration between our projects, and create a single place for information on file formats and development on older RSE games. As part of this there is now a RainbowRedux organisation on GitHub to house many of the related projects.
+[Alex Kimov](https://github.com/AlexKimov) and I have recently agreed to start closer collaboration between our projects, and create a single place for information on file formats and development on older RSE games. As part of this there is now a RainbowRedux organisation on GitHub to house many of the related projects.
 
 [RainbowRedux Github Organisation](https://github.com/RainbowRedux)
 
