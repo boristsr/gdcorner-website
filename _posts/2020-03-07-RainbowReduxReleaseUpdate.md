@@ -17,7 +17,7 @@ The first binary release is now available for RainbowRedux. This will ask you to
 
 [Release Notes](https://github.com/RainbowRedux/RainbowRedux/blob/master/Documentation/Release%20Notes/ReleaseNotes-0.1.1.md)
 
-[Download](https://github.com/RainbowRedux/RainbowRedux/releases/tag/v0.1.1)
+[Download](https://github.com/RainbowRedux/RainbowRedux/releases/tag/v0.1.2)
 
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/lF2UFoP8VMk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
