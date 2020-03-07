@@ -19,7 +19,7 @@ The first binary release is now available for RainbowRedux. This will ask you to
 
 [Download](https://github.com/RainbowRedux/RainbowRedux/releases/tag/v0.1.1)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lF2UFoP8VMk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/lF2UFoP8VMk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Screenshots are available at the bottom of the post
 
@@ -37,7 +37,7 @@ You can find the project on the [RainbowRedux Organisation GitHub page](https://
 
 ### Development Discord
 
-I’ve had a few people ask how to contribute, and I’ve been thinking how to open up the development process more. I’ve created a Discord server to allow faster interaction with people. Despite the name, this isn’t just focused on RainbowRedux. Any project related to older RSE games, like Ghost Recon and others are all welcome on this server.
+I’ve had a few people ask how to contribute, and I’ve been thinking how to open up the development process more. I’ve created a Discord server to allow faster interaction with people. Despite the name, this isn’t just focused on RainbowRedux. Any project related to older Red Storm Entertainment (RSE) games, like Ghost Recon and others are all welcome on this server.
 
 [Join us on Discord here](https://discord.gg/YygR4S8).
 
