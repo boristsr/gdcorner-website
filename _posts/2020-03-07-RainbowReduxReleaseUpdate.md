@@ -3,7 +3,7 @@ layout: post
 title:  "RainbowRedux First Release & Update"
 date:   2020-03-07 11:17:13 +1100
 tags: [Development, Management, Teams]
-ogimage: "/assets/posts/2020-02-28-ProblemBehavioursInSoftwareTeams.md/4problems-og-image.png"
+ogimage: "/assets/posts/2020-03-07-RainbowReduxReleaseUpdate.md/rr011-og-image.png"
 comments: true
 ---
 
