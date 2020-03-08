@@ -23,7 +23,7 @@ The first binary release is now available for RainbowRedux. This will ask you to
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/lF2UFoP8VMk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-Screenshots are available at the bottom of the post
+Screenshots are available at the bottom of the post.
 
 ## RainbowRedux Unreal project is now open source
 
