@@ -69,7 +69,7 @@ Voice chat was used extensively. Individuals could call each other as needed. So
 
 There were also scheduled meetings. Daily standups of a few people. Weekly meetings involving everyone from every team. These operated pretty much exactly as you would expect. Agenda and minutes all work exactly as in an office.
 
-We found that a voice chat of a larger group required some extra organisation though. First, Skype didn’t really scale to having 40 people in a single call. We fell back to using a tried and true solution from the games community, [Teamspeak](https://www.teamspeak.com/en/). No one was allowed an auto-activating microphone setting, it had to be Push-To-Talk. There was a bit of individual discipline required as interjecting with an idea while someone else is talking doesn’t work quite the same as it does in a face to face meeting. A text chat to go along with this helps. In the text chat you can raise points for discussion after the current point, or when the speaker has finished.
+We found that a voice chat of a larger group required some extra organisation though. First, Skype didn’t really scale to having 10+ people in a single call. We fell back to using a tried and true solution from the games community, [Teamspeak](https://www.teamspeak.com/en/). No one was allowed an auto-activating microphone setting, it had to be Push-To-Talk. There was a bit of individual discipline required as interjecting with an idea while someone else is talking doesn’t work quite the same as it does in a face to face meeting. A text chat to go along with this helps. In the text chat you can raise points for discussion after the current point, or when the speaker has finished.
 
 ## Project/Task Tracking & Development Methodology
 
