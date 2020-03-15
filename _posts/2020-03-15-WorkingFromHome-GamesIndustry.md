@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Working from home in the Games Industry"
+title:  "Working from home in the Game Development Industry"
 date:   2020-03-15 11:17:13 +1100
 tags: [Development, RainbowRedux, UnrealEngine, UE4, RainbowSix, Release, Github, OpenSource]
 ogimage: "/assets/posts/2020-03-15-WorkingFromHome-GamesIndustry.md/wfh-og-image.png"
 comments: true
 ---
 
-I spent nearly 4 years working as a lead programmer in the games industry entirely from home, along with a team spread across the globe. With the recent fears, travel restrictions, lock downs and other chaos around the novel coronavirus, COVID-19, I thought I’d share my experiences with remote working. How a large project with a large global team managed to function with almost everyone working remotely.
+I spent nearly 4 years working as a lead programmer in the game dev industry entirely from home, along with a team spread across the globe. With the recent fears, travel restrictions, lock downs and other chaos around the novel coronavirus, COVID-19, I thought I’d share my experiences with remote working. How a large project with a large global team managed to function with almost everyone working remotely.
 
 The games industry has some particular challenges with working remotely. There are the issues all companies face like IP agreements, the risk of leaks and maintaining communication. The games industry typically also has to deal with extremely large project sizes which further complicates matters.
 
