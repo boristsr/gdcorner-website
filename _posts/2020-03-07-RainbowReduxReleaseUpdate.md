@@ -2,7 +2,7 @@
 layout: post
 title:  "RainbowRedux First Release & Status Update"
 date:   2020-03-07 11:17:13 +1100
-tags: [Development, Management, Teams]
+tags: [Development, RainbowRedux, UnrealEngine, UE4, RainbowSix, Release, Github, OpenSource]
 ogimage: "/assets/posts/2020-03-07-RainbowReduxReleaseUpdate.md/rr011-og-image.png"
 comments: true
 ---
