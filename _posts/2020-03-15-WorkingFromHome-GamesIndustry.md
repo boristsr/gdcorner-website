@@ -3,7 +3,7 @@ layout: post
 title:  "Working from home in the Game Development Industry"
 date:   2020-03-15 11:17:13 +1100
 tags: [Development, RainbowRedux, UnrealEngine, UE4, RainbowSix, Release, Github, OpenSource]
-ogimage: "/assets/posts/2020-03-15-WorkingFromHome-GamesIndustry.md/wfh-og-image.png"
+ogimage: "/assets/posts/2020-03-15-WorkingFromHome-GamesIndustry.md/wfh-og-image-2.png"
 comments: true
 ---
 
