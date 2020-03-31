@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "A Primer on Backups for Developers Moving to Ops"
-date:   2020-03-15 11:17:13 +1100
+date:   2020-03-31 11:17:13 +1100
 tags: [Development, DevOps, Backups]
 ogimage: "/assets/posts/2020-03-31-PrimerOnBackupsForDevs.md/ogimage.png"
 comments: true
