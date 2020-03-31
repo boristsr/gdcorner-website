@@ -23,16 +23,12 @@ Of course, when things go south frustrations are high and you want solutions. Yo
 
 ### Snapshots vs Complete Copies
 
-Snapshots are generally accomplished with a filesystem or file that supports a [Copy-On-Write (CoW)](https://en.wikipedia.org/wiki/Copy-on-write), [Redirect-On-Write (RoW)](https://storageswiss.com/2016/04/01/snapshot-101-copy-on-write-vs-redirect-on-write/) or transaction based storage strategy. I won’t go into the differences between these strategies since they are all quite different and there are plenty of devils in the details. The thing they all have in common though is that they store data in hierarchical or differencing data structures. This means when a snapshot is made the existing data becomes the baseline, and any new writes are stored as changes or deltas. Every snapshot is linked to the base filesystem state and possibly several snapshots. A small list of examples of these types of system are
+Snapshots are generally accomplished with a filesystem or file that supports a [Copy-On-Write (CoW)](https://en.wikipedia.org/wiki/Copy-on-write), [Redirect-On-Write (RoW)](https://storageswiss.com/2016/04/01/snapshot-101-copy-on-write-vs-redirect-on-write/) or transaction based storage strategy. I won’t go into the differences between these strategies since they are all quite different and there are plenty of devils in the details. The thing they all have in common though is that they store data in hierarchical or differencing data structures. This means when a snapshot is made the existing data becomes the baseline, and any new writes are stored as changes or deltas. Every snapshot is linked to the base filesystem state and possibly several snapshots. A small list of examples of these types of system are:
 
 * Volume Shadow Services/Volume Shadow Copy/"Previous versions” in Windows
-
 * BtrFS
-
 * ZFS
-
 * LVM on *nix systems
-
 * VM snapshots in most hypervisors.
 
 For developers I like to draw a parallel between this and version control like git, subversion or perforce. If your repository corrupts, all work is lost.
@@ -62,15 +58,10 @@ Nothing can absolutely guarantee a bad change isn’t pushed, or prevent a physi
 A comprehensive backup plan, whether on-prem or on-cloud, should account for:
 
 * Accidental actions by users
-
 * Rogue scripts
-
 * Ransomware
-
 * Hardware failure
-
 * Natural disasters
-
 * Catastrophic provider failure
 
 The first 2 are reasonably well covered by snapshots. Take them often, and the rollback will go unnoticed.
