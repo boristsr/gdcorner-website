@@ -12,7 +12,7 @@ I’ve always found using Q and E to lean in FPS games awkward. I just don’t h
 I’ve hastily slapped together a proof of concept, imaginatively called FaceLean, and it works surprisingly well. It’s definitely a bit of fun in single player games. See the video below.
 
 <div class="embedvideo">
-<iframe width="100%" height="100%" src="https://www.youtube.com/watch?v=_NggXhsWcak" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/_NggXhsWcak" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 Latency isn’t perfect and it’s only sampling at 30hz, depending on your webcam. I’ve added some hard coded delays to stop it constantly firing events when you are hovering on the threshold angle. I haven’t been brave enough to test it online, as I don’t want to upset anti-cheat software and risk my steam account or a hardware ban.
