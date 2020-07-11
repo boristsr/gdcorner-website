@@ -9,6 +9,8 @@ comments: true
 
 I’ve always found using Q and E to lean in FPS games awkward. I just don’t have the coordination to maintain strafing and normal movement with WASD while also using those keys. I wanted to see how difficult it would be to use my webcam to detect head tilt and translate that into in-game actions.
 
+<!--more-->
+
 I’ve hastily slapped together a proof of concept, imaginatively called FaceLean, and it works surprisingly well. It’s definitely a bit of fun in single player games. See the video below.
 
 <div class="embedvideo">
