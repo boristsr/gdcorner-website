@@ -37,7 +37,7 @@ Without dedicated hardware designed for high-fps and low-latency video streaming
 
 ## Where can I get it
 
-<span class="badge badge-danger">DANGER</span>DO NOT USE THIS ONLINE as I have no idea if simulated key presses will trigger anti-cheat detection, best to avoid it altogether and only use this in single player games.
+<span class="badge badge-danger">DANGER</span> DO NOT USE THIS IN ONLINE/MULTIPLAYER GAMES! I have no idea if simulated key presses will trigger anti-cheat detection, best to avoid it altogether and only use this in single player games.
 
 ### Repo
 
