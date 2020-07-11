@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Leaning in Games with your Webcam"
-date:   2020-03-31 11:17:13 +1100
+date:   2020-07-11 11:17:13 +1100
 tags: [Development, python, opencv, poc]
 ogimage: "/assets/posts/2020-07-11-WebcamAsGameInput.md/ogimage.png"
 comments: true
