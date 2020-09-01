@@ -195,8 +195,12 @@ Under Environment, you want to add a line like this:
 
 ```INI
 JENKINS_AGENT_SSH_PUBKEY=ssh-rsa YOUR SSH PUBLIC KEY
-# or if you have an older version of the script
-# JENKINS_SLAVE_SSH_PUBKEY=ssh-rsa YOUR SSH PUBLIC KEY
+```
+
+or if you have an older image or version of setup-sshd script
+
+```INI
+JENKINS_SLAVE_SSH_PUBKEY=ssh-rsa YOUR SSH PUBLIC KEY
 ```
 
 ![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/03-06-PublicKey.jpg){: .enable-lightbox}
