@@ -21,6 +21,10 @@ Today we will setup on-demand linux agents through Docker. First step, let's ins
 - [Part 4 - Setting up Docker for on-demand linux agent creation (this article)]({{ site.url }}{% post_url jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents %})
 - Part 5 (Coming Soon) - Setting up Docker for on-demand windows agent creation
 
+## A quick note on updates to this article
+
+Since this article was published the Jenkins community has begun the process of updating repo names and documentation to prefer agent over slave. I've tried to keep this article up to date with new URLs, however there may be some leftover references.
+
 ## Install Docker
 
 There are 2 steps to installing Docker. Installing the Docker service, and then opening the HTTP API port.
@@ -82,17 +86,17 @@ http://HOSTNAME:2375/version
 
 > <span class="badge badge-danger">Security Note</span> In a production environment I’d recommend using TLS and adding additional security to secure your environment. In this case your port would also become 2376. [This is discussed in detail here.](https://docs.docker.com/engine/security/https/)
 
-## Fork & Modify SSH Slave Docker image
+## Fork & Modify SSH Agent Docker image
 
 Now that we have a Docker server configured, let's create a container image that can be used by Jenkins. Jenkins already has an example docker container which we’ll base our image off. I don’t use this one as it won’t work on Raspberry Pi Docker services and I prefer an image based off Ubuntu for my other images.
 
-Jenkins will connect to this container via SSH, so it needs to inject an SSH key into the image. [The repository here contains an example of how to do this. This is what we'll fork.](https://github.com/jenkinsci/docker-ssh-slave)
+Jenkins will connect to this container via SSH, so it needs to inject an SSH key into the image. [The repository here contains an example of how to do this. This is what we'll fork.](https://github.com/jenkinsci/docker-ssh-agent)
 
 The changes I made to this are minimal, and [can be seen in this commit](https://github.com/boristsr/docker-ssh-slave/commit/c678cca0b624f1e062f1f64237fa1ca0b8f6dad1).
 
 I changed the base image to Ubuntu 18.04 for x86 images, and I included a step to install the default java runtime environment.
 
-The key part of the provided example from [jenkinsci](https://github.com/jenkinsci/) is the script [setup-sshd](https://github.com/jenkinsci/docker-ssh-slave/blob/master/setup-sshd) which takes an environment variable, JENKINS_SLAVE_SSH_PUBKEY, and inserts it into the authorized_keys file before starting the SSH daemon. This allows Jenkins to connect to this Docker container via the specified SSH key.
+The key part of the provided example from [jenkinsci](https://github.com/jenkinsci/) is the script [setup-sshd](https://github.com/jenkinsci/docker-ssh-agent/blob/master/setup-sshd) which takes an environment variable, JENKINS_AGENT_SSH_PUBKEY (previous versions called this JENKINS_SLAVE_SSH_PUBKEY if you forked from an earlier version), and inserts it into the authorized_keys file before starting the SSH daemon. This allows Jenkins to connect to this Docker container via the specified SSH key.
 
 > <span class="badge badge-danger">Security Note</span> I haven’t been able to find a consistent source for up to date Docker container images on Raspberry Pi. The [Hypriot](https://hub.docker.com/u/hypriot) ones seem to be quite popular though. These should be fine for a home lab, but I’d recommend sticking with x86 images in many circumstances as they are updated more frequently.
 
@@ -109,8 +113,8 @@ The repository has a makefile which I recommend you update, but for now we’ll 
 From the directory where the Dockerfile is located run the following commands.
 
 ```bash
-docker build -t YOURDOCKERUSERNAME/jenkins-ssh-slave:latest .
-docker push YOURDOCKERUSERNAME/jenkins-ssh-slave:latest
+docker build -t YOURDOCKERUSERNAME/jenkins-ssh-agent:latest .
+docker push YOURDOCKERUSERNAME/jenkins-ssh-agent:latest
 ```
 
 > <span class="badge badge-danger">Security Note</span> It’s not critical for a home lab but you should update the Makefile and setup a job in Jenkins or via DockerHub to automatically build and push this image so it remains up to date.
@@ -190,7 +194,9 @@ Now the top level options are set, expand the Container settings section under D
 Under Environment, you want to add a line like this:
 
 ```INI
-JENKINS_SLAVE_SSH_PUBKEY=ssh-rsa YOUR SSH PUBLIC KEY
+JENKINS_AGENT_SSH_PUBKEY=ssh-rsa YOUR SSH PUBLIC KEY
+# or if you have an older version of the script
+# JENKINS_SLAVE_SSH_PUBKEY=ssh-rsa YOUR SSH PUBLIC KEY
 ```
 
 ![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/03-06-PublicKey.jpg){: .enable-lightbox}
@@ -198,6 +204,8 @@ JENKINS_SLAVE_SSH_PUBKEY=ssh-rsa YOUR SSH PUBLIC KEY
 This sets an environment variable that the script discussed above will insert into the authorized_hosts file by the setup-sshd script in the Docker image discussed earlier.
 
 > <span class="badge badge-warning">Note</span> If you are using the original jenkins image, you will need to set the JavaPath option under Connect Method->Advanced to point to the appropriate java path, as it’s not in the path for the jenkins user.
+
+Also make sure to check the option for **Remove Volumes**. I enable this to reclaim more disk space after a job has completed. Your use case might want to preserve these.
 
 That should be enough to configure our first image. You can tweak these as you see fit for future images.
 
