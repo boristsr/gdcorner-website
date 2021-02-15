@@ -39,6 +39,9 @@ post_assets_url: "/"
 
 google_analytics: UA-11335412-1
 
+plausible_analytics:
+  data_domain: gdcorner.com
+
 # Disqus Comments
 disqus:
     # Leave shortname blank to disable comments site-wide.
