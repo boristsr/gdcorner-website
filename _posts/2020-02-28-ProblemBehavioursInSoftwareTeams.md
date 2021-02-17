@@ -5,6 +5,7 @@ date:   2020-02-28 11:17:13 +1100
 tags: [Development, Management, Teams]
 ogimage: "/assets/posts/2020-02-28-ProblemBehavioursInSoftwareTeams.md/4problems-og-image.png"
 comments: true
+permalink: /2020/02/28/ProblemBehavioursInSoftwareTeams.html
 ---
 
 I’m going to outline 4 problem behaviours that I’ve noticed and experienced in my time in the game and software development industry. This is by no means an exhaustive list but they are problems I’ve seen crop up repeatedly which can have major effects on team performance and morale. I’ll talk about the issues that follow from these behaviours as well as offer insights into how to prevent them.

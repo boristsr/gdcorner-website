@@ -4,6 +4,7 @@ title:  "Cheap Optimization with Memoization in Python"
 date:   2019-10-11 11:17:13 +1100
 tags: [python, development, optimization]
 comments: true
+permalink: /2019/10/11/MemoizationInPython.html
 ---
 
 [Memoization](https://en.wikipedia.org/wiki/Memoization) is a technique to cache the result of a function or program for a given input. It's an incredibly simple optimization to make, and in the right circumstance significant speedups can be achieved.

@@ -4,6 +4,7 @@ title:  "Evaluating Project Dependencies"
 date:   2019-06-10 15:17:13 +1100
 tags: [dependencies, python, RainbowRedux, development]
 comments: true
+permalink: /2019/06/10/EvaluatingProjectDependencies.html
 ---
 
 With dependency management tools like NPM, PIP and other similar tools it’s easy to just add another library dependency to a project without much thought. However, dependencies do add weight and cost to a project. The costs could be time, money, and potential sources of bugs. The libraries also have different levels of support. So how do you weigh up using a new library or extending an existing library? When is it appropriate to roll your own?

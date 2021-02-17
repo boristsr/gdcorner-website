@@ -5,6 +5,7 @@ date:   2020-07-11 11:17:13 +1100
 tags: [Development, python, opencv, poc]
 ogimage: "/assets/posts/2020-07-11-WebcamAsGameInput.md/ogimage2.png"
 comments: true
+permalink: /2020/07/11/WebcamAsGameInput.html
 ---
 
 I’ve always found using Q and E to lean in FPS games awkward. I just don’t have the coordination to maintain strafing and normal movement with WASD while also using those keys. I wanted to see how difficult it would be to use my webcam to detect head tilt and translate that into in-game actions.

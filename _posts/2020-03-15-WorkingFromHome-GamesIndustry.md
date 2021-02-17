@@ -5,6 +5,7 @@ date:   2020-03-15 11:17:13 +1100
 tags: [Development, RainbowRedux, UnrealEngine, UE4, RainbowSix, Release, Github, OpenSource]
 ogimage: "/assets/posts/2020-03-15-WorkingFromHome-GamesIndustry.md/wfh-og-image-2.png"
 comments: true
+permalink: /2020/03/15/WorkingFromHome-GamesIndustry.html
 ---
 
 I spent nearly 4 years working as a lead programmer in the game dev industry entirely from home, along with a team spread across the globe. With the recent fears, travel restrictions, lock downs and other chaos around the novel coronavirus, COVID-19, I thought I’d share my experiences with remote working. How a large project with a large global team managed to function with almost everyone working remotely.
