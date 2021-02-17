@@ -8,7 +8,7 @@ permalink: /2019/11/25/TextureUpscalingPipeline.html
 categories: Blog
 ---
 
-At the beginning of the year I wrote about my [initial experiments with image super resolution]({{ site.url }}{% post_url 2019-01-04-SuperResolutionTesting %}). This week I focused on some of the improvements I discussed and implemented a pipeline.
+At the beginning of the year I wrote about my [initial experiments with image super resolution]({{ site.url }}{% post_url blog/2019-01-04-SuperResolutionTesting %}). This week I focused on some of the improvements I discussed and implemented a pipeline.
 
 I’ve written an image processing framework which I'm [releasing](https://github.com/boristsr/TextureUpscalingPipeline) under the [MIT license](https://github.com/boristsr/TextureUpscalingPipeline/blob/master/LICENSE). The goal is to allow rapid iteration of image processing until good results are achieved in the majority of cases reducing or eliminating the need for any manual editing of images.
 
