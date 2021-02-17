@@ -28,6 +28,7 @@ markdown: kramdown
 theme: jekyll-theme-slate
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 github:
   is_project_page: false
