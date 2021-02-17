@@ -6,6 +6,7 @@ tags: [Development, DevOps, Backups]
 ogimage: "/assets/posts/2020-03-31-PrimerOnBackupsForDevs.md/ogimage.png"
 comments: true
 permalink: /2020/03/31/PrimerOnBackupsForDevs.html
+categories: Blog
 ---
 
 It’s [World Backup Day](http://www.worldbackupday.com/en/)! Let’s dive into discussing backup strategies, whether cloud or on-prem.

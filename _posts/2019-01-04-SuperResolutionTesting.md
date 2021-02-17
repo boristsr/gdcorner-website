@@ -5,6 +5,7 @@ date:   2019-01-04 13:29:13 +1100
 tags: [rainbowsix, gamedev, SuperResolution, rendering, RainbowRedux]
 comments: true
 permalink: /rainbowsix/gamedev/superresolution/rendering/2019/01/04/SuperResolutionTesting.html
+categories: Blog
 ---
 
 After seeing [Doom Neural Upscale 2X by hidfan](https://www.doomworld.com/forum/topic/99021-v-0-95-doom-neural-upscale-2x/), I became interested in testing out "super resolution" techniques on the images found in Rainbow Six and Rogue Spear.

@@ -7,6 +7,7 @@ comments: true
 ogimage: "/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/jenkins-p1-ogimage.png"
 description: "A guide for building a Jenkins home lab. In this first part you'll learn how to configure a Jenkins master server."
 permalink: /2019/12/27/JenkinsHomeLab-P1-MasterSetup.html
+categories: Blog
 ---
 
 Are you looking for a project this holidays? Did you get a Raspberry Pi for Christmas? Why not setup a home lab for CI/CD with Jenkins? Over the next week or so I’m going to output a series of tutorials aimed at setting up a comprehensive home lab environment for Jenkins. With this home lab you can turn any old or cheap computers into an environment to automate tasks for your side projects, sharpen your CI/CD skills, and prototype new project pipelines.

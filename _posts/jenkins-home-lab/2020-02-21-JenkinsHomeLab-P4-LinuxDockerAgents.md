@@ -7,6 +7,7 @@ comments: true
 ogimage: "/assets/posts/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents/jenkins-p4-ogimage.png"
 description: "Configuring Jenkins to use Docker for on-demand agents"
 permalink: /2020/02/21/JenkinsHomeLab-P4-LinuxDockerAgents.html
+categories: Blog
 ---
 
 Today we will setup on-demand linux agents through Docker. First step, let's install Docker.

@@ -5,6 +5,7 @@ date:   2019-06-11 14:16:13 +1100
 tags: [math, floatingpoint, RainbowRedux, development, gamedev]
 comments: true
 permalink: /2019/06/11/BackToTheOrigin.html
+categories: Blog
 ---
 While working on [RainbowRedux]({{ site.url }}{% post_url 2019-01-13-RainbowSixRevivalProject %}) I’ve discovered the content is authored in some interesting ways. Today I’m going to talk about large distances, floating point numbers and the errors they can cause. I'll show how I'm trying to reduce these distances and make the geometry more manageable.
 
