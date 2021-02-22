@@ -37,6 +37,9 @@ github:
 excerpt_separator: <!--more-->
 show_excerpts: true
 
+paginate: 5
+paginate_path: "/blog/page:num"
+
 post_assets_url: "/"
 
 google_analytics: UA-11335412-1
@@ -53,6 +56,23 @@ disqus:
 
 commento:
     enabled: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      show_sidebar: true
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      author: "C.S. Rhymes"
+      layout: post
+      image: https://via.placeholder.com/1200x800
+      show_sidebar: true
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
