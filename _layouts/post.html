@@ -2,12 +2,22 @@
 layout: page
 ---
 
-{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-<div class="postdate">
-Published {{page.date| date: date_format }}
+<div class="content">
+
+    <p>Published: {{ page.date | date: "%b %-d, %Y" }} by {{ page.author }}</p>
+
+    {{ content }}
 </div>
 
-{{ content }}
+<div class="tags">
+    {% for tag in page.tags %}
+      {% include tag.html tag=tag %}
+    {% endfor %}
+</div>
+
+{% unless site.hide_share_buttons %}
+{% include share-buttons.html %}
+{% endunless %}
 
 {% if site.disqus.shortname and site.disqus.enabled %}
     {% include disquscomments.html %}
