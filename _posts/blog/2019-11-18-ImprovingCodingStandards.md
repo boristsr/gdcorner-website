@@ -6,7 +6,7 @@ tags: [Development, Standards, Testing, StaticAnalysis, linting, team]
 ogimage: "/assets/posts/2019-11-18-ImprovingCodingStandards.md/improvingcoding-ogimage.png"
 comments: true
 permalink: /2019/11/18/ImprovingCodingStandards.html
-categories: Blog
+categories: blog
 ---
 
 Coding Standards are often thought of as style guides, however coding standards should be more than merely a style guide. Beyond just style, I believe standards should encompass everything that is used to improve code quality and reliability. This includes how code is reviewed and what automated checks should be in place (before even discussing your testing strategy).

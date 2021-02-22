@@ -7,7 +7,7 @@ comments: true
 ogimage: "/assets/posts/jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents/jenkins-p2-ogimage.png"
 description: "Configuring Ubuntu and Raspberry Pi agents for a Jenkins home lab."
 permalink: /2019/12/27/JenkinsHomeLab-P2-LinuxAgents.html
-categories: Blog
+categories: blog
 ---
 
 Today we’ll look at setting up linux agents. These instructions apply to Ubuntu and Raspberry Pi / Raspbian systems, but should work for any debian based system. With some very minor tweaks these instructions should work pretty similarly for most linux systems.

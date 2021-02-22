@@ -6,7 +6,7 @@ tags: [Development, RainbowRedux, UnrealEngine, UE4, RainbowSix, Release, Github
 ogimage: "/assets/posts/2020-03-07-RainbowReduxReleaseUpdate.md/rr011-og-image.png"
 comments: true
 permalink: /2020/03/07/RainbowReduxReleaseUpdate.html
-categories: Blog
+categories: blog
 ---
 
 Some big news today for RainbowRedux. The first release is now available, the Unreal project has been made open source, and there is a new [Discord server](https://discord.gg/YygR4S8) to follow development. Read on for more details!

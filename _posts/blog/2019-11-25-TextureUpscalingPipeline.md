@@ -5,7 +5,7 @@ date:   2019-11-25 11:17:13 +1100
 tags: [Development, python, SuperResolution, ImageProcessing, RainbowRedux]
 comments: true
 permalink: /2019/11/25/TextureUpscalingPipeline.html
-categories: Blog
+categories: blog
 ---
 
 At the beginning of the year I wrote about my [initial experiments with image super resolution]({{ site.url }}{% post_url blog/2019-01-04-SuperResolutionTesting %}). This week I focused on some of the improvements I discussed and implemented a pipeline.
