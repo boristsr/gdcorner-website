@@ -31,8 +31,6 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
-livereload: true
-
 github:
   is_project_page: false
 
