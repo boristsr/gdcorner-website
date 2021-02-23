@@ -88,15 +88,6 @@ img.og-post-banner {
     margin-top: 10px;
 }
 
-@media screen and (max-width: 480px) {
-    .embedvideo {
-        width: 95%;
-        height: 220px;
-        display: block;
-        overflow: hidden;
-    }
-}
-
 #header-site-logo {
     height: 50px;
 }
@@ -110,8 +101,4 @@ img.og-post-banner {
     -webkit-box-shadow: 0 0 0px #ebebeb;
     border: none;
     margin-bottom: 0px;
-}
-
-.webring-desc {
-    color: rgb(182, 182, 182);
 }
