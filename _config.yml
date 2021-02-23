@@ -31,6 +31,8 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
+livereload: true
+
 github:
   is_project_page: false
 
@@ -46,6 +48,7 @@ google_analytics: UA-11335412-1
 
 plausible_analytics:
   data_domain: gdcorner.com
+  src: https://piostats.gdcorner.com/js/index.js
 
 # Disqus Comments
 disqus:
