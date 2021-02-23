@@ -75,6 +75,13 @@ defaults:
       image: https://via.placeholder.com/1200x800
       show_sidebar: false
 
+collections:
+  projects: 
+    output: true
+    layout: project
+    image: https://via.placeholder.com/800x600
+    show_sidebar: false
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
