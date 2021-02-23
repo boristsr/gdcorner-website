@@ -72,10 +72,10 @@ defaults:
       path: ""
       type: "posts"
     values:
-      author: "C.S. Rhymes"
+      author: "Philip Edwards"
       layout: post
       image: https://via.placeholder.com/1200x800
-      show_sidebar: true
+      show_sidebar: false
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
