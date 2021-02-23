@@ -33,9 +33,7 @@ I'm working on decoding the original Rainbow Six file formats to make the files 
 
 I was the lead programmer for the Rising Storm team which made an expansion for Red Orchestra 2.
 
-<div class="embedvideo">
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/xoRa_WA-ugs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</div>
+{% include youtube.html video="xoRa_WA-ugs" %}
 
 ### Rotor Studios
 
@@ -43,22 +41,14 @@ At Rotor Studios I held the roles of Lead Unreal Developer and Head of Realtime 
 
 #### Toyota Showroom 360
 
-<div class="embedvideo">
-<iframe src="https://player.vimeo.com/video/192877230?color=ff9933&title=0&byline=0&portrait=0" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-<p><a href="https://vimeo.com/192877230">Rotor Studios - Showroom 360 Tech Walkthrough 2016</a> from <a href="https://vimeo.com/rotorstudios">Rotor Studios</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-</div>
+{% include vimeo.html video="192877230" %}
 
 #### Camry WebGL Configurator
 
 [You can try the experience here](https://customise.toyota.com.au/camry/)
 
-<div class="embedvideo">
-<iframe src="https://player.vimeo.com/video/298918542?color=ff9933&title=0&byline=0&portrait=0" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-<p><a href="https://vimeo.com/298918542">Rotor Studios - GR & Camry WebGL Case Study</a> from <a href="https://vimeo.com/rotorstudios">Rotor Studios</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-</div>
+{% include vimeo.html video="298918542" %}
 
 #### Skyrider VR rollercoaster experience
 
-<div class="embedvideo">
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/Gz-CvZMjSz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</div>
+{% include youtube.html video="Gz-CvZMjSz0" %}
