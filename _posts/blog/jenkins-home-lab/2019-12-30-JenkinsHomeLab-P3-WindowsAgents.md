@@ -4,8 +4,8 @@ title:  "Jenkins Home Lab: Part 3 - Setting up Windows Agents"
 date:   2019-12-30 13:29:13 +1100
 tags: [jenkins, ci, homelab, sysadmin, windows]
 comments: true
-ogimage: "/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/jenkins-p3-ogimage.png"
-description: "Configuring Windows agents for a Jenkins home lab."
+image: "/assets/posts/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents/jenkins-p3-ogimage.png"
+summary: "Configuring Windows agents for a Jenkins home lab."
 permalink: /2019/12/30/JenkinsHomeLab-P3-WindowsAgents.html
 categories: blog
 ---

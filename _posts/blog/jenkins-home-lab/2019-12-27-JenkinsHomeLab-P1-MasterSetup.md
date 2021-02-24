@@ -4,8 +4,8 @@ title:  "Jenkins Home Lab: Part 1 - Setting up the Master"
 date:   2019-12-27 13:29:13 +1100
 tags: [jenkins, ci, HomeLab, sysadmin, docker, RaspberryPi, linux]
 comments: true
-ogimage: "/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/jenkins-p1-ogimage.png"
-description: "A guide for building a Jenkins home lab. In this first part you'll learn how to configure a Jenkins master server."
+image: "/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/jenkins-p1-ogimage.png"
+summary: "A guide for building a Jenkins home lab. In this first part you'll learn how to configure a Jenkins master server."
 permalink: /2019/12/27/JenkinsHomeLab-P1-MasterSetup.html
 categories: blog
 ---

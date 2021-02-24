@@ -3,7 +3,8 @@ layout: post
 title:  "A Primer on Backups for Developers Moving to Ops"
 date:   2020-03-31 11:17:13 +1100
 tags: [Development, DevOps, Backups]
-ogimage: "/assets/posts/2020-03-31-PrimerOnBackupsForDevs.md/ogimage.png"
+image: "/assets/posts/2020-03-31-PrimerOnBackupsForDevs.md/ogimage.png"
+summary: "A quick primer on the different types of system & cloud backups for developers, as well as information on forming good backup strategies."
 comments: true
 permalink: /2020/03/31/PrimerOnBackupsForDevs.html
 categories: blog

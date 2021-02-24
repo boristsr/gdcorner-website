@@ -12,9 +12,10 @@ categories: blog
 
 I've been working on extracting data out of Rainbow Six with the goal of bringing it into a new engine and recreating the game.
 
+<!--more-->
+
 Preview of the first mission in Unreal Engine 4
 ![First attempt in Unreal]({{ site.url }}/assets/posts/2019-01-13-RainbowSixRevivalProject.md/M01-R6-Unreal.jpg){: .enable-lightbox}
-<!--more-->
 
 ## Background
 

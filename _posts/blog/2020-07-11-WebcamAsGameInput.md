@@ -3,7 +3,8 @@ layout: post
 title:  "Leaning in Games With Your Webcam"
 date:   2020-07-11 11:17:13 +1100
 tags: [Development, python, opencv, poc]
-ogimage: "/assets/posts/2020-07-11-WebcamAsGameInput.md/ogimage2.png"
+image: "/assets/posts/2020-07-11-WebcamAsGameInput.md/ogimage2.png"
+summary: A proof-of-concept system to use a webcam to control leaning in games
 comments: true
 permalink: /2020/07/11/WebcamAsGameInput.html
 categories: blog

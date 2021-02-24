@@ -9,9 +9,9 @@ categories: blog
 ---
 While working on [RainbowRedux]({{ site.url }}{% post_url blog/2019-01-13-RainbowSixRevivalProject %}) I’ve discovered the content is authored in some interesting ways. Today I’m going to talk about large distances, floating point numbers and the errors they can cause. I'll show how I'm trying to reduce these distances and make the geometry more manageable.
 
-![Level is far away from the origin]({{ site.url }}/assets/posts/2019-06-11-BackToTheOrigin.md/TopDownProblem.png){: .enable-lightbox}
-
 <!--more-->
+
+![Level is far away from the origin]({{ site.url }}/assets/posts/2019-06-11-BackToTheOrigin.md/TopDownProblem.png){: .enable-lightbox}
 
 In this image you can see that the level geometry is stored in the top right, approximately  50,000 units away from the origin (roughly ([30 000],[30 000],[30 000])). In the bottom left you can see there is some geometry at the origin. This is all the dynamic objects like breakable glass, usable doors and so on. I haven't been able to find a reason for this. I suspect it's just how some of their authoring tools were configured.
 
