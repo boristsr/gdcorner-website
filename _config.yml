@@ -26,6 +26,7 @@ github_username:  boristsr
 # Build settings
 markdown: kramdown
 theme: bulma-clean-theme
+theme_color: '#333333'
 #remote_theme: chrisrhymes/bulma-clean-theme
 plugins:
   - jekyll-feed
