@@ -10,10 +10,10 @@
 {% else %}
     <meta content="website" property="og:type">
 {% endif %}
-{% if page.description %}
-    <meta content="{{ page.description }}" property="og:description">
+{% if page.summary %}
+    <meta content="{{ page.summary }}" property="og:description">
 {% else %}
-    <meta content="{{ site.description }}" property="og:description">
+    <meta content="{{ site.summary }}" property="og:description">
 {% endif %}
 {% if page.url %}
     <meta content="{{ site.url }}{{ page.url }}" property="og:url">
@@ -22,8 +22,8 @@
     <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
     <meta content="{{ site.url }}/about/" property="article:author">
 {% endif %}
-{% if page.ogimage %}
-    <meta content="{{ site.url }}{{ page.ogimage }}" property="og:image">
+{% if page.image %}
+    <meta content="{{ site.url }}{{ page.image }}" property="og:image">
 {% else %}
     <!--<meta content="{{ site.url }}/assets/img/logo-high-resolution.png" property="og:image">-->
 {% endif %}
