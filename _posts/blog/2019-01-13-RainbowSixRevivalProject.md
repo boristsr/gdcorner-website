@@ -85,7 +85,9 @@ Below are some examples of the strange placement of lights
 ![Example of lights clearly setup for Vertex Lighting]({{ site.url }}/assets/posts/2019-01-13-RainbowSixRevivalProject.md/M07-Inside-VertexLighting.jpg){: .enable-lightbox}
 ![Example of lights clearly setup for Vertex Lighting]({{ site.url }}/assets/posts/2019-01-13-RainbowSixRevivalProject.md/M07-Outside.jpg){: .enable-lightbox}
 
-Here is a [let's play by sigonsteele that shows how it looks in the original game](https://youtu.be/FyoSz4xW_9k?list=PLAA66182E9682A667&t=364). Skip to 9:05.
+Here is a [let's play by sigonsteele that shows how it looks in the original game](https://youtu.be/FyoSz4xW_9k?list=PLAA66182E9682A667&t=364). Skip to 6:05.
+
+{% include youtube.html video="FyoSz4xW_9k" time=364 %}
 
 Many modern renderers are moving towards a model known as [Physically Based Rendering](https://en.wikipedia.org/wiki/Physically_based_rendering). This describes how lights behave and interact with the surfaces and materials in the scene. Rendering previously has relied on a much simpler model. The old model only defined an ambient, diffuse and specular property as [described here](https://www.cs.uic.edu/~jbell/CourseNotes/ComputerGraphics/LightingAndShading.html). The lights also shared these properties so lights could give a different specular highlight to the diffuse color the light was producing.
 
@@ -100,7 +102,9 @@ Office in Embassy
 
 ### Rainbow Six Mission 02 and it's re-release in Rogue Spear Urban Operations
 
-For reference, [here is a let's play by sigonsteele of the mission](https://www.youtube.com/watch?v=LqS8ZYwJGFY) in the original game.
+For reference, below is a let's play by sigonsteele of the mission in the original game.
+
+{% include youtube.html video="LqS8ZYwJGFY" %}
 
 Basement
 
