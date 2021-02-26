@@ -26,7 +26,7 @@ github_username:  boristsr
 # Build settings
 markdown: kramdown
 theme: bulma-clean-theme
-theme_color: '#333333'
+theme_color: '#3b3b3b'
 #remote_theme: chrisrhymes/bulma-clean-theme
 plugins:
   - jekyll-feed
@@ -73,7 +73,7 @@ defaults:
     values:
       author: "Philip Edwards"
       layout: post
-      image: https://via.placeholder.com/1200x800
+      image: https://via.placeholder.com/1200x630
       show_sidebar: false
 
 collections:
