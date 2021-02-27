@@ -4,24 +4,33 @@ layout: default
 
 <div class="columns is-multiline">
 
-    <div class="column is-6">
-        <figure class="image is-4by3">
-            <img src="{{ page.image }}" />
-        </figure>
+    <div class="column is-5">
+        {% if page.youtube_id %}
+            {% include youtube.html video=page.youtube_id %}
+        {% elsif page.vimeo_id %}
+            {% include vimeo.html video=page.vimeo_id %}
+        {% else %}
+            <figure class="image is-16by9">
+                <img src="{{ page.image }}" />
+            </figure>
+        {% endif %}
     </div>
 
-    <div class="column is-6">
+    <div class="column is-7">
         <p class="title is-3">{{ page.title }}</p>
         <p class="subtitle is-3">{{ page.subtitle }}</p>
-        <p class="title is-4 has-text-right">{{ page.price }}</p>
-        {% if page.product_code %}
-        <p class="subtitle is-5 has-text-right">{{ page.product_code }}</p>
+
+        <p class="subtitle is-6">{{ page.date | date_to_string }}</p>
+        <p class="subtitle is-6">{{ page.project-type }}</p>
+        <p class="subtitle is-6">Engine: {{ page.engine }}</p>
+
+        {% if page.itchio %}
+        <p>
+            <span class="icon"><i class="fab fa-itch-io"></i></span>
+            <span><a href="{{ page.itchio }}">Available for download on Itch.io</a></span>
+        </p>
         {% endif %}
-        
-        {% if page.rating %}
-            {% include rating.html rating=page.rating %}
-        {% endif %}
-        
+
         {% if page.features %}
         <div class="content">
             {% for feature in page.features %}
@@ -33,7 +42,8 @@ layout: default
                     <i class="fas fa-circle fa-xs"></i>
                     {% endif %}
                 </span> 
-                <span>{{ feature.label }}</span></p>
+                <span>{{ feature.label }}</span>
+            </p>
             {% endfor %}
         </div>
         {% endif %}
@@ -48,13 +58,8 @@ layout: default
         </div>
     </div>
 
-    {% if site.data.reviews[page.product_code] %}
     <div class="column is-12">
-        <p class="title is-4">Reviews</p>
-        {% for review in site.data.reviews[page.product_code] %}
-        {% include review.html %}
-        {% endfor %}
+        
     </div>
-    {% endif %}
 
 </div>

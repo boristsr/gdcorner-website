@@ -9,7 +9,7 @@ show_sidebar: false
     {{ page.content }}
   </div>
 
-  {% assign sorted_projects = site.projects | sort:page.sort %}
+  {% assign sorted_projects = site.projects | sort:page.date | reverse %}
 
   {% for project in sorted_projects %}
   <div class="column is-4-desktop is-6-tablet">
@@ -18,9 +18,9 @@ show_sidebar: false
 
       <div class="card">
 
-        {% if product.image %}
+        {% if project.image %}
         <div class="card-image">
-          <figure class="image is-4by3">
+          <figure class="image is-16by9">
             <img src="{{ project.image }}" alt="{{ project.title }}" />
           </figure>
         </div>
@@ -29,7 +29,7 @@ show_sidebar: false
 
           <p class="title is-4">{{ project.title }}</h2>
           <p class="subtitle is-4">{{ project.subtitle }}</p>  
-          <p class="title is-5 has-text-right">{{ project.price }}</p>
+          <p class="title is-5 has-text-right">{{ project.project-type }}</p>
 
         </div>
       </div>
