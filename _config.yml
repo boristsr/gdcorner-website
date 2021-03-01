@@ -80,7 +80,12 @@ collections:
   projects: 
     output: true
     layout: project
-    image: https://via.placeholder.com/800x600
+    image: https://via.placeholder.com/1200x630
+    show_sidebar: false
+  products: 
+    output: true
+    layout: product
+    image: https://via.placeholder.com/1200x630
     show_sidebar: false
 
 # Exclude from processing.
