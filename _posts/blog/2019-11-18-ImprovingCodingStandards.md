@@ -4,7 +4,7 @@ title:  "Improving Coding Standards and Quality"
 date:   2019-11-18 11:17:13 +1100
 tags: [Development, Standards, Testing, StaticAnalysis, linting, team]
 image: "/assets/posts/2019-11-18-ImprovingCodingStandards.md/improvingcoding-ogimage.png"
-summary: Practical advice on how you can improve coding standards to make an impact on the effectiveness of your team, rather than just a style guide.
+description: Practical advice on how you can improve coding standards to make an impact on the effectiveness of your team, rather than just a style guide.
 comments: true
 permalink: /2019/11/18/ImprovingCodingStandards.html
 categories: blog

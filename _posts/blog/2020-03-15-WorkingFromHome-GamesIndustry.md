@@ -4,7 +4,7 @@ title:  "Working from home in the Game Development Industry"
 date:   2020-03-15 11:17:13 +1100
 tags: [Development, RainbowRedux, UnrealEngine, UE4, RainbowSix, Release, Github, OpenSource]
 image: "/assets/posts/2020-03-15-WorkingFromHome-GamesIndustry.md/wfh-og-image-2.png"
-summary: I outline some of the challenges of working from home in the games industry and my experience in how to mitigate these to keep a team effective.
+description: I outline some of the challenges of working from home in the games industry and my experience in how to mitigate these to keep a team effective.
 comments: true
 permalink: /2020/03/15/WorkingFromHome-GamesIndustry.html
 categories: blog

@@ -4,7 +4,7 @@ title:  "4 Problem Behaviours in Software Development Teams and How to Fix Them"
 date:   2020-02-28 11:17:13 +1100
 tags: [Development, Management, Teams]
 image: "/assets/posts/2020-02-28-ProblemBehavioursInSoftwareTeams.md/4problems-og-image.png"
-summary: Outlining 4 problem behaviours in Software Development teams, the roll on effects, and advice on how to eliminate or reduce these problems.
+description: Outlining 4 problem behaviours in Software Development teams, the roll on effects, and advice on how to eliminate or reduce these problems.
 comments: true
 permalink: /2020/02/28/ProblemBehavioursInSoftwareTeams.html
 categories: blog

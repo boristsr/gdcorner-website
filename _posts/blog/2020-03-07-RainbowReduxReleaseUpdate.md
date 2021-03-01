@@ -4,7 +4,7 @@ title:  "RainbowRedux First Release & Status Update"
 date:   2020-03-07 11:17:13 +1100
 tags: [Development, RainbowRedux, UnrealEngine, UE4, RainbowSix, Release, Github, OpenSource]
 image: "/assets/posts/2020-03-07-RainbowReduxReleaseUpdate.md/rr011-og-image.png"
-summary: RainbowRedux has a first version released, and announcing the open source release of the project.
+description: RainbowRedux has a first version released, and announcing the open source release of the project.
 comments: true
 permalink: /2020/03/07/RainbowReduxReleaseUpdate.html
 categories: blog

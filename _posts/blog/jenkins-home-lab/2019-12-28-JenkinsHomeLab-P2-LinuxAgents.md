@@ -5,7 +5,7 @@ date:   2019-12-27 13:29:13 +1100
 tags: [jenkins, ci, homelab, sysadmin, ubuntu, raspbian, raspberrypi, linux]
 comments: true
 image: "/assets/posts/jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents/jenkins-p2-ogimage.png"
-summary: "Configuring Ubuntu and Raspberry Pi agents for a Jenkins home lab."
+description: "Configuring Ubuntu and Raspberry Pi agents for a Jenkins home lab."
 permalink: /2019/12/27/JenkinsHomeLab-P2-LinuxAgents.html
 categories: blog
 ---
