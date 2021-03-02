@@ -2,25 +2,17 @@
 layout: default
 ---
 
-<div class="postheader">
-<!-- <h1>{{ page.title }}</h1> -->
+{% if page.toc %}
+    {% assign contentsTitle = page.toc_title | default: 'Contents' %}
+    {% include toc.html html=content class='menu-list' h_min=2 h_max=3 contents_title=contentsTitle %}
+{% endif %}
+<div class="content">
+    
+    {{ content }}
+
+    {%include heading-anchors.html %}
+    
+    {% include lightbox.html %}
+    
 </div>
 
-{{ content }}
-
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="/assets/js/anchorjs-4.2.1/anchor.min.js" ></script>
-<script>
-    $(document).ready(function () {
-        //Add anchors to all H2 elements
-        anchors.add('h2');
-        //Add anchors to all H3 elements
-        anchors.add('h3');
-        //Add anchors to all H4 elements
-        anchors.add('h4');
-        //Special case: remove it from site subtitle in header
-        anchors.remove('#project_tagline');
-    });
-</script>
-
-{% include lightbox.html %}
