@@ -5,91 +5,16 @@ $primary: #3b3b3b;
 
 @import "main";
 
-
-h3 {
-    margin-bottom: 0;
-}
-
-h3 a {
-    font-size: 28px;
-    color: #000;
-    color: rgba(0,0,0,0.9);
-    transition: all .15s ease-in-out;  
-    line-height: 1.2;
-}
-
-h3 a:hover {
-    text-decoration: none;
-}
-
-.post-list li {
-    padding-bottom: 10px;
-}
-
-img.og-post-banner:hover {
-    box-shadow: 0 0 25px 0 rgba(50, 50, 50, 0.4);
-    transition: all .15s ease-in-out;  
-    cursor: pointer;  
-}
-
-img.og-post-banner {
-    margin-top: 25px;
-    border: 0px;
-    box-shadow: 0 0 0px 0 rgba(50, 50, 50, 0.4);
-    transition: all .15s ease-in-out;  
-}
-
-//Fix slate themes code boxes having an ugly white inset box which doesn't cover all code
-code {
-    background-color: #00000000;
-    font-size: 12px;
-}
-
-//Fix slate theme width to be a bit wider
-.inner {
-    max-width: 740px;
-}
-
-#about {
-    display: block;
-    position: absolute;
-    top:0;
-    
-    z-index: 10;
-    padding: 10px 10px 10px 10px;
-    color: #fff;
-    background: #0090ff no-repeat 95% 50%;
-    font-weight: 700;
-    box-shadow: 0 0 10px rgba(0,0,0,.5);
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
+//Used on the 404 page, to center content
+.error-container {
+    margin: 10px auto;
+    max-width: 600px;
+    text-align: center;
   }
 
+//////////////////////////////////////////////////////////////////////////
+// check to remove
+//////////////////////////////////////////////////////////////////////////
 
+//Ugly red banner to identify the staging site, to redirect accidental visitors to the main site
 #staging_warning { color: #fff; font-size: 24px; font-weight: 300; background: #ef0000; text-shadow: #111 0px 0px 10px; }
-
-ul.post-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-img.og-post-banner {
-    padding: 0px;
-    margin: 0px;
-    margin-top: 10px;
-}
-
-#header-site-logo {
-    height: 50px;
-}
-
-#header-site-text {
-    height: 50px;
-}
-
-.header-img {
-    box-shadow: 0 0 0px #ebebeb;
-    -webkit-box-shadow: 0 0 0px #ebebeb;
-    border: none;
-    margin-bottom: 0px;
-}
