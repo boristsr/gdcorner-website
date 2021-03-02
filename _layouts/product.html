@@ -1,0 +1,72 @@
+---
+layout: default
+---
+
+<div class="columns is-multiline">
+
+    <div class="column is-5">
+        {% if page.youtube_id %}
+            {% include youtube.html video=page.youtube_id %}
+        {% elsif page.vimeo_id %}
+            {% include vimeo.html video=page.vimeo_id %}
+        {% else %}
+            <figure class="image is-16by9">
+                <img src="{{ page.image }}" />
+            </figure>
+        {% endif %}
+    </div>
+
+    <div class="column is-7">
+        <p class="title is-3">{{ page.title }}</p>
+        <p class="subtitle is-3">{{ page.subtitle }}</p>
+
+        <p class="subtitle is-6">{{ page.date | date_to_string }}</p>
+        <p class="subtitle is-6">{{ page.project-type }}</p>
+        <p class="subtitle is-6">Engine: {{ page.engine }}</p>
+
+        {% if page.unreal-marketplace %}
+        <p>
+            <span class="icon"><i class="fas fa-shopping-cart"></i></span>
+            <span><a href="{{ page.unreal-marketplace }}">Available on the Unreal Marketplace</a></span>
+        </p>
+        {% endif %}
+
+        {% if page.itchio %}
+        <p>
+            <span class="icon"><i class="fab fa-itch-io"></i></span>
+            <span><a href="{{ page.itchio }}">Available for download on Itch.io</a></span>
+        </p>
+        {% endif %}
+
+        {% if page.features %}
+        <div class="content">
+            {% for feature in page.features %}
+            <p>
+                <span class="icon">
+                    {% if feature.icon %}
+                    <i class="fas {{ feature.icon }}"></i>
+                    {% else %}
+                    <i class="fas fa-circle fa-xs"></i>
+                    {% endif %}
+                </span> 
+                <span>{{ feature.label }}</span>
+            </p>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="column is-12">
+        <p class="title is-4">Description</p>
+        <div class="content">
+            
+    
+            {{ content }}
+        </div>
+    </div>
+
+    <div class="column is-12">
+        
+    </div>
+
+</div>

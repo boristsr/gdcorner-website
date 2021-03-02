@@ -15,3 +15,16 @@ itchio: https://gdcorner.itch.io/
 ---
 
 This is a test post about there's something wrong
+
+# Credits
+
+Created by Philip Edwards
+
+Theme by Philip Edwards & James Davies
+
+## Assets Used
+
+- Quixel
+- Soldier Model
+- Geiger Counter
+- Sounds
