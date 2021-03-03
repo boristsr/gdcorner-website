@@ -7,7 +7,7 @@ comments: true
 permalink: /2019/06/11/BackToTheOrigin.html
 categories: blog
 ---
-While working on [RainbowRedux]({{ site.url }}{% post_url /2019-01-13-RainbowSixRevivalProject %}) I’ve discovered the content is authored in some interesting ways. Today I’m going to talk about large distances, floating point numbers and the errors they can cause. I'll show how I'm trying to reduce these distances and make the geometry more manageable.
+While working on a personal project, [RainbowRedux](https://www.rainbowredux.com/2019/01/13/RainbowSixRevivalProject), I’ve discovered the content is authored in some interesting ways. Today I’m going to talk about large distances, floating point numbers and the errors they can cause. I'll show how I'm trying to reduce these distances and make the geometry more manageable.
 
 <!--more-->
 
