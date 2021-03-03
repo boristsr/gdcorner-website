@@ -1,5 +1,4 @@
 ---
-layout: project
 title:  "There's Something Wrong in Reactor 7"
 subtitle: "A cinematic from UE4"
 date:   2021-02-27 13:29:13 +1100
