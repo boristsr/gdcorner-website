@@ -16,10 +16,10 @@ Today we will setup on-demand linux agents through Docker. First step, let's ins
 
 ## Articles in this guide
 
-- [Part 1 - Setting up the Master]({{ site.url }}{% post_url blog/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup %})
-- [Part 2 - Setting up Linux Agents on Ubuntu and Raspberry Pis]({{ site.url }}{% post_url blog/jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents %})
-- [Part 3 - Setting up Windows Agents]({{ site.url }}{% post_url blog/jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents %})
-- [Part 4 - Setting up Docker for on-demand linux agent creation (this article)]({{ site.url }}{% post_url blog/jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents %})
+- [Part 1 - Setting up the Master]({{ site.url }}{% post_url /jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup %})
+- [Part 2 - Setting up Linux Agents on Ubuntu and Raspberry Pis]({{ site.url }}{% post_url /jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents %})
+- [Part 3 - Setting up Windows Agents]({{ site.url }}{% post_url /jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents %})
+- [Part 4 - Setting up Docker for on-demand linux agent creation (this article)]({{ site.url }}{% post_url /jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents %})
 - Part 5 (Coming Soon) - Setting up Docker for on-demand windows agent creation
 
 ## A quick note on updates to this article
