@@ -73,20 +73,31 @@ defaults:
     values:
       author: "Philip Edwards"
       layout: post
-      image: https://via.placeholder.com/1200x630
+      image: /assets/images/default-social-card.png
       show_sidebar: false
+      comments: true
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      image: /assets/images/default-social-card.png
+      layout: project
+      show_sidebar: false
+  - scope:
+      path: ""
+      type: "products"
+    values:
+      image: /assets/images/default-social-card.png
+      layout: product
+      show_sidebar: false
+    
 
 collections:
   projects: 
     output: true
-    layout: project
-    image: https://via.placeholder.com/1200x630
-    show_sidebar: false
   products: 
     output: true
-    layout: product
-    image: https://via.placeholder.com/1200x630
-    show_sidebar: false
+    
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
