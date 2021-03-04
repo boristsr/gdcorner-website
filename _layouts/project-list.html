@@ -12,30 +12,6 @@ show_sidebar: false
   {% assign sorted_projects = site.projects | sort:page.date | reverse %}
 
   {% for project in sorted_projects %}
-  <div class="column is-4-desktop is-6-tablet">
-
-    <a href="{{ project.url | relative_url }}">
-
-      <div class="card">
-
-        {% if project.image %}
-        <div class="card-image">
-          <figure class="image">
-            <img src="{{ project.image }}" alt="{{ project.title }}" />
-          </figure>
-        </div>
-        {% endif %}
-        <div class="card-content">
-
-          <p class="title is-4">{{ project.title }}</h2>
-          <p class="subtitle is-4">{{ project.subtitle }}</p>  
-          <p class="title is-5 has-text-right">{{ project.project-type }}</p>
-
-        </div>
-      </div>
-
-    </a>
-
-  </div>
-{% endfor %}
+    {% include project-card-small.html %}
+  {% endfor %}
 </div>
