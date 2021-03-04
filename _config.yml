@@ -59,6 +59,9 @@ disqus:
 commento:
     enabled: true
 
+navbar_logo: "/assets/images/logo-w-text-small.png"
+hero_logo: "/assets/images/logo-large.png"
+
 defaults:
   -
     scope:
