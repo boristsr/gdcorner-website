@@ -1,0 +1,28 @@
+<div class="column is-12">
+
+    <a href="{{ product.url | relative_url }}">
+
+        <div class="card">
+
+            {% if product.image %}
+            <div class="card-image">
+                <figure class="image">
+                <img src="{{ product.image }}" alt="{{ product.title }}" />
+                </figure>
+            </div>
+            {% endif %}
+            <div class="card-content">
+
+                <p class="title is-4">{{ product.title }}</h2>
+                <p class="subtitle is-4">{{ product.subtitle }}</p>  
+                <p class="title is-5 has-text-right">{{ product.product-type }}</p>
+
+            </div>
+
+            <footer class="card-footer">
+                <p class="card-footer-item">Published: {{ product.date | date: "%b %-d, %Y" }}</p>
+            </footer>
+        </div>
+
+    </a>
+</div>
