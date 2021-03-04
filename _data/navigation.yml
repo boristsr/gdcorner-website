@@ -1,8 +1,8 @@
-- name: Articles
+- name: Latest Articles
   link: /articles/
 - name: Projects
-  link: /projects
+  link: /projects/
 - name: Products
-  link: /products
+  link: /products/
 - name: About
-  link: /about
+  link: /about/
