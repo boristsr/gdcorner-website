@@ -31,8 +31,10 @@ pipeline {
 
     //archive the build
     post {
-        //Archive the build artifacts
-        archiveArtifacts artifacts: '_site/**/*', followSymlinks: false
+        successful {
+            //Archive the build artifacts
+            archiveArtifacts artifacts: '_site/**/*', followSymlinks: false
+        }
     }
 }
 
