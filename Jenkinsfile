@@ -14,17 +14,22 @@ pipeline {
 
     stages {
         stage('build') {
-            //Execute build
-            sh 'bash build/jenkins-docker-build.sh'
+            steps {
+                //Execute build
+                sh 'bash build/jenkins-docker-build.sh'
+            }
         }
         stage('deploy-staging') {
             when {
                 branch 'staging' 
             }
-            //deploy to AWS staging site
-            withAWS(credentials: AWS_CREDENTIALS, region: 'ap-southeast-2') {
-                s3Delete bucket: 'staging.gdcorner.net', path: '/'
-                s3Upload acl: 'PublicRead', bucket: 'staging.gdcorner.net', file: '', workingDir: '_site/'
+            
+            steps {
+                //deploy to AWS staging site
+                withAWS(credentials: AWS_CREDENTIALS, region: 'ap-southeast-2') {
+                    s3Delete bucket: 'staging.gdcorner.net', path: '/'
+                    s3Upload acl: 'PublicRead', bucket: 'staging.gdcorner.net', file: '', workingDir: '_site/'
+                }
             }
         }
     }
