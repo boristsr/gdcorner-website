@@ -5,7 +5,7 @@ pipeline {
     environment {
         BUILD_ENVIRONMENT = 'development'
         OVERRIDE_URL = 'http://staging.gdcorner.net'
-        AWS_CREDENTIALS = credentials('cb2289b7-76c6-4711-8779-4b3800a3d0e8')
+        AWS_STAGING_CREDENTIALS = 'cb2289b7-76c6-4711-8779-4b3800a3d0e8'
     }
 
     options {
@@ -26,7 +26,7 @@ pipeline {
 
             steps {
                 //deploy to AWS staging site
-                withAWS(credentials: AWS_CREDENTIALS, region: 'ap-southeast-2') {
+                withAWS(credentials: AWS_STAGING_CREDENTIALS, region: 'ap-southeast-2') {
                     s3Delete bucket: 'staging.gdcorner.net', path: '/'
                     s3Upload acl: 'PublicRead', bucket: 'staging.gdcorner.net', file: '', workingDir: '_site/'
                 }
