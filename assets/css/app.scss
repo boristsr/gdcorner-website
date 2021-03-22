@@ -42,10 +42,3 @@ $primary: #3b3b3b;
     border-radius: .25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
-
-//////////////////////////////////////////////////////////////////////////
-// check to remove
-//////////////////////////////////////////////////////////////////////////
-
-//Ugly red banner to identify the staging site, to redirect accidental visitors to the main site
-#staging_warning { color: #fff; font-size: 24px; font-weight: 300; background: #ef0000; text-shadow: #111 0px 0px 10px; }
