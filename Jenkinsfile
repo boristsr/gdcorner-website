@@ -23,7 +23,7 @@ pipeline {
             when {
                 branch 'staging' 
             }
-            
+
             steps {
                 //deploy to AWS staging site
                 withAWS(credentials: AWS_CREDENTIALS, region: 'ap-southeast-2') {
@@ -36,7 +36,7 @@ pipeline {
 
     //archive the build
     post {
-        successful {
+        success {
             //Archive the build artifacts
             archiveArtifacts artifacts: '_site/**/*', followSymlinks: false
         }
