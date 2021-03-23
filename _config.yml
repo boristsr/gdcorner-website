@@ -32,6 +32,8 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
+fixed_navbar: top
+
 github:
   is_project_page: false
 
