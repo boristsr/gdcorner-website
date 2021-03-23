@@ -1,0 +1,1 @@
+find . | grep '\.png' | parallel build/png-zopflipng.sh
