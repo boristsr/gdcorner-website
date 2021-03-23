@@ -1,10 +1,10 @@
 - name: Latest Articles
-  link: /articles/
+  link: /articles/index.html
 - name: Projects
-  link: /projects/
+  link: /projects/index.html
 - name: Products
-  link: /products/
+  link: /products/index.html
 - name: Support
-  link: /support/
+  link: /support/index.html
 - name: About
-  link: /about/
+  link: /about.html
