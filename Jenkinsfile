@@ -4,7 +4,7 @@ pipeline {
 
     environment {
         BUILD_ENVIRONMENT = 'development'
-        OVERRIDE_URL = 'http://staging.gdcorner.net'
+        OVERRIDE_URL = 'https://staging.gdcorner.net'
         AWS_STAGING_CREDENTIALS = 'cb2289b7-76c6-4711-8779-4b3800a3d0e8'
         AWS_STAGING_BUCKET = 'staging.gdcorner.net'
         AWS_STAGING_CF_DISTRIBUTION = 'E3COBJBCCYEPYE'
