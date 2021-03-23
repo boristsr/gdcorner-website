@@ -1,1 +1,1 @@
-find . | grep '\.png' | parallel build/png-zopflipng.sh
+find . | grep '\.png\b' | parallel build/png-zopflipng.sh
