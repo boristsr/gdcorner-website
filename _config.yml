@@ -71,6 +71,7 @@ defaults:
       type: "pages"
     values:
       show_sidebar: true
+      image: /assets/images/default-social-card.png
   -
     scope:
       path: ""
