@@ -79,6 +79,7 @@ defaults:
     values:
       author: "Philip Edwards"
       layout: post
+      hero_height: is-fullwidth
       image: /assets/images/default-social-card.png
       show_sidebar: false
       comments: true
@@ -88,6 +89,7 @@ defaults:
     values:
       image: /assets/images/default-social-card.png
       layout: project
+      hero_height: is-fullwidth
       show_sidebar: false
   - scope:
       path: ""
@@ -95,6 +97,7 @@ defaults:
     values:
       image: /assets/images/default-social-card.png
       layout: product
+      hero_height: is-fullwidth
       show_sidebar: false
     
 
