@@ -70,6 +70,7 @@ defaults:
       path: ""
       type: "pages"
     values:
+      hero_height: is-fullwidth
       show_sidebar: true
       image: /assets/images/default-social-card.png
   -
