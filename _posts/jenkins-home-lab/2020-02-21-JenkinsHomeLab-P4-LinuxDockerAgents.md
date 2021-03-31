@@ -65,7 +65,7 @@ sudo pico /etc/systemd/system/docker.service.d/startup_options.conf
 
 Copy and paste the following config into the new file
 
-```INI
+```ini
 # /etc/systemd/system/docker.service.d/override.conf
 [Service]
 ExecStart=
@@ -194,13 +194,13 @@ Now the top level options are set, expand the Container settings section under D
 
 Under Environment, you want to add a line like this:
 
-```INI
+```ini
 JENKINS_AGENT_SSH_PUBKEY=ssh-rsa YOUR SSH PUBLIC KEY
 ```
 
 or if you have an older image or version of setup-sshd script
 
-```INI
+```ini
 JENKINS_SLAVE_SSH_PUBKEY=ssh-rsa YOUR SSH PUBLIC KEY
 ```
 
