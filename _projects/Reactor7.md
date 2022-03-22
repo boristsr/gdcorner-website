@@ -1,7 +1,7 @@
 ---
 title:  "There's Something Wrong in Reactor 7"
-subtitle: "A cinematic from UE4"
-date:   2021-02-27 13:29:13 +1100
+subtitle: "A cinematic in UE4"
+date:   2020-07-29 13:29:13 +1100
 tags: [unreal, ue4, cinematic]
 comments: true
 categories: project
@@ -13,7 +13,7 @@ download: https://gdcorner.itch.io/
 itchio: https://gdcorner.itch.io/
 ---
 
-This is a test post about there's something wrong
+After discussing an idea for a game with a friend, I wanted to test how quickly an atmospheric setting could be created with off the shelf content.
 
 # Credits
 
