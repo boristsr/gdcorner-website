@@ -49,13 +49,6 @@ plausible_analytics:
   data_domain: gdcorner.com
   src: https://piostats.gdcorner.com/js/index.js
 
-# Disqus Comments
-disqus:
-    # Leave shortname blank to disable comments site-wide.
-    # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
-    shortname: gdcorner
-    enabled: false
-
 commento:
     enabled: true
 
