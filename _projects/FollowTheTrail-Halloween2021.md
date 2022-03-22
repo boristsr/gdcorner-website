@@ -1,6 +1,6 @@
 ---
 title:  "Follow The Trail"
-subtitle: "A weekend project in Unreal to celebrate Halloween"
+subtitle: "A weekend project in UE4 to celebrate Halloween"
 date:   2021-11-02 13:29:13 +1100
 tags: [unreal, ue4, shooter, weekend]
 comments: true
