@@ -18,7 +18,7 @@ pipeline {
                 branch 'staging' 
             }
             environment {
-                BUILD_ENVIRONMENT = 'development'
+                BUILD_ENVIRONMENT = 'staging'
             }
             steps {
                 //Execute build

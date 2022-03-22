@@ -7,9 +7,9 @@ BUILD_ENVIRONMENT="${BUILD_ENVIRONMENT:-development}"
 
 CONFIG_FILES="_config.yml"
 
-if [[ "${BUILD_ENVIRONMENT}" ]]; then
+if [[ "${BUILD_ENVIRONMENT}"=="staging" ]]; then
   echo "Development build, building with extra config data"
-  CONFIG_FILES="_config.yml,_config_development.yml"
+  CONFIG_FILES="_config.yml,_config_staging.yml"
 fi
 
 echo Building in mode: $BUILD_ENVIRONMENT

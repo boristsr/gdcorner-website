@@ -18,7 +18,9 @@
       {%- include google-analytics.html -%}
     {%- endif -%}
     {% if site.plausible_analytics.data_domain %}
-        {%- include plausible-analytics.html -%}
+        {% if jekyll.environment == "staging" or jekyll.environment == "production" %}
+            {%- include plausible-analytics.html data_domain=site.plausible_analytics.staging_data_domain-%}
+        {% endif %}
     {% endif %}
     {%- include head-scripts.html -%}
 </head>
