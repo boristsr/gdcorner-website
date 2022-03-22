@@ -5,16 +5,14 @@ bundle install
 
 BUILD_ENVIRONMENT="${BUILD_ENVIRONMENT:-development}"
 
-if [[ -n "${OVERRIDE_URL}" ]]; then
-  echo "Ovverride url provided, modifying _config.yml"
-  sed -i \
-        -e 's!^url:.*!url: \"'"${OVERRIDE_URL}"'\"!' \
-        _config.yml
+CONFIG_FILES="_config.yml"
 
-  rm _config.yml-e
+if [[ "${BUILD_ENVIRONMENT}" ]]; then
+  echo "Development build, building with extra config data"
+  CONFIG_FILES="_config.yml,_config_development.yml"
 fi
 
 echo Building in mode: $BUILD_ENVIRONMENT
 
 # Build site
-JEKYLL_ENV=$BUILD_ENVIRONMENT bundle exec jekyll build
+JEKYLL_ENV=$BUILD_ENVIRONMENT bundle exec jekyll build --config ${CONFIG_FILES}

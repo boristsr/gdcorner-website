@@ -19,7 +19,6 @@ pipeline {
             }
             environment {
                 BUILD_ENVIRONMENT = 'development'
-                OVERRIDE_URL = 'https://staging.gdcorner.net'
             }
             steps {
                 //Execute build

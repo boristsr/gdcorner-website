@@ -1,0 +1,5 @@
+url: https://staging.gdcorner.net
+
+plausible_analytics:
+  data_domain: staging.gdcorner.net
+  src: https://plausible.io/js/plausible.js
