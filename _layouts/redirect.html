@@ -6,8 +6,10 @@
         {% if site.google_analytics and jekyll.environment == "production" %}
             {%- include google-analytics.html -%}
         {%- endif -%}
-        {% if site.plausible_analytics.data_domain and jekyll.environment == "production" %}
-            {%- include plausible-analytics.html -%}
+        {% if site.plausible_analytics.data_domain %}
+            {% if jekyll.environment == "staging" or jekyll.environment == "production" %}
+                {%- include plausible-analytics.html data_domain=site.plausible_analytics.staging_data_domain-%}
+            {% endif %}
         {% endif %}
         <link rel="canonical" href="{{ page.redirect }}"/>
         <script type="text/javascript">
