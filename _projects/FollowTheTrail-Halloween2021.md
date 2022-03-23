@@ -6,7 +6,7 @@ tags: [unreal, ue4, shooter, weekend]
 comments: true
 categories: project
 youtube_id: rF_WQ9Ie_Ns
-image: "/assets/projects/TheresSomethingWrongInReactor7/cover.png"
+image: "/assets/projects/FollowTheTrail-Halloween2021/cover.png"
 project-type: Cinematic
 engine: UE4
 download: https://gdcorner.itch.io/
