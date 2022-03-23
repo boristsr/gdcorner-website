@@ -45,10 +45,6 @@ paginate_path: "/articles/page:num"
 
 post_assets_url: "/"
 
-plausible_analytics:
-  data_domain: gdcorner.com
-  src: https://piostats.gdcorner.com/js/index.js
-
 commento:
     enabled: true
 

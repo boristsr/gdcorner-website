@@ -1,0 +1,5 @@
+url: "https://www.gdcorner.com"
+
+plausible_analytics:
+  data_domain: gdcorner.com
+  src: https://piostats.gdcorner.com/js/index.js
