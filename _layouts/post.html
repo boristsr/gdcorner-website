@@ -10,6 +10,10 @@ layout: page
         {% include series.html %}
     {% endif %}
 
+    {% if page.transcription == true %}
+     {% include post-transcription-note.html %}
+    {% endif %}
+
     {{ content }}
 </div>
 
