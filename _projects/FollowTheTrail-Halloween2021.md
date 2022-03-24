@@ -11,6 +11,7 @@ project-type: Playable Prototype
 engine: UE4
 download: https://gdcorner.itch.io/follow-the-trail
 itchio: https://gdcorner.itch.io/follow-the-trail
+project: follow-the-trail
 ---
 
 ​I got bored on Halloween and decided to see how far I could get making a game in a few hours. Ended up spending 12 hours total, 6 hours on Halloween, and 6 hours the next day. I ended up with a surprisingly good result.

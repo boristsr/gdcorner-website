@@ -78,7 +78,7 @@ defaults:
       image: /assets/images/default-social-card.png
       layout: project
       hero_height: is-fullwidth
-      show_sidebar: false
+      show_sidebar: true
   - scope:
       path: ""
       type: "products"
