@@ -4,7 +4,7 @@ layout: page
 
 <div class="content">
 
-    <p>Published: {{ page.date | date: "%b %-d, %Y" }} by {{ page.author }}</p>
+    <p class="post-author">Published: {{ page.date | date: "%b %-d, %Y" }} by {{ page.author }}</p>
 
     {% if page.series %}
         {% include series.html %}
