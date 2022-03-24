@@ -9,7 +9,9 @@ categories: blog
 project: follow-the-trail
 ---
 
-On Halloween 2021, I decided to try doing a mini game-jam style project. I wanted to make something simple, yet atmospheric. Possibly a simple wave based shooter. There was no solid plan, just an idea to make "something".
+On Halloween 2021, I decided to try doing a mini game-jam style project. I wanted to make something simple, yet atmospheric. Possibly a simple wave based shooter. There was no solid plan, just an idea to make "something". In this retrospective review, I share some of the goals, strengths and weaknesses of the project, and any lessons learned.
+
+<!--more-->
 
 After every project (even small personal ones) I like to do a small retrospective review, and solidify for myself any lessons that can be learned from the project. This can identify any strengths and weaknesses in my skill set or decision making. This can then be used to guide me in what I want to learn or improve on next. It also serves as a bit of a sense of closure on a project. After all, no project is ever "done".
 
