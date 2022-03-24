@@ -4,7 +4,7 @@ title:  "Follow the Trail Development Retro Review."
 date:   2022-03-23 14:16:13 +1100
 tags: [gamedev, gamejam, retrospective, unreal, ue4, project, retro, postmortem]
 comments: true
-
+image: "/assets/posts/2022-03-23-FollowTheTrailRetro/ogimage-retro.png"
 categories: blog
 project: follow-the-trail
 ---
