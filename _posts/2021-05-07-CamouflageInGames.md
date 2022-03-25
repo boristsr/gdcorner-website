@@ -7,6 +7,7 @@ tags: [essay, gamedev, camouflage, unreal, ue4, tutorial]
 comments: true
 transcription: true
 categories: blog
+youtube_id: nheFNQs378s
 ---
 
 Have you looked at camouflage in games recently? It looks amazing. Yet, it doesn't seem to stop you being seen in a split second. Is that a limitation of the technology or is it by design?  Let's have a look at some of the techniques and try recreating some of the ways game developers make camouflage look really good while still allowing easy visibility of characters.
