@@ -1,0 +1,8 @@
+title: Jenkins Home Lab
+description: A guide for building a complete Jenkins home lab
+sections:
+  - items:
+    - title: "Jenkins Home Lab: Part 1 - Setting up the Master"
+    - title: "Jenkins Home Lab: Part 2 - Setting up Linux Agents (Ubuntu & Raspberry Pi systems)"
+    - title: "Jenkins Home Lab: Part 3 - Setting up Windows Agents"
+    - title: "Jenkins Home Lab: Part 4 - On-Demand Linux Agents with Docker"

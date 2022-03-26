@@ -8,6 +8,7 @@ image: "/assets/posts/jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup/
 description: "A guide for building a Jenkins home lab. In this first part you'll learn how to configure a Jenkins master server."
 permalink: /2019/12/27/JenkinsHomeLab-P1-MasterSetup.html
 categories: blog
+series: jenkins_homelab_series
 ---
 
 Are you looking for a project this holidays? Did you get a Raspberry Pi for Christmas? Why not setup a home lab for CI/CD with Jenkins? Over the next week or so I’m going to output a series of tutorials aimed at setting up a comprehensive home lab environment for Jenkins. With this home lab you can turn any old or cheap computers into an environment to automate tasks for your side projects, sharpen your CI/CD skills, and prototype new project pipelines.
@@ -19,14 +20,6 @@ Are you looking for a project this holidays? Did you get a Raspberry Pi for Chri
 I embarked on creating my own home lab to automate tasks on a few side projects as well as a way of filling in some knowledge gaps of mine, specifically aiming to learn windows containers and [Docker](https://www.docker.com/) on ARM architectures, like a [Raspberry Pi](https://www.raspberrypi.org/). As a result this guide is going to cover many different options. I’ve aimed to keep it modular so you can pick how you want to run your master Jenkins server, and choose any or all of the different agents for your environment.
 
 > <span class="badge badge-danger">Security Note</span> This guide is focused on a home lab environment so certain security principles will not be rigidly conformed to. I’ll make a note anytime a security assumption or choice is made that should be more carefully considered in a production environment.
-
-## Articles in this guide
-
-- [Part 1 - Setting up the Master (this article)]({{ site.url }}{% post_url /jenkins-home-lab/2019-12-27-JenkinsHomeLab-P1-MasterSetup %})
-- [Part 2 - Setting up Linux Agents on Ubuntu and Raspberry Pis]({{ site.url }}{% post_url /jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents %})
-- [Part 3 - Setting up Windows Agents]({{ site.url }}{% post_url /jenkins-home-lab/2019-12-30-JenkinsHomeLab-P3-WindowsAgents %})
-- [Part 4 - Setting up Docker for on-demand linux agent creation]({{ site.url }}{% post_url /jenkins-home-lab/2020-02-21-JenkinsHomeLab-P4-LinuxDockerAgents %})
-- Part 5 (Coming Soon) - Setting up Docker for on-demand windows agent creation
 
 ## Why Jenkins?
 
