@@ -53,7 +53,6 @@ pipeline {
                 withAWS(credentials: AWS_STAGING_CREDENTIALS, region: 'ap-southeast-2') {
                     s3Delete bucket: AWS_STAGING_BUCKET, path: '/'
                     s3Upload acl: 'PublicRead', bucket: AWS_STAGING_BUCKET, file: '', workingDir: '_site/', cacheControl:'public,max-age=3600'
-                    cfInvalidate distribution: AWS_STAGING_CF_DISTRIBUTION, paths: ['/*'], waitForCompletion: true
                 }
             }
         }
@@ -67,6 +66,13 @@ pipeline {
                 withAWS(credentials: AWS_STAGING_CREDENTIALS, region: 'ap-southeast-2') {
                     s3Delete bucket: AWS_STAGING_BUCKET, path: '/'
                     s3Upload acl: 'PublicRead', bucket: AWS_STAGING_BUCKET, file: '', workingDir: '_site/', cacheControl:'public,max-age=3600'
+                }
+            }
+        }
+        stage('invalidate-cdn') {
+            steps {
+                //deploy to AWS staging site
+                withAWS(credentials: AWS_STAGING_CREDENTIALS, region: 'ap-southeast-2') {
                     cfInvalidate distribution: AWS_STAGING_CF_DISTRIBUTION, paths: ['/*'], waitForCompletion: true
                 }
             }
