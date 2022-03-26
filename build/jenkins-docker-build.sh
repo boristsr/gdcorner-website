@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Install modules for site
-bundle install
-
 BUILD_ENVIRONMENT="${BUILD_ENVIRONMENT:-development}"
 
 CONFIG_FILES="_config.yml"

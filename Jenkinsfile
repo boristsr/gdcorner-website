@@ -13,6 +13,12 @@ pipeline {
     }
 
     stages {
+        stage('install-prereqs') {
+            steps {
+                //Execute build
+                sh 'bash build/jenkins-docker-install.sh'
+            }
+        }
         stage('build-staging') {
             when {
                 branch 'staging' 
