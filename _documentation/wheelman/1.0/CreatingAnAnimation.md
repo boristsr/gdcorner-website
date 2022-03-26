@@ -1,15 +1,14 @@
 ---
-title:  "Wheelman"
-subtitle: "An AI Assisted tool for animating vehicles in Unreal"
+title:  "Creating an Animation"
+subtitle: "doco test"
 date:   2022-03-21 17:29:13 +1100
 tags: [unreal, ue4, tool, vehicles, animation, wheelman]
 comments: true
 categories: product
+version: 1.0
 product-type: Tool
 engine: UE4
 published: true
-product: wheelman
-unreal-marketplace: "https://www.unrealengine.com/marketplace/en-US/product/monster-sounds-pack"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum facilisis leo. Et netus et malesuada fames. Facilisis volutpat est velit egestas dui id. Volutpat commodo sed egestas egestas. Blandit volutpat maecenas volutpat blandit aliquam etiam erat velit. Eget nulla facilisi etiam dignissim diam. Ultrices neque ornare aenean euismod. Faucibus in ornare quam viverra orci sagittis eu volutpat. Interdum velit laoreet id donec ultrices tincidunt arcu non sodales. Viverra vitae congue eu consequat ac. Iaculis urna id volutpat lacus laoreet non. Lacus sed viverra tellus in hac. Et malesuada fames ac turpis. Leo urna molestie at elementum eu facilisis. Diam maecenas sed enim ut sem viverra aliquet eget. Amet cursus sit amet dictum sit amet. Mauris commodo quis imperdiet massa tincidunt. At tempor commodo ullamcorper a lacus.

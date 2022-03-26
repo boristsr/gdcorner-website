@@ -1,18 +1,17 @@
 ---
-title:  "Wheelman"
-subtitle: "An AI Assisted tool for animating vehicles in Unreal"
+title:  "Training a Vehicle"
+subtitle: "doco test2"
 date:   2022-03-21 17:29:13 +1100
 tags: [unreal, ue4, tool, vehicles, animation, wheelman]
 comments: true
 categories: product
+version: 1.0
 product-type: Tool
 engine: UE4
 published: true
-product: wheelman
-unreal-marketplace: "https://www.unrealengine.com/marketplace/en-US/product/monster-sounds-pack"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum facilisis leo. Et netus et malesuada fames. Facilisis volutpat est velit egestas dui id. Volutpat commodo sed egestas egestas. Blandit volutpat maecenas volutpat blandit aliquam etiam erat velit. Eget nulla facilisi etiam dignissim diam. Ultrices neque ornare aenean euismod. Faucibus in ornare quam viverra orci sagittis eu volutpat. Interdum velit laoreet id donec ultrices tincidunt arcu non sodales. Viverra vitae congue eu consequat ac. Iaculis urna id volutpat lacus laoreet non. Lacus sed viverra tellus in hac. Et malesuada fames ac turpis. Leo urna molestie at elementum eu facilisis. Diam maecenas sed enim ut sem viverra aliquet eget. Amet cursus sit amet dictum sit amet. Mauris commodo quis imperdiet massa tincidunt. At tempor commodo ullamcorper a lacus.
+22Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum facilisis leo. Et netus et malesuada fames. Facilisis volutpat est velit egestas dui id. Volutpat commodo sed egestas egestas. Blandit volutpat maecenas volutpat blandit aliquam etiam erat velit. Eget nulla facilisi etiam dignissim diam. Ultrices neque ornare aenean euismod. Faucibus in ornare quam viverra orci sagittis eu volutpat. Interdum velit laoreet id donec ultrices tincidunt arcu non sodales. Viverra vitae congue eu consequat ac. Iaculis urna id volutpat lacus laoreet non. Lacus sed viverra tellus in hac. Et malesuada fames ac turpis. Leo urna molestie at elementum eu facilisis. Diam maecenas sed enim ut sem viverra aliquet eget. Amet cursus sit amet dictum sit amet. Mauris commodo quis imperdiet massa tincidunt. At tempor commodo ullamcorper a lacus.
 
 Bibendum at varius vel pharetra vel. Placerat duis ultricies lacus sed turpis tincidunt id aliquet. Pretium aenean pharetra magna ac placerat vestibulum. Donec ultrices tincidunt arcu non sodales. Quis viverra nibh cras pulvinar mattis nunc sed. Congue eu consequat ac felis donec et. Ultrices in iaculis nunc sed augue lacus viverra. Amet cursus sit amet dictum sit. Duis ultricies lacus sed turpis. Sed velit dignissim sodales ut eu sem integer vitae justo. Mattis pellentesque id nibh tortor id. Pretium nibh ipsum consequat nisl vel pretium lectus quam. At imperdiet dui accumsan sit. Ultrices neque ornare aenean euismod elementum nisi quis eleifend quam. At auctor urna nunc id cursus metus aliquam. Lacinia at quis risus sed vulputate odio ut enim. Posuere ac ut consequat semper viverra nam libero justo. Mattis enim ut tellus elementum sagittis. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Tristique risus nec feugiat in fermentum.
 

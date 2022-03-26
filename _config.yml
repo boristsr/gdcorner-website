@@ -81,6 +81,18 @@ defaults:
       show_sidebar: true
   - scope:
       path: ""
+      type: "documentation"
+    values:
+      image: /assets/images/default-social-card.png
+      layout: documentation
+      hero_height: is-fullwidth
+      show_sidebar: false
+  - scope:
+      path: "_documentation/wheelman"
+    values:
+      product: wheelman
+  - scope:
+      path: ""
       type: "products"
     values:
       image: /assets/images/default-social-card.png
@@ -93,6 +105,8 @@ collections:
   projects: 
     output: true
   products: 
+    output: true
+  documentation: 
     output: true
   redirects: 
     output: true

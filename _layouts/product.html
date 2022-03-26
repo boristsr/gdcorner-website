@@ -56,17 +56,14 @@ layout: default
         {% endif %}
     </div>
 
-    <div class="column is-12">
-        <p class="title is-4">Description</p>
+</div>
+<div class="columns is-multiline">
+    <div class="column {{ content.width }}">
         <div class="content">
-            
-    
             {{ content }}
         </div>
     </div>
-
-    <div class="column is-12">
-        
+    <div class="column is-3-desktop is-3-tablet">
+        {% include documentation-menubar.html %}
     </div>
-
 </div>
