@@ -12,22 +12,20 @@ layout: none
       "content"  : {{ post.content | strip_html | strip_newlines | jsonify }}
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
-  ,
   {% for post in site.posts %}
-  {
-    {% if post.title != nil %}
-      "title"    : "{{ post.title | escape }}",
-      "category" : "{{ post.category }}",
-      "tags"     : "{{ post.tags | join: ', ' }}",
-      "url"      : "{{ site.baseurl }}{{ post.url }}",
-      "date"     : "{{ post.date }}",
-      "content"  : {{ post.content | strip_html | strip_newlines | jsonify }}
-    {% endif %}
-  } {% unless forloop.last %},{% endunless %}
+    , {
+        {% if post.title != nil %}
+          "title"    : "{{ post.title | escape }}",
+          "category" : "{{ post.category }}",
+          "tags"     : "{{ post.tags | join: ', ' }}",
+          "url"      : "{{ site.baseurl }}{{ post.url }}",
+          "date"     : "{{ post.date }}",
+          "content"  : {{ post.content | strip_html | strip_newlines | jsonify }}
+        {% endif %}
+    }
   {% endfor %}
-  ,
   {% for product in site.products %}
-    {
+    , {
       {% if product.title != nil %}
         "title"    : "{{ product.title | escape }}",
         "category" : "{{ product.category }}",
@@ -36,11 +34,10 @@ layout: none
         "date"     : "{{ product.date }}",
         "content"  : {{ product.content | strip_html | strip_newlines | jsonify }}
       {% endif %}
-    } {% unless forloop.last %},{% endunless %}
+    }
   {% endfor %}
-  ,
   {% for project in site.projects %}
-    {
+    , {
       {% if project.title != nil %}
         "title"    : "{{ project.title | escape }}",
         "category" : "{{ project.category }}",
@@ -49,11 +46,11 @@ layout: none
         "date"     : "{{ project.date }}",
         "content"  : {{ project.content | strip_html | strip_newlines | jsonify }}
       {% endif %}
-    } {% unless forloop.last %},{% endunless %}
+    }
   {% endfor %}
   ,
   {% for document in site.documentation %}
-    {
+    , {
       {% if document.title != nil %}
         "title"    : "{{ document.title | escape }}",
         "category" : "{{ document.category }}",
@@ -62,6 +59,6 @@ layout: none
         "date"     : "{{ document.date }}",
         "content"  : {{ document.content | strip_html | strip_newlines | jsonify }}
       {% endif %}
-    } {% unless forloop.last %},{% endunless %}
+    }
   {% endfor %}
 ]
