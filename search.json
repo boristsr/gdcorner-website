@@ -38,7 +38,6 @@ layout: none
      {% endif %}
    } {% unless forloop.last %},{% endunless %}
   {% endfor %}
-  ,
   {% for project in site.projects %}
    {
      {% if project.title != nil %}
