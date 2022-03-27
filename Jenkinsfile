@@ -90,6 +90,7 @@ pipeline {
         success {
             //Archive the build artifacts
             archiveArtifacts artifacts: '_site/**/*', followSymlinks: false
+            discordSend description: "Job '${JOB_NAME}' (${BUILD_NUMBER}) pipeline completed with status '${currentBuild.currentResult}'\n\n${env.BUILD_URL}", footer: currentBuild.currentResult, result: currentBuild.currentResult, title: JOB_NAME, webhookURL: ANNOUNCE_URL_JOB_DISCORD
         }
     }
 }
