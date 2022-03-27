@@ -2,10 +2,11 @@
 layout: page
 title:  Privacy Policy
 date:   2019-01-04 13:29:13 +1100
+show_sidebar: false
 permalink: /privacy/
 ---
 
-I do my best to respect the privacy of all visitors to my webpage. While I don't directly store cookies, or gather personal information, I do use 2 services which may gather a little bit of information.
+I do my best to respect the privacy of all visitors to my webpage. While I don't directly store cookies or gather personal information, I do use 2 services which may gather a little bit of information.
 
 ## Plausible Analytics
 
