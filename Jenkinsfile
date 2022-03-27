@@ -13,7 +13,7 @@ pipeline {
     }
 
     stages {
-        stage('install-prereqs') {
+        stage('Install Prerequisites') {
             steps {
                 //Execute build
                 sh 'bash build/jenkins-docker-install.sh'
@@ -41,6 +41,12 @@ pipeline {
             steps {
                 //Execute build
                 sh 'bash build/jenkins-docker-build.sh'
+            }
+        }
+        stage('Validate Search JSON') {
+            steps {
+                //Execute build
+                sh 'jsonlint -qc _site/search.json'
             }
         }
         stage('deploy-staging') {
