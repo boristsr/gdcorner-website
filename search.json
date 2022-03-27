@@ -51,4 +51,17 @@ layout: none
       {% endif %}
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
+  ,
+  {% for document in site.documentation %}
+    {
+      {% if document.title != nil %}
+        "title"    : "{{ document.title | escape }}",
+        "category" : "{{ document.category }}",
+        "tags"     : "{{ document.tags | join: ', ' }}",
+        "url"      : "{{ site.baseurl }}{{ document.url }}",
+        "date"     : "{{ document.date }}",
+        "content"  : {{ document.content | strip_html | strip_newlines | jsonify }}
+      {% endif %}
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
 ]
