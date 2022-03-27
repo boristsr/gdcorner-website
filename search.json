@@ -48,7 +48,6 @@ layout: none
       {% endif %}
     }
   {% endfor %}
-  ,
   {% for document in site.documentation %}
     , {
       {% if document.title != nil %}
