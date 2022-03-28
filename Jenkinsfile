@@ -6,6 +6,7 @@ pipeline {
         AWS_STAGING_CREDENTIALS = 'aws-gdcorner-blog-uat'
         AWS_STAGING_BUCKET = 'uat-gdcorner-website'
         AWS_STAGING_CF_DISTRIBUTION = 'E26PKTK3GL3AYG'
+        AWS_REGION = 'us-east-1'
     }
 
     options {
@@ -56,7 +57,7 @@ pipeline {
 
             steps {
                 //deploy to AWS staging site
-                withAWS(credentials: AWS_STAGING_CREDENTIALS, region: 'ap-southeast-2') {
+                withAWS(credentials: AWS_STAGING_CREDENTIALS, region: AWS_REGION) {
                     s3Delete bucket: AWS_STAGING_BUCKET, path: '/'
                     s3Upload acl: 'PublicRead', bucket: AWS_STAGING_BUCKET, file: '', workingDir: '_site/', cacheControl:'public,max-age=3600'
                 }
@@ -69,7 +70,7 @@ pipeline {
 
             steps {
                 //deploy to AWS staging site
-                withAWS(credentials: AWS_STAGING_CREDENTIALS, region: 'ap-southeast-2') {
+                withAWS(credentials: AWS_STAGING_CREDENTIALS, region: AWS_REGION) {
                     s3Delete bucket: AWS_STAGING_BUCKET, path: '/'
                     s3Upload acl: 'PublicRead', bucket: AWS_STAGING_BUCKET, file: '', workingDir: '_site/', cacheControl:'public,max-age=3600'
                 }
@@ -78,7 +79,7 @@ pipeline {
         stage('invalidate-cdn') {
             steps {
                 //deploy to AWS staging site
-                withAWS(credentials: AWS_STAGING_CREDENTIALS, region: 'ap-southeast-2') {
+                withAWS(credentials: AWS_STAGING_CREDENTIALS, region: AWS_REGION) {
                     cfInvalidate distribution: AWS_STAGING_CF_DISTRIBUTION, paths: ['/*'], waitForCompletion: true
                 }
             }
