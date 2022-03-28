@@ -3,9 +3,9 @@ pipeline {
     agent { label 'docker-jenkins-jekyll' }
 
     environment {
-        AWS_STAGING_CREDENTIALS = 'aws-gdcorner-blog-staging'
-        AWS_STAGING_BUCKET = 'staging.gdcorner.net'
-        AWS_STAGING_CF_DISTRIBUTION = 'E3COBJBCCYEPYE'
+        AWS_STAGING_CREDENTIALS = 'aws-gdcorner-blog-uat'
+        AWS_STAGING_BUCKET = 'uat-gdcorner-website'
+        AWS_STAGING_CF_DISTRIBUTION = 'E26PKTK3GL3AYG'
     }
 
     options {
