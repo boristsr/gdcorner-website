@@ -9,6 +9,7 @@ product-type: Tool
 engine: UE4
 published: true
 product: coming-soon
+featured_product: true
 unreal-marketplace: "https://www.unrealengine.com/marketplace/en-US/"
 itchio: "https://itch.io/"
 ---

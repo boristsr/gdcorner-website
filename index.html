@@ -26,10 +26,12 @@ subtitle: Development beyond code
 <p class="title is-4">Latest Product</p>
 
 <div class="columns is-multiline">
-    {% for product in sorted_products limit:1 %}
+    {% for product in sorted_products %}
+    {% if product.featured_product == true %}
     <div class="column is-12">
         {% include product-card.html %}
     </div>
+    {% endif %}
     {% endfor %}
 
     <div class="column is-12 has-text-centered">
