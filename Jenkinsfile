@@ -23,17 +23,17 @@ pipeline {
 
 
         //Determine final values based on branch names
-        AWS_CREDENTIALS = "${env.BRANCH_NAME == 'staging' ? env.AWS_STAGING_CREDENTIALS : env.AWS_UAT_CREDENTIALS}"
-        AWS_CREDENTIALS = "${env.BRANCH_NAME == 'master' ? env.AWS_PROD_CREDENTIALS : env.AWS_CREDENTIALS}"
+        AWS_CREDENTIALS_TEMP1 = "${env.BRANCH_NAME == 'staging' ? env.AWS_STAGING_CREDENTIALS : env.AWS_UAT_CREDENTIALS}"
+        AWS_CREDENTIALS = "${env.BRANCH_NAME == 'master' ? env.AWS_PROD_CREDENTIALS : env.AWS_CREDENTIALS_TEMP1}"
 
-        AWS_BUCKET = "${env.BRANCH_NAME == 'staging' ? env.AWS_STAGING_BUCKET : env.AWS_UAT_BUCKET}"
-        AWS_BUCKET = "${env.BRANCH_NAME == 'master' ? env.AWS_PROD_BUCKET : env.AWS_BUCKET}"
+        AWS_BUCKET_TEMP1 = "${env.BRANCH_NAME == 'staging' ? env.AWS_STAGING_BUCKET : env.AWS_UAT_BUCKET}"
+        AWS_BUCKET = "${env.BRANCH_NAME == 'master' ? env.AWS_PROD_BUCKET : env.AWS_BUCKET_TEMP1}"
 
-        AWS_CF_DISTRIBUTION = "${env.BRANCH_NAME == 'staging' ? env.AWS_STAGING_CF_DISTRIBUTION : env.AWS_UAT_CF_DISTRIBUTION}"
-        AWS_CF_DISTRIBUTION = "${env.BRANCH_NAME == 'master' ? env.AWS_PROD_CF_DISTRIBUTION : env.AWS_CF_DISTRIBUTION}"
+        AWS_CF_DISTRIBUTION_TEMP1 = "${env.BRANCH_NAME == 'staging' ? env.AWS_STAGING_CF_DISTRIBUTION : env.AWS_UAT_CF_DISTRIBUTION}"
+        AWS_CF_DISTRIBUTION = "${env.BRANCH_NAME == 'master' ? env.AWS_PROD_CF_DISTRIBUTION : env.AWS_CF_DISTRIBUTION_TEMP1}"
 
-        AWS_REGION = "${env.BRANCH_NAME == 'staging' ? env.AWS_STAGING_REGION : env.AWS_UAT_REGION}"
-        AWS_REGION = "${env.BRANCH_NAME == 'master' ? env.AWS_PROD_REGION : env.AWS_REGION}"
+        AWS_REGION_TEMP1 = "${env.BRANCH_NAME == 'staging' ? env.AWS_STAGING_REGION : env.AWS_UAT_REGION}"
+        AWS_REGION = "${env.BRANCH_NAME == 'master' ? env.AWS_PROD_REGION : env.AWS_REGION_TEMP1}"
 
         
     }
