@@ -49,7 +49,7 @@ pipeline {
                 sh 'bash build/jenkins-docker-install.sh'
             }
         }
-        stage('build') {
+        stage('Build') {
             steps {
                 //Execute build
                 sh 'bash build/jenkins-docker-build.sh'
@@ -61,7 +61,7 @@ pipeline {
                 sh 'jsonlint -qc _site/search.json'
             }
         }
-        stage('deploy') {
+        stage('Deploy') {
             steps {
                 //deploy to AWS staging site
                 withAWS(credentials: AWS_CREDENTIALS, region: AWS_REGION) {
@@ -70,7 +70,7 @@ pipeline {
                 }
             }
         }
-        stage('invalidate-cdn') {
+        stage('Invalidate CDN Cache') {
             steps {
                 //deploy to AWS staging site
                 withAWS(credentials: AWS_CREDENTIALS, region: AWS_REGION) {
