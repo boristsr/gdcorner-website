@@ -7,7 +7,7 @@ comments: true
 categories: product
 product-type: Tool
 engine: UE4
-published: false
+published: true
 product: coming-soon
 unreal-marketplace: "https://www.unrealengine.com/marketplace/en-US/"
 ---
