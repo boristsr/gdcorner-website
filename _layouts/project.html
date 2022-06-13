@@ -24,12 +24,7 @@ layout: default
         <p class="subtitle is-6">{{ page.project-type }}</p>
         <p class="subtitle is-6">Engine: {{ page.engine }}</p>
 
-        {% if page.itchio %}
-        <p>
-            <span class="icon"><i class="fab fa-itch-io"></i></span>
-            <span><a href="{{ page.itchio }}">Available for download on Itch.io</a></span>
-        </p>
-        {% endif %}
+        {% include download-links.html %}
 
         {% if page.features %}
         <div class="content">

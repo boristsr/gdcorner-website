@@ -99,6 +99,7 @@ defaults:
       layout: product
       hero_height: is-fullwidth
       show_sidebar: false
+      free_download: false
     
 
 collections:

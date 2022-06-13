@@ -9,7 +9,7 @@ youtube_id: rF_WQ9Ie_Ns
 image: "/assets/projects/FollowTheTrail-Halloween2021/cover.png"
 project-type: Playable Prototype
 engine: UE4
-download: https://gdcorner.itch.io/follow-the-trail
+free_download: true
 itchio: https://gdcorner.itch.io/follow-the-trail
 project: follow-the-trail
 ---

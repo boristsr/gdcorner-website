@@ -1,0 +1,28 @@
+{% if page.free_download %}
+<p>
+    <span class="icon"><i class="fas fa-file-download"></i></span>
+    <span>Free Download from:</span>
+</p>
+{% else %}
+<p>
+    <span class="icon"><i class="fas fa-shopping-cart"></i></span>
+    <span>Available for purchase from:</span>
+</p>
+{% endif %}
+{% if page.unreal-marketplace %}
+<p>
+    <a href="{{ page.unreal-marketplace }}">
+    <span class="icon"><i class="fas fa-shopping-cart"></i></span>
+    <span>Unreal Marketplace</span>
+    </a>
+</p>
+{% endif %}
+
+{% if page.itchio %}
+<p>
+    <a href="{{ page.itchio }}">
+    <span class="icon"><i class="fab fa-itch-io"></i></span>
+    <span>Itch.io</span>
+    </a>
+</p>
+{% endif %}
