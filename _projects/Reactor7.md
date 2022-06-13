@@ -9,8 +9,6 @@ youtube_id: F2fCGfssKAc
 image: "/assets/projects/TheresSomethingWrongInReactor7/cover.png"
 project-type: Cinematic
 engine: UE4
-download: https://gdcorner.itch.io/
-itchio: https://gdcorner.itch.io/
 project: reactor-7
 ---
 
