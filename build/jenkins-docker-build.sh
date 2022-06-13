@@ -4,12 +4,18 @@ BUILD_ENVIRONMENT="${BUILD_ENVIRONMENT:-development}"
 
 CONFIG_FILES="_config.yml"
 
-if [[ "${BUILD_ENVIRONMENT}"=="staging" ]]; then
+if [[ "${BRANCH_NAME}"=="uattest" ]]; then
+  echo "Development build, building with extra config data"
+  CONFIG_FILES="_config.yml,_config_uattest.yml"
+  BUILD_ENVIRONMENT='staging'
+elif [[ "${BRANCH_NAME}"=="staging" ]]; then
   echo "Development build, building with extra config data"
   CONFIG_FILES="_config.yml,_config_staging.yml"
-elif [[ "${BUILD_ENVIRONMENT}"=="production" ]]; then
+  BUILD_ENVIRONMENT='staging'
+elif [[ "${BRANCH_NAME}"=="production" ]]; then
   echo "Development build, building with extra config data"
   CONFIG_FILES="_config.yml,_config_production.yml"
+  BUILD_ENVIRONMENT='production'
 fi
 
 echo Building in mode: $BUILD_ENVIRONMENT

@@ -3,10 +3,39 @@ pipeline {
     agent { label 'docker-jenkins-jekyll' }
 
     environment {
+        //Staging
         AWS_STAGING_CREDENTIALS = 'aws-gdcorner-blog-staging'
         AWS_STAGING_BUCKET = 'staging.gdcorner.net'
         AWS_STAGING_CF_DISTRIBUTION = 'E3COBJBCCYEPYE'
-        AWS_REGION = 'ap-southeast-2'
+        AWS_STAGING_REGION = 'ap-southeast-2'
+
+        //UAT
+        AWS_UAT_CREDENTIALS = 'aws-gdcorner-blog-uat'
+        AWS_UAT_BUCKET = 'uat-gdcorner-website'
+        AWS_UAT_CF_DISTRIBUTION = 'E26PKTK3GL3AYG'
+        AWS_UAT_REGION = 'us-east-1'
+
+        //Production
+        AWS_PROD_CREDENTIALS = 'aws-gdcorner-blog-uat'
+        AWS_PROD_BUCKET = 'uat-gdcorner-website'
+        AWS_PROD_CF_DISTRIBUTION = 'E26PKTK3GL3AYG'
+        AWS_PROD_REGION = 'us-east-1'
+
+
+        //Determine final values based on branch names
+        AWS_CREDENTIALS = "${env.BRANCH_NAME == 'staging' ? env.AWS_STAGING_CREDENTIALS : env.AWS_UAT_CREDENTIALS}"
+        AWS_CREDENTIALS = "${env.BRANCH_NAME == 'master' ? env.AWS_PROD_CREDENTIALS : env.AWS_CREDENTIALS}"
+
+        AWS_BUCKET = "${env.BRANCH_NAME == 'staging' ? env.AWS_STAGING_BUCKET : env.AWS_UAT_BUCKET}"
+        AWS_BUCKET = "${env.BRANCH_NAME == 'master' ? env.AWS_PROD_BUCKET : env.AWS_BUCKET}"
+
+        AWS_CF_DISTRIBUTION = "${env.BRANCH_NAME == 'staging' ? env.AWS_STAGING_CF_DISTRIBUTION : env.AWS_UAT_CF_DISTRIBUTION}"
+        AWS_CF_DISTRIBUTION = "${env.BRANCH_NAME == 'master' ? env.AWS_PROD_CF_DISTRIBUTION : env.AWS_CF_DISTRIBUTION}"
+
+        AWS_REGION = "${env.BRANCH_NAME == 'staging' ? env.AWS_STAGING_REGION : env.AWS_UAT_REGION}"
+        AWS_REGION = "${env.BRANCH_NAME == 'master' ? env.AWS_PROD_REGION : env.AWS_REGION}"
+
+        
     }
 
     options {
@@ -20,25 +49,7 @@ pipeline {
                 sh 'bash build/jenkins-docker-install.sh'
             }
         }
-        stage('build-staging') {
-            when {
-                branch 'staging' 
-            }
-            environment {
-                BUILD_ENVIRONMENT = 'staging'
-            }
-            steps {
-                //Execute build
-                sh 'bash build/jenkins-docker-build.sh'
-            }
-        }
-        stage('build-production') {
-            when {
-                branch 'master' 
-            }
-            environment {
-                BUILD_ENVIRONMENT = 'production'
-            }
+        stage('build') {
             steps {
                 //Execute build
                 sh 'bash build/jenkins-docker-build.sh'
@@ -50,37 +61,20 @@ pipeline {
                 sh 'jsonlint -qc _site/search.json'
             }
         }
-        stage('deploy-staging') {
-            when {
-                branch 'staging' 
-            }
-
+        stage('deploy') {
             steps {
                 //deploy to AWS staging site
-                withAWS(credentials: AWS_STAGING_CREDENTIALS, region: AWS_REGION) {
-                    s3Delete bucket: AWS_STAGING_BUCKET, path: '/'
-                    s3Upload acl: 'PublicRead', bucket: AWS_STAGING_BUCKET, file: '', workingDir: '_site/', cacheControl:'public,max-age=3600'
-                }
-            }
-        }
-        stage('deploy-production') {
-            when {
-                branch 'master' 
-            }
-
-            steps {
-                //deploy to AWS staging site
-                withAWS(credentials: AWS_STAGING_CREDENTIALS, region: AWS_REGION) {
-                    s3Delete bucket: AWS_STAGING_BUCKET, path: '/'
-                    s3Upload acl: 'PublicRead', bucket: AWS_STAGING_BUCKET, file: '', workingDir: '_site/', cacheControl:'public,max-age=3600'
+                withAWS(credentials: AWS_CREDENTIALS, region: AWS_REGION) {
+                    s3Delete bucket: AWS_BUCKET, path: '/'
+                    s3Upload acl: 'PublicRead', bucket: AWS_BUCKET, file: '', workingDir: '_site/', cacheControl:'public,max-age=3600'
                 }
             }
         }
         stage('invalidate-cdn') {
             steps {
                 //deploy to AWS staging site
-                withAWS(credentials: AWS_STAGING_CREDENTIALS, region: AWS_REGION) {
-                    cfInvalidate distribution: AWS_STAGING_CF_DISTRIBUTION, paths: ['/*'], waitForCompletion: true
+                withAWS(credentials: AWS_CREDENTIALS, region: AWS_REGION) {
+                    cfInvalidate distribution: AWS_CF_DISTRIBUTION, paths: ['/*'], waitForCompletion: true
                 }
             }
         }
