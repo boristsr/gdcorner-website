@@ -1,5 +1,8 @@
 url: "https://www.gdcorner.com"
 
+commento:
+    enabled: true
+
 plausible_analytics:
   data_domain: gdcorner.com
   src: https://www.gdcorner.com/js/script.outbound-links.js
