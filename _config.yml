@@ -34,6 +34,9 @@ plugins:
 
 fixed_navbar: top
 
+commento:
+    enabled: false
+
 github:
   is_project_page: false
 
