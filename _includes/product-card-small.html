@@ -14,8 +14,14 @@
         <div class="card-content">
 
           <p class="title is-4">{{ product.title }}</h2>
-          <p class="subtitle is-4">{{ product.subtitle }}</p>  
-          <p class="title is-5 has-text-right">{{ product.price }}</p>
+          <p class="subtitle is-4">{{ product.subtitle }}</p>
+
+          {% if product.free_download == true %}
+            <p class="is-4 has-text-right">Free Download</p>
+          {% endif %}
+          {% if product.price %}
+            <p class="is-4 has-text-right">{{ product.price }}</p>
+          {% endif %}
 
         </div>
       </div>
