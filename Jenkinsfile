@@ -16,9 +16,9 @@ pipeline {
         AWS_UAT_REGION = 'us-east-1'
 
         //Production
-        AWS_PROD_CREDENTIALS = 'aws-gdcorner-blog-uat'
-        AWS_PROD_BUCKET = 'uat-gdcorner-website'
-        AWS_PROD_CF_DISTRIBUTION = 'E26PKTK3GL3AYG'
+        AWS_PROD_CREDENTIALS = 'aws-gdcorner-blog-prod'
+        AWS_PROD_BUCKET = 'www-gdcorner-website'
+        AWS_PROD_CF_DISTRIBUTION = 'E3UQNBGHNAT97M'
         AWS_PROD_REGION = 'us-east-1'
 
 

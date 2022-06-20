@@ -13,7 +13,7 @@ elif [[ "${BRANCH_NAME}" == "staging" ]]; then
   echo "Development build, building with extra config data"
   CONFIG_FILES="_config.yml,_config_staging.yml"
   BUILD_ENVIRONMENT='staging'
-elif [[ "${BRANCH_NAME}" == "production" ]]; then
+elif [[ "${BRANCH_NAME}" == "master" ]]; then
   echo "Building with PRODUCTION Configuration"
   CONFIG_FILES="_config.yml,_config_production.yml"
   BUILD_ENVIRONMENT='production'
