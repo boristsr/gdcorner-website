@@ -203,4 +203,4 @@ On the build page you can see some information about this build. Click Console O
 
 Congratulations, you now have a linux agent able to run any linux based jobs. Tomorrow we’ll look into configuring a Windows agent.
 
-Continue on with [Part 3 - Setting up Windows Agents](/2019/12/27/JenkinsHomeLab-P2-LinuxAgents.html)
+Continue on with [Part 3 - Setting up Windows Agents](2019/12/30/JenkinsHomeLab-P3-WindowsAgents.html)
