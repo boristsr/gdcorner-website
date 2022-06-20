@@ -2,15 +2,33 @@
 layout: page
 ---
 
-{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-<div class="postdate">
-Published {{page.date| date: date_format }}
+<div class="content">
+
+    <p class="post-author">Published: {{ page.date | date: "%b %-d, %Y" }} by {{ page.author }}</p>
+
+    {% if page.series %}
+        {% include series.html %}
+    {% endif %}
+
+    {% if page.transcription == true %}
+     {% include post-transcription-note.html %}
+    {% endif %}
+
+    {{ content }}
 </div>
 
-{{ content }}
+<div class="tags">
+    {% for tag in page.tags %}
+      {% include tag.html tag=tag %}
+    {% endfor %}
+</div>
 
-{% if site.disqus.shortname and site.disqus.enabled %}
-    {% include disquscomments.html %}
+{% unless site.hide_share_buttons %}
+{% include share-buttons.html %}
+{% endunless %}
+
+{% if site.disqus.shortname %}
+  {% include disqus.html %}
 {% endif %}
 
 {% if site.commento.enabled %}

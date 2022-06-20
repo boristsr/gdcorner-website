@@ -25,10 +25,17 @@ github_username:  boristsr
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-slate
+theme: bulma-clean-theme
+theme_color: '#3b3b3b'
+#remote_theme: chrisrhymes/bulma-clean-theme
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+
+fixed_navbar: top
+
+commento:
+    enabled: false
 
 github:
   is_project_page: false
@@ -36,22 +43,75 @@ github:
 excerpt_separator: <!--more-->
 show_excerpts: true
 
+paginate: 5
+paginate_path: "/articles/page:num"
+
 post_assets_url: "/"
 
-google_analytics: UA-11335412-1
+navbar_logo: "/assets/images/logo-w-text-small.png"
+hero_logo: "/assets/images/logo-large.png"
 
-plausible_analytics:
-  data_domain: gdcorner.com
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      hero_height: is-fullwidth
+      show_sidebar: true
+      image: /assets/images/default-social-card.png
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      author: "Philip Edwards"
+      layout: post
+      hero_height: is-fullwidth
+      image: /assets/images/default-social-card.png
+      show_sidebar: false
+      comments: true
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      image: /assets/images/default-social-card.png
+      layout: project
+      hero_height: is-fullwidth
+      show_sidebar: true
+  - scope:
+      path: ""
+      type: "documentation"
+    values:
+      image: /assets/images/default-social-card.png
+      layout: documentation
+      hero_height: is-fullwidth
+      show_sidebar: false
+  - scope:
+      path: "_documentation/wheelman"
+    values:
+      product: wheelman
+  - scope:
+      path: ""
+      type: "products"
+    values:
+      image: /assets/images/default-social-card.png
+      layout: product
+      hero_height: is-fullwidth
+      show_sidebar: false
+      free_download: false
+    
 
-# Disqus Comments
-disqus:
-    # Leave shortname blank to disable comments site-wide.
-    # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
-    shortname: gdcorner
-    enabled: false
-
-commento:
-    enabled: true
+collections:
+  projects: 
+    output: true
+  products: 
+    output: true
+  documentation: 
+    output: true
+  redirects: 
+    output: true
+    
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -65,3 +125,5 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - build/
+  - Jenkinsfile
+  - .gitignore

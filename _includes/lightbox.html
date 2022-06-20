@@ -7,6 +7,12 @@
      - Change added to how SwipeIt is initialized to fix an
         issue where text was not selectable. 
 -->
+
+<script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+
 <style>
     .lightbox {
         width: 100%;
@@ -411,7 +417,7 @@
             default:
                 return; // exit this handler for other keys
         }
-        e.preventDefault(); // prevent the default action (scroll / move caret)
+        //e.preventDefault(); // prevent the default action (scroll / move caret)
     });
 
     /*===========================

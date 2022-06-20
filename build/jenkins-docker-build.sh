@@ -1,20 +1,25 @@
 #!/bin/bash
 
-# Install modules for site
-bundle install
-
 BUILD_ENVIRONMENT="${BUILD_ENVIRONMENT:-development}"
 
-if [[ -n "${OVERRIDE_URL}" ]]; then
-  echo "Ovverride url provided, modifying _config.yml"
-  sed -i \
-        -e 's!^url:.*!url: \"'"${OVERRIDE_URL}"'\"!' \
-        _config.yml
+CONFIG_FILES="_config.yml"
 
-  rm _config.yml-e
+if [[ "${BRANCH_NAME}" == "uattest" ]]; then
+  echo "Building with UAT Configuration"
+  CONFIG_FILES="_config.yml,_config_uattest.yml"
+  BUILD_ENVIRONMENT='staging'
+elif [[ "${BRANCH_NAME}" == "staging" ]]; then
+  echo "Building with STAGING Configuration"
+  echo "Development build, building with extra config data"
+  CONFIG_FILES="_config.yml,_config_staging.yml"
+  BUILD_ENVIRONMENT='staging'
+elif [[ "${BRANCH_NAME}" == "production" ]]; then
+  echo "Building with PRODUCTION Configuration"
+  CONFIG_FILES="_config.yml,_config_production.yml"
+  BUILD_ENVIRONMENT='production'
 fi
 
 echo Building in mode: $BUILD_ENVIRONMENT
 
 # Build site
-JEKYLL_ENV=$BUILD_ENVIRONMENT bundle exec jekyll build
+JEKYLL_ENV=$BUILD_ENVIRONMENT bundle exec jekyll build --config ${CONFIG_FILES}

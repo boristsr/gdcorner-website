@@ -1,0 +1,17 @@
+---
+layout: default
+show_sidebar: false
+---
+
+<div class="columns is-multiline">
+
+  <div class="column is-12">
+    {{ page.content }}
+  </div>
+
+  {% assign sorted_products = site.products | sort:page.date | reverse %}
+
+  {% for product in sorted_products %}
+    {% include product-card-small.html %}
+  {% endfor %}
+</div>

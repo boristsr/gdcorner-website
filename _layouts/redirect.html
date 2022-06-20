@@ -1,0 +1,25 @@
+<!-- snippet from https://stackoverflow.com/a/58850736 -->
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="refresh" content="1;url={{ page.redirect }}"/>
+        {% if site.google_analytics and jekyll.environment == "production" %}
+            {%- include google-analytics.html -%}
+        {%- endif -%}
+        {% if site.plausible_analytics.data_domain %}
+            {% if jekyll.environment == "staging" or jekyll.environment == "production" %}
+                {%- include plausible-analytics.html data_domain=site.plausible_analytics.staging_data_domain-%}
+            {% endif %}
+        {% endif %}
+        <link rel="canonical" href="{{ page.redirect }}"/>
+        <script type="text/javascript">
+                window.location.href = "{{ page.redirect }}"
+        </script>
+        <title>Page Redirection - {{ page.title }}</title>
+        
+    </head>
+    <body>
+    <h1>Page Redirection - {{ page.title }}</h1>
+    If you are not redirected automatically, follow <a href='{{ page.redirect }}'>this link</a>.
+    </body>
+</html>

@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<div class="columns is-multiline is-centered">
+
+    <div class="column is-6">
+        {% if page.youtube_id %}
+            {% include youtube.html video=page.youtube_id %}
+        {% elsif page.vimeo_id %}
+            {% include vimeo.html video=page.vimeo_id %}
+        {% endif %}
+    </div>
+</div>
+<div class="columns is-multiline">
+
+    <div class="column {{ content_width }}">
+        <div class="content">
+            {{ content }}
+        </div>
+    </div>
+
+    <div class="column is-3-desktop is-3-tablet">
+        {% include documentation-menubar.html %}
+    </div>
+
+</div>

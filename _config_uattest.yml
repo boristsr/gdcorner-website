@@ -1,0 +1,8 @@
+url: https://uat.gdcorner.net
+
+commento:
+    enabled: true
+
+plausible_analytics:
+  data_domain: uat.gdcorner.net
+  src: https://uat.gdcorner.net/js/script.outbound-links.js

@@ -1,0 +1,40 @@
+---
+layout: default
+title: GDCorner
+subtitle: Development beyond code
+---
+
+
+<p class="title is-4">Latest Project</p>
+
+
+{% assign sorted_products = site.products | sort:page.date | reverse %}
+{% assign sorted_projects = site.projects | sort:page.date | reverse %}
+
+<div class="columns is-multiline">
+    {% for project in sorted_projects limit:1 %}
+    <div class="column is-12">
+        {% include project-card.html %}
+    </div>
+    {% endfor %}
+
+    <div class="column is-12 has-text-centered">
+        <a href="{{ site.baseurl }}/projects/" class="button is-primary">See More Projects</a>
+    </div>
+</div>
+
+<p class="title is-4">Latest Product</p>
+
+<div class="columns is-multiline">
+    {% for product in sorted_products %}
+    {% if product.featured_product == true %}
+    <div class="column is-12">
+        {% include product-card.html %}
+    </div>
+    {% endif %}
+    {% endfor %}
+
+    <div class="column is-12 has-text-centered">
+        <a href="{{ site.baseurl }}/products/" class="button is-primary">See More Products</a>
+    </div>
+</div>
