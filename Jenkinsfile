@@ -5,9 +5,9 @@ pipeline {
     environment {
         //Staging
         AWS_STAGING_CREDENTIALS = 'aws-gdcorner-blog-staging'
-        AWS_STAGING_BUCKET = 'staging.gdcorner.net'
-        AWS_STAGING_CF_DISTRIBUTION = 'E3COBJBCCYEPYE'
-        AWS_STAGING_REGION = 'ap-southeast-2'
+        AWS_STAGING_BUCKET = 'staging-gdcorner-website'
+        AWS_STAGING_CF_DISTRIBUTION = 'E16GBWPX0BBJW5'
+        AWS_STAGING_REGION = 'us-east-1'
 
         //UAT
         AWS_UAT_CREDENTIALS = 'aws-gdcorner-blog-uat'
