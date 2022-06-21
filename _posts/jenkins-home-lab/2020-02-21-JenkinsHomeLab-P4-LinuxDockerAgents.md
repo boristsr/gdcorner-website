@@ -258,6 +258,4 @@ Click on the job name, and then click on a build under Build History to see info
 
 Once you have a base Docker image you are happy with, it should be fairly easy to create a new Docker image that uses your base image and installs any dependencies required for specific projects.
 
-In the next article in this series I’ll be discussing documenting setting up a Windows Docker service, but this will be in a few weeks.
-
 As an exercise in the meantime try creating a job that automatically builds and pushes your image to DockerHub.
