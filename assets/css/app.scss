@@ -16,6 +16,13 @@ $primary: #3b3b3b;
     text-align: center;
 }
 
+:target::before {
+    content: '';
+    display: block;
+    height:      180px;
+    margin-top: -180px;
+}
+
 //////////////////////////////////////////////////////////////////////////
 // Badges from bootstrap, don't need the full kit
 //////////////////////////////////////////////////////////////////////////
