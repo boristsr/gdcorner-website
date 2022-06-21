@@ -16,11 +16,17 @@ $primary: #3b3b3b;
     text-align: center;
 }
 
+//Used to fix anchor links being hidden by the sticky top bar
 :target::before {
     content: '';
     display: block;
     height:      180px;
     margin-top: -180px;
+}
+
+//Disable padding on commento pre elements
+#commento pre {
+    padding: 0px
 }
 
 //////////////////////////////////////////////////////////////////////////
