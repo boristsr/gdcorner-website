@@ -307,4 +307,4 @@ Email notifications aren’t essential for a home lab, however I recommend spend
 
 Tomorrow I’ll cover configuring linux SSH agents. This will involve setting up an SSH key, installing java, and configuring Jenkins to remotely start the agent. This is a good method to use for VMs, a Raspberry Pi and other bare metal linux systems.
 
-Continue on with [Part 2 - Setting up Linux Agents on Ubuntu and Raspberry Pis](/2019/12/27/JenkinsHomeLab-P2-LinuxAgents.html)
+Continue on with [Part 2 - Setting up Linux Agents on Ubuntu and Raspberry Pis]({% post_url /jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents %})
