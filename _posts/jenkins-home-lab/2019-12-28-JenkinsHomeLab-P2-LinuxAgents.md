@@ -142,6 +142,7 @@ Here we want to enter a few details
 ### Adding the credentials
 
 To add the credentials click the Add button, and then click Jenkins.
+
 ![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents/2.01-add-credentials.jpg){: .enable-lightbox}
 
 ![jenkins]({{ site.url }}/assets/posts/jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents/2.02-credential-details.jpg){: .enable-lightbox}
