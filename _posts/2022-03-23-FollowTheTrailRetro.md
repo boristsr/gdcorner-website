@@ -13,6 +13,13 @@ On Halloween 2021, I decided to try doing a mini game-jam style project. I wante
 
 <!--more-->
 
+{% include youtube.html video="rF_WQ9Ie_Ns" %}
+
+
+[Project Page]({% link _projects/FollowTheTrail-Halloween2021.md %})
+
+[Download here](https://gdcorner.itch.io/follow-the-trail)
+
 After every project (even small personal ones) I like to do a small retrospective review, and solidify for myself any lessons that can be learned from the project. This can identify any strengths and weaknesses in my skill set or decision making. This can then be used to guide me in what I want to learn or improve on next. It also serves as a bit of a sense of closure on a project. After all, no project is ever "done".
 
 I've decided to share some of my retro reviews. These are written in bullet point form to minimise time spent writing them, and maximise the value in them for me. Hopefully others can learn something from them, even if it just serves as an example on how someone else does a retro review.
