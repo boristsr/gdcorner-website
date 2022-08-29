@@ -9,6 +9,7 @@ product-type: Tool
 engine: Unreal Engine 4, Unreal Engine 5
 published: true
 product: rushhour
+youtube_id: cxZmJC446Ok
 ---
 
 Rush Hour is a new way to quickly animate cars and other wheeled vehicles in Unreal Engine 4 & 5.
