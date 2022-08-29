@@ -10,9 +10,13 @@
 {% endfor %}
 {% for post in site.documentation %}
     {% if post.product == page.product %}
-        <li>
-            <a href="{{ post.url | relative_url }}" class="{% if post.url == page.url %}is-active{% endif %}">{{ post.title }}</a>
-        </li> 
+        {% if post.category != "releasenotes" %}
+            {% assign product_friendly_name = site.data.products[post.product].name %}
+            {% capture remove_string %} - {{ product_friendly_name }}{% endcapture %}
+            <li>                
+                <a href="{{ post.url | relative_url }}" class="{% if post.url == page.url %}is-active{% endif %}">{{ post.title | remove: remove_string}}</a>
+            </li>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </ul>
