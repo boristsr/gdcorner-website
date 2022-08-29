@@ -91,9 +91,13 @@ defaults:
       hero_height: is-fullwidth
       show_sidebar: false
   - scope:
-      path: "_documentation/wheelman"
+      path: "_documentation/rushhour"
     values:
-      product: wheelman
+      product: rushhour
+  - scope:
+      path: "_documentation/rushhour/releasenotes/"
+    values:
+      category: releasenotes
   - scope:
       path: ""
       type: "products"
