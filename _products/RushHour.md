@@ -11,7 +11,7 @@ published: true
 product: rushhour
 ---
 
-Rush Hour is a new way to quickly animation cars and other road vehicles in Unreal Engine 4 & 5.
+Rush Hour is a new way to quickly animate cars and other road vehicles in Unreal Engine 4 & 5.
 
 It's a little like instructing a stunt driver to perform in your scene. An AI will pilot your vehicle around your course. The AI driver supports several driving profiles, such as frantic, racer, precision, and slowpoke. 
 
