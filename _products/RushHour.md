@@ -20,8 +20,8 @@ You can refine the animation in several ways. You can choose a profile strength,
 
 Rush Hour dramatically speeds up the time it takes to create vehicle animations in Unreal. It eliminates the painful and slow back and forth. You can animate entirely within Unreal. There's no need to export your environment to another tool, create your animation, and finally bring that back.
 
-Rush Hour creates incredibly realistic driving behavior. The driving profiles are heavily tuned to create a natural look. Attempting to drive the vehicle yourself with a gamepad produces twitchy and unrealistic driving. A single mistake can mean having to repeat the drive over and over again, which is incredibly time-consuming. Rush Hour improves both of these aspects.
+Rush Hour creates incredibly realistic driving behavior. The driving profiles are heavily tuned to create a natural look. Attempting to drive the vehicle yourself with a gamepad produces twitchy and unrealistic driving. The vehicle movement looks like someone is driving in a video game. A single mistake can mean having to repeat the drive over and over again, which is incredibly time-consuming. Rush Hour improves all of these aspects.
 
-The driving is very consistent, so repeated runs are very similar. However, you can record a sequence to guarantee deterministic behavior animation and add the ability to scrub through a timeline.
+The driving is believable and consistent, so repeated runs are very similar. However, you can record a sequence to guarantee deterministic/repeatable animation and add the ability to scrub through a timeline.
 
 Rush Hour supports both PhysX and Chaos physics engines. If you require support for another physics engine, please reach out!
