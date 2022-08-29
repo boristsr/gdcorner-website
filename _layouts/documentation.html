@@ -2,21 +2,16 @@
 layout: default
 ---
 
-<div class="columns is-multiline is-centered">
-
-    <div class="column is-6">
-        {% if page.youtube_id %}
-            {% include youtube.html video=page.youtube_id %}
-        {% elsif page.vimeo_id %}
-            {% include vimeo.html video=page.vimeo_id %}
-        {% endif %}
-    </div>
-</div>
-
 <div class="columns is-multiline">
 
     <div class="column is-9">
         <div class="content">
+            {% if page.youtube_id %}
+                {% include youtube.html video=page.youtube_id %}
+            {% elsif page.vimeo_id %}
+                {% include vimeo.html video=page.vimeo_id %}
+            {% endif %}
+
             {{ content }}
         </div>
     </div>
