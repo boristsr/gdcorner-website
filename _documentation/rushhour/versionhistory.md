@@ -1,0 +1,52 @@
+---
+title:  "Version History - Rush Hour"
+subtitle: "Rush Hour Version History"
+date:   2022-03-21 17:29:13 +1100
+tags: [unreal, unrealengine, ue4, ue5, tool, vehicles, animation, cars, animation, rushhour]
+comments: true
+categories: product
+version: 1.0
+product-type: Tool
+product: rushhour
+---
+
+
+# Beta 2 (2022-08-19)
+
+* Added a Light Interface which can easily be added to existing vehicles, allowing RushHour to control reversing and brake lights. Additional light controls are exposed in the interface, but there is no way to control them currently.
+* Glass now renders before DOF
+* Removed Learner profile as it doesn’t offer enough difference
+* Begin Training button is now working after first training map load & selecting a vehicle
+* Progress tracking on the path when doing large jumps now works more reliably
+* Stopped compounding control multipliers which means steering is now less twitchy
+* Added additional Steering target samples to reduce unnatural swings in tighter corners
+* All references to Wheelman and WM are now replaced with RushHour and RH respectively. Core redirects are still in place to ease transition. These will be removed before final release.
+* Paths accidentally saved during play will not stop the vehicle from driving on next playthrough
+* 4x4 has slightly improved suspension. Works best at low speed. Example Video: [https://www.youtube.com/watch?v=Pn8E-gLHfZM](https://www.youtube.com/watch?v=Pn8E-gLHfZM)
+
+## Known Issues
+
+* Car references and recorded sequences using Rush Hour vehicles from Beta 1 will not work. You will need to relink cars to paths and re-record sequences.
+* Profiles need more adjustments to perform better and differentiate from each other
+* Align to ground can be blocked by foliage. Disable collision on foliage or shift your spline point to avoid hitting leaves on the trace to the ground.
+* 4x4 suspension requires lots of tweaking to get better behaviour.
+* Closed loops with a non-default looping position will exhibit artifacts at the looping point, and will loop with point 0 anyway.
+* Training may fail to find a good maximum cornering force value on vehicles with a high centre of gravity. This will be resolved before release.
+
+
+# Beta 1 (2022-08-01)
+
+ * Initial Beta Release
+
+## Known Issues
+
+* Glass on the example vehicles currently renders after DOF producing ugly DOF artifacts
+* Profiles need more adjustments to perform better and differentiate from each other
+* Sometimes on the first load of the training map, the begin training button remains disabled. Just load the training map again.
+* Progress tracking on the path can fail during extreme elevation changes like jumps or big slopes. To remedy this add extra nodes. This will be remedied in the next release
+* Due to a bug discovered in Beta 1, steering is a bit twitchy on all profiles, especially Sunday Driver. This will be fixed in the next release.
+* Align to ground can be blocked by foliage. Disable collision on foliage or shift your spline point to avoid hitting leaves on the trace to the ground.
+* 4x4 suspensions needs lots of tweaking to get better bodyroll
+* Closed loops with a non-default looping position will exhibit artifacts at the looping point, and will loop with point 0 anyway.
+* Training may fail to find a good maximum cornering force value on vehicles with a high centre of gravity. This will be resolved before release.
+* Saving a path modification made when playing in editor may cause that path to corrupt, requiring it to be recreated. The vehicle will spawn but will not drive.
