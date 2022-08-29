@@ -51,6 +51,9 @@ post_assets_url: "/"
 navbar_logo: "/assets/images/logo-w-text-small.png"
 hero_logo: "/assets/images/logo-large.png"
 
+feed:
+  path: /feed.xml
+
 defaults:
   -
     scope:
