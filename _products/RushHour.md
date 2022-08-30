@@ -16,7 +16,9 @@ featured_product: true
 
 Rush Hour is a new way to quickly animate cars and other wheeled vehicles in Unreal Engine 4 & 5.
 
-It's a little like instructing a stunt driver to perform in your scene. An AI will pilot your vehicle around your course. The AI driver supports several driving profiles, such as frantic, racer, precision, and slowpoke. 
+It's a little like instructing a stunt driver to perform in your scene. An AI will pilot your vehicle around your course. The AI driver supports several driving profiles, such as frantic, racer, precision, and slowpoke.
+
+<!--more-->
 
 You can refine the animation in several ways. You can choose a profile strength, such as making it more or less frantic. You can set a speed at each waypoint and add an action (stop, stop and wait, continue). Other hints will be coming in the future, like tap handbrake.
 
