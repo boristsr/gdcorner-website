@@ -95,10 +95,6 @@ defaults:
     values:
       product: rushhour
   - scope:
-      path: "_documentation/rushhour/releasenotes/"
-    values:
-      category: releasenotes
-  - scope:
       path: ""
       type: "products"
     values:
