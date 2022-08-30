@@ -10,7 +10,11 @@
 {% endfor %}
 {% for post in site.documentation %}
     {% if post.product == page.product %}
-        {% if post.category != "releasenotes" %}
+        {% if post.tags contains "releasenotes" %}
+            {% comment %}
+                Don't list release notes individually in the menu bar
+            {% endcomment %}
+        {% else %}
             {% assign product_friendly_name = site.data.products[post.product].name %}
             {% capture remove_string %} - {{ product_friendly_name }}{% endcapture %}
             <li>                
