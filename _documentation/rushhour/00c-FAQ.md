@@ -9,6 +9,16 @@ product-type: Tool
 product: rushhour
 ---
 
+# Where can I get it?
+
+Rush Hour is very close to release. Announcements will be made on the [product page](https://www.gdcorner.com/products/RushHour.html), [twitter](https://twitter.com/GDCorner), and in various Unreal Engine social media groups. It will be available on the Unreal Engine Marketplace.
+
+# Where can I see the list of upcoming features?
+
+I have a [public roadmap for post-release updates available here.](https://open.codecks.io/rushhour)
+
+Please note: Anything with no priority, or tagged as unconfirmed is currently being evaluated for feasibility or priority. These items are not confirmed or guaranteed for release.
+
 # How do I hide the watermark in the bottom right?
 
 This HUD only appears in Training & Rush Hour spectator and game modes. Change your world settings or project settings to use a different game mode in your animation scenes.
