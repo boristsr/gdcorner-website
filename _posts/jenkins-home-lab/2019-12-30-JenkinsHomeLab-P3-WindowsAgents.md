@@ -17,7 +17,7 @@ Today, since we already have a working setup of Jenkins, lets expand it to inclu
 
 ## UPDATE: Java Requirement Update with newer Jenkins versions
 
-Jenkins has recently updated their Java requirements to 11+, and this guide has been updated to match. If you are experiencing problems after following this guide and you see errors like these:
+Jenkins has recently updated their Java requirements to 11+, and this guide has been updated to match. If you are experiencing problems with an existing installation and you see errors like these:
 
 ```
 java.nio.channels.ClosedChannelException
@@ -28,7 +28,7 @@ java.nio.channels.ClosedChannelException
 java.lang.UnsupportedClassVersionError: hudson/slaves/SlaveComputer$SlaveVersion has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0
 ```
 
-If you see these errors you need to update Java to 11+ on your windows agent. [Instructions can be found at the end of this guide.](#troubleshooting-updating-java-runtime)
+If you see these errors you need to update Java to 11+ on your Windows agent. [Instructions can be found at the end of this guide.](#troubleshooting-updating-java-runtime)
 
 ## Configuring Jenkins
 
