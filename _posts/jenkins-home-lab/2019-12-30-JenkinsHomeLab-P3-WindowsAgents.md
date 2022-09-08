@@ -242,7 +242,7 @@ choco uninstall javaruntime
 choco uninstall jre8
 ```
 
-#### 2. Install Microsoft Open JDK.
+#### 2. Install Microsoft Open JDK
 
 Available here: [https://www.microsoft.com/openjdk](https://www.microsoft.com/openjdk)
 
@@ -252,9 +252,9 @@ If using chocolatey you can do the following:
 choco install microsoft-openjdk
 ```
 
-#### 3. Reboot your agent. It should automatically reconnect.
+#### 3. Reboot your agent. It should automatically reconnect
 
-### Self contained method / Docker Host version
+### Self-Contained Method / Docker Hosted version
 
 #### 1. Remove previous Java versions
 
@@ -265,7 +265,9 @@ choco uninstall javaruntime
 choco uninstall jre8
 ```
 
-#### 2. Install Microsoft Open JDK. Available here: [https://www.microsoft.com/openjdk](https://www.microsoft.com/openjdk)
+#### 2. Install Microsoft Open JDK
+
+Available here: [https://www.microsoft.com/openjdk](https://www.microsoft.com/openjdk)
 
 If using chocolatey you can do the following:
 
@@ -273,7 +275,9 @@ If using chocolatey you can do the following:
 choco install microsoft-openjdk
 ```
 
-#### 3. Then modify ```C:\jenkins\jenkins-slave.xml``` and change the ```<executable>``` field by stripping out the path to be just:
+#### 3. Modify Jenkins Agent launcher config
+
+Modify ```C:\jenkins\jenkins-slave.xml``` and change the ```<executable>``` field by stripping out the path to be just:
 
 ```powershell
 java.exe
