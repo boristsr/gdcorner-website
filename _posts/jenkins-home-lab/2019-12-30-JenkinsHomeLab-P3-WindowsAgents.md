@@ -237,7 +237,7 @@ If you have previously followed this guide and need to update your java version 
 
 If using chocolatey, you can do the following:
 
-```batch
+```powershell
 choco uninstall javaruntime
 choco uninstall jre8
 ```
@@ -248,7 +248,7 @@ Available here: [https://www.microsoft.com/openjdk](https://www.microsoft.com/op
 
 If using chocolatey you can do the following:
 
-```batch
+```powershell
 choco install microsoft-openjdk
 ```
 
@@ -260,7 +260,7 @@ choco install microsoft-openjdk
 
 If using chocolatey, you can do the following:
 
-```batch
+```powershell
 choco uninstall javaruntime
 choco uninstall jre8
 ```
@@ -269,13 +269,13 @@ choco uninstall jre8
 
 If using chocolatey you can do the following:
 
-```batch
+```powershell
 choco install microsoft-openjdk
 ```
 
-#### 3. Then modify ```C:\jenkins\jenkins-slave.xml``` and change the ```executable``` field by stripping out the path to be just:
+#### 3. Then modify ```C:\jenkins\jenkins-slave.xml``` and change the ```<executable>``` field by stripping out the path to be just:
 
-```batch
+```powershell
 java.exe
 ```
 
