@@ -15,6 +15,19 @@ Today, since we already have a working setup of Jenkins, lets expand it to inclu
 
 <!--more-->
 
+## UPDATE: Java Update
+
+Jenkins has recently updated their java requirements, and this guide has been updated to match. If you are experiencing problems after following this guide and you see errors like below, then you need to update Java to 11+ on your windows agent. [Instructions can be found at the end of this guide.]()
+
+```
+java.nio.channels.ClosedChannelException
+	at org.jenkinsci.remoting.protocol.impl.ChannelApplication
+```
+
+```
+java.lang.UnsupportedClassVersionError: hudson/slaves/SlaveComputer$SlaveVersion has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0
+```
+
 ## Configuring Jenkins
 
 There are a few things that need to be configured on the Jenkins master server, we'll get that out of the way first.
@@ -97,13 +110,13 @@ Add-WindowsCapability -Online -Name NetFx3~~~~
 
 ### Install Java
 
-The agent needs a Java JRE installed. You can download it from here:
-[https://www.java.com/en/download/](https://www.java.com/en/download/)
+The agent needs a Java JRE installed on the agent machine. I use the Microsoft OpenJDK runtime. You can download it from here:
+[https://www.microsoft.com/openjdk](https://www.microsoft.com/openjdk)
 
 If you use [chocolatey package manager](https://chocolatey.org/) you can run the following command.
 
 ```powershell
-choco install javaruntime
+choco install microsoft-openjdk
 ```
 
 > <span class="badge badge-warning">Licensing Note</span> Oracle Java needs to be licensed for business use. Check your licensing is appropriate.
@@ -211,3 +224,55 @@ Once you see the job has turned blue in the bottom left you can click #1 and the
 ## What's next?
 
 We now have a fairly robust lab for working with any kind of job, however managing agents can be kind of annoying, and there is always potential for dependencies to be installed on them which are not documented, or older versions conflicting with newer builds. We can solve these types of issues by dynamically creating agents and installing dependencies as needed. Tomorrow we'll setup a linux docker host and setup on-demand agents.
+
+## Troubleshooting: Updating Java Runtime
+
+If you have previously followed this guide and need to update your java version here are the guides. It's slightly different depending on if you used the NSSM version or the docker hosted self contained agent version.
+
+### NSSM Method
+
+1. Remove previous Java versions
+
+If using chocolatey, you can do the following:
+
+```batch
+choco uninstall javaruntime
+choco uninstall jre8
+```
+
+2. Install Microsoft Open JDK. Available here: [https://www.microsoft.com/openjdk](https://www.microsoft.com/openjdk)
+
+If using chocolatey you can do the following:
+
+```batch
+choco install microsoft-openjdk
+```
+
+3. Reboot your agent. It should automatically reconnect.
+
+### Self contained method / Docker Host version
+
+1. Remove previous Java versions
+
+If using chocolatey, you can do the following:
+
+```batch
+choco uninstall javaruntime
+choco uninstall jre8
+```
+
+2. Install Microsoft Open JDK. Available here: [https://www.microsoft.com/openjdk](https://www.microsoft.com/openjdk)
+
+If using chocolatey you can do the following:
+
+```batch
+choco install microsoft-openjdk
+```
+
+3. Then modify ```C:\jenkins\jenkins-slave.xml``` and change the ```executable``` field by stripping out the path to be just:
+
+```batch
+java.exe
+```
+
+4. Reboot your agent. It should automatically reconnect.
