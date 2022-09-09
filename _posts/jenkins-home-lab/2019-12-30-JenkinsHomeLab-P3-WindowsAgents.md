@@ -121,8 +121,6 @@ If you use [chocolatey package manager](https://chocolatey.org/) you can run the
 choco install microsoft-openjdk
 ```
 
-> <span class="badge badge-warning">Licensing Note</span> Oracle Java needs to be licensed for business use. Check your licensing is appropriate.
-
 ### Setup Agent
 
 There are a few ways to setup this agent to run on startup. I'll show 2 methods. The first will work if you used the Docker method for creating the master server. If you installed the master using the ubuntu/RPi method then most likely you'll need to use the second method.
@@ -131,10 +129,10 @@ There are a few ways to setup this agent to run on startup. I'll show 2 methods.
 
 Jump to the instructions for your method:
 
-- [Docker Master Method](#docker-master-method)
-- [Ubuntu/Raspbian Method](#ubunturaspbian-master-method)
+- [Docker Hosted Method](#docker-hosted-method---nssm)
+- [Ubuntu/Raspbian Method](#ubunturaspbian-hosted-method---self-managed-agent)
 
-#### Docker hosted master method
+#### Docker Hosted Method - NSSM
 
 From the Windows agent system log in to Jenkins and go to the status page for the windows node that was created earlier.
 
@@ -154,7 +152,7 @@ net start jenkinsslave-c__jenkins
 
 This will start the agent and it will relaunch every reboot. You can skip ahead to [setting up a test job](#create-a-test-job-for-windows-agents).
 
-#### Ubuntu/Raspbian hosted master method
+#### Ubuntu/Raspbian Hosted Method - Self-Managed Agent
 
 I adapted this method from a [larger method on stackoverflow](https://stackoverflow.com/a/44753306). From the Windows agent system log in to Jenkins and go to the status page for the windows node that was created earlier.
 
@@ -231,7 +229,7 @@ We now have a fairly robust lab for working with any kind of job, however managi
 
 If you have previously followed this guide and need to update your java version here are the guides. It's slightly different depending on if you used the NSSM version or the docker hosted self contained agent version.
 
-### NSSM Method
+### NSSM Service Method
 
 #### 1. Remove previous Java versions
 
@@ -254,7 +252,7 @@ choco install microsoft-openjdk
 
 #### 3. Reboot your agent. It should automatically reconnect
 
-### Self-Contained Method / Docker Hosted version
+### Self-Managed Agent Method
 
 #### 1. Remove previous Java versions
 
