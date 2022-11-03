@@ -9,6 +9,23 @@ product-type: Tool
 product: rushhour
 ---
 
+# Version 1.0.0
+
+- Added a time control feature when using the Rush Hour spectator player controller with number keys. This can make fine tuning paths a little quicker. This is not recommended to be used during training.
+- Align-To-Ground feature on paths now has advanced options to ignore actors and actor types, solving the issue of getting stuck on foliage and other volumes
+- Training is significantly more reliable and accurate.
+- Cornering force is now more accurate measured for vehicles that have low grip
+- Training now gives more detailed errors when issues occur.
+- Stopping hardness has now been added as a parameter for stop waypoints. This allows more artistic control over driver behavior
+- Vehicle profiles now save to the game content directory. This means they will more easily be added to version control.
+- Added editor icon for paths to more easily identify and select vehicle paths.
+- Disabled Receive Decals on included vehicle meshes to stop road decals flashing over the vehicles.
+- Improved driver profiles
+
+## Known Issues
+
+* Some minor deprecation notices may appear during C++ compilation. These are due to API changes in Unreal, and will be solved as older engine support is removed from the plugin.
+
 
 # Beta 2 (2022-08-19)
 
