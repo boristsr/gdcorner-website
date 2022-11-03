@@ -26,6 +26,8 @@ $ ssh-keygen -t rsa
 
 This will start generating the key files required, gathering some information in the process. When prompted enter the path below, and just press enter without specifying a passphrase.
 
+> <span class="badge badge-danger">Security Note</span> For increased security you should specify a passphrase.
+
 ```bash
 jenkins-ssh-key/id_rsa
 ```
@@ -130,7 +132,7 @@ Here we want to enter a few details
 
 - **Name**: Name of the node to be displayed in Jenkins
 - **\# of executors**: how many jobs should be able to concurrently run on this agent, generally set this to the number of cores available.
-- **Remote root directory**: /home/jenkins
+- **Remote root directory**: /home/jenkins/jenkins_root
 - **Labels**: a list of labels associated with this node. This can be used to restrict jobs to this node or node type. I like to put in operating system and architecture.
 - **Launch method**: Launch agent via SSH
 - **Host**: the hostname or ip address of the system that will be running the agent
