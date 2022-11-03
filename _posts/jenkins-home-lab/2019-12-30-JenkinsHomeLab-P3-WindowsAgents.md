@@ -129,10 +129,10 @@ There are a few ways to setup this agent to run on startup. I'll show 2 methods.
 
 Jump to the instructions for your method:
 
-- [Docker Hosted Method](#docker-hosted-method---nssm)
 - [Ubuntu/Raspbian Method](#ubunturaspbian-hosted-method---self-managed-agent)
+- [Docker Hosted Method](#docker-hosted-method---nssm)
 
-#### Docker Hosted Method - NSSM
+#### Ubuntu/Raspbian Hosted Method - Self-Managed Agent
 
 From the Windows agent system log in to Jenkins and go to the status page for the windows node that was created earlier.
 
@@ -152,7 +152,7 @@ net start jenkinsslave-c__jenkins
 
 This will start the agent and it will relaunch every reboot. You can skip ahead to [setting up a test job](#create-a-test-job-for-windows-agents).
 
-#### Ubuntu/Raspbian Hosted Method - Self-Managed Agent
+#### Docker Hosted Method - NSSM
 
 I adapted this method from a [larger method on stackoverflow](https://stackoverflow.com/a/44753306). From the Windows agent system log in to Jenkins and go to the status page for the windows node that was created earlier.
 
