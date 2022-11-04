@@ -11,9 +11,6 @@ youtube_id: yaK5RV-H8LQ
 
 # Troubleshooting
 
-Created: October 9, 2022 1:55 PM
-Updated: November 4, 2022 5:25 PM
-
 Training has been developed to be as robust and reliable as possible, but it is possible to make vehicles that don't train well. There are various reasons. Here are a few ones to watch for, and suggestions on how to improve
 
 ## Unstable Vehicles
