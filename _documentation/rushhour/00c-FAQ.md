@@ -21,7 +21,7 @@ Please note: Anything with no priority, or tagged as unconfirmed is currently be
 
 # How do I hide the watermark in the bottom right?
 
-This HUD only appears in Training & Rush Hour spectator and game modes. Change your world settings or project settings to use a different game mode in your animation scenes.
+This HUD only appears in Training & Rush Hour spectator game modes. Change your world settings or project settings to use a different game mode in your animation scenes.
 
 # Why don't the graphs change when I change speed units on the HUD?
 
@@ -43,7 +43,7 @@ Some more great tips for increasing the perception of speed are available here: 
 
 # The precision driver and racer are slow
 
-Clean driving often produces faster lap times while appearing slow, even in real life. Perception of speed can be enhanced when the car is just on the edge of being out of control. The precision driver and racer profiles are the fastest. However, if you have tried the steps in the previous tip and still want to enhance the perception of speed, you can try changing the driver profile to "frantic," which will brake later and push slightly faster at corners, causing some rather interesting cornering.
+Clean driving often produces faster lap times while appearing slow, even in real life. Perception of speed can be enhanced when the car is just on the edge of being out of control. The precision driver and racer profiles are the fastest. However, if you have tried the steps in the previous tip and still want to enhance the perception of speed, you can try changing the driver profile to "frantic" which will brake later and push slightly faster at corners, causing some rather interesting cornering.
 
 # My cars are spinning out at corners.
 
