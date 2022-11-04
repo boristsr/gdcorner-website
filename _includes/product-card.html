@@ -20,7 +20,11 @@
             </div>
 
             <footer class="card-footer">
+                {% if product.released == true %}
                 <p class="card-footer-item">Available Now</p>
+                {% else %}
+                <p class="card-footer-item">Coming Soon</p>
+                {% endif %}
             </footer>
         </div>
 

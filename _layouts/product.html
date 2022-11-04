@@ -23,6 +23,12 @@ layout: default
         <p class="subtitle is-6">{{ page.project-type }}</p>
         <p class="subtitle is-6">Engine: {{ page.engine }}</p>
 
+        {% if product.released == true %}
+        <p class="subtitle is-4">Available Now</p>
+        {% else %}
+        <p class="subtitle is-4">Coming Soon</p>
+        {% endif %}
+
         {% include download-links.html %}
 
         {% if page.features %}
