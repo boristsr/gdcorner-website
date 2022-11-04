@@ -9,7 +9,7 @@ product-type: Tool
 product: rushhour
 ---
 
-# Version 1.0.0
+# Version 1.0.0 (2022-11-02)
 
 - Added a time control feature when using the Rush Hour spectator player controller with number keys. This can make fine tuning paths a little quicker. This is not recommended to be used during training.
 - Align-To-Ground feature on paths now has advanced options to ignore actors and actor types, solving the issue of getting stuck on foliage and other volumes
