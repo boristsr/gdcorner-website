@@ -17,7 +17,7 @@ Rush Hour is very close to release. Announcements will be made on the [product p
 
 I have a [public roadmap for post-release updates available here.](https://open.codecks.io/rushhour)
 
-Please note: Anything with no priority, or tagged as unconfirmed is currently being evaluated for feasibility or priority. These items are not confirmed or guaranteed for release.
+Please note: Anything with no priority, or tagged as unconfirmed is currently being evaluated for feasibility or priority. These items are not confirmed or guaranteed for any future release.
 
 # How do I hide the watermark in the bottom right?
 
@@ -41,7 +41,7 @@ Editing also plays a role. If the car is slowing down significantly during a cor
 
 Some more great tips for increasing the perception of speed are available here: [https://neiloseman.com/how-to-make-chase-scenes-look-fast/](https://neiloseman.com/how-to-make-chase-scenes-look-fast/)
 
-# The precision driver and racer are slow
+# The precision driver and racer profiles are slow
 
 Clean driving often produces faster lap times while appearing slow, even in real life. Perception of speed can be enhanced when the car is just on the edge of being out of control. The precision driver and racer profiles are the fastest. However, if you have tried the steps in the previous tip and still want to enhance the perception of speed, you can try changing the driver profile to "frantic" which will brake later and push slightly faster at corners, causing some rather interesting cornering.
 
