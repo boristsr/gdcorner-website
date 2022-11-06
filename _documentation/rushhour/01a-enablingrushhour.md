@@ -38,15 +38,15 @@ Scroll down and find "Rush Hour Content". Expand this and expand the Blueprints 
 
 From the Rush Hour Content folder, expand Maps and open the Example_LongPath level.
 
-![Load Example Map]({{ site.url }}assets/products/rushhour/documentation/examplemap/loadexamplemap.png){: .enable-lightbox}
+![Load Example Map]({{ site.url }}/assets/products/rushhour/documentation/examplemap/loadexamplemap.png){: .enable-lightbox}
 
 Select the Vehicle Animation Path actor by clicking the Rush Hour logo.
 
-![Select the Path]({{ site.url }}assets/products/rushhour/documentation/examplemap/selectpath.png){: .enable-lightbox}
+![Select the Path]({{ site.url }}/assets/products/rushhour/documentation/examplemap/selectpath.png){: .enable-lightbox}
 
 On the right, in the details panel, scroll down and expand "Vehicle Type" and choose the BP_Sedan_RH vehicle. For UE4 it will be called `BP_Sedan_RH_PhysX` and for UE5 it will be called `BP_Sedan_RH_Chaos`.
 
-![Select the Sedan]({{ site.url }}assets/products/rushhour/documentation/examplemap/selectsedan.png){: .enable-lightbox}
+![Select the Sedan]({{ site.url }}/assets/products/rushhour/documentation/examplemap/selectsedan.png){: .enable-lightbox}
 
 Press Play and the vehicle should drive along the path. If the vehicle drives, Rush Hour is all ready to go!
 
