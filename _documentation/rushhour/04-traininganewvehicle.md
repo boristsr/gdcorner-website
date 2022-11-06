@@ -8,10 +8,73 @@ product: rushhour
 youtube_id: yaK5RV-H8LQ
 ---
 
+# Training a new vehicle
+
+The training menu guides you through the training process for new vehicles. Training is fully automated and takes around 12-13 minutes.
+
+## Disable Use Less CPU In Background
+
+Go to the top of the Unreal Editor window, and choose Edit -> Editor Preferences. In here search for "Use Less CPU when in Background". Uncheck this setting. This will allow training to be more reliable when switching windows.
+
+## Open the Training Menu
+
+In your content browser, ensure that the "Show Plugin Content" and "Show Engine Content" options are enabled.
+
+!['Show Plugin Content' Option in Content Browser]({{ site.url }}/assets/products/rushhour/documentation/showplugincontent/show-plugin-content.png){: .enable-lightbox}
+
+Then, expand the Engine and Plugins directories.
+
+![Expand Engine/Plugins Option in Content Browser]({{ site.url }}/assets/products/rushhour/documentation/showplugincontent/expand-plugins.png){: .enable-lightbox}
+
+Scroll down and find "Rush Hour Content". Expand this and expand the Blueprints directory. I recommend right clicking Rush Hour Content and selecting "Add To Favourites" so you can quickly jump back to this folder.
+
+![Expand 'Rush Hour Content' in Content Browser]({{ site.url }}/assets/products/rushhour/documentation/showplugincontent/expand-rushhour-content.png){: .enable-lightbox}
+
+Here you will find "EUW_TrainingMenu". Right Click this and choose "Run Editor Utility Widget".
+
+![Run Training Widget]({{ site.url }}/assets/products/rushhour/documentation/trainingvehicles/run-training-widget.png){: .enable-lightbox}
+
+This is the training menu we will use. Resize the window so you can see all the buttons, or scroll up and down to access them all.
+
+## Load the Training Level
+
+Click "Load Training Environment", which will create a copy of the training level in `/Content/RushHour/Maps`, and then automatically load this level.
+
+## Select a Vehicle
+
+Once the level is loaded, click the drop down and choose a vehicle you'd like to train.
+
+> <span class="badge badge-info">Note</span> This drop down lists all Pawns discovered in the project, not just vehicles. Choosing an incompatible will enable the "Start Training" but training will instantly abort when you try to start training. See the output log for more details.
+
+> <span class="badge badge-info">Note</span> Verbose Logging will output a LOT of information to the log. You should only enable this if requested to when asking for support with training. 
+
+## Start Training
+
+After a vehicle has been selected, the "Begin Training" will be available. This will begin the training process and take around 12-13 minutes typicaly. Some progress & status information will be displayed while the process is underway.
+
+> <span class="badge badge-warning">Note</span> During training, if you have changed the "Use Less CPU In Background" editor setting, you can switch windows, to a web browser for instance, but do not shrink the window or do anything intensive, as the training works best when it can maintain 30 FPS.
+
+![Training In Progress]({{ site.url }}/assets/products/rushhour/documentation/trainingvehicles/training-progress.png){: .enable-lightbox}
+
+If, for any reason, you need to stop training you can just press "Abort Training", which will instantly end the training.
+
+> <span class="badge badge-warning">Note</span> Make sure you use the "Abort Training" button, or the editor will remain locked to FPS for the rest of your session. Training limits the framerate to 30fps, and is restored properly when the training menu is used or training completes. Pressing the normal "Stop" button in the editor will not restore the FPS setting. You can restore full FPS by typing `t.maxfps 0` in the console.
+
+## Saving the Results
+
+Once training has completed, some status information will be displayed. Pressing Save "Trained Profile" will save the trained profile for this vehicle to `/Content/RushHour/Blueprints/DataTables/DT_VehiclePerformanceData`
+
+![Training Complete]({{ site.url }}/assets/products/rushhour/documentation/trainingvehicles/training-complete.png){: .enable-lightbox}
+
+Once saved, the newly trained profile will automatically be used for this vehicle. You don't need to change any setting on new or existing paths.
 
 # Troubleshooting
 
 Training has been developed to be as robust and reliable as possible, but it is possible to make vehicles that don't train well. There are various reasons. Here are a few ones to watch for, and suggestions on how to improve
+
+## Poor performing profiles
+
+The first thing to try if a vehicle is performing badly is to retrain the vehicle. If it trained improperly last time, I'd recommend not doing anything else on the computer. Leave the training window in focus, do not switch to another window. Just let it train with full focus. Training is limited to 30fps, but training works best when it can achieve 30fps without any stutters, hitching or slowdowns.
 
 ## Unstable Vehicles
 
