@@ -314,7 +314,8 @@
                     var filename = href.split('/').pop();
                     var split = filename.split(".");
                     var name = split[0];
-                    $(this).attr('title', name);
+                    let alt = $(this).attr('alt');
+                    $(this).attr('title', alt);
                 }
             }
         });
@@ -325,7 +326,8 @@
         $("img").each(function () {
             if (!$(this).hasClass('no-lightbox') && $(this).hasClass('enable-lightbox')) {
                 let src = $(this).attr('src');
-                wrapText = "<a href=\"" + src + "\"></a>"; 
+                let alt = $(this).attr('alt');
+                wrapText = "<a href=\"" + src + "\" alt=\"" + alt + "\"></a>"; 
                 $(this).wrap(wrapText);
             }
         });
