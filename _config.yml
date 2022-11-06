@@ -90,6 +90,7 @@ defaults:
       layout: documentation
       hero_height: is-fullwidth
       show_sidebar: false
+      menubar_toc: true
   - scope:
       path: "_documentation/rushhour"
     values:
