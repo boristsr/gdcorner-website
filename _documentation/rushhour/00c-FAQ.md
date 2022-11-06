@@ -19,6 +19,10 @@ I have a [public roadmap for post-release updates available here.](https://open.
 
 Please note: Anything with no priority, or tagged as unconfirmed is currently being evaluated for feasibility or priority. These items are not confirmed or guaranteed for any future release.
 
+# I get some warnings when compiling from source
+
+Some minor deprecation notices may appear during C++ compilation. These are due to API changes in Unreal and the support for multiple engine version. These warnings and will be solved as older engine support is removed from the plugin.
+
 # How do I hide the watermark in the bottom right?
 
 This HUD only appears in Training & Rush Hour spectator game modes. Change your world settings or project settings to use a different game mode in your animation scenes.
