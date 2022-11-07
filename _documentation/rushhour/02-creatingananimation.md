@@ -147,7 +147,7 @@ It's worth noting you can specify a vehicle to adopt as well as a vehicle type. 
 
 Setting the speed of the path can be done on the whole path, or individually on each waypoint. The recommended workflow is to lay out the majority of your path, then do a path wide speed reset. You can then tweak speeds at individual waypoints. This minimises time spent manually tweaking.
 
-### Whole path speed reset
+### Whole Path Speed Reset
 
 Expand the advanced section of the Animation Path panel. Type in a value into Reset Speed, and then press "Reset Path Speed". This will reset the values on every waypoint.
 
@@ -176,7 +176,7 @@ How long to wait at this point before starting.
 
 This is how hard the vehicle should stop at this waypoint. It's a "unitless" value, and is just a hint. Generally less than 1 will produce slow steady stops as if stopping casually at a set of traffic lights, while greater than 1 will lead to full lock ups. The harder the stop, the more likely the vehicle is to overshoot the stopping point. I plan to reduce overshoot in a future patch.
 
-## Starting a vehicle with Blueprints
+## Starting a Vehicle with Blueprints
 
 You can start a vehicle on the path with blueprints. Here is an example of starting the vehicle on a looping timer event.
 
