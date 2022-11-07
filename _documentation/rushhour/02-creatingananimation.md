@@ -182,3 +182,9 @@ This is how hard the vehicle should stop at this waypoint. It's a "unitless" val
 You can start a vehicle on the path with blueprints. Here is an example of starting the vehicle on a looping timer event.
 
 ![BP Control]({{ site.url }}/assets/products/rushhour/documentation/placepath/bp-control.png){: .enable-lightbox}
+
+## Tips & Tricks
+
+* To maintain fast corners you want to reduce kinks and sharp turns in your path
+* Using Frantic profile with a strong profile strength can produce interesting unstable driving
+* Cars such as Trucks/Utes have interesting cornering behaviour as the tail slides out
