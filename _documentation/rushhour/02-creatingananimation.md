@@ -6,6 +6,7 @@ version: 1.0
 product-type: Tool
 product: rushhour
 youtube_id: 25iUDmkg_x8
+video_out_of_date: true
 ---
 
 ## Placing the Path

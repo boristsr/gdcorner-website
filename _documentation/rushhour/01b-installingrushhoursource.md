@@ -6,6 +6,7 @@ version: 1.0
 product-type: Tool
 product: rushhour
 youtube_id: mj6M44XPieo
+video_out_of_date: true
 ---
 
 ## Installing From Source (Project Plugin)
