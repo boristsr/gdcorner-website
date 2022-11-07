@@ -81,11 +81,15 @@ The first thing to try if a vehicle is performing badly is to retrain the vehicl
 
 If you watch the vehicle training and you notice it bouncing or jumping, that's indicative that the vehicle is unstable. Tweak the suspension and physics setup until it drives steady. When in doubt, reference some values from the included vehicles with Rush Hour for a starting point.
 
-### Exceedingly slow/heavy vehicles
+### Exceedingly slow/heavy vehicles - VehicleDidNotMove
 
 Some vehicles, like construction vehicles with a top speed below 30mph, require full throttle to drive, which can cause Rush Hour to struggle. Increase the engine power until the vehicle drives with a much higher top speed, and then achieve the look you desire by choosing slow speeds on the animation path.
 
-### Colliding with Ground
+### Poor Steering Configuration - VehicleDidNotMove
+
+Sometimes this error is triggered if the steering is reversed on a vehicle. Flip the vehicles steering setup.
+
+### Colliding with Ground - VehicleCollidedWithGround
 
 Vehicles can collide with the ground for a number of reasons:
 
