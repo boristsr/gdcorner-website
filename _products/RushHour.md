@@ -10,9 +10,10 @@ image: "/assets/products/rushhour/rushhour-og-v1.jpg"
 engine: Unreal Engine 4, Unreal Engine 5
 published: true
 product: rushhour
-youtube_id: cxZmJC446Ok
+youtube_id: SepmZZ24aes
 featured_product: true
-released: false
+released: true
+unreal-marketplace: https://unrealengine.com/marketplace/en-US/product/rush-hour-vehicle-animator
 ---
 
 Rush Hour is a new way to quickly animate cars and other wheeled vehicles in Unreal Engine 4 & 5.
