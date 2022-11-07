@@ -95,7 +95,7 @@ If you have an actor that is being hit in the trace down that you want ignored a
 
 Once you have your path placed, you can set up the properties for the path in the details panel on the right.
 
-![Align To Ground]({{ site.url }}/assets/products/rushhour/documentation/placepath/pathproperties.png){: .enable-lightbox}
+![Path Properties]({{ site.url }}/assets/products/rushhour/documentation/placepath/pathproperties.png){: .enable-lightbox}
 
 ### Auto Start
 
@@ -155,6 +155,29 @@ Expand the advanced section of the Animation Path panel. Type in a value into Re
 
 If you select a waypoint, you can expand "Selected Points" and "Vehicle Path" in the details panel on the right and change properties.
 
+![Waypoint Control]({{ site.url }}/assets/products/rushhour/documentation/placepath/waypoint-controls.png){: .enable-lightbox}
 
+### Action At Point
+
+* **Start** The vehicle will start from this point.
+* **Stop** The vehicle will stop at this waypoint.
+* **Continue** The vehicle will continue through this waypoint.
+* **StopWaitGo** The vehicle will stop at this point, wait for the specified wait time, and then start again
+
+### Speed
+
+The target maximum speed at this waypoint. Smart Speed will reduce the target speed based on path curve and slope, as well as the vehicles performance characteristics.
+
+### Wait Time
+
+How long to wait at this point before starting.
+
+### Stop Hardness
+
+This is how hard the vehicle should stop at this waypoint. It's a "unitless" value, and is just a hint. Generally less than 1 will produce slow steady stops as if stopping casually at a set of traffic lights, while greater than 1 will lead to full lock ups. The harder the stop, the more likely the vehicle is to overshoot the stopping point. I plan to reduce overshoot in a future patch.
 
 ## Starting a vehicle with Blueprints
+
+You can start a vehicle on the path with blueprints. Here is an example of starting the vehicle on a looping timer event.
+
+![BP Control]({{ site.url }}/assets/products/rushhour/documentation/placepath/bp-control.png){: .enable-lightbox}
