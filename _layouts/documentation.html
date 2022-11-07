@@ -5,6 +5,9 @@ layout: page
 <div class="columns is-multiline">
 
     <div class="column is-9">
+        {% if page.video_out_of_date == true %}
+            {% include documentation-video-out-of-date-notice.html %}
+        {% endif %}
         <div class="content">
             {% if page.youtube_id %}
                 {% include youtube.html video=page.youtube_id %}
