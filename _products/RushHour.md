@@ -22,9 +22,19 @@ It's a little like instructing a stunt driver to perform in your scene. An AI wi
 
 <!--more-->
 
-You can refine the animation in several ways. You can choose a profile strength, such as making it more or less frantic. You can set a speed at each waypoint and add an action (stop, stop and wait, continue). Other hints will be coming in the future, like tap handbrake.
+## Features
 
-Rush Hour dramatically speeds up the time it takes to create vehicle animations in Unreal. It eliminates the painful and slow back and forth betwen programs. You can animate entirely within Unreal. There's no need to export your environment to another tool, create your animation, and finally bring that back.
+* An AI-powered driver that produces realistic animation.
+* 5 Driver profiles (Precision, Racer, Frantic, Slowpoke, Sunday Driver)
+* Profile strength setting to fine tune how the driver should behave
+* 3 Vehicles included (Sedan, Box Truck and 4x4)
+* MPH and KPH support
+* PhysX and Chaos vehicle Support
+* Automatic training for precise control of all vehicles
+
+Rush Hour dramatically speeds up the time it takes to create vehicle animations in Unreal. It eliminates the painful and slow back and forth between programs. You can animate entirely within Unreal. There's no need to export your environment to another tool, create your animation, and finally bring that back.
+
+You can refine the animation in several ways. You can choose a profile strength, such as making it more or less frantic. You can set a speed at each waypoint and add an action (stop, stop and wait, continue). Other hints will be coming in the future, like tap handbrake.
 
 Rush Hour creates incredibly realistic driving behavior. The driving profiles are heavily tuned to create a natural look. Attempting to drive the vehicle yourself with a gamepad produces twitchy and unrealistic driving. The vehicle movement looks like someone is driving in a video game. A single mistake can mean having to repeat the drive over and over again, which is incredibly time-consuming. Rush Hour improves all of these aspects.
 
