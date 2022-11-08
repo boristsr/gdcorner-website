@@ -11,7 +11,7 @@ product: rushhour
 
 ## Where can I get it?
 
-Rush Hour is very close to release. Announcements will be made on the [product page](https://www.gdcorner.com/products/RushHour.html), [twitter](https://twitter.com/GDCorner), and in various Unreal Engine social media groups. It will be available on the Unreal Engine Marketplace.
+[Rush Hour](https://unrealengine.com/marketplace/en-US/product/rush-hour-vehicle-animator) is available from the [Unreal Engine Marketplace.](https://unrealengine.com/marketplace/en-US/product/rush-hour-vehicle-animator)
 
 ## Where can I see the list of upcoming features?
 
