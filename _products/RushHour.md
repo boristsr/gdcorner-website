@@ -10,7 +10,7 @@ image: "/assets/products/rushhour/rushhour-og-v1.jpg"
 engine: Unreal Engine 4, Unreal Engine 5
 published: true
 product: rushhour
-youtube_id: SepmZZ24aes
+youtube_id: domP9beWhS8
 featured_product: true
 released: true
 unreal-marketplace: https://unrealengine.com/marketplace/en-US/product/rush-hour-vehicle-animator
