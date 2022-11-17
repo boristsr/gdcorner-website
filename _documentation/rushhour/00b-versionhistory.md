@@ -9,6 +9,24 @@ product-type: Tool
 product: rushhour
 ---
 
+## Version 1.0.1 (2022/11/17) notes:
+
+Minor improvements and official support for Unreal Engine 5.1.
+
+### Additions & Fixes
+
+- Ensured compatibility with Unreal Engine 5.1
+- Reduced compilation warnings by using newer API, and introducing an Engine Backwards Compatibility library
+    - TAssetSubclassOf renamed
+    - FStringAssetReference renamed
+- Reduced Compilation warnings by following newer conventions with preprocessor guards
+    - Stopped using ANY_PACKAGE and used full class path for EDriverProfile
+    - New asset registry changes and header locations
+
+### Known Issues
+
+* Some minor deprecation notices may appear during C++ compilation in 4.27 and 4.26 due to PhysX deprecation notices.
+
 ## Version 1.0.0 (2022-11-02)
 
 * Added a time control feature when using the Rush Hour spectator player controller with number keys. This can make fine tuning paths a little quicker. This is not recommended to be used during training.
