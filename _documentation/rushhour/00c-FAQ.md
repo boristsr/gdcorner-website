@@ -15,7 +15,7 @@ product: rushhour
 
 ## Where can I see the list of upcoming features?
 
-I have a [public roadmap for post-release updates available here.](https://open.codecks.io/rushhour)
+I have a [public roadmap for post-release updates available here.](https://open.codecks.io/rushhour/decks/47-public-rush-hour-roadmap)
 
 Please note: Anything with no priority, or tagged as unconfirmed is currently being evaluated for feasibility or priority. These items are not confirmed or guaranteed for any future release.
 
