@@ -1,2 +1,6 @@
 rushhour:
   name: Rush Hour
+  documentation-links:
+  - name: Roadmap
+    link: https://open.codecks.io/rushhour/decks/47-public-rush-hour-roadmap
+    new_window: true

@@ -8,6 +8,16 @@
         </li> 
     {% endif %}
 {% endfor %}
+
+{% for product_hash in site.data.products %}
+    {% assign product_data = product_hash[1] %}
+    {% for doco_link in product_data.documentation-links %}
+        <li>
+            <a href="{{ doco_link.link }}" {% if doco_link.new_window == true %}target="_blank"{% endif %}>{{ doco_link.name }}</a>
+        </li>
+    {% endfor %}
+{% endfor %}
+
 {% for post in site.documentation %}
     {% if post.product == page.product %}
         {% if post.tags contains "releasenotes" %}
