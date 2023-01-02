@@ -87,7 +87,7 @@ Further down the road, there are a number of updates planned. Some of these alre
 
 ## Holiday Break
 
-I’ve been pushing hard on Rush Hour for most of this year. Over the next 2 weeks, I’ll spend some time with friends and family, recharge and be ready for a solid start to next year. I’ll be taking a break and resuming work on January 9.
+I’ve been pushing hard on Rush Hour for most of this year. Over the next 2 weeks, I’ll spend some time with friends and family, recharge and be ready for a solid start to next year. I’ll be taking a break and resuming work on January 3.
 
 **Due to the holidays, support will be delayed for the next 2 weeks. Please ask if you require assistance, but be aware that responses will be delayed and sporadic until Monday, January 9.**
 
