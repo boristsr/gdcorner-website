@@ -45,7 +45,7 @@ Grab one of those handles, and move it around. You'll see the curve change.
 
 Aligning To Ground is an important step in the process. Rush Hour measures ground slope at each waypoint for extra information when determining speed. Slope affects cornering and braking performance, and this is important information. It's a simple process, in the details panel on the right, just click "Align To Ground".
 
-You should see all the points jump around 50cm off the ground (although, over elevation changes you may see the path line go through the ground). If they are still touching the ground, please see [Adjust Curve](#advanced-options)
+You should see all the points jump around 50cm off the ground (although, over elevation changes you may see the path line go through the ground). If they are still touching the ground, please see [Adjust Curve](#advanced-options) and the advanced options as described below.
 
 ![Align To Ground]({{ site.url }}/assets/products/rushhour/documentation/placepath/aligntoground.png){: .enable-lightbox}
 
@@ -71,6 +71,10 @@ This option will ignore InstancedFoliageActors, typically foliage placed with th
 #### Ignore Volumes
 
 This option will ignore Volume actors. This is useful if you have a volume to trigger an event or interact with the vehicle in some way, but you don't want the path affected by the volume. If this is off you will see the waypoints inside a volume raise ~50cm every time you press Align To Ground.
+
+#### Ignore Triggers
+
+This option will ignore trigger actors. This is useful if you have a trigger for an event or interact with the vehicle in some way, but you don't want the path affected by the trigger. If this is off you will see the waypoints inside a trigger raise ~50cm every time you press Align To Ground.
 
 #### Should Trace Up
 
