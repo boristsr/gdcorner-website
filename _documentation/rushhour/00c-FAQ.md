@@ -64,3 +64,13 @@ Rush Hour currently only supports a default physics material. Support for additi
 ## Why does the training level look so bad?
 
 The training level is designed to use as few resources as possible to produce the most stable physics simulation it can. The more stable and consistent the physics simulation, the better the training results are. For this reason, shadows, ambient occlusion, and reflections are all turned off or as low as possible. Regardless of the power of your PC, this helps contribute to the best training results possible.
+
+## Vehicles drive differently in packaged builds of my game?
+
+Rush Hour uses a number of data tables to function which aren't included by default in packaged projects. A few asset directories need to be added to your projects packaging settings.
+
+1) In your project settings, go to Packaging settings, and then find `Additional Asset Directories To Cook`.
+2) Add `/RushHour/Blueprints`
+3) Add `/Game/RushHour/Blueprints`
+
+Save these settings and then package again.
