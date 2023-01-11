@@ -50,4 +50,6 @@ On the right, in the details panel, scroll down and expand "Vehicle Type" and ch
 
 Press Play and the vehicle should drive along the path. If the vehicle drives, Rush Hour is all ready to go!
 
-Controls are listed in the bottom left of the viewport so you can accelerate time, change camera angle, etc.
+Controls are listed in the bottom left of the viewport so you can accelerate time, change camera angle, and so on.
+
+Further example maps demonstrating things like jumps, banked corners and offroading can be found in the `Maps/Examples` folder.
