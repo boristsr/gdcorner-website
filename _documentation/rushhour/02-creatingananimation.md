@@ -110,7 +110,7 @@ Here you can select a variety of driver profiles
 
 * **Racer** is a fast, yet controller driver. This driver will push corners quite a bit faster than precision driver, accelerate faster, brake harder, and so on.
 
-* **Frantic** is a fast, yet uncontroller driver. This driver will push corners very fast, accelerate faster, brake harder, steer more erratically. It will also brake a lot later, often too late.
+* **Frantic** is a fast, yet uncontrolled driver. This driver will push corners very fast, accelerate faster, brake harder, steer more erratically. It will also brake a lot later, often too late.
 
 * **Sunday Driver** is a casual, controlled driver. It will accelerate a bit slower than precision driver. It produces calm driving behaviour
 
@@ -124,7 +124,7 @@ Here you can select a variety of driver profiles
 
 ### Profile Strength
 
-This is an easy way to adjust performance of drivers. Technically this blends between Precision Driver, and the selected profile. You can push a profile beyond it's parameters by choosing a value beyond 1.0. For example, if you choose racer with a profile strength of 1.5, it will push even faster around corners. Alternatively, you can make a profile less intense by going closer to 0.0.
+This is an easy way to adjust performance of drivers. Technically this blends between Default Driver, and the selected profile. You can push a profile beyond it's parameters by choosing a value beyond 1.0. For example, if you choose racer with a profile strength of 1.5, it will push even faster around corners. Alternatively, you can make a profile less intense by going closer to 0.0.
 
 ### Smart Speed
 
@@ -132,7 +132,7 @@ Smart speed is the feature of the drivers to slow down as they approach corners.
 
 ### Speed Unit
 
-If you prefer to work in MPH or KPH, this is where you can configure that. Not this does NOT change the values set on the path or waypoints. A speed of 200 will still be 200, this will just change what that value means. 200 KPH or 200 MPH.
+If you prefer to work in MPH or KPH, this is where you can configure that. Note: this does NOT change the values set on the path or waypoints. A speed of 200 will still be 200, this will just change what that value means. 200 KPH or 200 MPH.
 
 ### Vehicle Type
 
