@@ -37,6 +37,8 @@ Here you will find "EUW_TrainingMenu". Right Click this and choose "Run Editor U
 
 This is the training menu we will use. Resize the window so you can see all the buttons, or scroll up and down to access them all.
 
+![Training Widget]({{ site.url }}/assets/products/rushhour/documentation/trainingvehicles/training-menu.png){: .enable-lightbox}
+
 ### Load the Training Level
 
 Click "Load Training Environment", which will create a copy of the training level in `/Content/RushHour/Maps`, and then automatically load this level.
