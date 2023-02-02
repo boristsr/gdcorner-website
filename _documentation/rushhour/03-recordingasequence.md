@@ -53,6 +53,10 @@ In Take Recorder, click "Source" -> From Actor -> Choose the actor you wish to t
 
 ![Add Actor as Source]({{ site.url }}/assets/products/rushhour/documentation/recordingasequence/takerecorder/track-vehicle-actor.png){: .enable-lightbox}
 
+Select the actor source, and then scroll down and uncheck "Remove Root Animation". If you forget to do this you may find some meshes are in the wrong location, like windows hovering above the car.
+
+![Uncheck Remove Root Animation]({{ site.url }}/assets/products/rushhour/documentation/recordingasequence/takerecorder/disable-remove-root-motion.png){: .enable-lightbox}
+
 Press Record and wait for the timer to count down, then press Resume play in the editor.
 
 ![Press Record]({{ site.url }}/assets/products/rushhour/documentation/recordingasequence/takerecorder/press-record.png){: .enable-lightbox}
@@ -63,7 +67,7 @@ Press Record and wait for the timer to count down, then press Resume play in the
 
 ## Disable Simulate Physics on Recorded Actor Skeletal Mesh
 
-Once the recording has taken place, the sequence will work fine when scrubbing through, but when you try and play in Movie Render Queue or at runtime, the mesh will remain in place. To fix this you need to disable Simulate Physics on the recorded skeletal mesh.
+Once the recording has taken place, the sequence will work fine when scrubbing through, but when you try and play in Movie Render Queue or at runtime, some meshes will remain in place, and some weird collisions can happen. To fix this you need to disable Simulate Physics on the recorded skeletal mesh.
 
 Open The Sequence you just recorded.
 
@@ -73,9 +77,6 @@ Find the Actor & Skeletal Mesh
 
 ![Find the Actor and the Skeletal Mesh]({{ site.url }}/assets/products/rushhour/documentation/recordingasequence/takerecorder/find-skeletal-mesh.png){: .enable-lightbox}
 
-Select the mesh, and in the details panel on the right search for and disable Simulate Physics.
+Select the main skeletal mesh, and in the details panel on the right search for and disable Simulate Physics.
 
 ![Disable Simulate Physics]({{ site.url }}/assets/products/rushhour/documentation/recordingasequence/takerecorder/disable-simulate-physics.png){: .enable-lightbox}
-
-
-
