@@ -81,9 +81,9 @@ Select the main skeletal mesh, and in the details panel on the right search for 
 
 ![Disable Simulate Physics]({{ site.url }}/assets/products/rushhour/documentation/recordingasequence/takerecorder/disable-simulate-physics.png){: .enable-lightbox}
 
-## General Tips for best results
+## General Tips for Best Results
 
-1) Before Recording, Turn Scalability to Low, and reduce anything that may cause a performance drop or a hitch. Any hitches will be recorded into the final sequence.
-2) After Recording, Ensure you have disabled "Simulate Physics" on the vehicles skeletal mesh, or it may appear fine in the editor, but fail to render correctly in the Movie Render Queue, or when played as a sequence in game.
-3) Before rendering, disable Auto Start on the Vehicle Animation Path you recorded the sequence from. If you don't the path will attempt to spawn a vehicle on top of your recorded vehicle and they will collide.
-4) Before rendering, turn off any systems that will cause randomness in your world, such as the traffic spawner in the City Sample project. These systems don't repeat the same way, so between renders you may have cars in the way of your car, or camera which were not expected.
+1. Before Recording, turn Scalability to Low in your editor or viewport, and reduce anything that may cause a performance drop or a hitch. Any hitches will be recorded into the final sequence.
+2. After Recording, ensure you have disabled "Simulate Physics" on the vehicles skeletal mesh, or it may appear fine in the editor, but fail to render correctly in the Movie Render Queue, or when played as a sequence in game.
+3. Before rendering, disable Auto Start on the Vehicle Animation Path you recorded the sequence from. If you don't the path will attempt to spawn a vehicle on top of your recorded vehicle and they will collide.
+4. Before rendering, turn off any systems that will cause randomness in your world, such as the traffic spawner in the City Sample project. These systems don't repeat the same way, so between renders you may have cars in the way of your car, or camera which were not expected.
