@@ -14,6 +14,12 @@ layout: page
      {% include post-transcription-note.html %}
     {% endif %}
 
+    {% if page.youtube_id %}
+        {% include youtube.html video=page.youtube_id %}
+    {% elsif page.vimeo_id %}
+        {% include vimeo.html video=page.vimeo_id %}
+    {% endif %}
+
     {{ content }}
 </div>
 

@@ -1,14 +1,1 @@
 <blockquote> <p> <span class="badge badge-warning">Note: Transcribed</span> This article is a transcription of a video. Images have been placed where appropriate, but some information will be better conveyed in the video. This version is to help follow along at your own pace. </p></blockquote>
-<div class="columns is-centered">
-<div class="column is-6">
-    {% if page.youtube_id %}
-        {% include youtube.html video=page.youtube_id %}
-    {% elsif page.vimeo_id %}
-        {% include vimeo.html video=page.vimeo_id %}
-    {% else %}
-        <figure class="image is-16by9">
-            <img src="{{ page.image }}" />
-        </figure>
-    {% endif %}
-</div>
-</div>
