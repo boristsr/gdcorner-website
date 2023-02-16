@@ -95,7 +95,7 @@ defaults:
       path: "_documentation/rushhour"
     values:
       product: rushhour
-      image: "/assets/products/rushhour/rushhour-og-v1.jpg"
+      image: "/assets/products/rushhour/rushhour-og-v2-mg.jpg"
   - scope:
       path: ""
       type: "products"

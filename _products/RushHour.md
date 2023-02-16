@@ -6,7 +6,7 @@ tags: [unreal, unrealengine, ue4, ue5, tool, vehicles, animation, cars, animatio
 comments: true
 categories: product
 product-type: Tool
-image: "/assets/products/rushhour/rushhour-og-v1.jpg"
+image: "/assets/products/rushhour/rushhour-og-v2-mg.jpg"
 engine: Unreal Engine 4, Unreal Engine 5
 published: true
 product: rushhour
