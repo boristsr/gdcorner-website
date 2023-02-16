@@ -7,6 +7,7 @@ comments: true
 image: "/assets/products/rushhour/rushhour-og-v2-mg.jpg"
 categories: blog
 product: rushhour
+youtube_id: oLmzXz_xdcw
 ---
 
 Rush Hour has received an Epic MegaGrant! Rush Hour aims to level up real-time workflows for vehicle animation and build on what Unreal Engine already offers. By utilising vehicle AI, similar to what you would find in games, to act as a stunt driver, it reduces the work animators need to put in to get the physics looking correct and instead focus on directing the scene, all from within the same editor where you are building your environment.
