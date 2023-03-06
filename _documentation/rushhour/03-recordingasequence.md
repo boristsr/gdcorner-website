@@ -55,6 +55,8 @@ In Take Recorder, click "Source" -> From Actor -> Choose the actor you wish to t
 
 Select the actor source, and then scroll down and uncheck "Remove Root Animation". If you forget to do this you may find some meshes are in the wrong location, like windows hovering above the car.
 
+> <span class="badge badge-warning">Note</span> Missing this step may cause issues like floating windows.
+
 ![Uncheck Remove Root Animation]({{ site.url }}/assets/products/rushhour/documentation/recordingasequence/takerecorder/disable-remove-root-motion.png){: .enable-lightbox}
 
 Press Record and wait for the timer to count down, then press Resume play in the editor.
@@ -69,6 +71,8 @@ Press Record and wait for the timer to count down, then press Resume play in the
 
 Once the recording has taken place, the sequence will work fine when scrubbing through, but when you try and play in Movie Render Queue or at runtime, some meshes will remain in place, and some weird collisions can happen. To fix this you need to disable Simulate Physics on the recorded skeletal mesh.
 
+> <span class="badge badge-warning">Note</span> Missing this step will cause issues when rendering with Movie Render Queue. Scrubbing in sequencer will be fine, but the vehicle won't move, or only part of the vehicle will move when rendering.
+
 Open The Sequence you just recorded.
 
 ![Open the Recorded Sequence]({{ site.url }}/assets/products/rushhour/documentation/recordingasequence/takerecorder/open-recorded-sequence.png){: .enable-lightbox}
@@ -80,6 +84,10 @@ Find the Actor & Skeletal Mesh
 Select the main skeletal mesh, and in the details panel on the right search for and disable Simulate Physics.
 
 ![Disable Simulate Physics]({{ site.url }}/assets/products/rushhour/documentation/recordingasequence/takerecorder/disable-simulate-physics.png){: .enable-lightbox}
+
+Ensure you save your sequence after making this change!
+
+> <span class="badge badge-warning">Note</span> Ensure you disable Autostart on your Vehicle Animation Path actor before rendering with MRQ, or the live vehicle will still spawn and the vehicles may collide and interfere with each other.
 
 ## General Tips for Best Results
 
