@@ -22,6 +22,10 @@ It's a little like instructing a stunt driver to perform in your scene. An AI wi
 
 <!--more-->
 
+**Rush Hour is an Epic MegaGrant Recipient!**
+
+{% include youtube.html video="oLmzXz_xdcw" %}
+
 ## Features
 
 * An AI-powered driver that produces realistic animation.
