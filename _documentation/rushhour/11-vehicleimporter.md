@@ -16,6 +16,14 @@ The Vehicle Importer is an optional new workflow to drastically improve the time
 
 Once you have prepared and exporter via the Blender addon, you can import this vehicle using Rush Hour.
 
+## Features
+
+- Correct handling of brake calipers
+- Ability to use Nanite static meshes
+- Several supported template vehicles
+- Custom template vehicles
+- Can be adapted to existing vehicle prep pipelines
+
 ## Open The Vehicle Import Menu
 
 In your content browser, ensure that the "Show Plugin Content" and "Show Engine Content" options are enabled.
@@ -104,6 +112,10 @@ You can see this generates much more accurate shapes for the wheels.
 ![Regenerated Shapes]({{ site.url }}/assets/products/rushhour/documentation/vehicleimporter/Untitled%2012.png){: .enable-lightbox}
 
 Now you will need to train the vehicle as normal through the Vehicle Trainer.
+
+## Integrating a custom vehicle pipeline
+
+If you have a custom vehicle prep pipeline, you can still use the Vehicle Importer. You will need to make sure you export the vehicle in the same way as the Vehicle Importer expects. Full documentation on the expected format is coming soon. In the meantime feel free to reach out to [support@gdcorner.com](mailto:support@gdcorner.com) for more details.
 
 ## Custom Vehicle Templates
 
