@@ -9,7 +9,7 @@ product: rushhour
 
 ## Importing a Vehicle with Rush Hour
 
-The Vehicle Importer is an optional new workflow to drastically improve the time and effort involved in bringing a new vehicle into Unreal. It consists of 2 parts:
+The Vehicle Importer is an optional new workflow to drastically improve the time and effort involved in bringing a new vehicle into Unreal. It produces regular Chaos Vehicles. It consists of 2 parts:
 
 - [An addon for Blender]({% link _documentation/rushhour/10-preparingavehicle.md %})
 - The importer included with Rush Hour for Unreal Engine 5.0+ (this article)
@@ -104,6 +104,10 @@ You can see this generates much more accurate shapes for the wheels.
 ![Regenerated Shapes]({{ site.url }}/assets/products/rushhour/documentation/vehicleimporter/Untitled%2012.png){: .enable-lightbox}
 
 Now you will need to train the vehicle as normal through the Vehicle Trainer.
+
+## Custom Vehicle Templates
+
+**Documentation Coming Soon**
 
 ## Troubleshooting
 
