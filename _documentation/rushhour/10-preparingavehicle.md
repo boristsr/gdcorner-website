@@ -12,7 +12,7 @@ product: rushhour
 The Vehicle Importer is an optional new workflow to drastically improve the time and effort involved in bringing a new vehicle into Unreal. It consists of 2 parts:
 
 - An addon for Blender (this article)
-- The importer included with Rush Hour for Unreal Engine 5.0+ (link soon)
+- [The importer included with Rush Hour for Unreal Engine 5.0+]({% link _documentation/rushhour/11-vehicleimporter.md %})
 
 ## Template & Example Vehicles
 
