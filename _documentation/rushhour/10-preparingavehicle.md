@@ -11,12 +11,12 @@ product: rushhour
 
 The Vehicle Importer is an experimental new workflow to drastically improve the time and effort involved in bringing a new vehicle into Unreal. It consists of 2 parts:
 
-- A plugin for Blender (this article)
+- An addon for Blender (this article)
 - The importer included with Rush Hour for Unreal Engine 5.0+ (link soon)
 
-## Installing the Blender Plugin
+## Installing the Blender Addon
 
-The plugin currently supports the 2 current LTS releases, and the latest stable release of Blender. 2.93, 3.3 & 3.5
+The addon currently supports the 2 current LTS releases, and the latest stable release of Blender. 2.93, 3.3 & 3.5
 
 Download the latest release from here [https://github.com/GDCorner/RushHourVehicleToolkit/releases/latest](https://github.com/GDCorner/RushHourVehicleToolkit/releases/latest)
 
@@ -30,25 +30,19 @@ Go to the Addons Tab, and click Install in the top right
 
 ![Install addon]({{ site.url }}/assets/products/rushhour/documentation/blenderaddon/01-installaddon.png)
 
-Install addon
-
-Navigate to where you downloaded the latest version of the plugin, and click Install Addon
+Navigate to where you downloaded the latest version of the addon, and click Install Addon
 
 ![Select downloaded addon]({{ site.url }}/assets/products/rushhour/documentation/blenderaddon/02-selectdownloadedaddon.png)
-
-Select downloaded addon
 
 After it is installed, ensure it is activated by ticking the check box.
 
 ![Activate Rush Hour Unreal Vehicle Toolkit addon]({{ site.url }}/assets/products/rushhour/documentation/blenderaddon/03-activateaddon.png)
 
-Activate Rush Hour Unreal Vehicle Toolkit addon
-
 ## Before your start
 
 There are a few requirements for your vehicle before we start using the toolkit.
 
-The plugin will try and compensate for some of these problems, but it’s more reliable if you address these manually.
+The addon will try and compensate for some of these problems, but it’s more reliable if you address these manually.
 
 - Ensure your blend file filename doesn’t contain any spaces.
 - Ensure your vehicle is facing so the front is looking down the `+X` axis, and `+Y` is left.
