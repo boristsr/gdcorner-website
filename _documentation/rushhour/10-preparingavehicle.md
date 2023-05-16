@@ -14,6 +14,13 @@ The Vehicle Importer is an experimental new workflow to drastically improve the 
 - An addon for Blender (this article)
 - The importer included with Rush Hour for Unreal Engine 5.0+ (link soon)
 
+## Template & Example Vehicles
+
+I've provided template Blender files to demonstrate the toolkit & provide rough sizing for vehicles of the supported types. The importer currently supports 3 vehicle types:
+ - [Sedan](https://rushhourresources.s3.amazonaws.com/vehicles/templates/SedanTemplate.blend)
+ - [4x4](https://rushhourresources.s3.amazonaws.com/vehicles/templates/4x4Template.blend)
+ - [Box Truck](https://rushhourresources.s3.amazonaws.com/vehicles/templates/BoxTruckTemplate.blend)
+
 ## Installing the Blender Addon
 
 The addon currently supports the 2 current LTS releases, and the latest stable release of Blender. 2.93, 3.3 & 3.5
