@@ -95,6 +95,8 @@ The default settings will create a much better approximation of the body than th
 
 ![The New Body Shape]({{ site.url }}/assets/products/rushhour/documentation/vehicleimporter/Untitled%209.png){: .enable-lightbox}
 
+You want to ensure this new body doesn't extend too low, especially on vehicles that already are low or have soft suspension. A body that is too low will cause the vehicle to body to collide with the ground, which will cause the vehicle to bounce around.
+
 ### The Wheels
 
 You can all the wheels in one go. This is where the decimated proxy mesh from the Blender addon really makes a big difference and why you want the wheels to be relatively well shaped.
