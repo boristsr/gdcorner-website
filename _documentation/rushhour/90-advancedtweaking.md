@@ -7,9 +7,13 @@ product-type: Tool
 product: rushhour
 ---
 
-Rush Hour tries to be as flexible as possible, while hiding the complexity of tweaking AI parameters. It is a difficult balance to be a simple interface, but allow indepth tweaking for fine grained artistic control. Sometimes though there are cases where you want to tweak the AI behavior in a way that is not possible with the current UI. Here are some notes on how to do so.
+## Advanced Tweaking Only - Not Usually Required
 
-This article describes how to access the data tables that Rush Hour uses to store the AI parameters. The way these parameters affect driving and what variables are available may change as the driving algorithm is improved.
+Occasionally, there are cases where you want to tweak the AI behavior in a way that is impossible with the current UI. Rush Hour tries to be as flexible as possible, while hiding the complexity of tweaking AI parameters. It is a difficult balance to provide a simple interface, while allowing in-depth tweaking for fine-grained artistic control.
+
+For the adventurous among you, here are some notes on how to dive deep into tweaking the AI and vehicles. This article describes how to access the data tables that Rush Hour uses to store the AI parameters. The way these parameters affect driving and what variables are available may change as the driving algorithm is improved between plugin versions.
+
+## Here Be Dragons
 
 ## IMPORTANT: When Upgrading Rush Hour
 
