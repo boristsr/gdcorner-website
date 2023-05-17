@@ -33,6 +33,8 @@ The information recorded about vehicle training and how vehicles performed is st
 
 The information on how each driver profile behaves is stored in a struct called UDriverProfileParameters. The fields of the struct have relatively detailed tooltips to indicate what they are used for and how they affect driving.
 
+There are 3 custom driver profiles that you can edit without affecting the main driver profiles.
+
 ![DT_DriverProfiles]({{ site.url }}/assets/products/rushhour/documentation/advancedtuning/dt_driverprofiles.png){: .enable-lightbox}
 
 ## Data Tables Locations
