@@ -15,6 +15,8 @@ For the adventurous among you, here are some notes on how to dive deep into twea
 
 ## Here Be Dragons
 
+It's easy to mess up the driving characteristics when changing these parameters. As discussed below, you should not work on the plugin data tables but only on copies within your project folder. If anything goes wrong, you can copy the data table from the plugin again. Otherwise, you will need to reinstall the plugin to get the original data tables back.
+
 ## IMPORTANT: When Upgrading Rush Hour
 
 - Make sure to backup the current plugin version
