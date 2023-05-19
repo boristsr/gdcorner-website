@@ -5,6 +5,7 @@ comments: true
 version: 1.0
 product-type: Tool
 product: rushhour
+youtube_id: kkanLZX6apU
 ---
 
 ## Blender toolkit
