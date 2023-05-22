@@ -83,6 +83,10 @@ The addon will try and compensate for some of these problems, but it’s more re
 
   ![Apply Scale]({{ site.url }}/assets/products/rushhour/documentation/blenderaddon/Untitled%2010.png)
 
+- Remove any parent settings on any meshes by selecting all meshes by pressing `A` on your keyboard, then go to the `Object` menu, -> `Parent` -> `Clear and Keep Transform`
+
+  ![Clear Parents and Keep Transform]({{ site.url }}/assets/products/rushhour/documentation/blenderaddon/blender-clear-parents.png)
+
 ## Preparing a vehicle
 
 Click into your viewport and **press `N`** on your keyboard to bring up the viewport menu
