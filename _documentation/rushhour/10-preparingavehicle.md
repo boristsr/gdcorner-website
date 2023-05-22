@@ -47,7 +47,7 @@ After it is installed, ensure it is activated by ticking the check box.
 
 ![Activate Rush Hour Unreal Vehicle Toolkit addon]({{ site.url }}/assets/products/rushhour/documentation/blenderaddon/03-activateaddon.png)
 
-## Before your start
+## Before You Start
 
 There are a few requirements for your vehicle before we start using the toolkit.
 
