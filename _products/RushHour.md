@@ -22,8 +22,6 @@ It's a little like instructing a stunt driver to perform in your scene. An AI wi
 
 <!--more-->
 
-***Version 1.2.0 is submitted and currently pending review on the marketplace. It will be available shortly. Early Access is available via a private GitHub repo. See Discord for more information.***
-
 **Rush Hour is an Epic MegaGrant Recipient!**
 
 {% include youtube.html video="oLmzXz_xdcw" %}
