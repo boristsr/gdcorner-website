@@ -114,6 +114,8 @@ You can see this generates much more accurate shapes for the wheels.
 
 ![Regenerated Shapes]({{ site.url }}/assets/products/rushhour/documentation/vehicleimporter/Untitled%2012.png){: .enable-lightbox}
 
+I encourage you at this stage to look through the `BP_<NewVehicleName>` and ensure that all materials are assigned, that there are no obvious defects in the mesh and that it looks as you would expect. Doing this now before training will save some time if you need to fix anything up.
+
 Now you will need to train the vehicle as normal through the Vehicle Trainer.
 
 ## Integrating a custom vehicle pipeline
