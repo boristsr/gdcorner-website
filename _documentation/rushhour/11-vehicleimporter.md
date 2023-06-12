@@ -152,6 +152,8 @@ Ensure you have moved the brake calipers into the correct collection in Blender.
 
 ### Vehicle Controls or Trains Poorly
 
+In Rush Hour 1.2 in UE 5.1 & 5.2, there is a bug where "Use Legacy Wheel Friction Position" is not preserved in new vehicles. Ensure this is enabled on the newly imported vehicle in the VehicleMovementComponent.
+
 Try lowering the `Center Of Mass Offset` on the Mesh component in the `BP_<VehicleName>` Blueprint
 
 Open the Blueprint
