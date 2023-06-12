@@ -82,6 +82,10 @@ Open this asset and lets recreate the bodies.
 
 The default bodies created are not suitable for driving. We’ll quickly recreate these.
 
+### The brake calipers
+
+Select and delete the brake caliper bodies by clicking on them and then pressing Delete on the keyboard. These bodies will cause the brake calipers to rotate incorrectly.
+
 ### The Body
 
 Select the body bone on the left under Skeleton Tree
@@ -142,7 +146,13 @@ This should show any error messages for issues encountered.
 
 Ensure you configured the Physics Asset.
 
+### The brake calipers are poking through the wheels and rotating
+
+Ensure you have moved the brake calipers into the correct collection in Blender. If this is still happening, ensure you deleted the bodies associated with the Brake Calipers in the Physics Asset.
+
 ### Vehicle Controls or Trains Poorly
+
+In Rush Hour 1.2 in UE 5.1 & 5.2, there is a bug where "Use Legacy Wheel Friction Position" is not preserved in new vehicles. Ensure this is enabled on the newly imported vehicle in the VehicleMovementComponent.
 
 Try lowering the `Center Of Mass Offset` on the Mesh component in the `BP_<VehicleName>` Blueprint
 
