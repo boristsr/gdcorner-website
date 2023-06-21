@@ -19,7 +19,8 @@ The light interface can be implemented as a [Blueprint Interface](https://docs.u
 
 The included vehicles include an example implementation as a component `BP_RH_Vehicle_Lights_Control_Component`. This simply does a search over the vehicle mesh to find matching Materials, and then swaps them for Dynamic Material Instances. These Dynamic Material Instances can then have parameters adjusted at runtime to change light intensity.
 
+The included example implementation relies on materials controlling their emissive property via a property called "OnAmount". This allows the example component to turn lights on or off by setting the "OnAmount" property to 0 or 1. There is one edge condition on the brake lights, where the `OnAmount` is set to 0.3 when the vehicle is in Reverse gear.
+
 ## Limitations
 
-* Currently sequence recorder and take recorder do not record the light state. I'm exploring ways to enable this on the included vehicles, but I expect it will require some changes if you handle lights in a different way.
-* The light interface has functions exposed for controlling all kinds of lights, however Rush Hour only controls brake lights and reversing lights currently.
+* The light interface and included example have functions exposed for controlling all kinds of lights. However, Rush Hour only controls brake lights and reversing lights currently. You can set the other properties via blueprints or sequencer.
