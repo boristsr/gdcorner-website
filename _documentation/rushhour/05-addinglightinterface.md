@@ -5,6 +5,7 @@ comments: true
 version: 1.0
 product-type: Tool
 product: rushhour
+youtube_id: YrnE-N91e30
 ---
 
 ## Vehicle Light Interface
@@ -19,7 +20,7 @@ The light interface can be implemented as a [Blueprint Interface](https://docs.u
 
 The included vehicles include an example implementation as a component `BP_RH_Vehicle_Lights_Control_Component`. This simply does a search over the vehicle mesh to find matching Materials, and then swaps them for Dynamic Material Instances. These Dynamic Material Instances can then have parameters adjusted at runtime to change light intensity.
 
-The included example implementation relies on materials controlling their emissive property via a property called "OnAmount". This allows the example component to turn lights on or off by setting the "OnAmount" property to 0 or 1. There is one edge condition on the brake lights, where the `OnAmount` is set to 0.3 when the vehicle is in Reverse gear.
+The included example implementation relies on materials controlling their emissive property via a property called "OnAmount". This allows the example component to turn lights on or off by setting the "OnAmount" property to 0 or 1. There is one edge condition on the brake lights, where the `OnAmount` is set to 0.3 when the headlights are on.
 
 ## Limitations
 
