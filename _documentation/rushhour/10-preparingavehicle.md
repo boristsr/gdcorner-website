@@ -25,7 +25,7 @@ I've provided template Blender files to demonstrate the toolkit & provide rough 
 
 ## Installing the Blender Addon
 
-The addon currently supports the 2 current LTS releases, and the latest stable release of Blender. 2.93, 3.3 & 3.5
+The addon currently supports the current LTS releases and the latest stable release of Blender. 2.93 LTS, 3.3 LTS, 3.5, & 3.6 LTS.
 
 Download the latest release from here [https://github.com/GDCorner/RushHourVehicleToolkit/releases/latest](https://github.com/GDCorner/RushHourVehicleToolkit/releases/latest)
 
