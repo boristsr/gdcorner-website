@@ -32,6 +32,7 @@ It's a little like instructing a stunt driver to perform in your scene. An AI wi
 * 5 Driver profiles (Precision, Racer, Frantic, Slowpoke, Sunday Driver)
 * Profile strength setting to fine-tune how the driver should behave
 * Three vehicles included (Sedan, Box Truck, and 4x4)
+* Easy Vehicle Importer to simplify the process of creating Chaos Vehicles.
 * MPH and KPH support
 * PhysX and Chaos vehicle support
 * Automatic training for precise control of all vehicles
