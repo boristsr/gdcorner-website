@@ -5,8 +5,8 @@ comments: true
 version: 1.0
 product-type: Tool
 product: rushhour
-youtube_id: 25iUDmkg_x8
-video_out_of_date: true
+youtube_id: H2gtUBgdvyE
+video_out_of_date: False
 ---
 
 ## Placing the Path
