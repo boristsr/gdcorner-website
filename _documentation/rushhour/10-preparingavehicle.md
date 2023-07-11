@@ -1,5 +1,5 @@
 ---
-title:  "Preparing a Vehicle with Blender - Rush Hour"
+title:  "Preparing a Vehicle with Blender - Advanced Features - Rush Hour"
 tags: [unreal, unrealengine, ue4, ue5, tool, vehicles, animation, cars, animation, rushhour, blender]
 comments: true
 version: 1.0
