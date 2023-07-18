@@ -13,9 +13,11 @@ On this page you'll find a variety of common issues people face when importing v
 
 Ensure your vehicle is facing `+X`, and the vehicles left side is pointing `+Y` in Blender
 
-## Vehicle flips out on training / Flies away
+## Vehicle flips out on training / Flies away / Launches into outer space
 
-Check your vehicle scale in Blender. Please [watch this video at the 2 minute 30 second mark](https://youtu.be/D5Yt90k7Xww?t=158). You can rescale the vehicle at any time. Just make sure you rescale the `vehicle` collection.
+Check your vehicle scale in Blender. Please [watch this video at the 2 minute 30 second mark](https://youtu.be/D5Yt90k7Xww?t=158) for detailed instructions on how to do this.
+
+You can rescale the vehicle at any time. Just make sure you rescale the `vehicle` collection.
 
 - If you are using simple mode, The `prepped` and `export` collections will be updated once you re-export.
 - If you are using advanced mode, the collections will be updated as you go through the `Prepare`, `Rig` and `Export` steps again.
@@ -37,7 +39,7 @@ If you have prepped brake calipers in Blender, you need to ensure there are no p
     - Open your wheel blueprints, `BP_wheel_...`
     - Reduce the `Suspension Max Raise` and `Suspension Max Drop` values
     - Increase the `Spring Rate`
-    - Compile and Save the asset
+    - `Compile` and `Save` the asset
     - Do this for all wheels
 
 ## The vehicle has too much body roll
