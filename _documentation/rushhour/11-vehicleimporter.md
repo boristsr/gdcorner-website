@@ -132,42 +132,4 @@ If you have a custom vehicle prep pipeline, you can still use the Vehicle Import
 
 ## Troubleshooting
 
-### General Troubleshooting
-
-If you run into trouble, the first step should be to open the Output Log through the Window menu.
-
-![Window -> Output Log]({{ site.url }}/assets/products/rushhour/documentation/vehicleimporter/Untitled%2013.png){: .enable-lightbox}
-
-![The Output Log]({{ site.url }}/assets/products/rushhour/documentation/vehicleimporter/Untitled%2014.png){: .enable-lightbox}
-
-This should show any error messages for issues encountered.
-
-### Vehicle doesn’t sit on ground
-
-Ensure you configured the Physics Asset.
-
-### The brake calipers are poking through the wheels and rotating
-
-Ensure you have moved the brake calipers into the correct collection in Blender. If this is still happening, ensure you deleted the bodies associated with the Brake Calipers in the Physics Asset.
-
-### Vehicle Controls or Trains Poorly
-
-In Rush Hour 1.2 in UE 5.1 & 5.2, there is a bug where "Use Legacy Wheel Friction Position" is not preserved in new vehicles. Ensure this is enabled on the newly imported vehicle in the VehicleMovementComponent.
-
-Try lowering the `Center Of Mass Offset` on the Mesh component in the `BP_<VehicleName>` Blueprint
-
-Open the Blueprint
-
-![Open the Vehicle Blueprint]({{ site.url }}/assets/products/rushhour/documentation/vehicleimporter/Untitled%2015.png){: .enable-lightbox}
-
-If you don’t see a viewport, make sure to press `Open Full Blueprint Editor`
-
-![Open Full Blueprint Editor]({{ site.url }}/assets/products/rushhour/documentation/vehicleimporter/Untitled%2016.png){: .enable-lightbox}
-
-Select the `Mesh` component
-
-![Select the Mesh Component]({{ site.url }}/assets/products/rushhour/documentation/vehicleimporter/Untitled%2017.png){: .enable-lightbox}
-
-Search for `center` in the details panel on the right, and lower the Z component of the `Center Of Mass Offset`
-
-![Center Of Mass Offset]({{ site.url }}/assets/products/rushhour/documentation/vehicleimporter/Untitled%2018.png){: .enable-lightbox}
+[Please see the dedicated page to troubleshooting vehicles that you have imported]({{ site.url }}{% link _documentation/rushhour/80-troubleshooting-vehicle-importer.md %})

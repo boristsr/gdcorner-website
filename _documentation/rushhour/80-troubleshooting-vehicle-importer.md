@@ -22,7 +22,7 @@ Check your vehicle scale in Blender. Please [watch this video at the 2 minute 30
 
 {% include youtube.html video="D5Yt90k7Xww" time=158 %}
 
-## Brake Calipers rotating funny
+## The brake calipers are poking through the wheels and rotating
 
 If you have prepped brake calipers in Blender, you need to ensure there are no physics bodies created for them in Unreal. To do this:
 - Open the Physics Asset, `PHYS_YourVehicleName`
@@ -57,3 +57,24 @@ This needs to be corrected on the Blender/Modeling tool side. On your wheels, pl
 - The wheel is centered on the rim
 - The wheels will rotate on the global Y axis; you can rotate them the same way in your modeling program to verify visually before running through the whole process
 
+### Vehicle doesn’t sit on ground
+
+Ensure you configured the Physics Asset.
+
+### Vehicle Controls or Trains Poorly
+
+Try lowering the `Center Of Mass Offset` on the Mesh component in the `BP_<VehicleName>` Blueprint
+
+- Ensure you click `Open Full Blueprint Editor` if you don’t see the components on the Left
+- Select the `Vehicle Movement Component` and on the details panel on the right, look for `Center Of Mass Override` and reduce this in 5-10cm increments.
+- `Compile` and `Save` your blueprint.
+
+### General Troubleshooting
+
+If you run into trouble, open the Output Log through the Window menu.
+
+![Window -> Output Log]({{ site.url }}/assets/products/rushhour/documentation/vehicleimporter/Untitled%2013.png){: .enable-lightbox}
+
+![The Output Log]({{ site.url }}/assets/products/rushhour/documentation/vehicleimporter/Untitled%2014.png){: .enable-lightbox}
+
+This should show any error messages for issues encountered.
