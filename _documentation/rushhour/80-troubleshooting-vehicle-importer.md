@@ -51,5 +51,5 @@ This needs to be corrected on the Blender/Modelling side. On your wheels, please
 - There is no camber\tilt to the wheel
 - The geometry is uniform all the way around
 - The wheel is centered on the rim
-- The wheels will rotate on the global Y axis; you can rotate them the same way in your modelling program to verify visually before running through the whole process
+- The wheels will rotate on the global Y axis; you can rotate them the same way in your modeling program to verify visually before running through the whole process
 
