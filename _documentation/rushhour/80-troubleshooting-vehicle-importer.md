@@ -9,11 +9,11 @@ product: rushhour
 
 On this page you'll find a variety of common issues people face when importing vehicles with the Rush Hour Vehicle Importer.
 
-## Vehicle attempts to drive sideways
+## Vehicle Attempts to Drive Sideways
 
 Ensure your vehicle is facing `+X`, and the vehicles left side is pointing `+Y` in Blender
 
-## Vehicle flips out on training / Flies away / Launches into outer space
+## Vehicle Flips Out on Training / Flies Away / Launches into Outer Space
 
 Check your vehicle scale in Blender. Please [watch this video at the 2 minute 30 second mark](https://youtu.be/D5Yt90k7Xww?t=158) for detailed instructions on how to do this.
 
@@ -24,7 +24,7 @@ You can rescale the vehicle at any time. Just make sure you rescale the `vehicle
 
 {% include youtube.html video="D5Yt90k7Xww" time=158 %}
 
-## The brake calipers are poking through the wheels and rotating
+## The Brake Calipers Are Poking Through the Wheels and Rotating
 
 If you have prepped brake calipers in Blender, you need to ensure there are no physics bodies created for them in Unreal. To do this:
 - Open the Physics Asset, `PHYS_YourVehicleName`
@@ -32,7 +32,7 @@ If you have prepped brake calipers in Blender, you need to ensure there are no p
 - If there are, please select and delete the brake caliper bodies by pressing `Del` on your keyboard.
 - Save the Physics Asset.
 
-## The vehicle keeps colliding with the ground during training
+## The Vehicle Keeps Colliding with the Ground During Training
 
 - Ensure you have used an appropriate template. Don’t use the 4x4 soft template on a race car for example
 - If the vehicle is particularly low profile you may need to adjust the wheels suspension. Some tips:
@@ -42,7 +42,7 @@ If you have prepped brake calipers in Blender, you need to ensure there are no p
     - `Compile` and `Save` the asset
     - Do this for all wheels
 
-## The vehicle has too much body roll
+## The Vehicle Has Too Much Body Roll
 
 - You can try lowering the center of mass by going to the `BP_YourVehicleName` blueprint
 - Ensure you click `Open Full Blueprint Editor` if you don’t see the components on the Left
@@ -59,11 +59,11 @@ This needs to be corrected on the Blender/Modeling tool side. On your wheels, pl
 - The wheel is centered on the rim
 - The wheels will rotate on the global Y axis; you can rotate them the same way in your modeling program to verify visually before running through the whole process
 
-### Vehicle doesn’t sit on ground
+## Vehicle Doesn’t Sit On The Ground
 
 Ensure you configured the Physics Asset.
 
-### Vehicle Controls or Trains Poorly
+## Vehicle Controls or Trains Poorly
 
 Try lowering the `Center Of Mass Offset` on the Mesh component in the `BP_<VehicleName>` Blueprint
 
@@ -71,7 +71,7 @@ Try lowering the `Center Of Mass Offset` on the Mesh component in the `BP_<Vehic
 - Select the `Vehicle Movement Component` and on the details panel on the right, look for `Center Of Mass Override` and reduce this in 5-10cm increments.
 - `Compile` and `Save` your blueprint.
 
-### General Troubleshooting
+## General Troubleshooting
 
 If you run into trouble, open the Output Log through the Window menu.
 
