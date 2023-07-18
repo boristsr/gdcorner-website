@@ -95,9 +95,9 @@ Sometimes this error is triggered if the steering is reversed on a vehicle. Flip
 
 Vehicles can collide with the ground for a number of reasons:
 
-- the suspension of the vehicle is too soft
-- the vehicles have a lot of heavy body roll
-- the collision models are too large
+- the suspension of the vehicle is too soft - Reduce the weight or tweak the suspension
+- the vehicles have a lot of heavy body roll - Correct the center of mass, perhaps lower it
+- the collision models are too large in the Physics Asset
 
 These factors can cause the vehicle to collide with the ground during hard turning or heavy braking. The solution is to make the suspension stronger, reduce the collision model size, or combine these.
 
