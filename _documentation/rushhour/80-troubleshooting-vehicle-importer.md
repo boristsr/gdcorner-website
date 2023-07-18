@@ -33,8 +33,12 @@ If you have prepped brake calipers in Blender, you need to ensure there are no p
 ## The vehicle keeps colliding with the ground during training
 
 - Ensure you have used an appropriate template. Don’t use the 4x4 soft template on a race car for example
-- If the vehicle is particularly low profile you may need to adjust the wheels suspension.
-    - Open your wheel blueprints and reduce the Rise and Lower
+- If the vehicle is particularly low profile you may need to adjust the wheels suspension. Some tips:
+    - Open your wheel blueprints, `BP_wheel_...`
+    - Reduce the `Suspension Max Raise` and `Suspension Max Drop` values
+    - Increase the `Spring Rate`
+    - Compile and Save the asset
+    - Do this for all wheels
 
 ## The vehicle has too much body roll
 
@@ -45,7 +49,7 @@ If you have prepped brake calipers in Blender, you need to ensure there are no p
 
 ## Wheels are Wobbling
 
-This needs to be corrected on the Blender/Modelling side. On your wheels, please ensure that:
+This needs to be corrected on the Blender/Modeling tool side. On your wheels, please ensure that:
 
 - They are straight
 - There is no camber\tilt to the wheel
