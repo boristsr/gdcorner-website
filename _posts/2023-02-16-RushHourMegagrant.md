@@ -10,9 +10,9 @@ product: rushhour
 youtube_id: oLmzXz_xdcw
 ---
 
-[Rush Hour]({{ site.url }}{% link _products/RushHour.md %}) has received an Epic MegaGrant! [Rush Hour]({{ site.url }}{% link _products/RushHour.md %}) aims to level up real-time workflows for vehicle animation and build on what Unreal Engine already offers. By utilising vehicle AI, similar to what you would find in games, to act as a stunt driver, it reduces the work animators need to put in to get the physics looking correct and instead focus on directing the scene, all from within the same editor where you are building your environment.
+[Rush Hour]({% link _products/RushHour.md %}) has received an Epic MegaGrant! [Rush Hour]({% link _products/RushHour.md %}) aims to level up real-time workflows for vehicle animation and build on what Unreal Engine already offers. By utilising vehicle AI, similar to what you would find in games, to act as a stunt driver, it reduces the work animators need to put in to get the physics looking correct and instead focus on directing the scene, all from within the same editor where you are building your environment.
 
-Thanks to the generous support of Epic Games, [Rush Hour]({{ site.url }}{% link _products/RushHour.md %}) is able to take several major steps forward. This will support the addition of several new features and improve existing aspects.
+Thanks to the generous support of Epic Games, [Rush Hour]({% link _products/RushHour.md %}) is able to take several major steps forward. This will support the addition of several new features and improve existing aspects.
 
 <!--more-->
 

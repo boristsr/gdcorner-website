@@ -25,7 +25,7 @@ The import process on the Unreal side is identical for both modes.
     - Windows drawing in the incorrect order.
     - Nanite only supports 64 materials per mesh, by splitting interior and exterior meshes, you are less likely to run into this limitation.
 
-## Blender toolkit
+## Blender Toolkit
 
 The Vehicle Importer is an optional new workflow to drastically improve the time and effort involved in bringing a new vehicle into Unreal. It produces regular Chaos Vehicles. It consists of 2 parts:
 
@@ -63,3 +63,8 @@ Navigate to where you downloaded the latest version of the addon, and click Inst
 After it is installed, ensure it is activated by ticking the check box.
 
 ![Activate Rush Hour Unreal Vehicle Toolkit addon]({{ site.url }}/assets/products/rushhour/documentation/blenderaddon/03-activateaddon.png)
+
+## Before You Start
+
+ - Ensure your blend file filename doesn’t contain any spaces.
+ - Ensure your model is clean and meets the requirements as defined in the [Vehicle Model Requirements]({% link _documentation/rushhour/08-vehicle-model-requirements.md %}) documentation.

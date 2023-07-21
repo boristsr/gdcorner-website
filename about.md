@@ -18,4 +18,4 @@ Github: [boristsr](https://github.com/boristsr/)
 
 Github: [GDCorner](https://github.com/GDCorner/)
 
-[Privacy Policy]({{ site.url }}{% link privacypolicy.md %})
+[Privacy Policy]({% link privacypolicy.md %})

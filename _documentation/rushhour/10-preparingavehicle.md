@@ -49,43 +49,8 @@ After it is installed, ensure it is activated by ticking the check box.
 
 ## Before You Start
 
-There are a few requirements for your vehicle before we start using the toolkit.
-
-The addon will try and compensate for some of these problems, but it’s more reliable if you address these manually.
-
-- Ensure your blend file filename doesn’t contain any spaces.
-- Ensure your vehicle is facing so the front is looking down the `+X` axis, and `+Y` is left.
-
-![Vehicle should face forwards +X, and Left +Y]({{ site.url }}/assets/products/rushhour/documentation/blenderaddon/04-vehicleorientation.png)
-
-- Ensure all your geometry parts are separate meshes
-  - The wheels are required to be separate meshes for rigging
-  - If you are going to be using tyre deformation, or need your brake calipers to be correct you should ensure the wheels are separated appropriately.
-  - Any transparent objects are separated if using nanite
-  - The windows are separated by interior and exterior to avoid z-fighting issues and avoid windows drawing in the wrong order in Unreal.
-- Ensure all your normals are facing the correct way with the face orientation overlay
-  - Make sure all visible surfaces are blue. If they are red they won’t appear, or will appear “inside-out” in Unreal.
-
-![Activate Face Orientation Overlay]({{ site.url }}/assets/products/rushhour/documentation/blenderaddon/Untitled%205.png)
-
-![Face Orientation Overlay in action]({{ site.url }}/assets/products/rushhour/documentation/blenderaddon/Untitled%206.png)
-
-  - If you do have inverted normals, select the mesh, go into edit mode, select all faces, and then go to the Mesh menu, Normals, Flip Normals.
-
-![Edit Mode]({{ site.url }}/assets/products/rushhour/documentation/blenderaddon/Untitled%207.png)
-
-![Select all]({{ site.url }}/assets/products/rushhour/documentation/blenderaddon/Untitled%208.png)
-
-![Flip Normals]({{ site.url }}/assets/products/rushhour/documentation/blenderaddon/Untitled%209.png)
-
-- Ensure you aren’t using negative scales on any meshes.
-  - If you have negative scales, apply the scale transform by selecting the object, and going to the object menu, Apply, Scale.
-
-  ![Apply Scale]({{ site.url }}/assets/products/rushhour/documentation/blenderaddon/Untitled%2010.png)
-
-- Remove any parent settings on any meshes by selecting all meshes by pressing `A` on your keyboard, then go to the `Object` menu, -> `Parent` -> `Clear and Keep Transform`
-
-  ![Clear Parents and Keep Transform]({{ site.url }}/assets/products/rushhour/documentation/blenderaddon/blender-clear-parents.png)
+ - Ensure your blend file filename doesn’t contain any spaces.
+ - Ensure your model is clean and meets the requirements as defined in the [Vehicle Model Requirements]({% link _documentation/rushhour/08-vehicle-model-requirements.md %}) documentation.
 
 ## Preparing a vehicle
 
@@ -134,6 +99,7 @@ The unprepped vehicle remains intact and untouched, so you may see flickering, o
 ![Car offset when prepped due to centering]({{ site.url }}/assets/products/rushhour/documentation/blenderaddon/Untitled%2021.png)
 
 If any errors come up, please see the troubleshooting at the bottom to get a clearer read out of any errors, so you can correct them before moving on.
+
 
 ### Rigging a vehicle for Unreal
 
