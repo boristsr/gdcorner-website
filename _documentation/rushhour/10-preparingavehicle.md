@@ -19,13 +19,13 @@ The Vehicle Importer is an optional new workflow to drastically improve the time
 
 I've provided template Blender files to demonstrate the toolkit & provide rough sizing for vehicles of the supported types. The importer currently supports 3 vehicle types:
 
-- [Sedan](https://rushhourresources.s3.amazonaws.com/vehicles/templates/SedanTemplate.blend)
-- [4x4](https://rushhourresources.s3.amazonaws.com/vehicles/templates/4x4Template.blend)
-- [Box Truck](https://rushhourresources.s3.amazonaws.com/vehicles/templates/BoxTruckTemplate.blend)
+- [Sedan](https://rushhourresources.s3.amazonaws.com/v1.4.0/SedanTemplate.blend)
+- [4x4](https://rushhourresources.s3.amazonaws.com/v1.4.0/4x4Template.blend)
+- [Box Truck](https://rushhourresources.s3.amazonaws.com/v1.4.0/BoxTruckTemplate.blend)
 
 ## Installing the Blender Addon
 
-The addon currently supports the current LTS releases and the latest stable release of Blender. 2.93 LTS, 3.3 LTS, 3.5, & 3.6 LTS.
+The addon currently supports the current LTS releases Blender, with other versions being "best efforts". The current versions supported are: 3.3 LTS & 3.6 LTS.
 
 Download the latest release from here [https://github.com/GDCorner/RushHourVehicleToolkit/releases/latest](https://github.com/GDCorner/RushHourVehicleToolkit/releases/latest)
 
