@@ -13,9 +13,11 @@ video_out_of_date: False
 
 Find the actor by pressing the "Quickly Add" button in the top left. Go To All Actors and search for "vehicle".
 
-![Find Vehicle Animation Path actor]({{ site.url }}/assets/products/rushhour/documentation/placepath/placeactor-find.png){: .enable-lightbox}
+![Find Rush Hour Path actor]({{ site.url }}/assets/products/rushhour/documentation/placepath/placeactor-find.png){: .enable-lightbox}
 
-Drag the Vehicle Animation Path actor to where you'd like your path to start. Then rotate so the line is pointing in the starting direction.
+Please note that as of Rush Hour 1.4, the Vehicle Animation Path actor is now called Rush Hour Path.
+
+Drag the Rush Hour Path actor to where you'd like your path to start. Then rotate so the line is pointing in the starting direction.
 
 ![Place and Rotate]({{ site.url }}/assets/products/rushhour/documentation/placepath/placeactor-rotate.png){: .enable-lightbox}
 
@@ -168,6 +170,8 @@ If you select a waypoint, you can expand "Selected Points" and "Vehicle Path" in
 * **Stop** The vehicle will stop at this waypoint.
 * **Continue** The vehicle will continue through this waypoint.
 * **StopWaitGo** The vehicle will stop at this point, wait for the specified wait time, and then start again
+* **Tap Handbrake** The vehicle will tap the handbrake and apply a steering override for a specified time
+* **StopDestroy** The vehicle will stop at this point, wait a specified time, and then be destroyed.
 
 ### Speed
 
@@ -180,6 +184,14 @@ How long to wait at this point before starting.
 ### Stop Hardness
 
 This is how hard the vehicle should stop at this waypoint. It's a "unitless" value, and is just a hint. Generally less than 1 will produce slow steady stops as if stopping casually at a set of traffic lights, while greater than 1 will lead to full lock ups. The harder the stop, the more likely the vehicle is to overshoot the stopping point. I plan to reduce overshoot in a future patch.
+
+### Tap Handbrake Duration
+
+This is how long the handbrake will be applied for. There is a slight ramp up and ramp down time applied of about 0.15 seconds, so I wouldn't set this below around 0.3 seconds.
+
+### Tap Handbrake Steering Override
+
+This is the steering input that will be applied during the handbrake maneuver. -1.0 is turn the steering wheel all the way left, and +1.0 is turn the steering wheel all the way right. The ramp up and down time descibed in the Handbrake Duration section applies to this, so it isn't an instant snap of the steering.
 
 ## Starting a Vehicle with Blueprints
 
