@@ -51,7 +51,7 @@ You will then be presented with the Import menu.
 
 - **Import Materials** - This imports very basic materials from the FBX files. The plugin always searches in the project for matching materials first, before then optionally importing basic materials.
 - **Import Textures** - This imports textures specified in the FBX files. Can be useful if you need to recreate materials in Unreal.
-- **Use Nanite** - This enables nanite on all the imported static meshes.
+- **Use Nanite** - This enables nanite on all the imported static meshes, except windows and transparent meshes. **NOTE** Nanite will automatically be *disabled* if a material that is incompatible is assigned to the mesh. This prevents Unreal from silently displaying the fallback mesh.
 - **Assign Rush Hour Materials** - By default the Rush Hour plugin isn’t scanned for materials to assign. This make sure to look for matching materials in the Rush Hour plugin directory.
 - **Cleanup Unused Assets** - This deletes unused materials and textures that were imported. This is experimental and may cleanup all imported materials and textures regardless of their usage. For this reason it’s disabled by default.
 - **Vehicle Type** - Choose the vehicle template that closest matches the vehicle you are importing. This is just a starting point, and you are free to tweak all vehicle configuration after the fact as it’s just a regular Chaos Vehicle.
