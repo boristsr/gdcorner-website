@@ -7,5 +7,35 @@
         "ogimage",
         "raspbian",
         "systemctl"
+    ],
+    "frontMatter.content.pageFolders": [
+        {
+            "title": "rushhour-docs",
+            "path": "[[workspace]]/_documentation/rushhour"
+        },
+        {
+            "title": "rushhour-releasenotes",
+            "path": "[[workspace]]/_documentation/rushhour/releasenotes"
+        },
+        {
+            "title": "_posts",
+            "path": "[[workspace]]/_posts"
+        },
+        {
+            "title": "posts-jenkins-home-lab",
+            "path": "[[workspace]]/_posts/jenkins-home-lab"
+        },
+        {
+            "title": "_products",
+            "path": "[[workspace]]/_products"
+        },
+        {
+            "title": "_projects",
+            "path": "[[workspace]]/_projects"
+        },
+        {
+            "title": "assets-posts",
+            "path": "[[workspace]]/assets/posts"
+        }
     ]
 }
