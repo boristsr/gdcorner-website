@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How Good Are 3D Printer Filaments In The Sun?"
+title:  "How Does Color Affect 3D Printer Filament Strength In The Sun?"
 date:   2024-02-20 14:16:13 +1100
 tags: [maker, telescope, 3dprinting]
 comments: true
