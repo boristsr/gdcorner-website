@@ -104,13 +104,13 @@ The white prints however, were ALWAYS under 50C (122f). There was 1 reading at 4
 
 To further highlight the difference it can be useful to not just directly compare the absolute temperatures, but also the temperature over ambient. In this case the white prints were about 10C degrees above ambient temperature, while the black printers were 40C degrees over ambient! This means that the black samples absorbed 4 times the energy!
 
-[https://phys.libretexts.org/Bookshelves/College_Physics/College_Physics_1e_(OpenStax)/14%3A_Heat_and_Heat_Transfer_Methods/14.02%3A_Temperature_Change_and_Heat_Capacity](https://phys.libretexts.org/Bookshelves/College_Physics/College_Physics_1e_(OpenStax)/14%3A_Heat_and_Heat_Transfer_Methods/14.02%3A_Temperature_Change_and_Heat_Capacity)
+[More info on heat transfer and temperature change](https://phys.libretexts.org/Bookshelves/College_Physics/College_Physics_1e_(OpenStax)/14%3A_Heat_and_Heat_Transfer_Methods/14.02%3A_Temperature_Change_and_Heat_Capacity)
 
 ## Long Term UV Damage
 
 This test obviously only tested the strength of the filament due to temperature changes from sunlight, in the long term you’ll also have UV radiation aging and degrading the plastic, as well as fading colours. This is a separate problem, and I suspect both filaments would be damaged by this, although PETG is reportedly significantly more UV resistant. A coating of paint, especially a paint designed for exterior use, would help significantly for protection against UV in any case.
 
-https://www.filamentive.com/best-3d-printing-filament-for-outdoors-uv-resistance-guide/
+[More info on UV resistance](https://www.filamentive.com/best-3d-printing-filament-for-outdoors-uv-resistance-guide/)
 
 ## Conclusion
 
