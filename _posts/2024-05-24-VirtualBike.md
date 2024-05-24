@@ -59,9 +59,9 @@ I wanted the setup process to be dead simple for the rider. By just relying on U
 
 There are no IPs hardcoded into the microcontroller, it just assumes that you are on a standard /24 network with the broadcast address being x.x.x.255. It takes the current IP obtained via DHCP and replaces the final octet with 255. This means that on basically any home network it will broadcast the packets to all PCs. PCs that aren’t listening for the packets will just discard it.
 
-For the video player on the laptop I just used the old faithfuls of Python, PyGame and OpenCV. PyGame is used for the presentation of the video, and OpenCV is used for its FFMpeg wrapper allowing decoding of all sorts of videos. I did hardcode some limits into the player, the player expects 720p videos, but supports any FPS (tested with 30 and 60fps), and codecs don’t seem to be too picky. I tested with h264 and h265 videos.
+For the video player on the laptop I just used the old faithfuls of [Python](https://www.python.org/), [PyGame](https://www.pygame.org/) and [OpenCV](https://opencv.org/). PyGame is used for the presentation of the video, and [OpenCV](https://opencv.org/) is used for its [FFMpeg](https://ffmpeg.org/) integration allowing decoding of all sorts of videos. I did hardcode some limits into the player, the player expects 720p videos, but supports any FPS (tested with 30 and 60fps), and codecs don’t seem to be too picky. I tested with h264 and h265 videos.
 
-For every pedal received it bumps the target playrate up. The target playrate is decayed over time towards zero. The actual playrate is then slowly adjusted over time towards the target playrate which gives a much smoother, more naturally changing video playback speed.
+For every pedal received it bumps the target playrate up. The target playrate is decayed over time towards zero. The actual playrate is then slowly adjusted over time towards the target playrate which gives a much smoother, more naturally changing video playback speed. This means adjustments are not jerky, and it gives that "coasting to slow down" effect.
 
 The circles on the right side of the screen show the play rate. The green circle is the target of 1x speed playback, and the red circle is the current play rate. These were initially added as a debug view however they ended up being a nice visual feedback for the rider, so they stayed!
 
@@ -71,7 +71,7 @@ I’m happy with the results of the software, it has enough features implemented
 
 ## Finding videos
 
-There are a huge number of creators on YouTube who do walking tours of picturesque or historic places, some favourites are [Follow Matty](https://www.youtube.com/@FollowMatty) and [Dave's Walks](https://www.youtube.com/@DavesWalks). I downloaded some videos of areas of sentimental meaning to my family member using [YT-DLP](https://github.com/yt-dlp/yt-dlp) and converted them with Handbrake to 720p, h265, CRF29, leaving the frame rate the same as the original, using constant framerate, not variable framerate. This meant that the videos are reasonably good quality while not taking up a huge amount of space. Most of the quality loss is not important since the screen is a bit of a distance away and while pedalling you are rocking a little bit.
+There are a huge number of creators on YouTube who do walking tours of picturesque or historic places, some favourites are [Follow Matty](https://www.youtube.com/@FollowMatty) and [Dave's Walks](https://www.youtube.com/@DavesWalks). I downloaded some videos of areas of sentimental meaning to my family member using [YT-DLP](https://github.com/yt-dlp/yt-dlp) and converted them with [Handbrake](https://handbrake.fr/) to 720p, h265, CRF29, leaving the frame rate the same as the original, using constant framerate, not variable framerate. This meant that the videos are reasonably good quality while not taking up a huge amount of space. Most of the quality loss is not important since the screen is a bit of a distance away and while pedalling you are rocking a little bit.
 
 ## Power Reduction
 
