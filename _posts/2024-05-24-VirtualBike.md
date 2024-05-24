@@ -4,7 +4,7 @@ title:  "Turning a Mini Exercise Bike into a Virtual Bike!"
 date:   2024-05-24 11:16:13 +1100
 tags: [maker, telescope, 3dprinting]
 comments: true
-image: "/assets/posts/2024-02-20-PrintFilamentsSun/og-thumb.jpeg"
+image: "/assets/posts/2024-05-24-VirtualBike/ogthumb.jpg"
 categories: blog
 youtube_id: 4pHFzt2iPx4
 ---
@@ -18,24 +18,28 @@ Where possible we tried to use parts we already had laying around and avoid new 
 
 <!--more-->
 
-!!! COVER IMAGE !!!
-
 ## Exploring the bike
 
 Originally I had the idea of attaching 1 or more magnets and using a hall effect sensor to monitor the rotation speed of the bike that way, but when I pulled off the trip computer to look how it works I noticed on the internal wheel there was already a magnet attached. Looking at the trip computer there was a tube that sits next to the magnet. Pulling this off and checking it on a multimeter in continuity test mode showed that it’s just a magnetic switch. This meant that I could use the existing mechanism, and we could just rebuild the housing and put in the custom trip computer.
 
-!!!!!!!!!!!!!!!!!!!!IMAGES!!!!!!!!!!!!!!!!!!!
+![Original Trip Computer](/assets/posts/2024-05-24-VirtualBike/originaltripcomputer_1.jpg){: .enable-lightbox}
+![Original Trip Computer](/assets/posts/2024-05-24-VirtualBike/originaltripcomputer_2.jpg){: .enable-lightbox}
+
+
 The small silver circle you can see is a magnet on the internal wheel.
-!!!!!!!!!!!!!!!!!!!!IMAGES!!!!!!!!!!!!!!!!!!!
+
+![Magnet on Internal Wheel](/assets/posts/2024-05-24-VirtualBike/wheelmagnet.jpg){: .enable-lightbox}
 
 ## Designing the case
+
 My brother was in charge of the case. The first order of business was to match the socket the original computer sits in. This meant that mounting the trip computer is very easy and requires no modification to the main bike casing.
 
 The original goal was to be as small as possible, but this ended up being quite frustrating to iterate on. The final design ends up quite bulky, but fits neatly on the bike and doesn’t get in the way of the rider. To help with durability as we iterated the build he used heat-press inserts which make it so screws don’t damage the plastic on repeated assembly
 
 The final design is easy to print, easy to work in and easy to assemble.
 
-!!!!!!!!!!!!!!!!!!!!IMAGES!!!!!!!!!!!!!!!!!!!
+![Final Build](/assets/posts/2024-05-24-VirtualBike/newtripcomputer_assembled_1.jpg){: .enable-lightbox}
+![Final Build](/assets/posts/2024-05-24-VirtualBike/newtripcomputer_assembled_2.jpg){: .enable-lightbox}
 
 ## Designing the Trip Computer
 
@@ -49,7 +53,7 @@ When powering the adjusting the output voltage 5.0v seemed to work but the WiFi 
 
 The prototyping PCB and the headers aren’t strictly necessary but it gave good mounting options in the case, and made it really easy to replace the T-Display when I accidentally fried one. **Note: DO NOT CONNECT BATTERY AND USB AT THE SAME TIME!**
 
-!!!!!!!!!!!!!!!!!!!!IMAGES!!!!!!!!!!!!!!!!!!!
+![Build](/assets/posts/2024-05-24-VirtualBike/newtripcomputerbuild_1.jpg){: .enable-lightbox}
 
 ## Designing the software
 
@@ -105,7 +109,7 @@ Parts (All prices in Australian Dollars - AUD):
 | Wire, M3 screws, filament, heat press inserts, odds and ends                   |                  |         |             |
 |                                                                                |                  |         |             |
 |                                                                                |                  |         |             |
-| Total                                                                          |                  |         | $102.62 AUD |
+| **Total**                                                                          |                  |         | **$102.62 AUD** |
 |                                                                                |                  |         | ~$70 USD |
 
 ### Assembly Instructions
@@ -120,12 +124,17 @@ Parts (All prices in Australian Dollars - AUD):
     1. I only had 10 pin female headers so I offset them diagonally to better support the T-Display board
     1. We have assembled 3 of these now, some of the original trip computers had a JST connector to disconnect the magnetic switch, some we had to cut the wires and add our own JST connector.
 1. Flash the firmware to the T-Display as the USB port will be inaccessible once in the case
+    - **Note: DO NOT CONNECT BATTERY AND USB AT THE SAME TIME!**
 1. You can test the firmware by running a magnet past the switch/probe before assembly
 1. Install into case as shown in picture
-1. Put kapton tape over anything you fear might short, such as over the switch where the battery will sit below.
+1. Put kapton or electrical tape over anything you fear might short, such as over the switch where the battery will sit below.
 1. Make sure you mount the magnetic switch as low as possible in the case so it is as close as possible to the magnet on the internal resistance wheel of the bike. You may need to test this a few times to get it right. Spin the pedals and see if the counter goes up on the screen.
 
-!!!!!!!!!!!!!!!!!!!!IMAGES!!!!!!!!!!!!!!!!!!!
+![T-Display Headers Offset](/assets/posts/2024-05-24-VirtualBike/tdisplayheaders.jpg){: .enable-lightbox}
+![T-Display Headers Offset](/assets/posts/2024-05-24-VirtualBike/tdisplayheaders2.jpg){: .enable-lightbox}
+![Assembled Internals](/assets/posts/2024-05-24-VirtualBike/newtripcomputerbuild_2.jpg){: .enable-lightbox}
+![Circuit Diagram](/assets/posts/2024-05-24-VirtualBike/kicad_diagram.png){: .enable-lightbox}
+
 
 ### Connections:
 
