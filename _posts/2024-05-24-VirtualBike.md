@@ -122,7 +122,7 @@ Parts:
 1. You can test the firmware by running a magnet past the switch/probe before assembly
 1. Install into case as shown in picture
 1. Put kapton tape over anything you fear might short, such as over the switch where the battery will sit below.
-1. Make sure you mount the magnetic switch as low as possible in the case so it is as close as possible to the magnet on the internal resistance wheel of the bike
+1. Make sure you mount the magnetic switch as low as possible in the case so it is as close as possible to the magnet on the internal resistance wheel of the bike. You may need to test this a few times to get it right. Spin the pedals and see if the counter goes up on the screen.
 
 !!!!!!!!!!!!!!!!!!!!IMAGES!!!!!!!!!!!!!!!!!!!
 
