@@ -2,7 +2,7 @@
 layout: post
 title:  "Turning a Mini Exercise Bike into a Virtual Bike!"
 date:   2024-05-24 11:16:13 +1100
-tags: [maker, telescope, 3dprinting]
+tags: [maker, electronics, microcontroller, python, arduino, esp32, 3dprinting]
 comments: true
 image: "/assets/posts/2024-05-24-VirtualBike/ogthumb.jpg"
 categories: blog
