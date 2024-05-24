@@ -89,7 +89,7 @@ Code: [https://github.com/boristsr/VirtualBikeRides](https://github.com/boristsr
 
 Prints: [https://www.printables.com/model/875892-mini-exercise-bike-esp32-virtual-convertion](https://www.printables.com/model/875892-mini-exercise-bike-esp32-virtual-convertion)
 
-Parts:
+Parts (All price in Australian Dollars AUD):
 
 | **Item Name**                                                                  | **Model Number** | **Qty** | **Price**   |
 |--------------------------------------------------------------------------------|------------------|---------|-------------|
@@ -106,6 +106,7 @@ Parts:
 |                                                                                |                  |         |             |
 |                                                                                |                  |         |             |
 | Total                                                                          |                  |         | $102.62 AUD |
+|                                                                                |                  |         | ~$70 USD |
 
 ### Assembly Instructions
 
