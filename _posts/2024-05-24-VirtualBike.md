@@ -89,7 +89,7 @@ Code: [https://github.com/boristsr/VirtualBikeRides](https://github.com/boristsr
 
 Prints: [https://www.printables.com/model/875892-mini-exercise-bike-esp32-virtual-convertion](https://www.printables.com/model/875892-mini-exercise-bike-esp32-virtual-convertion)
 
-Parts (All price in Australian Dollars AUD):
+Parts (All prices in Australian Dollars - AUD):
 
 | **Item Name**                                                                  | **Model Number** | **Qty** | **Price**   |
 |--------------------------------------------------------------------------------|------------------|---------|-------------|
