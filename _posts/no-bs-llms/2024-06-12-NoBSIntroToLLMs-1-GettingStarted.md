@@ -4,7 +4,7 @@ title:  "#1 - Getting Started - No BS Intro To Developing with LLMs"
 date:   2024-06-12 13:29:13 +1100
 tags: [ubuntu, llms, rag, no-bs, python, llama.cpp]
 comments: true
-image: "/assets/posts/jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents/jenkins-p2-ogimage.png"
+image: "/assets/posts/no-bs-llms/no-bs-llms-ogimage.png"
 description: "A No BS guide to getting started developing with LLMs. We'll cover the jargon, terms, and get a model running locally. We'll also cover the different model formats, and how to convert and quantize a model."
 categories: blog
 menubar_toc: true

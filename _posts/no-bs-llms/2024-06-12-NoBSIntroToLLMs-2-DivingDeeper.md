@@ -4,7 +4,7 @@ title:  "#2 - Diving Deeper! - No BS Intro To Developing with LLMs"
 date:   2024-06-12 15:20:13 +1100
 tags: [ubuntu, llms, rag, no-bs, python, llama.cpp]
 comments: true
-image: "/assets/posts/jenkins-home-lab/2019-12-28-JenkinsHomeLab-P2-LinuxAgents/jenkins-p2-ogimage.png"
+image: "/assets/posts/no-bs-llms/no-bs-llms-ogimage.png"
 description: "The second part of the No BS guide to getting started developing with LLMs. We'll explore connecting to an LLM host via a network API, using streaming for responses, usage statistics, generation settings, chat templates, and system prompts."
 categories: blog
 menubar_toc: true
