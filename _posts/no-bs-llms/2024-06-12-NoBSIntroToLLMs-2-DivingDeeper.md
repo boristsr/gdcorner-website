@@ -11,7 +11,7 @@ menubar_toc: true
 series: no_bs_llms
 ---
 
-Welcome back to the No BS exploration of LLMs. I hope you are excited to dive in once again. This article is a bit shorter as we have got over the initial learning hump of the models, runtimes and lots of the jargon involved in getting up to speed.
+Welcome back to the No BS exploration of LLMs! I'm excited to dive in once again. This article is a bit shorter as we have got over the initial learning hump of the models, runtimes and lots of the jargon involved in getting up to speed.
 
 In this article we’ll explore connecting to an LLM host via a nework API, then we will begin using streaming for our responses so we can start showing the user information sooner. After that we’ll explore usage statistics and generation settings so we can tune the LLM responses a little bit. We’ll also look at Chat Templates and how chat histories are formatted for the LLM to understand them better. Finally we’ll cover system prompts and how we can get the LLM to do the tasks we want them to.
 

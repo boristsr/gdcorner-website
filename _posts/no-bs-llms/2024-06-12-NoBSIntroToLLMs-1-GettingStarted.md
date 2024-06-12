@@ -25,15 +25,13 @@ Let’s get started!
 
 ## What we’ll cover
 
-I’ve planned 4 articles in this series. 
+We begin with 3 articles in this series, but I have a few more planned to keep diving deeper into the tech and concepts. 
 
 In this first article we’ll cover a lot of the initial jargon and terms you’ll find. We’ll then download a model, and get a basic chat loop going in code.
 
 In article 2 we’ll look at using an LLM via network APIs so we can connect to other LLM services, as well as explore a lot more about working with LLMs, generation settings, chat templates and so on.
 
 Article 3 will guide us through adding some basic voice interactivity since processing speech from live microphones or recordings will be very useful to many LLM applications.
-
-Finally, article 4 will explore some basic Retrieval Augment Generation concepts which will allow us to feed our internal documentation, or web searches and other relevant information to the LLM to aid it in answering question. We’ll dive a bit deeper into the topic of embeddings for this one.
 
 If you’re an absolute beginner and are absolutely bamboozled with all the jargon and terms, stick with article 1 which will get you up to speed in no time.
 
