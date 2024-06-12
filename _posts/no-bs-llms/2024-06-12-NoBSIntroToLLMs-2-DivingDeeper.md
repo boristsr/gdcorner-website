@@ -324,7 +324,7 @@ The model publisher will usually give information on it’s expected template or
 
 The Llama 3 instruct template looks like this.
 
-```json
+```text
 <|begin_of_text|><|start_header_id|>system<|end_header_id|>
 
 {{ system_prompt }}<|eot_id|><|start_header_id|>user<|end_header_id|>
@@ -336,7 +336,7 @@ The Llama 3 instruct template looks like this.
 
 Lets break this down. It appears that the prompt is expected to begin with `<|begin_of_text|>`, then the rest is a repeating pattern of:
 
-```json
+```text
 <|start_header_id|>**system**<|end_header_id|>
 
 **{{ system_prompt }}**<|eot_id|>
@@ -348,7 +348,7 @@ The server will try and do this formatting for you, but there are ways to do thi
 
 Naturally, a templating engine like [Jinja](https://github.com/pallets/jinja) would be a great tool to use here, but for simplicity of this example we’re going to just write it in pure Python. We won’t be adjusting our main chatbot to use this, this is just as a side quest to explore the templates concept. So lets take a copy of the chatbot and begin to make some changes.
 
-```json
+```bash
 cp chatbot-streaming.py chatbot-templates.py
 ```
 
@@ -396,7 +396,7 @@ print(formatted_chat)
 
 Here is an example chat after being formatted with the template.
 
-```json
+```text
 <|begin_of_text|><|start_header_id|>system<|end_header_id|>
 
 You are a helpful teacher who is teaching students about astronomy and the Solar System.<|eot_id|><|start_header_id|>user<|end_header_id|>
@@ -507,5 +507,6 @@ In the next article we’ll deviate from LLMs and look at finishing our chatbot 
 
 - Write a new system prompt for a workflow problem you think LLMs could solve
 - Host the LLM on a second PC or laptop
-- Get an OpenAI key and connect to OpenAI instead of Ollama.
+- Connect to an Ollama server instead of llama.cpp
+- Get an OpenAI key and connect to OpenAI instead of llama.cpp.
 - Experiment with making detailed system prompts for a problem you have, or a task you have for LLMs.

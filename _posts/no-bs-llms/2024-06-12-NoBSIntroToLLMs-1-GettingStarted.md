@@ -46,9 +46,9 @@ This article assumes you know what LLMs are, at least from a users perspective, 
 - **Context Length** - This is how much text, or history that can be considered at a time by the LLM. It’s expressed in number of tokens. A larger context window means more tokens, and therefore more text can be processed at a time.
 - **Transformers** - These are the core of LLMs. It’s a [deep learning architecture developed by Google in 2017](https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)), and has been one of the key technological advances in the development of LLMs.
 
-## Resources for Diving Deeper
+## Resources for Learning ML and Transformers Internals
 
-However, If you want a deeper dive into the internals of LLMs and Transformers I’d recommend the [3Blue1Brown video series on Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi), specifically videos 5 and 6 focusing on embeddings and transformers which helps build a solid understanding of all the concepts involved. After that consider doing the [Hugging Face Natural Language Processing course](https://huggingface.co/learn/nlp-course/chapter1/1). 
+If you want a deeper dive into the internals of LLMs and Transformers I’d recommend the [3Blue1Brown video series on Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi), specifically videos 5 and 6 focusing on embeddings and transformers which helps build a solid understanding of all the concepts involved. After that consider doing the [Hugging Face Natural Language Processing course](https://huggingface.co/learn/nlp-course/chapter1/1). 
 
 If you want to take a closer look specifically at embeddings, I found this article was really informative - [A Beginner’s Guide to Tokens, Vectors and Embeddings in NLP by Sascha Metzger](https://medium.com/@saschametzger/what-are-tokens-vectors-and-embeddings-how-do-you-create-them-e2a3e698e037).
 
@@ -133,7 +133,7 @@ This is under the AGPL 3.0 license which has some considerations when using it c
 
 ### Llamafile
 
-This is a very interesting project from Mozilla that embeds a cross platform runtime in with the model itself. This allows you to download a single file, double click it, and start interacting with the model immediately. The runtime is a fork of Llama.cpp. The developers of Llamafile have been very active in adding speed improvements as well as submitting these upstream to Llama.cpp
+[Llamafile](https://github.com/Mozilla-Ocho/llamafile) is a very interesting project from Mozilla that embeds a cross platform runtime in with the model itself. This allows you to download a single file, double click it, and start interacting with the model immediately. The runtime is a fork of Llama.cpp. The developers of Llamafile have been very active in adding speed improvements as well as submitting these upstream to Llama.cpp
 
 This is under the Apache License 2.0 which is quite permissive.
 
@@ -145,7 +145,7 @@ This is available under the MIT license which is very permissive.
 
 ### Llama-cpp-python
 
-This is a python wrapper around llama.cpp. This is the first thing we’ll use before moving directly to Llama.cpp.
+[Llama-cpp-python](https://llama-cpp-python.readthedocs.io/en/latest/) is a python wrapper around llama.cpp. This is the first thing we’ll use before moving directly to Llama.cpp.
 
 ### Others
 
@@ -161,7 +161,7 @@ Quantized, 7b, 13b, Q5_? WTF?
 
 Ok, there’s lots of Jargon you’ll run into when choosing a model, let’s break down some of them. 
 
-**Parameters** - This is the number of weights in a model. Usually expressed in billions or trillions, hence the 7B, 13B, 1.7T. The number of parameters directly affects the memory required to run the model, as well as the processing power required to generate text quickly. This can be used to also quickly estimate how much RAM will be required to run the original models and how big the download will be. Without going in-depth on model configuration and architecture, a lot of models use 16bit floating point numbers for the bulk of their weights, so `7,000,000,000 parameters * 2 bytes = 14,000,000,000 bytes = 14 gigabytes of memory`
+**Parameters** - This is the number of weights in a model. Usually expressed in billions or trillions, hence the 7B, 13B, 1.7T. The number of parameters directly affects the memory required to run the model, as well as the processing power required to generate text quickly. This can be used to also quickly estimate the minimum amount of RAM required to run the models at the original quality and how big the download will be. Without going in-depth on model configuration and architecture, a lot of models use 16bit floating point numbers for the bulk of their weights, so `7,000,000,000 parameters * 2 bytes = 14,000,000,000 bytes = 14 gigabytes of memory`
 
 **Quantized / Quantization / Q4 / Q8**  - This is a form of lossy compression. Essentially it tries to balance keeping as much original data and performance as possible while discarding information that doesn’t impact the results from the LLM by a significant amount. I’ll be covering this in a bit more depth after we’ve downloaded a model. We’re going to download a model at it’s full precision first, and learn how to quantize ourselves.
 
@@ -265,7 +265,7 @@ Llama.cpp uses a custom model format called GGUF, or GPT-Generated Unified Forma
 
 ## Convert from HuggingFace Transformers model to GGUF
 
-First we need to get the model into llama.cpp’s preferred model format, GGUF. We can do this with the `convert.py` script included with llama.cpp. Just point it to the directory of the model we downloaded and specify the output file.
+First we need to get the model into llama.cpp’s preferred model format, GGUF. We can do this with the various convert scripts included with llama.cpp. Just point it to the directory of the model we downloaded and specify the output file.
 
 There’s a few variations of the convert script from various starting formats. For our purposes we want to use `convert-hf-to-gguf.py` which converts from hugging face models to GGUF. You can optionally specify an output type for the weights, but for now it’s best to leave this at auto.
 
@@ -275,7 +275,7 @@ python llama.cpp/convert-hf-to-gguf.py Meta-Llama-3-8B-Instruct/ --outfile Meta-
 
 In the case of Mistral 0.3 and some others you may see an error regarding duplicate names. In this case the repository has 2 copies of the model, usually a mix of `consolidated.safetensors` and `model-0000*-of-00003.safetensors`. Simply delete the consolidated model with `rm consolidated.safetensors` and it will work as expected.
 
-If you have downloaded a newly released model, it can take some time for llama.cpp to have support added or fully ironed out. Keep an eye on the GitHub issues and pull requests pages for more information on the state of support for a given model.
+If you have downloaded a newly released model, it can take some time for llama.cpp to have support added or fully ironed out. Keep an eye on the [GitHub issues](https://github.com/ggerganov/llama.cpp/issues) and [pull requests pages](https://github.com/ggerganov/llama.cpp/pulls) for more information on the state of support for a given model.
 
 ### What does quantizing do?
 
@@ -316,8 +316,8 @@ Q<Target Bits Per Float>_K_<Size>
 
 Where:
 
-- <Target Bits Per Float> defines the main size of the majority of the weights Remember, lower numbers will result in smaller models, but will have greater impacts on the performance.
-- <Size> allows mixed precision on the float size for segments of the model to preserve performance while still minimising memory. For example this may allow a Q5 model to have some weights, some more important areas of the model, at 6bits to improve performance. This is typically `S` for small, `M` for medium or `L` for large.
+- `<Target Bits Per Float>` defines the main size of the majority of the weights Remember, lower numbers will result in smaller models, but will have greater impacts on the performance.
+- `<Size>` allows mixed precision on the float size for segments of the model to preserve performance while still minimising memory. For example this may allow a Q5 model to have some weights, some more important areas of the model, at 6bits to improve performance. This is typically `S` for small, `M` for medium or `L` for large.
 
 If you browse a bunch of models from TheBloke, he has done benchmarking on the various quant levels on all the models processed, [such as the Llama2 quantized version here](https://huggingface.co/TheBloke/Llama-2-7B-GGUF), and it seems one of the better tradeoffs for size and performance is Q5_K_M, which is what we’ll be using for our example. Feel free to experiment for your use case though. Your target system may be faster or slower depending on the quantization method chosen, and your application may or may not tolerate the performance/quality loss.
 
@@ -636,7 +636,7 @@ And that’s it. We now have a working chat-bot! You can see the full source cod
 
 ## Coming Up Next
 
-In the next article I’m going to dive into:
+[In the next article]({% link _posts/no-bs-llms/2024-06-12-NoBSIntroToLLMs-2-DivingDeeper.md %}) I’m going to dive into:
 
 - OpenAI compatible APIs and client/server architecture for LLMs
 - Streaming generation
