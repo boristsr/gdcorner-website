@@ -324,7 +324,7 @@ If you browse a bunch of models from TheBloke, he has done benchmarking on the v
 For a comprehensive list of available quantization methods available to you, you can run the below command for a list:
 
 ```bash
-./llama.cpp/quantize --help
+./llama.cpp/llama-quantize --help
 ```
 
 ### Quantize
@@ -332,7 +332,7 @@ For a comprehensive list of available quantization methods available to you, you
 Remember that this is an optional step, but if you want to quantize your model it’s a single line. This is a relatively quick process. On my machine it takes 2-3 minutes of CPU time for a 7b model.
 
 ```bash
-llama.cpp/quantize Meta-Llama-3-8B-Instruct.gguf Meta-Llama-3-8B-Instruct-q5_k_m.gguf Q5_K_M
+llama.cpp/llama-quantize Meta-Llama-3-8B-Instruct.gguf Meta-Llama-3-8B-Instruct-q5_k_m.gguf Q5_K_M
 ```
 
 ### Convert to GGUF and Quantize in a single step
