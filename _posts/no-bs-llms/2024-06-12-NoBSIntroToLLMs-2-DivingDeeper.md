@@ -44,7 +44,7 @@ To run llama.cpp in Server mode, it’s as simple as the following command. Make
 
 ```bash
 # Start the server with our model
-./llama.cpp/server -m Meta-Llama-3-8B-Instruct-q5_k_m.gguf -c 0
+./llama.cpp/llama-server -c 0 -m Meta-Llama-3-8B-Instruct-q5_k_m.gguf
 ```
 
 I specify `-c 0` here for an important reason. Llama.cpp defaults to using a 512 token context length. By specifying 0, it tells llama.cpp to use the context length specified in the model. If you go back to the source HuggingFace model, you can open `config.json` and look for the field entry `max_position_embeddings` . This was encoded into the GGUF when it was converted. We’ll look at context size more when we get to the settings in a few sections time, but for now just know that it’s basically the length of the chat history we can pass into the LLM to be considered when generating an answer.
