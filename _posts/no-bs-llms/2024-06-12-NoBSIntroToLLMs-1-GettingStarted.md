@@ -56,7 +56,7 @@ Another suggestion I wanted to throw out there if you want to dive deeper is get
 
 ## Setting up our project
 
-This guide assumes you are working in Ubuntu 24.04. You should be able to follow along just fine in Windows with WSL, and with a few minor modifications on Mac OS too.
+This guide assumes you are working in Ubuntu 24.04. You should be able to follow along just fine in Windows with WSL, and with a few minor modifications on Mac OS too. Make sure you have around 10gb or more of RAM and around 50-60gb of disk space free. We're going to have a few copies of the model on disk during the conversion process so we need some extra space.
 
 The main things we want are:
 
@@ -223,7 +223,7 @@ Most models can just be cloned with Git LFS, or you can individually download al
 git clone https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct
 ```
 
-Another option to get models is to use the [HuggingFace Hub CLI tools](https://huggingface.co/docs/huggingface_hub/main/en/guides/cli.). I won’t be covering this though I wanted to draw your attention to it as an alternative.
+Another option to get models is to use the [HuggingFace Hub CLI tools](https://huggingface.co/docs/huggingface_hub/main/en/guides/cli.). I won’t be covering this though I wanted to draw your attention to it as an alternative. It can be worthwhile as it can require less space on your disk when you download it.
 
 ### My Recommended Starting Models
 
