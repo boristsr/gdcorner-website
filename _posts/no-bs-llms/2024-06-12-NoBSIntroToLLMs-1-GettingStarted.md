@@ -347,16 +347,16 @@ python llama.cpp/convert-hf-to-gguf.py Meta-Llama-3-8B-Instruct/ \
 
 ## Let’s try the model
 
-So now we have a model converted and quantized, we can use llama.cpp to start generating text. The `main` program from llama.cpp will just start generating random text. We can run this and get an idea of performance and make sure the model is working.
+So now we have a model converted and quantized, we can use llama.cpp to start generating text. The `llama-cli` program from llama.cpp will just start generating random text. We can run this and get an idea of performance and make sure the model is working. We'll also specify the `-n` parameter to limit the length of the output.
 
 ```bash
-llama.cpp/main -m Meta-Llama-3-8B-Instruct-q5_k_m.gguf
+llama.cpp/llama-cli -m Meta-Llama-3-8B-Instruct-q5_k_m.gguf -n 100
 ```
 
-Now we can use the `simple` program to give it a specific input:
+Now we can use the `llama-simple` program to give it a specific input with the `-p` parameter.:
 
 ```bash
-llama.cpp/simple Meta-Llama-3-8B-Instruct-q5_k_m.gguf "What is the capital of Australia?"
+llama.cpp/llama-simple -m Meta-Llama-3-8B-Instruct-q5_k_m.gguf -n 20 -p "What is the capital of Australia?"
 ```
 
 I encourage you to have a look through the other programs llama.cpp comes with, but for now we know it’s working and we can move on to building our first app.
