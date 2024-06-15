@@ -71,6 +71,8 @@ sudo apt-get install -y git git-lfs build-essential
 
 One complication is that llama.cpp [doesn’t support Python 3.12 yet](https://github.com/ggerganov/llama.cpp/issues/6422) due to some dependencies. So along with some tools we’ll also need to install Python 3.11 which isn’t available in the official Ubuntu 24.04 repositories. [Deadsnakes is a very popular repository](https://launchpad.net/~deadsnakes/+archive/ubuntu/ppa) to get alternative builds of Python. This is the method we’ll use until Python 3.12 is fully supported.
 
+Note that [I've heard anaconda](https://www.reddit.com/r/LocalLLaMA/comments/1de226j/comment/l8md4x2/), or simply conda, has Python 3.11 include. If you are familiar with conda then feel free to use it, but I’ll be sticking with the system Python for this series.
+
 ```bash
 # Install Python 3.11
 sudo apt install -y software-properties-common
