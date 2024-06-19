@@ -377,7 +377,7 @@ pip install llama-cpp-python
 
 ### Exploring with Python
 
-Start a new file called [chatbot1.py](http://chatbot1.py) and we’ll start pasting some of these snippets in there.
+Start a new file called `chatbot1.py` and we’ll start pasting some of these snippets in there.
 
 ### Load the model
 
