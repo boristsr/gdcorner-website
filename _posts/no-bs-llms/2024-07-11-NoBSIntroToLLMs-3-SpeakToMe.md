@@ -20,6 +20,7 @@ This isn’t going to be a super deep dive into DSP and audio, but rather just i
 Working with audio can seem daunting if you haven’t done it before, and it is naturally a very deep topic, but for our purposes it’s pretty quick to get up to working speed with it.
 
 ![By Д.Ильин: vectorization - File:Signal Sampling.png by Email4mobile (talk), CC0, https://commons.wikimedia.org/w/index.php?curid=98587159](/assets/posts/no-bs-llms/signal_sampling.svg)
+[By Д.Ильин: vectorization - File:Signal Sampling.png by Email4mobile (talk), CC0, https://commons.wikimedia.org/w/index.php?curid=98587159](https://commons.wikimedia.org/w/index.php?curid=98587159)
 
 To represent a continuous signal like an audio waveform digitally we need to break it down into discrete (or individual) values. Audio is represented in digital systems as a series of intensity or strength values. An individual measured value is called a **sample** or a **frame** in the case of the audio library we’ll be using. These samples are are taken at regular intervals which is usually expressed in **hertz** (often abbreviated as `hz`) which means samples per second. This is called the **sample rate** or **sampling rate**. The resolution or size of the samples is called the **bit depth**, for example 8, 16 and 24 bits are common.
 
