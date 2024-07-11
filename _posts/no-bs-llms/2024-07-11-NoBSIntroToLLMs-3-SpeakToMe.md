@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "#3 - Speak To Me! (TTS & STT) - No BS Intro To Developing with LLMs"
-date:   2024-06-12 15:20:13 +1100
+date:   2024-07-11 15:20:13 +1100
 tags: [ubuntu, llms, rag, no-bs, python, llama.cpp, stt, tts]
 comments: true
 image: "/assets/posts/no-bs-llms/no-bs-llms-ogimage.png"
