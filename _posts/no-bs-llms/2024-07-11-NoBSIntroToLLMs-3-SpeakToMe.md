@@ -110,8 +110,8 @@ Finally, we close up the stream and terminate our PyAudio instance.
 # Stop and close the stream 
 stream.stop_stream()
 stream.close()
-# Release PortAudio
-p.terminate()
+# Release PyAudio
+pyaudio_instance.terminate()
 ```
 
 ### Wave Files
@@ -641,7 +641,7 @@ def main():
         # Print the full conversation
         print_message_history()
 
-    # Release PortAudio
+    # Release PyAudio
     pyaudio_instance.terminate()
 
     print("Chatbot finished - Goodbye!")
