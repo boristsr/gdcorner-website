@@ -37,7 +37,7 @@ To ensure our app works on most operating systems we’ll use PyAudio, which pro
 
 We won’t dive into device selection in this series. I’m going to assume you only have 1 input and 1 output audio device, or that you’ve appropriately set the default audio devices in your system settings.
 
-Once again, on Ubuntu we need to install a little more. [If you need a refresher on the setup so far checkout article 1]({% link _posts/no-bs-llms/2024-06-12-NoBSIntroToLLMs-1-GettingStarted.md %}). We need the development package for Python 3.11, as well as [PortAudio](https://www.portaudio.com/) which is what PyAudio uses behind the scenes, and PyAudio is what we’ll be using in Python.
+Once again, on Ubuntu we need to install a little more. [If you need a refresher on the setup so far checkout article 1]({% link _posts/no-bs-llms/2024-06-12-NoBSIntroToLLMs-1-GettingStarted.md %}#setting-up-our-project). We need the development package for Python 3.11, as well as [PortAudio](https://www.portaudio.com/) which is what PyAudio uses behind the scenes, and PyAudio is what we’ll be using in Python.
 
 ```bash
 # Ensure our virtual environment is active
