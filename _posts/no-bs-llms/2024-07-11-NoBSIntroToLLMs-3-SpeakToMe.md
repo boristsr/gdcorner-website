@@ -331,6 +331,8 @@ transcription_result = model.transcribe(whisper_samples)
 print(transcription_result["text"])
 ```
 
+You can see [the full code  of this example here](https://github.com/GDCorner/no-bs-llms/blob/main/article3/stt-whisper-audiobuffer.py).
+
 That’s all we need from Whisper for a simple chat bot.  Whisper is very powerful, and there are a number of models and model sizes that better match different use-cases.
 
 If you want to look further into Speech-To-Text (STT), I recommend checking out these projects:
