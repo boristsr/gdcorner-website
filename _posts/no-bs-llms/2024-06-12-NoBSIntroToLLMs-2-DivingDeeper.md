@@ -493,11 +493,11 @@ Next we explored **Streaming generation** which can used to reduce latency in re
 
 Following that we dug into **usage statistics** which we can use to understand which parts of our system, or which users or agents are utilising the system the most. We can also monitor usage costs and compare usage costs across other potential providers by comparing historical usage metrics with published API pricing.
 
-Then we looked at some of the generation settings available which can be used to tweak the LLM to provide more creative, or more deterministic outputs.
+Then we looked at some of the **generation settings** available which can be used to tweak the LLM to provide more creative, or more deterministic outputs.
 
-We also had a look at Chat Templates and how we can manually apply chat templates. This gives us a greater understanding of how models are fine-tuned for different prompting styles, and allows us flexibility in how we create generations from LLMs, especially if the server does not support a given chat template.
+We also had a look at **Chat Templates** and how we can manually apply chat templates. This gives us a greater understanding of how models are fine-tuned for different prompting styles, and allows us flexibility in how we create generations from LLMs, especially if the server does not support a given chat template.
 
-Finally we discussed System prompts, their purpose and what can be put into a good system prompt. I again encourage you to read some of the prompts included in Fabric for some great examples. We also briefly spoke about agents, and how system prompts can be used to define the different roles of an LLM in a larger system.
+Finally we discussed **System prompts**, their purpose and what can be put into a good system prompt. I again encourage you to read some of the prompts included in Fabric for some great examples. We also briefly spoke about agents, and how system prompts can be used to define the different roles of an LLM in a larger system.
 
 ## Next Time…
 
