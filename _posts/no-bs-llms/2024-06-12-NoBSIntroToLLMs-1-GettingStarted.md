@@ -269,10 +269,10 @@ Llama.cpp uses a custom model format called GGUF, or GPT-Generated Unified Forma
 
 First we need to get the model into llama.cpp’s preferred model format, GGUF. We can do this with the various convert scripts included with llama.cpp. Just point it to the directory of the model we downloaded and specify the output file.
 
-There’s a few variations of the convert script from various starting formats. For our purposes we want to use `convert-hf-to-gguf.py` which converts from hugging face models to GGUF. You can optionally specify an output type for the weights, but for now it’s best to leave this at auto.
+There’s a few variations of the convert script from various starting formats. For our purposes we want to use `convert_hf_to_gguf.py` which converts from hugging face models to GGUF. You can optionally specify an output type for the weights, but for now it’s best to leave this at auto.
 
 ```bash
-python llama.cpp/convert-hf-to-gguf.py Meta-Llama-3-8B-Instruct/ --outfile Meta-Llama-3-8B-Instruct.gguf --outtype auto
+python llama.cpp/convert_hf_to_gguf.py Meta-Llama-3-8B-Instruct/ --outfile Meta-Llama-3-8B-Instruct.gguf --outtype auto
 ```
 
 In the case of Mistral 0.3 and some others you may see an error regarding duplicate names. In this case the repository has 2 copies of the model, usually a mix of `consolidated.safetensors` and `model-0000*-of-00003.safetensors`. Simply delete the consolidated model with `rm consolidated.safetensors` and it will work as expected.
@@ -342,7 +342,7 @@ llama.cpp/llama-quantize Meta-Llama-3-8B-Instruct.gguf Meta-Llama-3-8B-Instruct-
 You can do both of these steps at once with a single command if you are happy to just use Q8, although doing it separately is nice because you have more options to choose quantization level.
 
 ```bash
-python llama.cpp/convert-hf-to-gguf.py Meta-Llama-3-8B-Instruct/ \
+python llama.cpp/convert_hf_to_gguf.py Meta-Llama-3-8B-Instruct/ \
   --outfile Meta-Llama-3-8B-Instruct-q8.gguf \
   --outtype q8_0
 ```
