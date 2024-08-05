@@ -29,12 +29,6 @@ Disallow: /
 ## The following are from
 # https://github.com/ai-robots-txt/ai.robots.txt
 
-User-agent: GPTBot
-Disallow: /
-
-User-agent: Google-Extended
-Disallow: /
-
 User-agent: Amazonbot
 Disallow: /
 
@@ -68,6 +62,9 @@ Disallow: /
 User-agent: FacebookBot
 Disallow: /
 
+User-agent: facebookexternalhit
+Disallow: /
+
 User-agent: FriendlyCrawler
 Disallow: /
 
@@ -86,10 +83,19 @@ Disallow: /
 User-agent: GPTBot
 Disallow: /
 
+User-agent: ICC-Crawler
+Disallow: /
+
 User-agent: ImagesiftBot
 Disallow: /
 
 User-agent: img2dataset
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: OAI-SearchBot
 Disallow: /
 
 User-agent: omgili
@@ -99,6 +105,18 @@ User-agent: omgilibot
 Disallow: /
 
 User-agent: PerplexityBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: Scrapy
+Disallow: /
+
+User-agent: Timpibot
+Disallow: /
+
+User-agent: VelenPublicWebCrawler
 Disallow: /
 
 User-agent: YouBot
